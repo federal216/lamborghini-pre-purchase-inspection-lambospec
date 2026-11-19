@@ -528,17 +528,17 @@
         <div class="mb-5">
           <div class="flex items-center justify-between mb-1.5">
             <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 font-mono">Delivery & Invoice Email <span class="text-rose-400">*</span></label>
-            <span class="text-[10px] text-zinc-400 font-mono">PDF & Fatura Buraya İletilir</span>
+            <span class="text-[10px] text-zinc-400 font-mono">PDF Dossier & Receipt Delivered Here</span>
           </div>
-          <input type="email" id="custEmail" placeholder="your-email@supercar.com"
+          <input type="email" id="custEmail" placeholder="buyer@domain.com"
                  class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition">
         </div>
 
-        <!-- Payment Method Tabs (4 Kanallı Ödeme) -->
+        <!-- Payment Method Tabs (4 Channels) -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 border-b border-zinc-800 pb-3 mb-5">
           <button id="tabCardBtn" type="button" onclick="switchPaymentTab('card')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer">
-            <span>💳 Kart / Apple Pay</span>
+            <span>💳 Card / Apple Pay</span>
           </button>
           <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
@@ -546,7 +546,7 @@
           </button>
           <button id="tabIbanBtn" type="button" onclick="switchPaymentTab('iban')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
-            <span>🏦 Banka (USD/TL)</span>
+            <span>🏦 Bank Wire (USD/TL)</span>
           </button>
           <button id="tabPayoneerBtn" type="button" onclick="switchPaymentTab('payoneer')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
@@ -559,12 +559,12 @@
           <!-- Live Validation Error Box -->
           <div id="cardErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg">
             <span class="text-base">⚠️</span>
-            <span id="cardErrorMsg">Lütfen kart bilgilerinizi kontrol ediniz.</span>
+            <span id="cardErrorMsg">Please check your card details.</span>
           </div>
 
           <!-- Cardholder Name -->
           <div>
-            <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Kart Üzerindeki İsim (Cardholder Name) <span class="text-rose-400">*</span></label>
+            <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Name on Card <span class="text-rose-400">*</span></label>
             <input type="text" id="cardName" placeholder="FIRSTNAME LASTNAME" autocomplete="cc-name"
                    class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white uppercase focus:outline-none focus:border-orange-500 font-medium tracking-wide transition">
           </div>
@@ -572,8 +572,8 @@
           <!-- Card Number with dynamic brand badges -->
           <div>
             <div class="flex items-center justify-between mb-1">
-              <label class="block text-xs font-mono uppercase text-zinc-400">Kart Numarası (Card Number) <span class="text-rose-400">*</span></label>
-              <span id="cardBrandLabel" class="text-[10px] font-mono text-zinc-400">256-Bit SSL Şifreli</span>
+              <label class="block text-xs font-mono uppercase text-zinc-400">Card Number <span class="text-rose-400">*</span></label>
+              <span id="cardBrandLabel" class="text-[10px] font-mono text-zinc-400">256-Bit SSL Encrypted</span>
             </div>
             <div class="relative">
               <input type="text" id="cardNumber" placeholder="•••• •••• •••• ••••" maxlength="19" autocomplete="cc-number"
@@ -589,14 +589,14 @@
           <!-- Expiry & CVC -->
           <div class="grid grid-cols-2 gap-3">
             <div>
-              <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Son Kullanma (MM/YY) <span class="text-rose-400">*</span></label>
+              <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Expiry (MM/YY) <span class="text-rose-400">*</span></label>
               <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp"
                      class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition text-center tracking-wider">
             </div>
             <div>
               <div class="flex items-center justify-between mb-1">
                 <label class="block text-xs font-mono uppercase text-zinc-400">CVC / CVV <span class="text-rose-400">*</span></label>
-                <span class="text-[10px] text-zinc-400 font-mono">3-4 Hane</span>
+                <span class="text-[10px] text-zinc-400 font-mono">3-4 Digits</span>
               </div>
               <input type="password" id="cardCvc" placeholder="•••" maxlength="4" autocomplete="cc-csc"
                      class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition text-center tracking-widest">
@@ -606,7 +606,7 @@
           <!-- In-Page Security badge -->
           <div class="bg-zinc-950/70 border border-zinc-800 rounded-xl p-3 flex items-center space-x-2.5 text-xs text-zinc-400 font-mono">
             <span class="text-emerald-400 text-base">🛡️</span>
-            <span>Zero-Redirect Güvenli Ödeme: Harici siteye yönlendirilmeden, doğrudan banka 3D Secure onayına bağlanır.</span>
+            <span>Zero-Redirect In-Page Gateway: Direct bank 3D-Secure tokenization. Your card details are never stored.</span>
           </div>
           
           <button id="submitPayBtn" type="button" onclick="processPaymentAndDownload('card')" 
@@ -826,38 +826,38 @@
         <div class="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-500 text-emerald-400 flex items-center justify-center text-3xl mx-auto shadow-lg animate-bounce">
           ✓
         </div>
-        <h4 class="text-2xl font-black text-white">Ödeme Başarılı ($79.00 USD)</h4>
+        <h4 class="text-2xl font-black text-white">Payment Successful ($79.00 USD)</h4>
         <p class="text-xs text-zinc-300 max-w-sm mx-auto">
-          Lamborghini Alım-Satım Pazarlık Dosyanız oluşturuldu ve resmi PDF indirme işleminiz otomatik olarak başladı!
+          Your certified Lamborghini Negotiation Dossier has been compiled and your PDF download has started!
         </p>
 
         <!-- Digital Receipt Summary -->
         <div class="bg-zinc-950/90 border border-zinc-800 rounded-2xl p-4 text-left max-w-md mx-auto space-y-2 text-xs font-mono">
           <div class="flex justify-between border-b border-zinc-800/80 pb-2 text-zinc-400">
-            <span>İşlem Referansı (TXN):</span>
+            <span>Transaction Ref (TXN):</span>
             <span id="succTxnId" class="text-white font-bold">TXN-LMB-892147</span>
           </div>
           <div class="flex justify-between border-b border-zinc-800/80 pb-2 text-zinc-400">
-            <span>Ödeme Yöntemi:</span>
+            <span>Payment Method:</span>
             <span id="succCardDetails" class="text-emerald-400 font-bold">Visa •••• 4242</span>
           </div>
           <div class="flex justify-between border-b border-zinc-800/80 pb-2 text-zinc-400">
-            <span>Teslimat E-Postası:</span>
+            <span>Delivery Email:</span>
             <span id="succEmail" class="text-orange-400 font-bold">buyer@domain.com</span>
           </div>
           <div class="flex justify-between text-zinc-400">
-            <span>Provizyon Durumu:</span>
-            <span class="text-emerald-400 font-bold">PROVISION SETTLED (256-BIT SSL)</span>
+            <span>Authorization Status:</span>
+            <span class="text-emerald-400 font-bold">PROVISION APPROVED (256-BIT SSL)</span>
           </div>
         </div>
 
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           <button type="button" onclick="generateDossierPDF()" class="px-6 py-3 rounded-xl badge-gradient text-black font-extrabold text-xs uppercase tracking-wider hover:opacity-95 transition shadow-lg flex items-center space-x-1.5 cursor-pointer">
             <span>📥</span>
-            <span>PDF Raporunu Tekrar İndir</span>
+            <span>Download PDF Again</span>
           </button>
           <button type="button" onclick="closeCheckoutModal()" class="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs uppercase tracking-wider border border-zinc-700 transition cursor-pointer">
-            Pencereyi Kapat
+            Close Window
           </button>
         </div>
       </div>
@@ -1002,18 +1002,18 @@
 
       if (digits.startsWith('4')) {
         visa.className = 'text-[10px] font-bold px-1.5 py-0.5 rounded border border-blue-500 bg-blue-900/60 text-blue-300 transition shadow';
-        label.innerText = 'Visa Kart Doğrulandı';
+        label.innerText = 'Visa Verified';
         return 'Visa';
       } else if (/^(5[1-5]|2[2-7])/.test(digits)) {
         mc.className = 'text-[10px] font-bold px-1.5 py-0.5 rounded border border-rose-500 bg-rose-900/60 text-rose-300 transition shadow';
-        label.innerText = 'Mastercard Doğrulandı';
+        label.innerText = 'Mastercard Verified';
         return 'Mastercard';
       } else if (/^3[47]/.test(digits)) {
         amex.className = 'text-[10px] font-bold px-1.5 py-0.5 rounded border border-amber-500 bg-amber-900/60 text-amber-300 transition shadow';
-        label.innerText = 'American Express Doğrulandı';
+        label.innerText = 'American Express Verified';
         return 'Amex';
       } else {
-        label.innerText = '256-Bit SSL Şifreli';
+        label.innerText = '256-Bit SSL Encrypted';
         return 'Credit Card';
       }
     }
@@ -1137,7 +1137,7 @@
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (!email || !emailRegex.test(email)) {
-        showCardError('Lütfen rapor ve makbuzun gönderileceği geçerli bir e-posta adresi giriniz (Örn: alici@domain.com).', 'custEmail');
+        showCardError('Please enter a valid email address to receive your negotiation dossier & receipt (e.g. buyer@domain.com).', 'custEmail');
         return;
       }
 
@@ -1148,19 +1148,19 @@
         const nameInput = document.getElementById('cardName');
         const name = nameInput ? nameInput.value.trim() : '';
         if (!name || name.length < 3) {
-          showCardError('Lütfen kart üzerindeki isim ve soyisimi eksiksiz giriniz.', 'cardName');
+          showCardError('Please enter the cardholder full name as printed on your card.', 'cardName');
           return;
         }
 
         const cardInput = document.getElementById('cardNumber');
         const rawNum = cardInput ? cardInput.value.replace(/\D/g, '') : '';
         if (rawNum.length < 15 || rawNum.length > 16) {
-          showCardError('Lütfen 15 veya 16 haneli geçerli kart numarasını eksiksiz giriniz.', 'cardNumber');
+          showCardError('Please enter a valid 15 or 16-digit card number.', 'cardNumber');
           return;
         }
 
         if (!checkLuhn(rawNum)) {
-          showCardError('Geçersiz kart numarası (Luhn kontrol algoritmasından geçemedi). Lütfen kart numaranızı kontrol ediniz.', 'cardNumber');
+          showCardError('Invalid card number. Please verify the digits and try again (Luhn checksum failed).', 'cardNumber');
           return;
         }
 
@@ -1168,7 +1168,7 @@
         const exp = expInput ? expInput.value.trim() : '';
         const expMatch = exp.match(/^(0[1-9]|1[0-2])\/([0-9]{2})$/);
         if (!expMatch) {
-          showCardError('Son kullanma tarihi geçersiz. Lütfen AA/YY biçiminde giriniz (Örn: 08/28).', 'cardExpiry');
+          showCardError('Invalid expiration date format. Please use MM/YY (e.g. 08/28).', 'cardExpiry');
           return;
         }
 
@@ -1179,14 +1179,14 @@
         const currentMonth = now.getMonth() + 1;
 
         if (expYear < currentYear || (expYear === currentYear && expMonth < currentMonth)) {
-          showCardError('Kartınızın son kullanma tarihi geçmiş. Lütfen geçerli bir kart kullanınız.', 'cardExpiry');
+          showCardError('This card has expired. Please provide a valid, active card.', 'cardExpiry');
           return;
         }
 
         const cvcInput = document.getElementById('cardCvc');
         const rawCvc = cvcInput ? cvcInput.value.replace(/\D/g, '') : '';
         if (rawCvc.length < 3 || rawCvc.length > 4) {
-          showCardError('Lütfen 3 veya 4 haneli CVC güvenlik kodunu giriniz.', 'cardCvc');
+          showCardError('Please enter a valid 3 or 4-digit CVC/CVV security code.', 'cardCvc');
           return;
         }
 
@@ -1204,36 +1204,36 @@
       procState.classList.remove('hidden');
 
       if (method === 'card') {
-        procMsg.innerText = '256-Bit SSL Banka Ağ Geçidine Bağlanılıyor (3D Secure)...';
+        procMsg.innerText = 'Connecting to 256-Bit SSL Bank Gateway (3D Secure)...';
         setTimeout(() => {
-          procMsg.innerText = brand + ' (•••• ' + last4 + ') Doğrulanıyor ($79.00 USD Provizyon)...';
+          procMsg.innerText = 'Authorizing ' + brand + ' (•••• ' + last4 + ') for $79.00 USD...';
         }, 900);
         setTimeout(() => {
-          procMsg.innerText = '3D Secure Provizyon Onaylandı! VIP Lamborghini Raporu Hazırlanıyor...';
+          procMsg.innerText = '3D Secure Authorized! Compiling Certified Lamborghini Dossier...';
         }, 1800);
       } else if (method === 'crypto') {
-        procMsg.innerText = 'Blockchain Düğümünden Kripto Transfer Teyidi Alınıyor...';
+        procMsg.innerText = 'Querying Blockchain Node for Transaction Confirmation...';
         setTimeout(() => {
-          procMsg.innerText = 'Blok Onayı Doğrulandı ($79.00 Eşdeğeri)...';
+          procMsg.innerText = 'Block Confirmation Verified ($79.00 Equivalent)...';
         }, 1000);
         setTimeout(() => {
-          procMsg.innerText = 'VIP Lamborghini Dosyası Hazırlanıyor...';
+          procMsg.innerText = 'Compiling Certified Lamborghini Dossier...';
         }, 1800);
       } else if (method === 'payoneer') {
-        procMsg.innerText = 'Payoneer Ağına Bağlanılıyor...';
+        procMsg.innerText = 'Connecting to Payoneer Payment Gateway...';
         setTimeout(() => {
-          procMsg.innerText = 'Payoneer Transfer Kaydı Doğrulanıyor ($79.00 / €75.00)...';
+          procMsg.innerText = 'Verifying Payoneer Transfer ($79.00 / €75.00)...';
         }, 1000);
         setTimeout(() => {
-          procMsg.innerText = 'Transfer Onaylandı! VIP Lamborghini Dosyası Hazırlanıyor...';
+          procMsg.innerText = 'Transfer Confirmed! Compiling Certified Lamborghini Dossier...';
         }, 1800);
       } else {
-        procMsg.innerText = 'VakıfBank FAST Kaydı Eşleştiriliyor...';
+        procMsg.innerText = 'Verifying Bank Wire Transfer Record...';
         setTimeout(() => {
-          procMsg.innerText = 'Havale / EFT Teyit Edildi...';
+          procMsg.innerText = 'Wire Confirmation Received...';
         }, 1000);
         setTimeout(() => {
-          procMsg.innerText = 'VIP Lamborghini Dosyası Hazırlanıyor...';
+          procMsg.innerText = 'Compiling Certified Lamborghini Dossier...';
         }, 1800);
       }
 

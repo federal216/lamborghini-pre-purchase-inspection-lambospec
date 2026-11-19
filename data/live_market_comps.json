@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19T20:01:00.187281+00:00",
+  "last_updated": "2026-11-19T20:12:46.689201+00:00",
   "currency": "USD",
   "active_source_monitors": [
     "Bring a Trailer",
@@ -113,6 +113,123 @@
           "price": 224000,
           "source": "Bring a Trailer",
           "spec": "Giallo Auge / B&O 3D Sound"
+        }
+      ]
+    },
+    "huracan_sto": {
+      "sample_size": 19,
+      "avg_sold_price": 365000,
+      "low_sold_price": 315000,
+      "high_sold_price": 428000,
+      "trend_30d": "-0.8% (Consolidating)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-14",
+          "year": 2022,
+          "miles": 3100,
+          "price": 372000,
+          "source": "Bring a Trailer",
+          "spec": "Verde Scandal / Full Cofango"
+        },
+        {
+          "date": "2026-10-29",
+          "year": 2021,
+          "miles": 6400,
+          "price": 338000,
+          "source": "Cars & Bids",
+          "spec": "Blu Laufey / Track Telemetry"
+        }
+      ]
+    },
+    "aventador_svj": {
+      "sample_size": 14,
+      "avg_sold_price": 720000,
+      "low_sold_price": 610000,
+      "high_sold_price": 860000,
+      "trend_30d": "+3.4% (Ultra-Strong Collector Demand)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-10",
+          "year": 2020,
+          "miles": 2200,
+          "price": 785000,
+          "source": "Mecum Auctions",
+          "spec": "Viola Pasifae / Full Carbon Roadster"
+        },
+        {
+          "date": "2026-10-18",
+          "year": 2019,
+          "miles": 5100,
+          "price": 685000,
+          "source": "Bring a Trailer",
+          "spec": "Grigio Telesto / Painted SVJ Logo"
+        }
+      ]
+    },
+    "gallardo_lp560": {
+      "sample_size": 36,
+      "avg_sold_price": 122000,
+      "low_sold_price": 98000,
+      "high_sold_price": 185000,
+      "trend_30d": "+1.8% (Modern Classic Appreciation)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-08",
+          "year": 2010,
+          "miles": 18400,
+          "price": 118000,
+          "source": "Bring a Trailer",
+          "spec": "Arancio Borealis / E-Gear / Lift"
+        },
+        {
+          "date": "2026-10-22",
+          "year": 2009,
+          "miles": 14200,
+          "price": 175000,
+          "source": "Cars & Bids",
+          "spec": "Nero Noctis / Rare Gated 6-Speed"
+        }
+      ]
+    },
+    "murcielago_lp640": {
+      "sample_size": 16,
+      "avg_sold_price": 345000,
+      "low_sold_price": 255000,
+      "high_sold_price": 520000,
+      "trend_30d": "+5.2% (Investment Surge)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-02",
+          "year": 2008,
+          "miles": 12500,
+          "price": 335000,
+          "source": "RM Sothebys",
+          "spec": "Giallo Orion / E-Gear / Carbon Brakes"
+        },
+        {
+          "date": "2026-10-14",
+          "year": 2007,
+          "miles": 7800,
+          "price": 490000,
+          "source": "Bring a Trailer",
+          "spec": "Rosso Vik / Factory 6-Speed Manual"
+        }
+      ]
+    },
+    "revuelto_v12": {
+      "sample_size": 9,
+      "avg_sold_price": 795000,
+      "low_sold_price": 710000,
+      "high_sold_price": 920000,
+      "trend_30d": "-2.1% (Delivery Premium Softening)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-16",
+          "year": 2024,
+          "miles": 620,
+          "price": 840000,
+          "source": "SBX Cars",
+          "spec": "Arancio Apodis / Delivery Miles / Full Carbon"
         }
       ]
     }

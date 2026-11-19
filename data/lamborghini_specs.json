@@ -2,7 +2,14 @@
   "models": {
     "huracan_lp610_4": {
       "name": "Lamborghini Huracán LP610-4",
-      "years": [2014, 2015, 2016, 2017, 2018, 2019],
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
       "engine": "5.2L Naturally Aspirated V10 (602 hp / 413 lb-ft)",
       "transmission": "7-speed LDF Dual-Clutch (Doppia Frizione)",
       "drivetrain": "All-Wheel Drive (Electronically Controlled)",
@@ -81,7 +88,13 @@
     },
     "aventador_lp700_4": {
       "name": "Lamborghini Aventador LP700-4",
-      "years": [2012, 2013, 2014, 2015, 2016],
+      "years": [
+        2012,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
       "engine": "6.5L Naturally Aspirated V12 (690 hp / 509 lb-ft)",
       "transmission": "7-speed ISR (Independent Shifting Rods) Single-Clutch Robotized",
       "drivetrain": "All-Wheel Drive (Haldex Generation IV)",
@@ -154,7 +167,13 @@
     },
     "urus_suv": {
       "name": "Lamborghini Urus (4.0L Twin-Turbo V8)",
-      "years": [2019, 2020, 2021, 2022, 2023],
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
       "engine": "4.0L Twin-Turbocharged V8 (641 hp / 627 lb-ft)",
       "transmission": "8-speed ZF Torque-Converter Automatic",
       "drivetrain": "All-Wheel Drive with Active Rear Torque Vectoring",
@@ -214,6 +233,337 @@
           "estimated_repair_usd": 2800,
           "symptoms": "One corner sits 1-2 inches lower after standing overnight; compressor runs excessively.",
           "inspection_tip": "Measure ground clearance on all 4 corners after vehicle has been parked for 24 hours."
+        }
+      ]
+    },
+    "huracan_evo": {
+      "name": "Lamborghini Huracán EVO (AWD / RWD)",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "engine": "5.2L Naturally Aspirated V10 (631 hp / 443 lb-ft)",
+      "transmission": "7-speed LDF Dual-Clutch with LDVI Predictive Logic",
+      "drivetrain": "All-Wheel Drive or Rear-Wheel Drive",
+      "market_price_usd": {
+        "poor": 235000,
+        "good": 265000,
+        "excellent": 295000,
+        "concours": 330000
+      },
+      "must_have_options": [
+        {
+          "name": "Lifting System (Front Axle)",
+          "importance": "CRITICAL_DEALBREAKER",
+          "value_impact_usd": 10000,
+          "description": "Mandatory for resale; prevents front bumper underside gouging."
+        },
+        {
+          "name": "Sensonum Audio System",
+          "importance": "HIGH",
+          "value_impact_usd": 4200,
+          "description": "Crucial premium audio option requested by 80% of secondary buyers."
+        },
+        {
+          "name": "Full Carbon Fiber Interior Package",
+          "importance": "MEDIUM",
+          "value_impact_usd": 7500,
+          "description": "High aesthetic retention."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "LDVI Central Computer Sensor Calibration",
+          "severity": "MEDIUM",
+          "typical_mileage": "8,000 - 15,000 miles",
+          "estimated_repair_usd": 2200,
+          "symptoms": "Intermittent ESC warning light after battery disconnect or track usage.",
+          "inspection_tip": "Run full ODIS / Leonardo CAN-bus scan for steering angle torque sensor codes."
+        },
+        {
+          "component": "Infotainment Touchscreen Ghost Touches",
+          "severity": "LOW",
+          "typical_mileage": "Any (Hot Climate)",
+          "estimated_repair_usd": 3400,
+          "symptoms": "Center 8.4-inch portrait display registering phantom inputs.",
+          "inspection_tip": "Inspect digitizer screen under direct flashlight for adhesive bubbling."
+        }
+      ]
+    },
+    "huracan_sto": {
+      "name": "Lamborghini Huracán STO (Super Trofeo Omologata)",
+      "years": [
+        2021,
+        2022,
+        2023
+      ],
+      "engine": "5.2L Naturally Aspirated V10 (631 hp - Track Spec)",
+      "transmission": "7-speed LDF Dual-Clutch with Fast-Shift Logic",
+      "drivetrain": "Rear-Wheel Drive (RWD)",
+      "market_price_usd": {
+        "poor": 310000,
+        "good": 350000,
+        "excellent": 390000,
+        "concours": 440000
+      },
+      "must_have_options": [
+        {
+          "name": "Full Exterior Carbon Cofango Skin",
+          "importance": "CRITICAL",
+          "value_impact_usd": 22000,
+          "description": "Gloss or matte bare carbon single-piece front hood/fenders (Cofango)."
+        },
+        {
+          "name": "CCMR Carbon-Ceramic Racing Brakes",
+          "importance": "HIGH",
+          "value_impact_usd": 15000,
+          "description": "F1-derived Brembo CCMR rotors. Check track heat stress micro-fissures."
+        },
+        {
+          "name": "Telemetry System with Dual Cameras",
+          "importance": "MEDIUM",
+          "value_impact_usd": 5500,
+          "description": "Track telemetry option."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "Front Cofango Hinge Alignment & Carbon Stress",
+          "severity": "HIGH",
+          "typical_mileage": "5,000+ miles",
+          "estimated_repair_usd": 8500,
+          "symptoms": "Misalignment gap at A-pillar; carbon corner chipping from improper closure.",
+          "inspection_tip": "Verify original factory shut-lines; check latch engagement without force."
+        },
+        {
+          "component": "Track Pad Marring on CCMR Rotors",
+          "severity": "HIGH",
+          "typical_mileage": "Heavy Track Sessions",
+          "estimated_repair_usd": 28000,
+          "symptoms": "Heavy groove wear or transfer layer degradation on CCMR discs.",
+          "inspection_tip": "Require dealer surface laser profilometry measurement."
+        }
+      ]
+    },
+    "aventador_svj": {
+      "name": "Lamborghini Aventador SVJ (Super Veloce Jota)",
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "engine": "6.5L Naturally Aspirated V12 (759 hp / 531 lb-ft)",
+      "transmission": "7-speed ISR (Independent Shifting Rods) Robotized",
+      "drivetrain": "All-Wheel Drive with ALA 2.0 Active Aerodynamics",
+      "market_price_usd": {
+        "poor": 580000,
+        "good": 660000,
+        "excellent": 750000,
+        "concours": 890000
+      },
+      "must_have_options": [
+        {
+          "name": "ALA 2.0 Active Aero Carbon Wing & Flaps",
+          "importance": "CRITICAL",
+          "value_impact_usd": 25000,
+          "description": "Verify ALA electric servo motor actuation on both left and right aero channels."
+        },
+        {
+          "name": "Cross-Stitched Alcantara SVJ Livery",
+          "importance": "HIGH",
+          "value_impact_usd": 12000,
+          "description": "Hand-painted SVJ side logo vs decal ($8,000 factory option difference)."
+        },
+        {
+          "name": "Carbon Fiber Removable Targa Roof (Roadster)",
+          "importance": "HIGH",
+          "value_impact_usd": 15000,
+          "description": "Check roof panel storage bags and latches."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "ALA 2.0 Flap Actuator Stuck Error",
+          "severity": "HIGH",
+          "typical_mileage": "3,000 - 10,000 miles",
+          "estimated_repair_usd": 6200,
+          "symptoms": "'Aerodinamica Lamborghini Attiva' warning message on instrument cluster.",
+          "inspection_tip": "Demand dealer diagnostic cycle test of inner rear wing micro-flaps."
+        },
+        {
+          "component": "ISR Single-Clutch Wear Index",
+          "severity": "CRITICAL",
+          "typical_mileage": "7,000 - 14,000 miles",
+          "estimated_repair_usd": 16500,
+          "symptoms": "Severe violent thudding into 1st gear or reverse clutch slip.",
+          "inspection_tip": "Must obtain Leonardo/ODIS clutch snap printout showing remaining mm wear."
+        }
+      ]
+    },
+    "gallardo_lp560": {
+      "name": "Lamborghini Gallardo LP560-4",
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013
+      ],
+      "engine": "5.2L Even-Firing V10 (552 hp / 398 lb-ft)",
+      "transmission": "6-speed E-Gear or 6-speed Gated Manual",
+      "drivetrain": "All-Wheel Drive",
+      "market_price_usd": {
+        "poor": 95000,
+        "good": 115000,
+        "excellent": 135000,
+        "concours": 165000
+      },
+      "must_have_options": [
+        {
+          "name": "Gated 6-Speed Manual Shifter",
+          "importance": "ULTRA_INVESTMENT",
+          "value_impact_usd": 50000,
+          "description": "Factory manual commands a massive $50k-$70k collector premium over E-gear."
+        },
+        {
+          "name": "Front Nose Hydraulic Lifting System",
+          "importance": "HIGH",
+          "value_impact_usd": 5000,
+          "description": "Critical for curb clearance."
+        },
+        {
+          "name": "Carbon Ceramic Brakes (CCB)",
+          "importance": "MEDIUM",
+          "value_impact_usd": 6000,
+          "description": "Optional on LP560-4."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "E-Gear Snap Test Wear / Hydraulic Actuator",
+          "severity": "HIGH",
+          "typical_mileage": "15,000 - 25,000 miles",
+          "estimated_repair_usd": 8500,
+          "symptoms": "Transmission drops into neutral under hard acceleration; pump motor whining.",
+          "inspection_tip": "Read clutch snap wear percentage; 80%+ wear means replacement is imminent."
+        },
+        {
+          "component": "Front Suspension Bushing Deterioration",
+          "severity": "MEDIUM",
+          "typical_mileage": "20,000+ miles / 10+ years",
+          "estimated_repair_usd": 3200,
+          "symptoms": "Clunking sound over low-speed pavement bumps.",
+          "inspection_tip": "Inspect control arm ball joints and rubber boots on hydraulic lift."
+        }
+      ]
+    },
+    "murcielago_lp640": {
+      "name": "Lamborghini Murciélago LP640",
+      "years": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "engine": "6.5L Bizzarrini-Heritage V12 (632 hp / 487 lb-ft)",
+      "transmission": "6-speed E-Gear or Gated 6-Speed Manual",
+      "drivetrain": "All-Wheel Drive (Viscous Traction)",
+      "market_price_usd": {
+        "poor": 240000,
+        "good": 310000,
+        "excellent": 395000,
+        "concours": 520000
+      },
+      "must_have_options": [
+        {
+          "name": "Gated 6-Speed Manual Gearbox",
+          "importance": "COLLECTOR_HOLY_GRAIL",
+          "value_impact_usd": 150000,
+          "description": "Original manual Murciélago LP640s command $500k+ at Sotheby's & Gooding."
+        },
+        {
+          "name": "Carbon Ceramic Brake Discs (CCB)",
+          "importance": "HIGH",
+          "value_impact_usd": 12000,
+          "description": "Standard from late 2007; massive upgrade over steel."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "V12 Rear Main Crankshaft Seal Leak",
+          "severity": "HIGH",
+          "typical_mileage": "15,000 - 30,000 miles",
+          "estimated_repair_usd": 9500,
+          "symptoms": "Engine oil drops weeping from bellhousing weep hole.",
+          "inspection_tip": "Requires full engine-out drop to replace seal; ask for recent service receipts."
+        },
+        {
+          "component": "Active Air Intake Shoulder Actuator Failure",
+          "severity": "MEDIUM",
+          "typical_mileage": "Any",
+          "estimated_repair_usd": 2800,
+          "symptoms": "Batwing cooling scoops fail to deploy above 160 km/h or at high coolant temps.",
+          "inspection_tip": "Manually trigger batwing opening via cockpit toggle."
+        }
+      ]
+    },
+    "revuelto_v12": {
+      "name": "Lamborghini Revuelto (V12 HPEV Flagship)",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "engine": "6.5L Naturally Aspirated V12 + 3 Electric Motors (1,001 hp)",
+      "transmission": "8-speed Transverse Dual-Clutch (DCT)",
+      "drivetrain": "Electric 4WD (Front e-Axle + Rear Motor)",
+      "market_price_usd": {
+        "poor": 650000,
+        "good": 750000,
+        "excellent": 850000,
+        "concours": 980000
+      },
+      "must_have_options": [
+        {
+          "name": "Titanium Sport Exhaust with High Pipe Exit",
+          "importance": "HIGH",
+          "value_impact_usd": 12500,
+          "description": "Essential acoustic resonance for the 9,500 rpm redline."
+        },
+        {
+          "name": "Full Exposed Carbon Monofuselage Package",
+          "importance": "HIGH",
+          "value_impact_usd": 28000,
+          "description": "Exterior and interior exposed carbon weave."
+        },
+        {
+          "name": "Passenger Side Interactive Display",
+          "importance": "MEDIUM",
+          "value_impact_usd": 4800,
+          "description": "Second screen in dashboard."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "3.8 kWh High-Voltage Battery State-of-Health (SoH)",
+          "severity": "CRITICAL",
+          "typical_mileage": "Under Warranty",
+          "estimated_repair_usd": 35000,
+          "symptoms": "Hybrid powertrain reduced power warning; EV mode unavailable.",
+          "inspection_tip": "Verify HV battery warranty status and Lamborghini authorized cell diagnostic report."
+        },
+        {
+          "component": "High-Voltage Inverter Software Calibration",
+          "severity": "MEDIUM",
+          "typical_mileage": "First 5,000 miles",
+          "estimated_repair_usd": 1500,
+          "symptoms": "Jerky regenerative brake handover to CCB discs.",
+          "inspection_tip": "Confirm factory recall and service campaign updates applied."
         }
       ]
     }

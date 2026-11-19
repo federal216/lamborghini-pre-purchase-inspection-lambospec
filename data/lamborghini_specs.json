@@ -1,0 +1,221 @@
+{
+  "models": {
+    "huracan_lp610_4": {
+      "name": "Lamborghini Huracán LP610-4",
+      "years": [2014, 2015, 2016, 2017, 2018, 2019],
+      "engine": "5.2L Naturally Aspirated V10 (602 hp / 413 lb-ft)",
+      "transmission": "7-speed LDF Dual-Clutch (Doppia Frizione)",
+      "drivetrain": "All-Wheel Drive (Electronically Controlled)",
+      "market_price_usd": {
+        "poor": 175000,
+        "good": 195000,
+        "excellent": 220000,
+        "concours": 245000
+      },
+      "must_have_options": [
+        {
+          "name": "Front Axle Lifting System",
+          "importance": "CRITICAL_DEALBREAKER",
+          "value_impact_usd": 10000,
+          "description": "Essential for clearing curbs, speed bumps, and driveways. Without this, front carbon lip damage is almost guaranteed and resale liquidity drops by 40%."
+        },
+        {
+          "name": "Carbon Ceramic Brakes (CCB)",
+          "importance": "STANDARD_VERIFY_WEAR",
+          "value_impact_usd": 8000,
+          "description": "Standard equipment on LP610-4. Must verify rotor surface roughness and carbon oxidation. Replacement cost is $24,000+ for all 4 corners."
+        },
+        {
+          "name": "Magneto-rheological Suspension + Dynamic Steering (LDS)",
+          "importance": "HIGH",
+          "value_impact_usd": 5000,
+          "description": "Transforms ride quality from harsh track to daily compliant. Highly favored by second-hand buyers."
+        },
+        {
+          "name": "Transparent Engine Bonnet with Forged Composite Bay",
+          "importance": "MEDIUM",
+          "value_impact_usd": 6500,
+          "description": "Exposes the V10 engine. Cars with solid louvered black decklid sell at an immediate $5,000-$7,000 discount."
+        },
+        {
+          "name": "Sport / Race Exhaust System",
+          "importance": "MEDIUM",
+          "value_impact_usd": 4500,
+          "description": "Unlocks true V10 acoustic character. Factory sport exhaust or verified aftermarket (Akrapovic, Novitec, Capristo)."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "Front Differential Output Seals",
+          "severity": "HIGH",
+          "typical_mileage": "15,000 - 30,000 miles",
+          "estimated_repair_usd": 3800,
+          "symptoms": "Oil seepage/droplets along the front axle casing and undertray. Requires differential removal to reseal.",
+          "inspection_tip": "Remove front aerodynamic belly pan and inspect with UV light for gear oil residue."
+        },
+        {
+          "component": "Coolant Reservoir Tank Micro-Cracks",
+          "severity": "MEDIUM",
+          "typical_mileage": "20,000+ miles or 5+ years",
+          "estimated_repair_usd": 1200,
+          "symptoms": "Sweet maple syrup odor after hard driving; gradual loss of coolant level in expansion tank.",
+          "inspection_tip": "Check upper plastic seam of tank located in the left rear engine compartment for white chalky residue."
+        },
+        {
+          "component": "LDF Transmission Clutch Pack Wear (Launch Counter)",
+          "severity": "HIGH",
+          "typical_mileage": "Dependent on launches",
+          "estimated_repair_usd": 14000,
+          "symptoms": "Clutch hesitation in 1st/reverse, jerky low-speed maneuvering.",
+          "inspection_tip": "Demand dealer ODIS / Leonardo diagnostic report showing exact launch control count and clutch touch point millimeter wear."
+        },
+        {
+          "component": "AC Evaporator Core Leakage",
+          "severity": "HIGH",
+          "typical_mileage": "Age-related (2015-2017 cars)",
+          "estimated_repair_usd": 6500,
+          "symptoms": "Hissing behind dashboard vents; AC blows warm air despite refrigerant recharge.",
+          "inspection_tip": "Requires full interior dashboard removal. Sniff air vents immediately upon AC startup."
+        }
+      ]
+    },
+    "aventador_lp700_4": {
+      "name": "Lamborghini Aventador LP700-4",
+      "years": [2012, 2013, 2014, 2015, 2016],
+      "engine": "6.5L Naturally Aspirated V12 (690 hp / 509 lb-ft)",
+      "transmission": "7-speed ISR (Independent Shifting Rods) Single-Clutch Robotized",
+      "drivetrain": "All-Wheel Drive (Haldex Generation IV)",
+      "market_price_usd": {
+        "poor": 250000,
+        "good": 285000,
+        "excellent": 325000,
+        "concours": 365000
+      },
+      "must_have_options": [
+        {
+          "name": "Front Suspension Lifting System",
+          "importance": "CRITICAL_DEALBREAKER",
+          "value_impact_usd": 15000,
+          "description": "Non-negotiable. The long front overhang will scrape on 90% of driveways without hydraulic lift."
+        },
+        {
+          "name": "Carbon Fiber Exterior Lower & Upper Packages",
+          "importance": "HIGH",
+          "value_impact_usd": 12000,
+          "description": "Front spoiler, rear diffuser, side intake scoops in genuine glossy carbon fiber."
+        },
+        {
+          "name": "T-Shaped Engine Cover & X-Frame in Carbon",
+          "importance": "MEDIUM",
+          "value_impact_usd": 7500,
+          "description": "Structural aesthetic carbon reinforcement across the mid-mounted V12."
+        },
+        {
+          "name": "Sensonum Premium Audio System",
+          "importance": "LOW",
+          "value_impact_usd": 3000,
+          "description": "Better acoustic output, although most buyers listen to the 8,250 RPM V12 sound."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "ISR Single-Clutch Assembly & Release Bearing",
+          "severity": "CRITICAL_EXPENSIVE",
+          "typical_mileage": "12,000 - 18,000 miles",
+          "estimated_repair_usd": 22000,
+          "symptoms": "Clutch slippage in Corsa mode, gear engagement fault warning on dashboard, smell of burning friction material.",
+          "inspection_tip": "MANDATORY: Run a Lamborghini Lara/Leonardo diagnostic tool check. A clutch reading below 25% requires an immediate $20,000 price deduction because the engine must be pulled out."
+        },
+        {
+          "component": "Rear Suspension Pushrod Bushings & Dampers",
+          "severity": "HIGH",
+          "typical_mileage": "15,000 - 25,000 miles",
+          "estimated_repair_usd": 5500,
+          "symptoms": "Clunking or rattling noise over expansion joints; unequal ride height.",
+          "inspection_tip": "Inspect pushrod horizontal spring mounts and check for oil weeping along damper shaft."
+        },
+        {
+          "component": "Fuel Tank Evaporative Vent System (Recall Campaign)",
+          "severity": "CRITICAL_SAFETY",
+          "typical_mileage": "All 2012-2016 models",
+          "estimated_repair_usd": 3500,
+          "symptoms": "Fuel vapors venting near hot exhaust in high RPM over-rev, fire hazard with aftermarket catless pipes.",
+          "inspection_tip": "Verify official Lamborghini Safety Recall L616 (EVAP canister & purge valve update) was completed in authorized service records."
+        },
+        {
+          "component": "Scissor Door Hydraulic Lift Gas Struts",
+          "severity": "LOW",
+          "typical_mileage": "5+ years",
+          "estimated_repair_usd": 1800,
+          "symptoms": "Scissor doors fail to stay elevated or feel overly heavy to open.",
+          "inspection_tip": "Open both doors and let go at 45 degrees. They should glide smoothly upward without assistance."
+        }
+      ]
+    },
+    "urus_suv": {
+      "name": "Lamborghini Urus (4.0L Twin-Turbo V8)",
+      "years": [2019, 2020, 2021, 2022, 2023],
+      "engine": "4.0L Twin-Turbocharged V8 (641 hp / 627 lb-ft)",
+      "transmission": "8-speed ZF Torque-Converter Automatic",
+      "drivetrain": "All-Wheel Drive with Active Rear Torque Vectoring",
+      "market_price_usd": {
+        "poor": 165000,
+        "good": 195000,
+        "excellent": 235000,
+        "concours": 275000
+      },
+      "must_have_options": [
+        {
+          "name": "Bang & Olufsen 3D Advanced Sound System",
+          "importance": "HIGH",
+          "value_impact_usd": 6500,
+          "description": "21 speakers with motorized acoustic acoustic tweeters. Massive resale appeal."
+        },
+        {
+          "name": "23-inch Taigete / Pelope Diamond Finished Wheels",
+          "importance": "HIGH",
+          "value_impact_usd": 5000,
+          "description": "The 21-inch base wheels make the Urus look under-wheeled; 23-inch is the market standard."
+        },
+        {
+          "name": "Panoramic Glass Electric Sunroof",
+          "importance": "MEDIUM",
+          "value_impact_usd": 3500,
+          "description": "Cabin airiness and family utility demand."
+        },
+        {
+          "name": "Full ADAS Safety Suite (Highway & Urban Package)",
+          "importance": "HIGH",
+          "value_impact_usd": 4000,
+          "description": "Adaptive cruise control, lane keep assist, 360 top-view 3D camera."
+        }
+      ],
+      "chronic_issues": [
+        {
+          "component": "4.0T V8 Turbo Coolant Line O-Rings & Plastic Y-Connectors",
+          "severity": "HIGH",
+          "typical_mileage": "30,000 - 45,000 miles",
+          "estimated_repair_usd": 3200,
+          "symptoms": "Coolant pooling in engine V valley, low coolant level warning.",
+          "inspection_tip": "Inspect the inner engine V under the plastic cover with a borescope for pink crust."
+        },
+        {
+          "component": "Carbon Ceramic Brake Squeal at Low Speeds",
+          "severity": "MEDIUM",
+          "typical_mileage": "Common across all miles",
+          "estimated_repair_usd": 1500,
+          "symptoms": "High-pitched screeching during light braking in city traffic.",
+          "inspection_tip": "Check pad chamfer and ensure dealer anti-squeal damping plates are installed."
+        },
+        {
+          "component": "Air Suspension Compressor Valve Block Sticking",
+          "severity": "MEDIUM",
+          "typical_mileage": "35,000+ miles",
+          "estimated_repair_usd": 2800,
+          "symptoms": "One corner sits 1-2 inches lower after standing overnight; compressor runs excessively.",
+          "inspection_tip": "Measure ground clearance on all 4 corners after vehicle has been parked for 24 hours."
+        }
+      ]
+    }
+  }
+}

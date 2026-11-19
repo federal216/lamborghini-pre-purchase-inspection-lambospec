@@ -463,15 +463,28 @@
             <span>✓ I Have Sent 79 USDT — Unlock & Download PDF</span>
           </button>
         </div>
-        <!-- TAB 3: HAVALE / FAST (VAKIFBANK TL) -->
+                <!-- TAB 3: HAVALE / WIRE (VAKIFBANK USD & TL) -->
         <div id="tabIbanContent" class="space-y-4 hidden">
-          <div class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-left space-y-3">
+          <!-- Currency Toggle: USD vs TL -->
+          <div class="flex space-x-2 bg-black/60 p-1 rounded-xl border border-zinc-800">
+            <button type="button" id="currUsdBtn" onclick="switchIbanCurrency('usd')" 
+                    class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1">
+              <span>💵 USD Hesabı ($79)</span>
+            </button>
+            <button type="button" id="currTlBtn" onclick="switchIbanCurrency('tl')" 
+                    class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 flex items-center justify-center space-x-1">
+              <span>🇹🇷 TL Hesabı (2.750 TL / FAST)</span>
+            </button>
+          </div>
+
+          <!-- USD VIEW (DOLARLARIM) -->
+          <div id="ibanUsdView" class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-left space-y-3">
             <div class="flex items-center justify-between border-b border-zinc-800 pb-2.5">
               <div>
                 <span class="text-xs font-mono text-zinc-400 uppercase">Ödenecek Tutar</span>
-                <div class="text-xl font-black text-emerald-400 font-mono">2.750 TL <span class="text-xs text-zinc-500 font-normal">($79 USD Karşılığı)</span></div>
+                <div class="text-xl font-black text-emerald-400 font-mono">$79.00 USD</div>
               </div>
-              <span class="text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-1 rounded-full font-mono uppercase">FAST İle 7/24 Anında</span>
+              <span class="text-[10px] font-bold bg-blue-950 text-blue-400 border border-blue-800 px-2 py-1 rounded-full font-mono uppercase">SWIFT / Uluslararası USD</span>
             </div>
 
             <div>
@@ -481,35 +494,73 @@
               </div>
             </div>
 
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-mono text-zinc-400 uppercase">Alıcı (Hesap Sahibi)</span>
-                <button type="button" onclick="copyIbanName()" class="text-[10px] text-orange-400 hover:underline font-mono">Adı Kopyala</button>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <span class="text-[11px] font-mono text-zinc-400 uppercase block mb-1">Alıcı Adı</span>
+                <div class="text-xs font-bold text-white bg-zinc-900/80 border border-zinc-800 px-2.5 py-2 rounded-lg font-mono">
+                  İBRAHİM KARAKOÇ
+                </div>
               </div>
-              <div class="text-sm font-bold text-white bg-zinc-900/80 border border-zinc-800 px-3 py-2 rounded-lg font-mono" id="ibanName">
-                İBRAHİM KARAKOÇ
+              <div>
+                <span class="text-[11px] font-mono text-zinc-400 uppercase block mb-1">SWIFT / BIC Kodu</span>
+                <div class="text-xs font-bold text-orange-400 bg-zinc-900/80 border border-zinc-800 px-2.5 py-2 rounded-lg font-mono">
+                  VAKFTRIS
+                </div>
               </div>
             </div>
 
             <div>
               <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-mono text-zinc-400 uppercase">IBAN Numarası (TL)</span>
-                <button type="button" onclick="copyIbanNumber()" class="text-[10px] text-orange-400 hover:underline font-mono font-bold">IBAN'ı Kopyala</button>
+                <span class="text-[11px] font-mono text-zinc-400 uppercase font-bold text-zinc-300">USD IBAN Numarası (Vadesiz Dolar)</span>
+                <button type="button" onclick="copyText('TR890001500158048021426045', 'USD IBAN')" class="text-[10px] text-orange-400 hover:underline font-mono font-bold">Kopyala</button>
               </div>
               <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
-                <span id="ibanVal">TR44 0001 5001 5800 7298 8926 75</span>
-                <button type="button" onclick="copyIbanNumber()" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
+                <span>TR89 0001 5001 5804 8021 4260 45</span>
+                <button type="button" onclick="copyText('TR890001500158048021426045', 'USD IBAN')" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
               </div>
             </div>
 
             <div class="text-[11px] text-zinc-400 font-mono bg-zinc-950/60 p-2 rounded border border-zinc-800">
-              💡 <strong>Açıklama Kısmına:</strong> <code class="text-orange-400">Huracan Raporu</code> yazmanız yeterlidir.
+              💡 <strong>Açıklama:</strong> <code class="text-orange-400">Huracan Raporu #LMB</code>
+            </div>
+          </div>
+
+          <!-- TL VIEW (FAST) -->
+          <div id="ibanTlView" class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-left space-y-3 hidden">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div>
+                <span class="text-xs font-mono text-zinc-400 uppercase">Ödenecek Tutar</span>
+                <div class="text-xl font-black text-emerald-400 font-mono">2.750 TL</div>
+              </div>
+              <span class="text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-1 rounded-full font-mono uppercase">FAST İle 7/24 Anında</span>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-mono text-zinc-400 uppercase block mb-1">Banka & Hesap Sahibi</span>
+              <div class="text-xs font-bold text-white bg-zinc-900/80 border border-zinc-800 px-3 py-2 rounded-lg font-mono">
+                VakıfBank · İBRAHİM KARAKOÇ
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase font-bold text-zinc-300">TL IBAN Numarası (FAST)</span>
+                <button type="button" onclick="copyText('TR440001500158007298892675', 'TL IBAN')" class="text-[10px] text-orange-400 hover:underline font-mono font-bold">Kopyala</button>
+              </div>
+              <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
+                <span>TR44 0001 5001 5800 7298 8926 75</span>
+                <button type="button" onclick="copyText('TR440001500158007298892675', 'TL IBAN')" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-zinc-400 font-mono bg-zinc-950/60 p-2 rounded border border-zinc-800">
+              💡 <strong>Açıklama:</strong> <code class="text-orange-400">Huracan Raporu #LMB</code>
             </div>
           </div>
 
           <button type="button" onclick="processPaymentAndDownload('iban')" 
                   class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2">
-            <span>✓ 2.750 TL Gönderdim — Raporu İndir</span>
+            <span>✓ Havale / Transfer Yaptım — Raporu İndir</span>
           </button>
         </div>
       </div>

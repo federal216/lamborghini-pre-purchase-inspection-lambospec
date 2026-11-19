@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-11-19T20:35:43.894179+00:00",
-  "total_monitored_models": 40,
+  "total_monitored_models": 50,
   "currency": "USD",
   "active_source_monitors": [
     "Bring a Trailer",
@@ -728,6 +728,186 @@
           "price": 2856000,
           "source": "Bring a Trailer",
           "spec": "Lamborghini Countach LPI 800-4 (Modern 50th Homage) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "lamborghini_350_gt": {
+      "name": "Lamborghini 350 GT (Ferruccio's First Production Supercar)",
+      "sample_size": 7,
+      "avg_sold_price": 720000,
+      "low_sold_price": 550000,
+      "high_sold_price": 1050000,
+      "trend_30d": "+3.4% (Blue-Chip Classic Appreciation)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-08-18",
+          "year": 1965,
+          "miles": 42000,
+          "price": 785000,
+          "source": "Gooding & Co Monterey",
+          "spec": "Matching Numbers 3.5L V12 / Classiche Certified"
+        }
+      ]
+    },
+    "lamborghini_400_gt": {
+      "name": "Lamborghini 400 GT 2+2 (Touring Coachwork)",
+      "sample_size": 9,
+      "avg_sold_price": 580000,
+      "low_sold_price": 450000,
+      "high_sold_price": 820000,
+      "trend_30d": "+2.1% (High European Collector Demand)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-09-10",
+          "year": 1967,
+          "miles": 38000,
+          "price": 615000,
+          "source": "RM Sotheby's St. Moritz",
+          "spec": "4.0L Quad-Cam / Senesi Leather / Borrani Wheels"
+        }
+      ]
+    },
+    "lamborghini_islero": {
+      "name": "Lamborghini Islero / Islero S (Ferruccio's Daily V12)",
+      "sample_size": 8,
+      "avg_sold_price": 420000,
+      "low_sold_price": 320000,
+      "high_sold_price": 630000,
+      "trend_30d": "+4.0% (Rare V12 GT Surge)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-10-02",
+          "year": 1969,
+          "miles": 31000,
+          "price": 445000,
+          "source": "Bonhams Zoute",
+          "spec": "Islero S Spec / 350 hp / Factory Air Conditioning"
+        }
+      ]
+    },
+    "lamborghini_jarama": {
+      "name": "Lamborghini Jarama 400 GT / Jarama S (Gandini Bertone V12)",
+      "sample_size": 12,
+      "avg_sold_price": 170000,
+      "low_sold_price": 120000,
+      "high_sold_price": 265000,
+      "trend_30d": "+1.8% (Accessible Vintage V12)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-04",
+          "year": 1973,
+          "miles": 47000,
+          "price": 182000,
+          "source": "Bring a Trailer",
+          "spec": "Jarama S / NACA Hood Ducts / Campagnolo Alloys"
+        }
+      ]
+    },
+    "lamborghini_urraco": {
+      "name": "Lamborghini Urraco P250 / P300 (Gandini V8 Mid-Engine)",
+      "sample_size": 14,
+      "avg_sold_price": 95000,
+      "low_sold_price": 65000,
+      "high_sold_price": 165000,
+      "trend_30d": "+2.7% (Strong Entry Collector Interest)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-10-22",
+          "year": 1977,
+          "miles": 36000,
+          "price": 118000,
+          "source": "Bring a Trailer",
+          "spec": "Urraco P300 / Chain-Drive 3.0L V8 / Ansa Exhaust"
+        }
+      ]
+    },
+    "lamborghini_silhouette": {
+      "name": "Lamborghini Silhouette P300 (Rare Targa V8 - 54 Built)",
+      "sample_size": 5,
+      "avg_sold_price": 160000,
+      "low_sold_price": 110000,
+      "high_sold_price": 270000,
+      "trend_30d": "+5.5% (Ultra-Rare 54-Unit Unicorn)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-07-14",
+          "year": 1978,
+          "miles": 24000,
+          "price": 195000,
+          "source": "Artcurial Paris",
+          "spec": "Targa Roof / Bravo Wheels / 1 of 54 Worldwide"
+        }
+      ]
+    },
+    "lamborghini_jalpa": {
+      "name": "Lamborghini Jalpa 350 (Rocky IV Targa Classic)",
+      "sample_size": 16,
+      "avg_sold_price": 105000,
+      "low_sold_price": 75000,
+      "high_sold_price": 175000,
+      "trend_30d": "+3.1% (80s Nostalgia Wave)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-12",
+          "year": 1986,
+          "miles": 28000,
+          "price": 114000,
+          "source": "Cars & Bids",
+          "spec": "3.5L V8 / Gated 5-Speed / Silhouette Rear Wing"
+        }
+      ]
+    },
+    "lamborghini_sesto_elemento": {
+      "name": "Lamborghini Sesto Elemento (999kg Full-Carbon Track Weapon)",
+      "sample_size": 3,
+      "avg_sold_price": 3100000,
+      "low_sold_price": 2500000,
+      "high_sold_price": 4500000,
+      "trend_30d": "+6.2% (Hypercar Royalty)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-05-20",
+          "year": 2012,
+          "miles": 250,
+          "price": 3450000,
+          "source": "Private Treaty Geneva",
+          "spec": "Delivery Mileage / Factory Flight Cases / Full Carbon"
+        }
+      ]
+    },
+    "lamborghini_essenza_scv12": {
+      "name": "Lamborghini Essenza SCV12 (830 hp Squadra Corse Hypercar)",
+      "sample_size": 4,
+      "avg_sold_price": 3400000,
+      "low_sold_price": 2800000,
+      "high_sold_price": 4800000,
+      "trend_30d": "+4.8% (Track-Only Hypercar Collector Market)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-09-28",
+          "year": 2021,
+          "miles": 450,
+          "price": 3650000,
+          "source": "RM Sotheby's Dubai",
+          "spec": "Squadra Corse Livery / 830 hp / Full Track Support"
+        }
+      ]
+    },
+    "lamborghini_invencible": {
+      "name": "Lamborghini Invencible & Auténtica (Final Pure V12 One-Offs)",
+      "sample_size": 2,
+      "avg_sold_price": 4200000,
+      "low_sold_price": 3500000,
+      "high_sold_price": 6000000,
+      "trend_30d": "+8.0% (Historic Last Pure V12 Milestone)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-08-30",
+          "year": 2023,
+          "miles": 120,
+          "price": 4600000,
+          "source": "Private Treaty Monterey",
+          "spec": "One-Off Coupe / 769 hp / Final Pure V12 Ever Built"
         }
       ]
     }

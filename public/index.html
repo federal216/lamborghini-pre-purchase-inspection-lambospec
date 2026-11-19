@@ -509,7 +509,7 @@
           </button>
           <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
-            <span>⚡ USDT (TRC-20)</span>
+            <span>⚡ Kripto (USDT / USDC)</span>
           </button>
           <button id="tabIbanBtn" type="button" onclick="switchPaymentTab('iban')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
@@ -555,23 +555,49 @@
           </button>
         </div>
 
-        <!-- TAB 2: CRYPTO -->
+                <!-- TAB 2: CRYPTO (USDT TRC20 & USDC ERC20) -->
         <div id="tabCryptoContent" class="space-y-4 hidden">
-          <div class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-center">
-            <div class="text-xs font-mono text-zinc-300 uppercase mb-2">Send Exactly <strong class="text-white font-bold">79 USDT</strong> via <span class="text-orange-400 font-bold bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">TRON (TRC-20)</span></div>
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi" alt="USDT TRC20 QR Code" class="mx-auto rounded-2xl p-2.5 bg-white border border-zinc-700 w-36 h-36 mb-3 shadow-lg">
-            <div class="bg-zinc-900 border border-zinc-800 p-3 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
+          <!-- Crypto Coin Toggle -->
+          <div class="flex space-x-2 bg-black/60 p-1 rounded-xl border border-zinc-800">
+            <button type="button" id="coinUsdtBtn" onclick="switchCryptoCoin('usdt')" 
+                    class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1">
+              <span>🟢 USDT (TRON TRC-20)</span>
+            </button>
+            <button type="button" id="coinUsdcBtn" onclick="switchCryptoCoin('usdc')" 
+                    class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 flex items-center justify-center space-x-1">
+              <span>🔵 USDC (Ethereum ERC-20)</span>
+            </button>
+          </div>
+
+          <!-- USDT VIEW -->
+          <div id="cryptoUsdtView" class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-center space-y-2">
+            <div class="text-xs font-mono text-zinc-300 uppercase mb-1">Send Exactly <strong class="text-white font-bold">79 USDT</strong> via <span class="text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800">TRON (TRC-20)</span></div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi" alt="USDT TRC20 QR Code" class="mx-auto rounded-2xl p-2.5 bg-white border border-zinc-700 w-36 h-36 mb-2 shadow-lg">
+            <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
               <span id="cryptoWalletAddr">TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi</span>
-              <button type="button" onclick="copyWalletAddr()" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">COPY</button>
+              <button type="button" onclick="copyText('TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi', 'USDT TRC20 Adresi')" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
             </div>
-            <div class="mt-3 text-[11px] text-amber-400/90 font-mono bg-amber-950/30 p-2 rounded-lg border border-amber-900/40">
-              ⚠️ <strong>Dikkat / Notice:</strong> Sadece <strong>TRON (TRC-20)</strong> ağından USDT gönderiniz. (Do not send USDC or ERC-20 to this address).
+            <div class="text-[11px] text-zinc-400 font-mono">
+              ⚡ Transfer ücreti ~$1 · Otomatik onay süresi: 30 saniye
+            </div>
+          </div>
+
+          <!-- USDC VIEW -->
+          <div id="cryptoUsdcView" class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-center space-y-2 hidden">
+            <div class="text-xs font-mono text-zinc-300 uppercase mb-1">Send Exactly <strong class="text-white font-bold">79 USDC</strong> via <span class="text-blue-400 font-bold bg-blue-950/60 px-2 py-0.5 rounded border border-blue-800">Ethereum (ERC-20)</span></div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=0x45824b71c98b4922723be312fa6fc8af6be0e090" alt="USDC ERC20 QR Code" class="mx-auto rounded-2xl p-2.5 bg-white border border-zinc-700 w-36 h-36 mb-2 shadow-lg">
+            <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-blue-400 break-all select-all flex items-center justify-between">
+              <span id="cryptoUsdcAddr">0x45824b71c98b4922723be312fa6fc8af6be0e090</span>
+              <button type="button" onclick="copyText('0x45824b71c98b4922723be312fa6fc8af6be0e090', 'USDC ERC20 Adresi')" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
+            </div>
+            <div class="text-[11px] text-zinc-400 font-mono">
+              🏦 Standart Kurumsal Ağ · Coinbase, MetaMask, Phantom, Kraken uyumlu.
             </div>
           </div>
 
           <button type="button" onclick="processPaymentAndDownload('crypto')" 
                   class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2">
-            <span>✓ I Have Sent 79 USDT — Unlock & Download PDF</span>
+            <span>✓ Kripto Transferi Yaptım — Raporu İndir</span>
           </button>
         </div>
                 <!-- TAB 3: HAVALE / WIRE (VAKIFBANK USD & TL) -->

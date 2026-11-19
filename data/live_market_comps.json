@@ -1,11 +1,12 @@
 {
-  "last_updated": "2026-11-19T20:12:46.689201+00:00",
+  "last_updated": "2026-11-19T20:13:16.487904+00:00",
   "currency": "USD",
   "active_source_monitors": [
     "Bring a Trailer",
     "Cars & Bids",
     "AutoTrader Supercars",
-    "Mobile.de Exotic"
+    "RM Sotheby's",
+    "Mobile.de"
   ],
   "models": {
     "huracan_lp610_4": {

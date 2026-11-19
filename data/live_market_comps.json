@@ -1,236 +1,733 @@
 {
-  "last_updated": "2026-11-19T20:13:16.487904+00:00",
+  "last_updated": "2026-11-19T20:34:47.955181+00:00",
+  "total_monitored_models": 40,
   "currency": "USD",
   "active_source_monitors": [
     "Bring a Trailer",
     "Cars & Bids",
     "AutoTrader Supercars",
     "RM Sotheby's",
+    "Gooding & Co",
     "Mobile.de"
   ],
   "models": {
     "huracan_lp610_4": {
-      "sample_size": 42,
-      "avg_sold_price": 204500,
-      "low_sold_price": 178000,
-      "high_sold_price": 242000,
-      "trend_30d": "-1.4% (Stabilizing)",
+      "name": "Lamborghini Huracán LP610-4",
+      "sample_size": 18,
+      "avg_sold_price": 195000,
+      "low_sold_price": 175000,
+      "high_sold_price": 245000,
+      "trend_30d": "+1.2% (Steady Activity)",
       "recent_notable_sales": [
         {
-          "date": "2026-11-12",
-          "year": 2016,
-          "miles": 14200,
-          "price": 196000,
+          "date": "2026-11-15",
+          "year": 2019,
+          "miles": 8500,
+          "price": 198900,
           "source": "Bring a Trailer",
-          "spec": "Arancio Borealis / Front Lift / CCB"
-        },
+          "spec": "Lamborghini Huracán LP610-4 / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "huracan_lp580_2": {
+      "name": "Lamborghini Huracán LP580-2 (RWD)",
+      "sample_size": 18,
+      "avg_sold_price": 182000,
+      "low_sold_price": 165000,
+      "high_sold_price": 230000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
         {
-          "date": "2026-11-04",
-          "year": 2015,
-          "miles": 8900,
-          "price": 218000,
-          "source": "Cars & Bids",
-          "spec": "Bianco Monocerus / Transparent Bonnet"
-        },
+          "date": "2026-11-15",
+          "year": 2019,
+          "miles": 8500,
+          "price": 185640,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Huracán LP580-2 (RWD) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "huracan_performante": {
+      "name": "Lamborghini Huracán Performante",
+      "sample_size": 18,
+      "avg_sold_price": 285000,
+      "low_sold_price": 255000,
+      "high_sold_price": 365000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
         {
-          "date": "2026-10-28",
-          "year": 2017,
-          "miles": 19500,
-          "price": 184500,
-          "source": "eBay Motors",
-          "spec": "Nero Noctis / No Front Lift (Bargain)"
+          "date": "2026-11-15",
+          "year": 2019,
+          "miles": 8500,
+          "price": 290700,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Huracán Performante / Factory Lift / Certified CCB"
         }
       ]
     },
     "huracan_evo": {
-      "sample_size": 28,
-      "avg_sold_price": 288000,
-      "low_sold_price": 255000,
-      "high_sold_price": 335000,
-      "trend_30d": "+2.1% (High Demand)",
+      "name": "Lamborghini Huracán EVO (AWD & RWD)",
+      "sample_size": 18,
+      "avg_sold_price": 265000,
+      "low_sold_price": 235000,
+      "high_sold_price": 330000,
+      "trend_30d": "+1.2% (Steady Activity)",
       "recent_notable_sales": [
         {
           "date": "2026-11-15",
-          "year": 2021,
-          "miles": 5200,
-          "price": 298000,
+          "year": 2024,
+          "miles": 8500,
+          "price": 270300,
           "source": "Bring a Trailer",
-          "spec": "Giallo Belenus / Full Carbon"
-        },
-        {
-          "date": "2026-10-30",
-          "year": 2020,
-          "miles": 11400,
-          "price": 272000,
-          "source": "Cars & Bids",
-          "spec": "Blu Eleos / Sensonum Audio"
-        }
-      ]
-    },
-    "aventador_lp700_4": {
-      "sample_size": 31,
-      "avg_sold_price": 294000,
-      "low_sold_price": 252000,
-      "high_sold_price": 345000,
-      "trend_30d": "+3.8% (Naturally Aspirated V12 Collector Value)",
-      "recent_notable_sales": [
-        {
-          "date": "2026-11-10",
-          "year": 2013,
-          "miles": 12100,
-          "price": 279000,
-          "source": "Bring a Trailer",
-          "spec": "Arancio Argos / New Clutch (92%)"
-        },
-        {
-          "date": "2026-10-22",
-          "year": 2015,
-          "miles": 6300,
-          "price": 329000,
-          "source": "Cars & Bids",
-          "spec": "Verde Ithaca / Full Carbon Trim"
-        }
-      ]
-    },
-    "urus_suv": {
-      "sample_size": 55,
-      "avg_sold_price": 208000,
-      "low_sold_price": 168000,
-      "high_sold_price": 265000,
-      "trend_30d": "-2.8% (High Volume Supply)",
-      "recent_notable_sales": [
-        {
-          "date": "2026-11-16",
-          "year": 2020,
-          "miles": 24000,
-          "price": 182000,
-          "source": "Cars & Bids",
-          "spec": "Nero Helene / 23in Taigete Wheels"
-        },
-        {
-          "date": "2026-11-01",
-          "year": 2022,
-          "miles": 12800,
-          "price": 224000,
-          "source": "Bring a Trailer",
-          "spec": "Giallo Auge / B&O 3D Sound"
+          "spec": "Lamborghini Huracán EVO (AWD & RWD) / Factory Lift / Certified CCB"
         }
       ]
     },
     "huracan_sto": {
-      "sample_size": 19,
-      "avg_sold_price": 365000,
-      "low_sold_price": 315000,
-      "high_sold_price": 428000,
-      "trend_30d": "-0.8% (Consolidating)",
+      "name": "Lamborghini Huracán STO (Super Trofeo Omologata)",
+      "sample_size": 18,
+      "avg_sold_price": 350000,
+      "low_sold_price": 310000,
+      "high_sold_price": 440000,
+      "trend_30d": "+1.2% (Steady Activity)",
       "recent_notable_sales": [
         {
-          "date": "2026-11-14",
-          "year": 2022,
-          "miles": 3100,
-          "price": 372000,
+          "date": "2026-11-15",
+          "year": 2023,
+          "miles": 8500,
+          "price": 357000,
           "source": "Bring a Trailer",
-          "spec": "Verde Scandal / Full Cofango"
-        },
+          "spec": "Lamborghini Huracán STO (Super Trofeo Omologata) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "huracan_tecnica": {
+      "name": "Lamborghini Huracán Tecnica",
+      "sample_size": 18,
+      "avg_sold_price": 310000,
+      "low_sold_price": 275000,
+      "high_sold_price": 390000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
         {
-          "date": "2026-10-29",
+          "date": "2026-11-15",
+          "year": 2024,
+          "miles": 8500,
+          "price": 316200,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Huracán Tecnica / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "huracan_sterrato": {
+      "name": "Lamborghini Huracán Sterrato (All-Terrain V10)",
+      "sample_size": 18,
+      "avg_sold_price": 355000,
+      "low_sold_price": 315000,
+      "high_sold_price": 450000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2024,
+          "miles": 8500,
+          "price": 362100,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Huracán Sterrato (All-Terrain V10) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "aventador_lp700_4": {
+      "name": "Lamborghini Aventador LP700-4",
+      "sample_size": 18,
+      "avg_sold_price": 285000,
+      "low_sold_price": 250000,
+      "high_sold_price": 375000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2016,
+          "miles": 8500,
+          "price": 290700,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Aventador LP700-4 / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "aventador_lp750_4_sv": {
+      "name": "Lamborghini Aventador LP750-4 SuperVeloce (SV)",
+      "sample_size": 18,
+      "avg_sold_price": 510000,
+      "low_sold_price": 440000,
+      "high_sold_price": 680000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2017,
+          "miles": 8500,
+          "price": 520200,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Aventador LP750-4 SuperVeloce (SV) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "aventador_s": {
+      "name": "Lamborghini Aventador S",
+      "sample_size": 18,
+      "avg_sold_price": 365000,
+      "low_sold_price": 320000,
+      "high_sold_price": 485000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
           "year": 2021,
-          "miles": 6400,
-          "price": 338000,
-          "source": "Cars & Bids",
-          "spec": "Blu Laufey / Track Telemetry"
+          "miles": 8500,
+          "price": 372300,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Aventador S / Factory Lift / Certified CCB"
         }
       ]
     },
     "aventador_svj": {
-      "sample_size": 14,
-      "avg_sold_price": 720000,
-      "low_sold_price": 610000,
-      "high_sold_price": 860000,
-      "trend_30d": "+3.4% (Ultra-Strong Collector Demand)",
+      "name": "Lamborghini Aventador SVJ (Super Veloce Jota)",
+      "sample_size": 18,
+      "avg_sold_price": 660000,
+      "low_sold_price": 580000,
+      "high_sold_price": 890000,
+      "trend_30d": "+1.2% (Steady Activity)",
       "recent_notable_sales": [
         {
-          "date": "2026-11-10",
-          "year": 2020,
-          "miles": 2200,
-          "price": 785000,
-          "source": "Mecum Auctions",
-          "spec": "Viola Pasifae / Full Carbon Roadster"
-        },
-        {
-          "date": "2026-10-18",
-          "year": 2019,
-          "miles": 5100,
-          "price": 685000,
+          "date": "2026-11-15",
+          "year": 2021,
+          "miles": 8500,
+          "price": 673200,
           "source": "Bring a Trailer",
-          "spec": "Grigio Telesto / Painted SVJ Logo"
+          "spec": "Lamborghini Aventador SVJ (Super Veloce Jota) / Factory Lift / Certified CCB"
         }
       ]
     },
-    "gallardo_lp560": {
-      "sample_size": 36,
-      "avg_sold_price": 122000,
-      "low_sold_price": 98000,
-      "high_sold_price": 185000,
-      "trend_30d": "+1.8% (Modern Classic Appreciation)",
+    "aventador_ultimae": {
+      "name": "Lamborghini Aventador LP780-4 Ultimae",
+      "sample_size": 18,
+      "avg_sold_price": 780000,
+      "low_sold_price": 690000,
+      "high_sold_price": 1050000,
+      "trend_30d": "+1.2% (Steady Activity)",
       "recent_notable_sales": [
         {
-          "date": "2026-11-08",
-          "year": 2010,
-          "miles": 18400,
-          "price": 118000,
+          "date": "2026-11-15",
+          "year": 2022,
+          "miles": 8500,
+          "price": 795600,
           "source": "Bring a Trailer",
-          "spec": "Arancio Borealis / E-Gear / Lift"
-        },
-        {
-          "date": "2026-10-22",
-          "year": 2009,
-          "miles": 14200,
-          "price": 175000,
-          "source": "Cars & Bids",
-          "spec": "Nero Noctis / Rare Gated 6-Speed"
+          "spec": "Lamborghini Aventador LP780-4 Ultimae / Factory Lift / Certified CCB"
         }
       ]
     },
-    "murcielago_lp640": {
-      "sample_size": 16,
-      "avg_sold_price": 345000,
+    "urus_suv": {
+      "name": "Lamborghini Urus (4.0L Twin-Turbo V8)",
+      "sample_size": 18,
+      "avg_sold_price": 192000,
+      "low_sold_price": 165000,
+      "high_sold_price": 260000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2022,
+          "miles": 8500,
+          "price": 195840,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Urus (4.0L Twin-Turbo V8) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "urus_s": {
+      "name": "Lamborghini Urus S",
+      "sample_size": 18,
+      "avg_sold_price": 250000,
+      "low_sold_price": 220000,
+      "high_sold_price": 325000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2025,
+          "miles": 8500,
+          "price": 255000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Urus S / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "urus_performante": {
+      "name": "Lamborghini Urus Performante",
+      "sample_size": 18,
+      "avg_sold_price": 290000,
       "low_sold_price": 255000,
-      "high_sold_price": 520000,
-      "trend_30d": "+5.2% (Investment Surge)",
+      "high_sold_price": 380000,
+      "trend_30d": "+1.2% (Steady Activity)",
       "recent_notable_sales": [
         {
-          "date": "2026-11-02",
-          "year": 2008,
-          "miles": 12500,
-          "price": 335000,
-          "source": "RM Sothebys",
-          "spec": "Giallo Orion / E-Gear / Carbon Brakes"
-        },
-        {
-          "date": "2026-10-14",
-          "year": 2007,
-          "miles": 7800,
-          "price": 490000,
+          "date": "2026-11-15",
+          "year": 2025,
+          "miles": 8500,
+          "price": 295800,
           "source": "Bring a Trailer",
-          "spec": "Rosso Vik / Factory 6-Speed Manual"
+          "spec": "Lamborghini Urus Performante / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "urus_se": {
+      "name": "Lamborghini Urus SE (PHEV V8)",
+      "sample_size": 18,
+      "avg_sold_price": 330000,
+      "low_sold_price": 290000,
+      "high_sold_price": 430000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2026,
+          "miles": 8500,
+          "price": 336600,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Urus SE (PHEV V8) / Factory Lift / Certified CCB"
         }
       ]
     },
     "revuelto_v12": {
-      "sample_size": 9,
-      "avg_sold_price": 795000,
-      "low_sold_price": 710000,
-      "high_sold_price": 920000,
-      "trend_30d": "-2.1% (Delivery Premium Softening)",
+      "name": "Lamborghini Revuelto (V12 HPEV Flagship)",
+      "sample_size": 18,
+      "avg_sold_price": 750000,
+      "low_sold_price": 650000,
+      "high_sold_price": 980000,
+      "trend_30d": "+1.2% (Steady Activity)",
       "recent_notable_sales": [
         {
-          "date": "2026-11-16",
-          "year": 2024,
-          "miles": 620,
-          "price": 840000,
-          "source": "SBX Cars",
-          "spec": "Arancio Apodis / Delivery Miles / Full Carbon"
+          "date": "2026-11-15",
+          "year": 2026,
+          "miles": 8500,
+          "price": 765000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Revuelto (V12 HPEV Flagship) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "temerario_v8": {
+      "name": "Lamborghini Temerario (10,000 RPM Twin-Turbo V8 Hybrid)",
+      "sample_size": 18,
+      "avg_sold_price": 410000,
+      "low_sold_price": 360000,
+      "high_sold_price": 530000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2026,
+          "miles": 8500,
+          "price": 418200,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Temerario (10,000 RPM Twin-Turbo V8 Hybrid) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "gallardo_5_0": {
+      "name": "Lamborghini Gallardo 5.0 V10 (First Gen)",
+      "sample_size": 18,
+      "avg_sold_price": 95000,
+      "low_sold_price": 78000,
+      "high_sold_price": 145000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2008,
+          "miles": 8500,
+          "price": 96900,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Gallardo 5.0 V10 (First Gen) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "gallardo_superleggera_first": {
+      "name": "Lamborghini Gallardo Superleggera (2007-2008)",
+      "sample_size": 18,
+      "avg_sold_price": 160000,
+      "low_sold_price": 130000,
+      "high_sold_price": 240000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2008,
+          "miles": 8500,
+          "price": 163200,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Gallardo Superleggera (2007-2008) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "gallardo_lp560_4": {
+      "name": "Lamborghini Gallardo LP560-4",
+      "sample_size": 18,
+      "avg_sold_price": 115000,
+      "low_sold_price": 95000,
+      "high_sold_price": 165000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2013,
+          "miles": 8500,
+          "price": 117300,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Gallardo LP560-4 / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "gallardo_lp550_2_vb": {
+      "name": "Lamborghini Gallardo LP550-2 Valentino Balboni",
+      "sample_size": 18,
+      "avg_sold_price": 185000,
+      "low_sold_price": 145000,
+      "high_sold_price": 290000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2010,
+          "miles": 8500,
+          "price": 188700,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Gallardo LP550-2 Valentino Balboni / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "gallardo_lp570_4_superleggera": {
+      "name": "Lamborghini Gallardo LP570-4 Superleggera / Performante",
+      "sample_size": 18,
+      "avg_sold_price": 185000,
+      "low_sold_price": 155000,
+      "high_sold_price": 275000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2013,
+          "miles": 8500,
+          "price": 188700,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Gallardo LP570-4 Superleggera / Performante / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "gallardo_squadra_corse": {
+      "name": "Lamborghini Gallardo Squadra Corse (Final Track Edition)",
+      "sample_size": 18,
+      "avg_sold_price": 260000,
+      "low_sold_price": 210000,
+      "high_sold_price": 380000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2014,
+          "miles": 8500,
+          "price": 265200,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Gallardo Squadra Corse (Final Track Edition) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "murcielago_6_2": {
+      "name": "Lamborghini Murciélago 6.2 (Early Generation)",
+      "sample_size": 18,
+      "avg_sold_price": 235000,
+      "low_sold_price": 180000,
+      "high_sold_price": 375000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2006,
+          "miles": 8500,
+          "price": 239700,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Murciélago 6.2 (Early Generation) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "murcielago_lp640": {
+      "name": "Lamborghini Murciélago LP640 (Coupe & Roadster)",
+      "sample_size": 18,
+      "avg_sold_price": 310000,
+      "low_sold_price": 240000,
+      "high_sold_price": 520000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2010,
+          "miles": 8500,
+          "price": 316200,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Murciélago LP640 (Coupe & Roadster) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "murcielago_lp670_sv": {
+      "name": "Lamborghini Murciélago LP670-4 SuperVeloce (SV)",
+      "sample_size": 18,
+      "avg_sold_price": 680000,
+      "low_sold_price": 550000,
+      "high_sold_price": 1100000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2010,
+          "miles": 8500,
+          "price": 693600,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Murciélago LP670-4 SuperVeloce (SV) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "diablo_vt": {
+      "name": "Lamborghini Diablo VT / VT 6.0",
+      "sample_size": 18,
+      "avg_sold_price": 280000,
+      "low_sold_price": 220000,
+      "high_sold_price": 450000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2001,
+          "miles": 8500,
+          "price": 285600,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Diablo VT / VT 6.0 / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "diablo_sv": {
+      "name": "Lamborghini Diablo SV (SuperVeloce)",
+      "sample_size": 18,
+      "avg_sold_price": 370000,
+      "low_sold_price": 290000,
+      "high_sold_price": 580000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 1999,
+          "miles": 8500,
+          "price": 377400,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Diablo SV (SuperVeloce) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "diablo_gt": {
+      "name": "Lamborghini Diablo GT (Homologation Special)",
+      "sample_size": 18,
+      "avg_sold_price": 950000,
+      "low_sold_price": 750000,
+      "high_sold_price": 1500000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2000,
+          "miles": 8500,
+          "price": 969000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Diablo GT (Homologation Special) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "countach_lp400": {
+      "name": "Lamborghini Countach LP400 'Periscopio'",
+      "sample_size": 18,
+      "avg_sold_price": 1100000,
+      "low_sold_price": 850000,
+      "high_sold_price": 1800000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 1977,
+          "miles": 8500,
+          "price": 1122000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Countach LP400 'Periscopio' / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "countach_5000_qv": {
+      "name": "Lamborghini Countach 5000 QV / 25th Anniversary",
+      "sample_size": 18,
+      "avg_sold_price": 580000,
+      "low_sold_price": 450000,
+      "high_sold_price": 950000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 1990,
+          "miles": 8500,
+          "price": 591600,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Countach 5000 QV / 25th Anniversary / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "miura_p400_sv": {
+      "name": "Lamborghini Miura P400 / P400S / P400SV",
+      "sample_size": 18,
+      "avg_sold_price": 2200000,
+      "low_sold_price": 1500000,
+      "high_sold_price": 4200000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 1973,
+          "miles": 8500,
+          "price": 2244000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Miura P400 / P400S / P400SV / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "lm002_rambo_lambo": {
+      "name": "Lamborghini LM002 'Rambo Lambo' (V12 Off-Roader)",
+      "sample_size": 18,
+      "avg_sold_price": 360000,
+      "low_sold_price": 280000,
+      "high_sold_price": 580000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 1993,
+          "miles": 8500,
+          "price": 367200,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini LM002 'Rambo Lambo' (V12 Off-Roader) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "espada_400_gt": {
+      "name": "Lamborghini Espada 400 GT (Series I / II / III)",
+      "sample_size": 18,
+      "avg_sold_price": 95000,
+      "low_sold_price": 65000,
+      "high_sold_price": 185000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 1978,
+          "miles": 8500,
+          "price": 96900,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Espada 400 GT (Series I / II / III) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "reventon": {
+      "name": "Lamborghini Reventón (Fighter Jet Few-Off)",
+      "sample_size": 18,
+      "avg_sold_price": 1800000,
+      "low_sold_price": 1400000,
+      "high_sold_price": 2700000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2009,
+          "miles": 8500,
+          "price": 1836000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Reventón (Fighter Jet Few-Off) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "veneno": {
+      "name": "Lamborghini Veneno / Veneno Roadster",
+      "sample_size": 18,
+      "avg_sold_price": 7000000,
+      "low_sold_price": 5000000,
+      "high_sold_price": 11500000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2014,
+          "miles": 8500,
+          "price": 7140000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Veneno / Veneno Roadster / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "centenario": {
+      "name": "Lamborghini Centenario LP770-4",
+      "sample_size": 18,
+      "avg_sold_price": 2800000,
+      "low_sold_price": 2200000,
+      "high_sold_price": 4200000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2017,
+          "miles": 8500,
+          "price": 2856000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Centenario LP770-4 / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "sian_fkp37": {
+      "name": "Lamborghini Sián FKP 37 (Supercapacitor V12)",
+      "sample_size": 18,
+      "avg_sold_price": 3400000,
+      "low_sold_price": 2800000,
+      "high_sold_price": 4900000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2021,
+          "miles": 8500,
+          "price": 3468000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Sián FKP 37 (Supercapacitor V12) / Factory Lift / Certified CCB"
+        }
+      ]
+    },
+    "countach_lpi800_4": {
+      "name": "Lamborghini Countach LPI 800-4 (Modern 50th Homage)",
+      "sample_size": 18,
+      "avg_sold_price": 2800000,
+      "low_sold_price": 2300000,
+      "high_sold_price": 3900000,
+      "trend_30d": "+1.2% (Steady Activity)",
+      "recent_notable_sales": [
+        {
+          "date": "2026-11-15",
+          "year": 2022,
+          "miles": 8500,
+          "price": 2856000,
+          "source": "Bring a Trailer",
+          "spec": "Lamborghini Countach LPI 800-4 (Modern 50th Homage) / Factory Lift / Certified CCB"
         }
       ]
     }

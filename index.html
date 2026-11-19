@@ -504,19 +504,23 @@
                  class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition">
         </div>
 
-        <!-- Payment Method Tabs -->
-        <div class="grid grid-cols-3 gap-2 border-b border-zinc-800 pb-3 mb-5">
+        <!-- Payment Method Tabs (4 Kanallı Ödeme) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 border-b border-zinc-800 pb-3 mb-5">
           <button id="tabCardBtn" type="button" onclick="switchPaymentTab('card')" 
-                  class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5">
-            <span>💳 Card / Apple Pay</span>
+                  class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>💳 Kart / Apple Pay</span>
           </button>
           <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" 
-                  class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
-            <span>⚡ Kripto (USDT / USDC)</span>
+                  class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>⚡ USDT / USDC</span>
           </button>
           <button id="tabIbanBtn" type="button" onclick="switchPaymentTab('iban')" 
-                  class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
-            <span>🏦 Havale / FAST (TL)</span>
+                  class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>🏦 Banka (USD/TL)</span>
+          </button>
+          <button id="tabPayoneerBtn" type="button" onclick="switchPaymentTab('payoneer')" 
+                  class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>🅿️ Payoneer (EUR/$)</span>
           </button>
         </div>
 
@@ -727,6 +731,57 @@
             <span>✓ Havale / Transfer Yaptım — Raporu İndir</span>
           </button>
         </div>
+        <!-- TAB 4: PAYONEER (EUR / USD) -->
+        <div id="tabPayoneerContent" class="space-y-4 hidden">
+          <div class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-left space-y-3">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div>
+                <span class="text-xs font-mono text-zinc-400 uppercase">Ödenecek Tutar</span>
+                <div class="text-xl font-black text-emerald-400 font-mono">$79.00 USD <span class="text-xs text-zinc-400 font-normal">veya</span> €75.00 EUR</div>
+              </div>
+              <span class="text-[10px] font-bold bg-amber-950 text-amber-400 border border-amber-800 px-2.5 py-1 rounded-full font-mono uppercase">Payoneer to Payoneer (%0 Komisyon)</span>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-mono text-zinc-400 uppercase block mb-1">Hesap Sahibi</span>
+              <div class="text-sm font-bold text-white bg-zinc-900/80 border border-zinc-800 px-3 py-2 rounded-lg font-mono">
+                Ibrahim Karakoc
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase font-bold text-zinc-300">Payoneer Kayıtlı E-Posta</span>
+                <button type="button" onclick="copyText('kiliclarinfirtinasi216@gmail.com', 'Payoneer E-Posta')" class="text-[10px] text-orange-400 hover:underline font-mono font-bold">Kopyala</button>
+              </div>
+              <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
+                <span>kiliclarinfirtinasi216@gmail.com</span>
+                <button type="button" onclick="copyText('kiliclarinfirtinasi216@gmail.com', 'Payoneer E-Posta')" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase font-bold text-zinc-300">Payoneer Müşteri Numarası (Customer ID)</span>
+                <button type="button" onclick="copyText('96037764', 'Payoneer Müşteri No')" class="text-[10px] text-orange-400 hover:underline font-mono font-bold">Kopyala</button>
+              </div>
+              <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
+                <span>96037764</span>
+                <button type="button" onclick="copyText('96037764', 'Payoneer Müşteri No')" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-zinc-400 font-mono bg-zinc-950/60 p-2.5 rounded border border-zinc-800 space-y-1">
+              <div>💡 <strong>Nasıl Gönderilir?</strong> Payoneer uygulamanızdan <strong>"Öde" ➔ "Alıcının Payoneer Hesabına"</strong> seçin.</div>
+              <div>E-posta adresini veya Müşteri No'yu girip <strong>$79 USD</strong> veya <strong>€75 EUR</strong> transferini tamamlayın.</div>
+            </div>
+          </div>
+
+          <button type="button" onclick="processPaymentAndDownload('payoneer')" 
+                  class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2 cursor-pointer">
+            <span>✓ Payoneer İle Gönderdim — Raporu İndir</span>
+          </button>
+        </div>
       </div>
 
       <!-- PROCESSING SPINNER OVERLAY -->
@@ -854,30 +909,30 @@
       const cardBtn = document.getElementById('tabCardBtn');
       const cryptoBtn = document.getElementById('tabCryptoBtn');
       const ibanBtn = document.getElementById('tabIbanBtn');
+      const payoneerBtn = document.getElementById('tabPayoneerBtn');
+
       const cardContent = document.getElementById('tabCardContent');
       const cryptoContent = document.getElementById('tabCryptoContent');
       const ibanContent = document.getElementById('tabIbanContent');
+      const payoneerContent = document.getElementById('tabPayoneerContent');
 
-      const activeClass = 'py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5';
-      const inactiveClass = 'py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5';
+      const activeClass = 'py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer';
+      const inactiveClass = 'py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer';
 
-      cardBtn.className = (tab === 'card') ? activeClass : inactiveClass;
-      cryptoBtn.className = (tab === 'crypto') ? activeClass : inactiveClass;
+      if (cardBtn) cardBtn.className = (tab === 'card') ? activeClass : inactiveClass;
+      if (cryptoBtn) cryptoBtn.className = (tab === 'crypto') ? activeClass : inactiveClass;
       if (ibanBtn) ibanBtn.className = (tab === 'iban') ? activeClass : inactiveClass;
+      if (payoneerBtn) payoneerBtn.className = (tab === 'payoneer') ? activeClass : inactiveClass;
 
-      if (tab === 'card') {
-        cardContent.classList.remove('hidden');
-        cryptoContent.classList.add('hidden');
-        if (ibanContent) ibanContent.classList.add('hidden');
-      } else if (tab === 'crypto') {
-        cryptoContent.classList.remove('hidden');
-        cardContent.classList.add('hidden');
-        if (ibanContent) ibanContent.classList.add('hidden');
-      } else if (tab === 'iban') {
-        if (ibanContent) ibanContent.classList.remove('hidden');
-        cardContent.classList.add('hidden');
-        cryptoContent.classList.add('hidden');
-      }
+      if (cardContent) cardContent.classList.add('hidden');
+      if (cryptoContent) cryptoContent.classList.add('hidden');
+      if (ibanContent) ibanContent.classList.add('hidden');
+      if (payoneerContent) payoneerContent.classList.add('hidden');
+
+      if (tab === 'card' && cardContent) cardContent.classList.remove('hidden');
+      if (tab === 'crypto' && cryptoContent) cryptoContent.classList.remove('hidden');
+      if (tab === 'iban' && ibanContent) ibanContent.classList.remove('hidden');
+      if (tab === 'payoneer' && payoneerContent) payoneerContent.classList.remove('hidden');
     }
 
     function copyIbanNumber() {
@@ -1134,6 +1189,14 @@
         setTimeout(() => {
           procMsg.innerText = 'VIP Lamborghini Dosyası Hazırlanıyor...';
         }, 1800);
+      } else if (method === 'payoneer') {
+        procMsg.innerText = 'Payoneer Ağına Bağlanılıyor...';
+        setTimeout(() => {
+          procMsg.innerText = 'Payoneer Transfer Kaydı Doğrulanıyor ($79.00 / €75.00)...';
+        }, 1000);
+        setTimeout(() => {
+          procMsg.innerText = 'Transfer Onaylandı! VIP Lamborghini Dosyası Hazırlanıyor...';
+        }, 1800);
       } else {
         procMsg.innerText = 'VakıfBank FAST Kaydı Eşleştiriliyor...';
         setTimeout(() => {
@@ -1155,7 +1218,7 @@
         const succEmailEl = document.getElementById('succEmail');
 
         if (succTxnEl) succTxnEl.innerText = txnId;
-        if (succCardEl) succCardEl.innerText = (method === 'card') ? (brand + ' •••• ' + last4) : (method === 'crypto' ? 'USDT/USDC Blockchain' : 'VakıfBank FAST');
+        if (succCardEl) succCardEl.innerText = (method === 'card') ? (brand + ' •••• ' + last4) : (method === 'crypto' ? 'USDT/USDC Blockchain' : (method === 'payoneer' ? 'Payoneer (96037764)' : 'VakıfBank FAST'));
         if (succEmailEl) succEmailEl.innerText = email;
 
         // Trigger real PDF download

@@ -391,14 +391,18 @@
         </div>
 
         <!-- Payment Method Tabs -->
-        <div class="flex space-x-2 border-b border-zinc-800 pb-3 mb-5">
+        <div class="grid grid-cols-3 gap-2 border-b border-zinc-800 pb-3 mb-5">
           <button id="tabCardBtn" type="button" onclick="switchPaymentTab('card')" 
-                  class="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2">
-            <span>💳 Credit Card / Apple Pay</span>
+                  class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5">
+            <span>💳 Card / Apple Pay</span>
           </button>
           <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" 
-                  class="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2">
-            <span>⚡ Crypto (USDT / USDC)</span>
+                  class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
+            <span>⚡ USDT Kripto</span>
+          </button>
+          <button id="tabIbanBtn" type="button" onclick="switchPaymentTab('iban')" 
+                  class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
+            <span>🏦 Havale / FAST (TL)</span>
           </button>
         </div>
 
@@ -459,6 +463,55 @@
             <span>✓ I Have Sent 79 USDT — Unlock & Download PDF</span>
           </button>
         </div>
+        <!-- TAB 3: HAVALE / FAST (VAKIFBANK TL) -->
+        <div id="tabIbanContent" class="space-y-4 hidden">
+          <div class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-left space-y-3">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div>
+                <span class="text-xs font-mono text-zinc-400 uppercase">Ödenecek Tutar</span>
+                <div class="text-xl font-black text-emerald-400 font-mono">2.750 TL <span class="text-xs text-zinc-500 font-normal">($79 USD Karşılığı)</span></div>
+              </div>
+              <span class="text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-1 rounded-full font-mono uppercase">FAST İle 7/24 Anında</span>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-mono text-zinc-400 uppercase block mb-1">Banka Adı</span>
+              <div class="text-sm font-bold text-white bg-zinc-900/80 border border-zinc-800 px-3 py-2 rounded-lg font-mono">
+                VakıfBank (Türkiye Vakıflar Bankası T.A.O.)
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase">Alıcı (Hesap Sahibi)</span>
+                <button type="button" onclick="copyIbanName()" class="text-[10px] text-orange-400 hover:underline font-mono">Adı Kopyala</button>
+              </div>
+              <div class="text-sm font-bold text-white bg-zinc-900/80 border border-zinc-800 px-3 py-2 rounded-lg font-mono" id="ibanName">
+                İBRAHİM KARAKOÇ
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase">IBAN Numarası (TL)</span>
+                <button type="button" onclick="copyIbanNumber()" class="text-[10px] text-orange-400 hover:underline font-mono font-bold">IBAN'ı Kopyala</button>
+              </div>
+              <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
+                <span id="ibanVal">TR44 0001 5001 5800 7298 8926 75</span>
+                <button type="button" onclick="copyIbanNumber()" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-zinc-400 font-mono bg-zinc-950/60 p-2 rounded border border-zinc-800">
+              💡 <strong>Açıklama Kısmına:</strong> <code class="text-orange-400">Huracan Raporu</code> yazmanız yeterlidir.
+            </div>
+          </div>
+
+          <button type="button" onclick="processPaymentAndDownload('iban')" 
+                  class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2">
+            <span>✓ 2.750 TL Gönderdim — Raporu İndir</span>
+          </button>
+        </div>
       </div>
 
       <!-- PROCESSING SPINNER OVERLAY -->
@@ -483,6 +536,55 @@
           </button>
           <button type="button" onclick="closeCheckoutModal()" class="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs uppercase tracking-wider border border-zinc-700">
             Close Window
+          </button>
+        </div>
+        <!-- TAB 3: HAVALE / FAST (VAKIFBANK TL) -->
+        <div id="tabIbanContent" class="space-y-4 hidden">
+          <div class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-left space-y-3">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div>
+                <span class="text-xs font-mono text-zinc-400 uppercase">Ödenecek Tutar</span>
+                <div class="text-xl font-black text-emerald-400 font-mono">2.750 TL <span class="text-xs text-zinc-500 font-normal">($79 USD Karşılığı)</span></div>
+              </div>
+              <span class="text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-1 rounded-full font-mono uppercase">FAST İle 7/24 Anında</span>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-mono text-zinc-400 uppercase block mb-1">Banka Adı</span>
+              <div class="text-sm font-bold text-white bg-zinc-900/80 border border-zinc-800 px-3 py-2 rounded-lg font-mono">
+                VakıfBank (Türkiye Vakıflar Bankası T.A.O.)
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase">Alıcı (Hesap Sahibi)</span>
+                <button type="button" onclick="copyIbanName()" class="text-[10px] text-orange-400 hover:underline font-mono">Adı Kopyala</button>
+              </div>
+              <div class="text-sm font-bold text-white bg-zinc-900/80 border border-zinc-800 px-3 py-2 rounded-lg font-mono" id="ibanName">
+                İBRAHİM KARAKOÇ
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase">IBAN Numarası (TL)</span>
+                <button type="button" onclick="copyIbanNumber()" class="text-[10px] text-orange-400 hover:underline font-mono font-bold">IBAN'ı Kopyala</button>
+              </div>
+              <div class="bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
+                <span id="ibanVal">TR44 0001 5001 5800 7298 8926 75</span>
+                <button type="button" onclick="copyIbanNumber()" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">KOPYALA</button>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-zinc-400 font-mono bg-zinc-950/60 p-2 rounded border border-zinc-800">
+              💡 <strong>Açıklama Kısmına:</strong> <code class="text-orange-400">Huracan Raporu</code> yazmanız yeterlidir.
+            </div>
+          </div>
+
+          <button type="button" onclick="processPaymentAndDownload('iban')" 
+                  class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2">
+            <span>✓ 2.750 TL Gönderdim — Raporu İndir</span>
           </button>
         </div>
       </div>
@@ -560,20 +662,45 @@
     function switchPaymentTab(tab) {
       const cardBtn = document.getElementById('tabCardBtn');
       const cryptoBtn = document.getElementById('tabCryptoBtn');
+      const ibanBtn = document.getElementById('tabIbanBtn');
       const cardContent = document.getElementById('tabCardContent');
       const cryptoContent = document.getElementById('tabCryptoContent');
+      const ibanContent = document.getElementById('tabIbanContent');
+
+      const activeClass = 'py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5';
+      const inactiveClass = 'py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5';
+
+      cardBtn.className = (tab === 'card') ? activeClass : inactiveClass;
+      cryptoBtn.className = (tab === 'crypto') ? activeClass : inactiveClass;
+      if (ibanBtn) ibanBtn.className = (tab === 'iban') ? activeClass : inactiveClass;
 
       if (tab === 'card') {
-        cardBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2';
-        cryptoBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2';
         cardContent.classList.remove('hidden');
         cryptoContent.classList.add('hidden');
-      } else {
-        cryptoBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2';
-        cardBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2';
+        if (ibanContent) ibanContent.classList.add('hidden');
+      } else if (tab === 'crypto') {
         cryptoContent.classList.remove('hidden');
         cardContent.classList.add('hidden');
+        if (ibanContent) ibanContent.classList.add('hidden');
+      } else if (tab === 'iban') {
+        if (ibanContent) ibanContent.classList.remove('hidden');
+        cardContent.classList.add('hidden');
+        cryptoContent.classList.add('hidden');
       }
+    }
+
+    function copyIbanNumber() {
+      const iban = "TR440001500158007298892675";
+      navigator.clipboard.writeText(iban).then(() => {
+        alert("VakıfBank IBAN Kopyalandı:\n" + iban);
+      });
+    }
+
+    function copyIbanName() {
+      const name = "İBRAHİM KARAKOÇ";
+      navigator.clipboard.writeText(name).then(() => {
+        alert("Hesap Sahibi Kopyalandı: " + name);
+      });
     }
 
     function copyWalletAddr() {

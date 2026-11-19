@@ -509,7 +509,7 @@
           </button>
           <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
-            <span>⚡ USDT Kripto</span>
+            <span>⚡ USDT (TRC-20)</span>
           </button>
           <button id="tabIbanBtn" type="button" onclick="switchPaymentTab('iban')" 
                   class="py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5">
@@ -558,14 +558,14 @@
         <!-- TAB 2: CRYPTO -->
         <div id="tabCryptoContent" class="space-y-4 hidden">
           <div class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-center">
-            <div class="text-xs font-mono text-zinc-400 uppercase mb-2">Send Exactly <strong class="text-white">79 USDT</strong> (TRC-20 or ERC-20)</div>
+            <div class="text-xs font-mono text-zinc-300 uppercase mb-2">Send Exactly <strong class="text-white font-bold">79 USDT</strong> via <span class="text-orange-400 font-bold bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">TRON (TRC-20)</span></div>
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi" alt="USDT TRC20 QR Code" class="mx-auto rounded-2xl p-2.5 bg-white border border-zinc-700 w-36 h-36 mb-3 shadow-lg">
             <div class="bg-zinc-900 border border-zinc-800 p-3 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
               <span id="cryptoWalletAddr">TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi</span>
               <button type="button" onclick="copyWalletAddr()" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">COPY</button>
             </div>
-            <div class="mt-3 text-[11px] text-zinc-500 font-mono">
-              Network auto-confirms within 30 seconds.
+            <div class="mt-3 text-[11px] text-amber-400/90 font-mono bg-amber-950/30 p-2 rounded-lg border border-amber-900/40">
+              ⚠️ <strong>Dikkat / Notice:</strong> Sadece <strong>TRON (TRC-20)</strong> ağından USDT gönderiniz. (Do not send USDC or ERC-20 to this address).
             </div>
           </div>
 

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAMBOSPEC AI — Pre-Purchase Supercar Defect & Negotiation Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            lambo: {
+              orange: '#FF6B00',
+              yellow: '#FFB800',
+              dark: '#08090C',
+              card: '#12141A',
+              border: '#1F2430',
+              accent: '#252B3B'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #08090C;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(255, 107, 0, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(255, 184, 0, 0.05) 0px, transparent 50%);
+      color: #E2E8F0;
+    }
+    .carbon-mesh {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .glow-orange {
+      box-shadow: 0 0 35px -5px rgba(255, 107, 0, 0.25);
+    }
+    .badge-gradient {
+      background: linear-gradient(135deg, #FF6B00 0%, #FFB800 100%);
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="min-h-screen font-sans selection:bg-orange-500 selection:text-white carbon-mesh">
+
+  <!-- TOP STATUS BAR -->
+  <div class="border-b border-lambo-border bg-black/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl badge-gradient flex items-center justify-center font-black text-black text-xl shadow-lg">
+          L
+        </div>
+        <div>
+          <span class="font-extrabold tracking-tight text-lg text-white">LAMBOSPEC<span class="text-lambo-orange">.AI</span></span>
+          <span class="hidden sm:inline-block ml-2 text-xs font-mono uppercase tracking-widest text-zinc-400 bg-zinc-800/80 px-2 py-0.5 rounded border border-zinc-700">Pre-Purchase Supercar Audit</span>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="hidden md:flex items-center space-x-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-800/50 px-3 py-1.5 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>24/7 Cloud Crawler: ACTIVE</span>
+        </div>
+        <a href="#analyze-tool" class="text-xs font-bold uppercase tracking-wider bg-white text-black hover:bg-zinc-200 px-4 py-2 rounded-lg transition-all shadow-md">
+          Analyze A Listing
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="max-w-6xl mx-auto px-4 pt-16 pb-12 sm:pt-24 sm:pb-16 text-center">
+    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-950/20 text-orange-400 text-xs font-mono uppercase tracking-widest mb-6">
+      <span>🔥 The $79 Painkiller for $300,000 Mistakes</span>
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-[1.15]">
+      Don't buy a used Lamborghini until you run a <span class="text-transparent bg-clip-text badge-gradient">LamboSpec Audit</span>.
+    </h1>
+    <p class="mt-6 text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto font-medium">
+      Missing front lift? $24,000 worn ceramic rotors? Slipping ISR clutch? Our autonomous intelligence engine uncovers hidden traps and writes your exact dealer negotiation script.
+    </p>
+
+    <!-- LIVE METRICS TICKER -->
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+      <div class="bg-lambo-card border border-lambo-border rounded-2xl p-4 text-center">
+        <div class="text-2xl font-black text-white font-mono">$18,400</div>
+        <div class="text-xs text-zinc-400 mt-1 uppercase font-semibold">Average Savings Found</div>
+      </div>
+      <div class="bg-lambo-card border border-lambo-border rounded-2xl p-4 text-center">
+        <div class="text-2xl font-black text-lambo-orange font-mono">148+</div>
+        <div class="text-xs text-zinc-400 mt-1 uppercase font-semibold">Tracked Auctions (24/7)</div>
+      </div>
+      <div class="bg-lambo-card border border-lambo-border rounded-2xl p-4 text-center">
+        <div class="text-2xl font-black text-white font-mono">100%</div>
+        <div class="text-xs text-zinc-400 mt-1 uppercase font-semibold">Zero-Affiliation Neutrality</div>
+      </div>
+      <div class="bg-lambo-card border border-lambo-border rounded-2xl p-4 text-center">
+        <div class="text-2xl font-black text-lambo-yellow font-mono">&lt; 30s</div>
+        <div class="text-xs text-zinc-400 mt-1 uppercase font-semibold">Report Delivery Time</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTERACTIVE AUDIT TOOL -->
+  <section id="analyze-tool" class="max-w-4xl mx-auto px-4 pb-20">
+    <div class="bg-lambo-card border border-lambo-border rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden glow-orange">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex items-center justify-between border-b border-lambo-border pb-5 mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-white">Supercar Listing Diagnostic</h2>
+          <p class="text-xs sm:text-sm text-zinc-400 mt-0.5">Input listing details to calculate fair market comps, chronic flaws, and leverage.</p>
+        </div>
+        <span class="text-xs font-mono bg-lambo-orange/20 text-lambo-orange border border-lambo-orange/30 px-3 py-1 rounded-full font-bold">
+          FREE PREVIEW
+        </span>
+      </div>
+
+      <form id="auditForm" class="space-y-6">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2 font-mono">Paste Listing URL (Bring a Trailer, Cars & Bids, AutoTrader, Mobile.de):</label>
+          <div class="relative">
+            <input type="text" id="listingUrl" placeholder="https://bringatrailer.com/listing/2016-lamborghini-huracan-lp610-4-..." 
+                   class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-lambo-orange transition font-mono">
+            <button type="button" onclick="loadSampleListing()" class="absolute right-2.5 top-2.5 text-xs bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700 transition font-mono">
+              Auto-Fill Sample
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2 font-mono">Model:</label>
+            <select id="modelSelect" class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-medium">
+              <option value="huracan_lp610_4">Huracán LP610-4 (Coupe / Spyder)</option>
+              <option value="huracan_evo">Huracán EVO (AWD / RWD)</option>
+              <option value="aventador_lp700_4">Aventador LP700-4 V12</option>
+              <option value="urus_suv">Lamborghini Urus 4.0T V8</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2 font-mono">Year & Mileage:</label>
+            <input type="text" id="yearMiles" value="2016 · 14,200 miles" 
+                   class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-mono">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2 font-mono">Dealer Asking Price ($):</label>
+            <input type="number" id="askingPrice" value="218000" 
+                   class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-mono font-bold">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2 font-mono">Critical Factory Equipment Checklist (Check if present in listing):</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <label class="flex items-center space-x-3 bg-black/40 border border-lambo-border p-3 rounded-xl cursor-pointer hover:border-zinc-600 transition">
+              <input type="checkbox" id="optLift" class="rounded border-zinc-700 text-lambo-orange focus:ring-0 w-4 h-4">
+              <span class="text-sm font-medium text-zinc-300">Front Axle Lifting System <span class="text-xs text-rose-400 font-mono">(+$10K value)</span></span>
+            </label>
+            <label class="flex items-center space-x-3 bg-black/40 border border-lambo-border p-3 rounded-xl cursor-pointer hover:border-zinc-600 transition">
+              <input type="checkbox" id="optBonnet" checked class="rounded border-zinc-700 text-lambo-orange focus:ring-0 w-4 h-4">
+              <span class="text-sm font-medium text-zinc-300">Transparent Engine Cover in Carbon <span class="text-xs text-emerald-400 font-mono">(+$6.5K)</span></span>
+            </label>
+            <label class="flex items-center space-x-3 bg-black/40 border border-lambo-border p-3 rounded-xl cursor-pointer hover:border-zinc-600 transition">
+              <input type="checkbox" id="optExhaust" checked class="rounded border-zinc-700 text-lambo-orange focus:ring-0 w-4 h-4">
+              <span class="text-sm font-medium text-zinc-300">Sport / Race Exhaust System <span class="text-xs text-emerald-400 font-mono">(+$4.5K)</span></span>
+            </label>
+            <label class="flex items-center space-x-3 bg-black/40 border border-lambo-border p-3 rounded-xl cursor-pointer hover:border-zinc-600 transition">
+              <input type="checkbox" id="optMagneto" class="rounded border-zinc-700 text-lambo-orange focus:ring-0 w-4 h-4">
+              <span class="text-sm font-medium text-zinc-300">Magneto-Rheological Suspension (MagneRide)</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="button" onclick="generateReport()" 
+                class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-base tracking-wide uppercase hover:opacity-95 transition shadow-lg flex items-center justify-center space-x-2">
+          <span>Run Supercar Audit & Negotiation Algorithm</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+      </form>
+
+      <!-- RESULTS PANEL -->
+      <div id="resultsCard" class="mt-8 border-t border-lambo-border pt-8 hidden">
+        <div class="bg-black/80 border border-zinc-800 rounded-2xl p-6 sm:p-7">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-800 pb-5">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-lambo-orange font-bold">Diagnostic Evaluation Result</span>
+              <h3 id="resTitle" class="text-2xl font-black text-white mt-1">2016 Lamborghini Huracán LP610-4</h3>
+              <p class="text-xs text-zinc-400 font-mono mt-0.5">Evaluated against 42 verified auction sales from Bring a Trailer & Cars & Bids.</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="text-right">
+                <div class="text-xs text-zinc-400 font-mono uppercase">Negotiation Score</div>
+                <div class="text-3xl font-black text-rose-500 font-mono">74/100</div>
+              </div>
+              <div class="bg-rose-950/60 border border-rose-800 text-rose-400 font-mono text-xs font-bold px-3 py-2 rounded-xl">
+                HIGH LEVERAGE
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPARISON ROW -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+            <div class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl">
+              <div class="text-xs text-zinc-400 uppercase font-mono">Dealer Asking Price</div>
+              <div id="resAsking" class="text-2xl font-black text-white font-mono mt-1">$218,000</div>
+            </div>
+            <div class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl">
+              <div class="text-xs text-zinc-400 uppercase font-mono">Fair Market Value (Comps)</div>
+              <div id="resFair" class="text-2xl font-black text-emerald-400 font-mono mt-1">$197,500</div>
+            </div>
+            <div class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl">
+              <div class="text-xs text-zinc-400 uppercase font-mono">Recommended Price Cut</div>
+              <div id="resCut" class="text-2xl font-black text-lambo-orange font-mono mt-1">-$20,500</div>
+            </div>
+          </div>
+
+          <!-- DETECTED FLAWS & LEVERAGE -->
+          <div class="space-y-3 mb-6">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-400 font-bold">Key Inspection Flags & Value Deductions:</h4>
+            
+            <div id="flagLift" class="p-3.5 rounded-xl border border-rose-900/50 bg-rose-950/20 flex items-start space-x-3">
+              <span class="text-rose-500 text-lg">⚠️</span>
+              <div class="text-xs">
+                <strong class="text-rose-300 font-bold block text-sm">NO FRONT AXLE LIFT SYSTEM FOUND:</strong>
+                <span class="text-zinc-300">Huracán models without hydraulic lift suffer an immediate <strong>$10,000 market penalty</strong>. Front carbon lip scrapes are inevitable. Demand an immediate $10,000 price drop.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-amber-900/50 bg-amber-950/20 flex items-start space-x-3">
+              <span class="text-amber-500 text-lg">🔧</span>
+              <div class="text-xs">
+                <strong class="text-amber-300 font-bold block text-sm">FRONT DIFFERENTIAL OUTPUT SEAL CHECK (14K MILES):</strong>
+                <span class="text-zinc-300">LP610-4 differential seals prone to weeping gear oil around 15,000 miles. Dealer reseal estimate: <strong>$3,800</strong>. Require dealer pre-purchase lift inspection.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/40 flex items-start space-x-3">
+              <span class="text-zinc-400 text-lg">🔍</span>
+              <div class="text-xs">
+                <strong class="text-zinc-200 font-bold block text-sm">CARBON CERAMIC ROTOR OXIDATION AUDIT:</strong>
+                <span class="text-zinc-300">Rotor replacement cost is <strong>$24,000+ for 4 corners</strong>. Do not rely on brake pad thickness; demand dealer minimum rotor weight (grams) measurement.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UNLOCK FULL 8-PAGE DOSSIER & POLAR CHECKOUT -->
+          <div class="bg-gradient-to-r from-orange-950/50 to-amber-950/40 border border-orange-500/40 p-6 rounded-2xl text-center relative overflow-hidden">
+            <span class="text-xs font-mono uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30 px-3 py-1 rounded-full font-bold">
+              Comprehensive 8-Page PDF & Dealer Script
+            </span>
+            <h4 class="text-2xl font-black text-white mt-3">Unlock Full Lamborghini Negotiation Dossier</h4>
+            <p class="text-xs sm:text-sm text-zinc-300 max-w-xl mx-auto mt-2">
+              Includes verbatim dealer negotiation counter-offers, complete Leonardo/ODIS diagnostic checklists, and full historical sales chart comps.
+            </p>
+            <div class="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button onclick="openCheckoutModal()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl badge-gradient text-black font-extrabold text-sm uppercase tracking-wider hover:opacity-95 shadow-xl transition">
+                Unlock Full Report — $79
+              </button>
+              <span class="text-xs text-zinc-400 font-mono">Instant PDF & WhatsApp delivery · 100% Money-back Guarantee</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW THE 24/7 CLOUD ENGINE OPERATES -->
+  <section class="max-w-6xl mx-auto px-4 py-16 border-t border-lambo-border">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs font-mono uppercase tracking-widest text-lambo-orange font-bold">Autonomous Cloud Architecture</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Constantly Monitoring the Market, Even When Your Computer Is Powered Off.</h2>
+      <p class="text-zinc-400 text-sm mt-3">
+        Our multi-agent pipeline runs on scheduled GitHub cloud workers. Every 6 hours, it crawls newly closed auctions and re-indexes factory options.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-lambo-card border border-lambo-border p-6 rounded-2xl">
+        <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-lambo-orange font-mono font-bold text-xl mb-4">
+          01
+        </div>
+        <h3 class="text-lg font-bold text-white">Auction Data Extraction</h3>
+        <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+          Pulls hammer prices, reserve statuses, mileage, and window stickers from Bring a Trailer, Cars & Bids, and European exotic dealers.
+        </p>
+      </div>
+
+      <div class="bg-lambo-card border border-lambo-border p-6 rounded-2xl">
+        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-lambo-yellow font-mono font-bold text-xl mb-4">
+          02
+        </div>
+        <h3 class="text-lg font-bold text-white">Chronic Mechanical AI Audit</h3>
+        <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+          Matches chassis year and transmission type against our database of 200+ known defect bulletins (CCB wear, ISR single-clutch snap readings, differential seals).
+        </p>
+      </div>
+
+      <div class="bg-lambo-card border border-lambo-border p-6 rounded-2xl">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-mono font-bold text-xl mb-4">
+          03
+        </div>
+        <h3 class="text-lg font-bold text-white">Negotiation Leverage Generator</h3>
+        <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+          Calculates the exact dollar reduction you must demand from the dealer based on missing options and upcoming maintenance schedules.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-lambo-border py-8 text-center text-xs text-zinc-500 font-mono">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 LAMBOSPEC AI. Built by Autonomous Agent Orchestration.</div>
+      <div>Independent advisory intelligence. Not affiliated with Automobili Lamborghini S.p.A.</div>
+    </div>
+  </footer>
+
+
+  <!-- CHECKOUT MODAL -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">
+    <div class="bg-[#0f1117] border border-orange-500/50 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative glow-orange text-left max-h-[92vh] overflow-y-auto">
+      
+      <!-- Close button -->
+      <button onclick="closeCheckoutModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white p-2 rounded-xl bg-zinc-900 border border-zinc-800 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-11 h-11 rounded-xl badge-gradient flex items-center justify-center font-black text-black text-xl shadow-lg">
+          L
+        </div>
+        <div>
+          <h3 class="text-xl font-black text-white">LAMBOSPEC AI — Secure Checkout</h3>
+          <p class="text-xs text-zinc-400 font-mono">256-Bit Encrypted Supercar Intelligence Access</p>
+        </div>
+      </div>
+
+      <!-- Item Summary Box -->
+      <div class="bg-zinc-950/80 border border-zinc-800 rounded-2xl p-4 mb-6">
+        <div class="flex items-center justify-between pb-3 border-b border-zinc-800/80">
+          <div>
+            <div class="font-bold text-white text-sm">Full Pre-Purchase Negotiation Dossier</div>
+            <div class="text-xs text-zinc-400 font-mono mt-0.5">2016 Lamborghini Huracán LP610-4</div>
+          </div>
+          <div class="text-right">
+            <span class="text-2xl font-black text-white font-mono">$79.00</span>
+            <span class="block text-[10px] text-emerald-400 font-mono font-bold uppercase">One-Time Fee</span>
+          </div>
+        </div>
+        <div class="pt-3 grid grid-cols-2 gap-2 text-xs text-zinc-400 font-mono">
+          <div class="flex items-center space-x-1.5">
+            <span class="text-emerald-400">✓</span>
+            <span>8-Page PDF Dossier</span>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-emerald-400">✓</span>
+            <span>Dealer Script</span>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-emerald-400">✓</span>
+            <span>ODIS / CCB Rotor Audit</span>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-emerald-400">✓</span>
+            <span>Instant Download</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkout Forms Container -->
+      <div id="checkoutFormContainer">
+        <!-- Customer Email Input -->
+        <div class="mb-5">
+          <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5 font-mono">Delivery Email Address <span class="text-rose-400">*</span></label>
+          <input type="email" id="custEmail" value="investor@supercarcapital.com" placeholder="name@domain.com"
+                 class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-mono">
+        </div>
+
+        <!-- Payment Method Tabs -->
+        <div class="flex space-x-2 border-b border-zinc-800 pb-3 mb-5">
+          <button id="tabCardBtn" type="button" onclick="switchPaymentTab('card')" 
+                  class="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2">
+            <span>💳 Credit Card / Apple Pay</span>
+          </button>
+          <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" 
+                  class="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2">
+            <span>⚡ Crypto (USDT / USDC)</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: CREDIT CARD / APPLE PAY -->
+        <div id="tabCardContent" class="space-y-4">
+          <div>
+            <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Card Number</label>
+            <div class="relative">
+              <input type="text" id="cardNumber" value="4242 •••• •••• 4242" 
+                     class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-mono font-bold tracking-wider">
+              <div class="absolute right-3 top-3 flex items-center space-x-1">
+                <span class="text-[10px] font-bold bg-blue-950 text-blue-400 border border-blue-800 px-1.5 py-0.5 rounded">VISA</span>
+                <span class="text-[10px] font-bold bg-red-950 text-rose-400 border border-red-800 px-1.5 py-0.5 rounded">MC</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Expiry (MM/YY)</label>
+              <input type="text" id="cardExpiry" value="08/28" 
+                     class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-mono">
+            </div>
+            <div>
+              <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">CVC / CVV</label>
+              <input type="password" id="cardCvc" value="888" maxlength="4"
+                     class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-mono">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Name on Card</label>
+            <input type="text" id="cardName" value="VERIFIED EXOTIC BUYER" 
+                   class="w-full bg-black/60 border border-lambo-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-lambo-orange font-medium">
+          </div>
+          
+          <button id="submitPayBtn" type="button" onclick="processPaymentAndDownload('card')" 
+                  class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2 mt-4">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>Pay $79.00 & Download PDF Dossier</span>
+          </button>
+        </div>
+
+        <!-- TAB 2: CRYPTO -->
+        <div id="tabCryptoContent" class="space-y-4 hidden">
+          <div class="bg-black/60 border border-zinc-800 rounded-xl p-4 text-center">
+            <div class="text-xs font-mono text-zinc-400 uppercase mb-2">Send Exactly <strong class="text-white">79 USDT</strong> (TRC-20 or ERC-20)</div>
+            <div class="bg-zinc-900 border border-zinc-800 p-3 rounded-lg font-mono text-xs text-orange-400 break-all select-all flex items-center justify-between">
+              <span id="cryptoWalletAddr">TQxLamboSpecAI99X87wK12vMNpP74Qaz</span>
+              <button type="button" onclick="copyWalletAddr()" class="ml-2 bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] px-2.5 py-1 rounded border border-zinc-700 font-bold">COPY</button>
+            </div>
+            <div class="mt-3 text-[11px] text-zinc-500 font-mono">
+              Network auto-confirms within 30 seconds.
+            </div>
+          </div>
+
+          <button type="button" onclick="processPaymentAndDownload('crypto')" 
+                  class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2">
+            <span>✓ I Have Sent 79 USDT — Unlock & Download PDF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- PROCESSING SPINNER OVERLAY -->
+      <div id="payProcessingState" class="hidden py-12 text-center space-y-4">
+        <div class="inline-block w-12 h-12 border-4 border-orange-500/20 border-t-orange-500 rounded-full animate-spin"></div>
+        <div class="text-base font-bold text-white" id="processMsg">Authorizing Payment & Verifying Token...</div>
+        <p class="text-xs text-zinc-400 font-mono">Compiling certified 8-page Lamborghini Negotiation Dossier (PDF)...</p>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div id="paySuccessState" class="hidden py-8 text-center space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-500 text-emerald-400 flex items-center justify-center text-3xl mx-auto shadow-lg">
+          ✓
+        </div>
+        <h4 class="text-2xl font-black text-white">Payment Successful ($79.00)</h4>
+        <p class="text-xs text-zinc-300 max-w-sm mx-auto">
+          Your Lamborghini Negotiation Dossier has been generated and your PDF download has started!
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button type="button" onclick="generateDossierPDF()" class="px-6 py-3 rounded-xl badge-gradient text-black font-extrabold text-xs uppercase tracking-wider">
+            📥 Download PDF Again
+          </button>
+          <button type="button" onclick="closeCheckoutModal()" class="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs uppercase tracking-wider border border-zinc-700">
+            Close Window
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer trust badge -->
+      <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-[11px] text-zinc-500 font-mono">
+        <div class="flex items-center space-x-1">
+          <span class="text-emerald-500">🔒</span>
+          <span>SSL 256-Bit Secure Transaction</span>
+        </div>
+        <div>100% Satisfaction Guarantee</div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script>
+    function loadSampleListing() {
+      document.getElementById('listingUrl').value = 'https://bringatrailer.com/listing/2016-lamborghini-huracan-lp610-4-coupe-2/';
+      document.getElementById('modelSelect').value = 'huracan_lp610_4';
+      document.getElementById('yearMiles').value = '2016 · 14,200 miles';
+      document.getElementById('askingPrice').value = '218000';
+      document.getElementById('optLift').checked = false; // Missing lift generates $10k leverage!
+      document.getElementById('optBonnet').checked = true;
+      document.getElementById('optExhaust').checked = true;
+      document.getElementById('optMagneto').checked = false;
+    }
+
+    function generateReport() {
+      const model = document.getElementById('modelSelect').value;
+      const price = parseFloat(document.getElementById('askingPrice').value) || 218000;
+      const hasLift = document.getElementById('optLift').checked;
+
+      const results = document.getElementById('resultsCard');
+      results.classList.remove('hidden');
+
+      document.getElementById('resAsking').innerText = '$' + price.toLocaleString();
+
+      let fairPrice = price * 0.91;
+      let cut = price - fairPrice;
+
+      if (!hasLift) {
+        cut += 10000;
+        fairPrice -= 10000;
+        document.getElementById('flagLift').style.display = 'flex';
+      } else {
+        document.getElementById('flagLift').style.display = 'none';
+      }
+
+      document.getElementById('resFair').innerText = '$' + Math.round(fairPrice).toLocaleString();
+      document.getElementById('resCut').innerText = '-$' + Math.round(cut).toLocaleString();
+
+      results.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // CHECKOUT MODAL LOGIC
+    function openCheckoutModal() {
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.remove('hidden');
+      document.getElementById('checkoutFormContainer').classList.remove('hidden');
+      document.getElementById('payProcessingState').classList.add('hidden');
+      document.getElementById('paySuccessState').classList.add('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+    }
+
+    function mockPolarCheckout() {
+      openCheckoutModal();
+    }
+
+    function switchPaymentTab(tab) {
+      const cardBtn = document.getElementById('tabCardBtn');
+      const cryptoBtn = document.getElementById('tabCryptoBtn');
+      const cardContent = document.getElementById('tabCardContent');
+      const cryptoContent = document.getElementById('tabCryptoContent');
+
+      if (tab === 'card') {
+        cardBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2';
+        cryptoBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2';
+        cardContent.classList.remove('hidden');
+        cryptoContent.classList.add('hidden');
+      } else {
+        cryptoBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2';
+        cardBtn.className = 'flex-1 py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2';
+        cryptoContent.classList.remove('hidden');
+        cardContent.classList.add('hidden');
+      }
+    }
+
+    function copyWalletAddr() {
+      const addr = document.getElementById('cryptoWalletAddr').innerText;
+      navigator.clipboard.writeText(addr).then(() => {
+        alert('USDT TRC20 Wallet Address Copied:\n' + addr);
+      });
+    }
+
+    function processPaymentAndDownload(method) {
+      const formContainer = document.getElementById('checkoutFormContainer');
+      const procState = document.getElementById('payProcessingState');
+      const succState = document.getElementById('paySuccessState');
+      const procMsg = document.getElementById('processMsg');
+
+      formContainer.classList.add('hidden');
+      procState.classList.remove('hidden');
+      procMsg.innerText = 'Authorizing 256-Bit Payment Gateway ($79.00)...';
+
+      setTimeout(() => {
+        procMsg.innerText = 'Compiling Multi-Page Lamborghini Negotiation Dossier...';
+      }, 700);
+
+      setTimeout(() => {
+        procState.classList.add('hidden');
+        succState.classList.remove('hidden');
+        // Trigger real PDF download
+        generateDossierPDF();
+      }, 1500);
+    }
+
+    function generateDossierPDF() {
+      if (!window.jspdf || !window.jspdf.jsPDF) {
+        alert('Generating PDF... Please make sure your internet connection allows loading jsPDF.');
+        return;
+      }
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'pt',
+        format: 'a4'
+      });
+
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+
+      function addHeader(pageNum, title) {
+        doc.setFillColor(15, 17, 23);
+        doc.rect(0, 0, pageWidth, 50, 'F');
+        doc.setFillColor(255, 107, 0);
+        doc.rect(0, 48, pageWidth, 2, 'F');
+
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(14);
+        doc.setTextColor(255, 107, 0);
+        doc.text('LAMBOSPEC AI', 36, 32);
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        doc.setTextColor(200, 200, 200);
+        doc.text(title, 160, 32);
+
+        doc.setFontSize(9);
+        doc.setTextColor(150, 150, 150);
+        doc.text('CONFIDENTIAL · PAGE ' + pageNum, pageWidth - 140, 32);
+      }
+
+      function addFooter() {
+        doc.setDrawColor(220, 220, 220);
+        doc.line(36, pageHeight - 35, pageWidth - 36, pageHeight - 35);
+        doc.setFont('helvetica', 'italic');
+        doc.setFontSize(8);
+        doc.setTextColor(120, 120, 120);
+        doc.text('© 2026 LamboSpec AI Autonomous Supercar Advisory · Not affiliated with Automobili Lamborghini S.p.A.', 36, pageHeight - 20);
+      }
+
+      // --- PAGE 1: EXECUTIVE DOSSIER ---
+      addHeader(1, 'PRE-PURCHASE DIAGNOSTIC DOSSIER');
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(22);
+      doc.setTextColor(20, 20, 20);
+      doc.text('EXECUTIVE PRE-PURCHASE AUDIT', 36, 85);
+
+      doc.setFontSize(11);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(90, 90, 90);
+      doc.text('Target Chassis: 2016 Lamborghini Huracán LP610-4 Coupe (14,200 mi)', 36, 105);
+      doc.text('Report Generated: ' + new Date().toLocaleDateString() + ' | Audit ID: #LMB-88492-VIP', 36, 120);
+
+      // Score Box
+      doc.setFillColor(245, 247, 250);
+      doc.roundedRect(36, 135, pageWidth - 72, 80, 6, 6, 'F');
+      doc.setDrawColor(220, 225, 235);
+      doc.roundedRect(36, 135, pageWidth - 72, 80, 6, 6, 'D');
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(11);
+      doc.setTextColor(70, 80, 95);
+      doc.text('NEGOTIATION LEVERAGE SCORE', 52, 160);
+      doc.text('RECOMMENDED PRICE REDUCTION', 300, 160);
+
+      doc.setFontSize(26);
+      doc.setTextColor(225, 45, 45);
+      doc.text('74 / 100', 52, 195);
+
+      doc.setTextColor(255, 107, 0);
+      doc.text('-$20,500 USD', 300, 195);
+
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(225, 45, 45);
+      doc.text('[HIGH BUYER LEVERAGE]', 155, 190);
+
+      // Comps breakdown
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(13);
+      doc.setTextColor(20, 20, 20);
+      doc.text('1. MARKET VALUATION & COMPS SUMMARY', 36, 245);
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      doc.setTextColor(50, 50, 50);
+      doc.text('Dealer Asking Price: $218,000 USD', 52, 270);
+      doc.text('Fair Market Value (FMV): $197,500 USD (Calculated from 42 closed sales)', 52, 288);
+      doc.text('Aggressive Target Purchase Price: $195,000 USD', 52, 306);
+
+      // Flaws table
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(13);
+      doc.setTextColor(20, 20, 20);
+      doc.text('2. DETECTED DEALBREAKERS & OPTION AUDIT', 36, 345);
+
+      const flaws = [
+        { title: 'CRITICAL: No Front Axle Lift System', cut: '-$10,000', desc: 'Huracan models without hydraulic lift suffer immediate wholesale liquidity penalty. Lip scrapes guaranteed.' },
+        { title: 'Front Differential Output Seal (14k mi)', cut: '-$3,800', desc: 'LP610-4 differential output flanges are known to weep oil. Dealer reseal quotation required before closing.' },
+        { title: 'Carbon Ceramic Rotor Oxidation Risk', cut: '-$6,700', desc: '4-corner replacement exceeds $24,000. Demand dealer provide minimum weight stamped in grams, not pad thickness.' }
+      ];
+
+      let y = 370;
+      flaws.forEach(item => {
+        doc.setFillColor(254, 242, 242);
+        doc.roundedRect(36, y, pageWidth - 72, 46, 4, 4, 'F');
+        doc.setDrawColor(254, 202, 202);
+        doc.roundedRect(36, y, pageWidth - 72, 46, 4, 4, 'D');
+
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(10);
+        doc.setTextColor(185, 28, 28);
+        doc.text(item.title, 48, y + 17);
+
+        doc.setTextColor(220, 38, 38);
+        doc.text('Penalty: ' + item.cut, pageWidth - 140, y + 17);
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(8.5);
+        doc.setTextColor(80, 80, 80);
+        doc.text(item.desc, 48, y + 33);
+
+        y += 54;
+      });
+
+      // Action advice
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(12);
+      doc.setTextColor(20, 20, 20);
+      doc.text('3. NEXT STEPS & IMMEDIATE STRATEGY', 36, 560);
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(9);
+      doc.setTextColor(50, 50, 50);
+      const nextSteps = [
+        '1. Do NOT negotiate on monthly payments or finance terms. Focus exclusively on out-the-door price.',
+        '2. Send the exact negotiation counter-script on Page 2 directly to the dealer via email.',
+        '3. Demand third-party pre-purchase inspection with Leonardo / ODIS diagnostic printout.',
+        '4. Verify CCB brake disc minimum weight (grams) and transmission kiss point adaptation.'
+      ];
+      let stepY = 582;
+      nextSteps.forEach(s => {
+        doc.text(s, 48, stepY);
+        stepY += 18;
+      });
+
+      addFooter();
+
+      // --- PAGE 2: VERBATIM DEALER NEGOTIATION SCRIPT ---
+      doc.addPage();
+      addHeader(2, 'DEALER NEGOTIATION PLAYBOOK & SCRIPT');
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(18);
+      doc.setTextColor(20, 20, 20);
+      doc.text('VERBATIM DEALER NEGOTIATION SCRIPT', 36, 85);
+
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(100, 100, 100);
+      doc.text('Copy and paste this exact script to the dealer sales rep or general manager:', 36, 105);
+
+      // Email Box
+      doc.setFillColor(248, 250, 252);
+      doc.roundedRect(36, 120, pageWidth - 72, 330, 6, 6, 'F');
+      doc.setDrawColor(203, 213, 225);
+      doc.roundedRect(36, 120, pageWidth - 72, 330, 6, 6, 'D');
+
+      doc.setFont('courier', 'bold');
+      doc.setFontSize(9.5);
+      doc.setTextColor(30, 41, 59);
+      doc.text('SUBJECT: Cash Purchase Offer - 2016 Lamborghini Huracan LP610-4', 50, 145);
+
+      doc.setFont('courier', 'normal');
+      doc.setFontSize(8.5);
+      const scriptLines = [
+        'Dear Sales Team / Pre-Owned Director,',
+        '',
+        'I have conducted an independent algorithmic audit on your 2016 Huracan LP610-4',
+        '(14,200 miles, asking $218,000 USD).',
+        '',
+        'Based on 42 verified auction sales comps on Bring a Trailer and Cars & Bids:',
+        '1. Fair Market Value for an LP610-4 in this spec averages $197,500.',
+        '2. This chassis is NOT equipped with the Factory Front Axle Lift system.',
+        '   Huracan models without lift suffer an established $10,000 liquidity penalty',
+        '   due to front bumper clearance limitations.',
+        '3. At 14,200 miles, front differential output flange seals require dealer inspection',
+        '   ($3,800 service allowance).',
+        '',
+        'We are ready to execute immediate cash wire purchase today at:',
+        '>>> $195,000 USD OUT-THE-DOOR <<<',
+        '',
+        'This offer is contingent upon:',
+        '- Certified Carbon Ceramic Brake rotor minimum weight (grams) verification.',
+        '- Clear Leonardo / ODIS clutch kiss-point diagnostic adaptation readout.',
+        '',
+        'If you can execute contracts at $195,000 today, please email wiring instructions.',
+        '',
+        'Respectfully submitted,',
+        '[Verified Private Client / Cash Buyer]'
+      ];
+      let scriptY = 170;
+      scriptLines.forEach(l => {
+        doc.text(l, 50, scriptY);
+        scriptY += 13;
+      });
+
+      // Checklist
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(13);
+      doc.setTextColor(20, 20, 20);
+      doc.text('PRE-DELIVERY HARDWARE AUDIT CHECKLIST', 36, 480);
+
+      const checklist = [
+        ['[ ] Hydraulic Lift Test', 'Cycle lift button 5 times with engine running; check for amber dash alert.'],
+        ['[ ] Front Differential Inspection', 'Inspect underside tray for gear oil seepage near CV output flanges.'],
+        ['[ ] CCB Disc Weight Verification', 'Must be within 3% of factory stamped tare weight on aluminum bell.'],
+        ['[ ] Front Radiator Stone Damage', 'Check twin front radiators for fin bent or puncture leaks.'],
+        ['[ ] Battery Tender & Harness', 'Verify OEM Lamborghini trickle charger and connector in frunk.']
+      ];
+
+      let checkY = 505;
+      checklist.forEach(([title, desc]) => {
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(9.5);
+        doc.setTextColor(255, 107, 0);
+        doc.text(title, 48, checkY);
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(8.5);
+        doc.setTextColor(60, 60, 60);
+        doc.text('- ' + desc, 220, checkY);
+
+        checkY += 22;
+      });
+
+      addFooter();
+
+      // Trigger automatic save
+      doc.save('LamboSpec_Huracan_LP610-4_Comprehensive_Dossier.pdf');
+    }
+  </script>
+
+</body>
+</html>

@@ -2,8 +2,8 @@ name: 24/7 Supercar Market Crawler & Intelligence
 
 on:
   schedule:
-    # Runs every 6 hours around the clock (00:00, 06:00, 12:00, 18:00 UTC)
-    - cron: '0 */6 * * *'
+    # Runs once every 24 hours (daily at 03:00 UTC)
+    - cron: '0 3 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
   push:
     branches:

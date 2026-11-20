@@ -233,6 +233,13 @@
     }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Paddle.js Checkout Overlay -->
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script>
+    Paddle.Initialize({
+      token: '7sexx0tq6f10248f7ekcdh9zp29dhmdrbswga92as1g0bhmy7c'
+    });
+  </script>
 </head>
 <body class="min-h-screen font-sans selection:bg-orange-500 selection:text-white carbon-mesh">
 
@@ -1140,11 +1147,8 @@
     // =====================================================
     //  PAYMENT GATEWAY CONFIG
     // =====================================================
-    //  1) Paddle Dashboard > Catalog > Products > Create
-    //     Product : LamboSpec AI VIP Dossier — $79.00
-    //     Success URL: https://federal216.github.io/lambospec-ai/?paddle_success=true
-    //  2) Paste the Paddle checkout/payment link URL below:
-    const PADDLE_PAYMENT_LINK = '';
+    // ── Paddle.js Checkout Config ──
+    const PADDLE_PRICE_ID = 'pri_01m7wnbynzbf08mydbbj8vgkd5';
     const CONTACT_EMAIL       = 'karakoc.i@gmail.com';
     let   paymentVerified     = false;
 
@@ -1424,18 +1428,24 @@
       var modelName = modelSelect ? modelSelect.options[modelSelect.selectedIndex].text : 'Lamborghini';
 
       if (method === 'card') {
-        // Redirect to Paddle Hosted Checkout
-        if (!PADDLE_PAYMENT_LINK) {
+        // Open Paddle.js overlay checkout
+        try {
+          Paddle.Checkout.open({
+            items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
+            customer: { email: email },
+            customData: { model: modelName },
+            settings: {
+              successUrl: 'https://federal216.github.io/lambospec-ai/?paddle_success=true',
+              theme: 'dark'
+            }
+          });
+        } catch(e) {
           if (errBox && errMsg) {
-            errMsg.innerText = 'Payment system is being configured. Please contact ' + CONTACT_EMAIL + ' for manual processing.';
+            errMsg.innerText = 'Payment system error. Please contact ' + CONTACT_EMAIL + ' or use an alternative payment method.';
             errBox.classList.remove('hidden');
           }
-          return;
         }
-        window.location.href = PADDLE_PAYMENT_LINK
-          + (PADDLE_PAYMENT_LINK.includes('?') ? '&' : '?')
-          + 'customer_email=' + encodeURIComponent(email)
-          + '&passthrough=' + encodeURIComponent(JSON.stringify({model: modelName, email: email}));
+        return;
       } else {
         // Crypto / IBAN / Payoneer — show confirmation email instructions
         var container = document.getElementById('checkoutFormContainer');

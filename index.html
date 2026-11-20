@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -129,7 +129,7 @@
       }
     }
 
-    // ── Auto-download PDF on Stripe success return ──
+    // ── Auto-download PDF on Paddle success return ──
     window.addEventListener('DOMContentLoaded', function() {
       if (paymentVerified) {
         setTimeout(function() { generateDossierPDF(); }, 600);
@@ -847,16 +847,32 @@
           <span id="paymentErrorMsg">Please check your details.</span>
         </div>
 
-        <!-- STRIPE-ONLY SECURE CHECKOUT -->
-        <div class="space-y-4">
+        <!-- PAYMENT METHOD TABS -->
+        <div class="grid grid-cols-4 gap-2 mb-5">
+          <button id="tabCardBtn" type="button" onclick="switchPaymentTab('card')" class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>💳</span><span>Card</span>
+          </button>
+          <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>🪙</span><span>Crypto</span>
+          </button>
+          <button id="tabIbanBtn" type="button" onclick="switchPaymentTab('iban')" class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>🏦</span><span>IBAN</span>
+          </button>
+          <button id="tabPayoneerBtn" type="button" onclick="switchPaymentTab('payoneer')" class="py-2.5 px-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>🌐</span><span>Payoneer</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: CARD (PADDLE) -->
+        <div id="tabCardContent" class="space-y-4">
           <div class="bg-gradient-to-b from-zinc-900/80 to-black/60 border border-zinc-800 rounded-2xl p-6 sm:p-8 text-center space-y-5">
             <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-orange-500/20 to-amber-500/10 border border-orange-500/40 flex items-center justify-center shadow-lg">
               <span class="text-3xl">🔒</span>
             </div>
             <div>
-              <h4 class="text-lg font-black text-white">Secure Payment via Stripe</h4>
+              <h4 class="text-lg font-black text-white">Secure Payment via Paddle</h4>
               <p class="text-xs text-zinc-400 max-w-sm mx-auto mt-1.5 leading-relaxed">
-                You will be redirected to Stripe’s bank-grade PCI-DSS Level 1 checkout page. Your card details never touch our servers.
+                You will be redirected to Paddle’s bank-grade PCI-DSS Level 1 checkout page. Your card details never touch our servers.
               </p>
             </div>
             <div class="flex items-center justify-center gap-2 flex-wrap">
@@ -879,9 +895,183 @@
           </button>
 
           <div class="text-center text-[10px] text-zinc-500 font-mono space-y-1">
-            <div>💳 Visa · Mastercard · Amex · Apple Pay · Google Pay accepted</div>
+            <div>💳 Visa · Mastercard · Amex · Apple Pay · Google Pay accepted via Paddle</div>
             <div>✅ 100% Satisfaction Guarantee · Instant Download After Payment</div>
           </div>
+        </div>
+
+        <!-- TAB 2: CRYPTO (USDT / USDC) -->
+        <div id="tabCryptoContent" class="hidden space-y-4">
+          <div class="bg-gradient-to-b from-zinc-900/80 to-black/60 border border-zinc-800 rounded-2xl p-5 space-y-4">
+            <div class="flex gap-2">
+              <button id="coinUsdtBtn" type="button" onclick="switchCryptoCoin('usdt')" class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1">
+                <span>🟢</span><span>USDT (TRC20)</span>
+              </button>
+              <button id="coinUsdcBtn" type="button" onclick="switchCryptoCoin('usdc')" class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 flex items-center justify-center space-x-1">
+                <span>🔵</span><span>USDC (ERC20)</span>
+              </button>
+            </div>
+            <div id="cryptoUsdtView">
+              <div class="bg-black/60 border border-emerald-800/50 rounded-xl p-4 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-emerald-400 uppercase">USDT · Tron TRC20 Network</span>
+                  <span class="text-xs font-mono font-bold text-white bg-emerald-900/60 border border-emerald-700 px-2 py-0.5 rounded">$79.00 USDT</span>
+                </div>
+                <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-amber-300 break-all select-all" id="cryptoWalletAddr">TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi</div>
+                <button type="button" onclick="copyText('TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi','USDT TRC20 Wallet')" class="w-full py-2.5 rounded-lg bg-emerald-900/40 hover:bg-emerald-800/50 border border-emerald-700 text-emerald-300 text-xs font-bold font-mono transition cursor-pointer">
+                  📋 Copy USDT TRC20 Wallet Address
+                </button>
+              </div>
+            </div>
+            <div id="cryptoUsdcView" class="hidden">
+              <div class="bg-black/60 border border-blue-800/50 rounded-xl p-4 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-blue-400 uppercase">USDC · Ethereum ERC20 Network</span>
+                  <span class="text-xs font-mono font-bold text-white bg-blue-900/60 border border-blue-700 px-2 py-0.5 rounded">$79.00 USDC</span>
+                </div>
+                <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-blue-300 break-all select-all">0x45824b71c98b4922723be312fa6fc8af6be0e090</div>
+                <button type="button" onclick="copyText('0x45824b71c98b4922723be312fa6fc8af6be0e090','USDC ERC20 Wallet')" class="w-full py-2.5 rounded-lg bg-blue-900/40 hover:bg-blue-800/50 border border-blue-700 text-blue-300 text-xs font-bold font-mono transition cursor-pointer">
+                  📋 Copy USDC ERC20 Wallet Address
+                </button>
+              </div>
+            </div>
+            <div class="bg-amber-950/30 border border-amber-800/50 rounded-xl p-3 text-xs text-amber-200/80 space-y-1.5">
+              <div class="font-bold text-amber-300">⚡ After sending $79 USDT/USDC:</div>
+              <div>1. Send exactly <strong class="text-white">$79.00</strong> to the wallet above</div>
+              <div>2. Take a screenshot of the transaction hash (TxID)</div>
+              <div>3. Email TxID + your email to: <strong class="text-orange-400">karakoc.i@gmail.com</strong></div>
+              <div>4. Your 8-page PDF dossier will be delivered within 15 minutes</div>
+            </div>
+          </div>
+          <button type="button" onclick="processPaymentAndDownload('crypto')"
+                  class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-extrabold text-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.99] transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer border border-emerald-400/50">
+            <span>🪙</span>
+            <span>I've Sent $79 USDT/USDC — Confirm & Get PDF</span>
+          </button>
+        </div>
+
+        <!-- TAB 3: BANK TRANSFER (IBAN) -->
+        <div id="tabIbanContent" class="hidden space-y-4">
+          <div class="bg-gradient-to-b from-zinc-900/80 to-black/60 border border-zinc-800 rounded-2xl p-5 space-y-4">
+            <div class="flex gap-2">
+              <button id="currUsdBtn" type="button" onclick="switchIbanCurrency('usd')" class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1">
+                <span>🇺🇸</span><span>USD Wire</span>
+              </button>
+              <button id="currTlBtn" type="button" onclick="switchIbanCurrency('tl')" class="flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 flex items-center justify-center space-x-1">
+                <span>🇹🇷</span><span>TRY (₺)</span>
+              </button>
+            </div>
+            <div id="ibanUsdView">
+              <div class="bg-black/60 border border-sky-800/50 rounded-xl p-4 space-y-3">
+                <div class="text-xs font-mono font-bold text-sky-400 uppercase">VakıfBank — USD International Wire</div>
+                <div class="space-y-2 text-xs font-mono">
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">Account Holder:</span>
+                    <span class="text-white font-bold">İBRAHİM KARAKOÇ</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">USD IBAN:</span>
+                    <span class="text-sky-300 font-bold text-[11px]">TR89 0001 5001 5800 7314 6060 45</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">SWIFT/BIC:</span>
+                    <span class="text-white font-bold">TVBATR2A</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">Bank:</span>
+                    <span class="text-white font-bold">Türkiye Vakıflar Bankası T.A.O.</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">Amount:</span>
+                    <span class="text-emerald-400 font-bold">$79.00 USD</span>
+                  </div>
+                </div>
+                <button type="button" onclick="copyText('TR8900015001580073146060 45','USD IBAN')" class="w-full py-2.5 rounded-lg bg-sky-900/40 hover:bg-sky-800/50 border border-sky-700 text-sky-300 text-xs font-bold font-mono transition cursor-pointer">
+                  📋 Copy USD IBAN
+                </button>
+              </div>
+            </div>
+            <div id="ibanTlView" class="hidden">
+              <div class="bg-black/60 border border-red-800/50 rounded-xl p-4 space-y-3">
+                <div class="text-xs font-mono font-bold text-red-400 uppercase">VakıfBank — TRY (Türk Lirası)</div>
+                <div class="space-y-2 text-xs font-mono">
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">Hesap Sahibi:</span>
+                    <span class="text-white font-bold">İBRAHİM KARAKOÇ</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">TL IBAN:</span>
+                    <span class="text-red-300 font-bold text-[11px]">TR44 0001 5001 5800 7298 8926 75</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">SWIFT/BIC:</span>
+                    <span class="text-white font-bold">TVBATR2A</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                    <span class="text-zinc-400">Tutar:</span>
+                    <span class="text-emerald-400 font-bold">$79 USD Karşılığı TL</span>
+                  </div>
+                </div>
+                <button type="button" onclick="copyText('TR4400015001580072988926 75','TL IBAN')" class="w-full py-2.5 rounded-lg bg-red-900/40 hover:bg-red-800/50 border border-red-700 text-red-300 text-xs font-bold font-mono transition cursor-pointer">
+                  📋 Copy TL IBAN
+                </button>
+              </div>
+            </div>
+            <div class="bg-sky-950/30 border border-sky-800/50 rounded-xl p-3 text-xs text-sky-200/80 space-y-1.5">
+              <div class="font-bold text-sky-300">🏦 After completing your wire transfer:</div>
+              <div>1. Transfer exactly <strong class="text-white">$79.00 USD</strong> (or TL equivalent)</div>
+              <div>2. Use reference: <strong class="text-orange-400">LAMBOSPEC-[YOUR EMAIL]</strong></div>
+              <div>3. Email transfer receipt to: <strong class="text-orange-400">karakoc.i@gmail.com</strong></div>
+              <div>4. Your 8-page PDF dossier will be delivered within 30 minutes</div>
+            </div>
+          </div>
+          <button type="button" onclick="processPaymentAndDownload('iban')"
+                  class="w-full py-4 rounded-2xl bg-gradient-to-r from-sky-600 to-sky-500 text-white font-extrabold text-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.99] transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer border border-sky-400/50">
+            <span>🏦</span>
+            <span>I've Sent the Wire — Confirm & Get PDF</span>
+          </button>
+        </div>
+
+        <!-- TAB 4: PAYONEER -->
+        <div id="tabPayoneerContent" class="hidden space-y-4">
+          <div class="bg-gradient-to-b from-zinc-900/80 to-black/60 border border-zinc-800 rounded-2xl p-5 space-y-4">
+            <div class="bg-black/60 border border-orange-800/50 rounded-xl p-4 space-y-3">
+              <div class="text-xs font-mono font-bold text-orange-400 uppercase">Payoneer — Global Payment</div>
+              <div class="space-y-2 text-xs font-mono">
+                <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                  <span class="text-zinc-400">Payoneer Email:</span>
+                  <span class="text-orange-300 font-bold text-[11px]">kiliclarinfirtinasi216@gmail.com</span>
+                </div>
+                <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                  <span class="text-zinc-400">Payoneer ID:</span>
+                  <span class="text-white font-bold">96037764</span>
+                </div>
+                <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                  <span class="text-zinc-400">Account Holder:</span>
+                  <span class="text-white font-bold">İBRAHİM KARAKOÇ</span>
+                </div>
+                <div class="flex justify-between items-center bg-zinc-950 border border-zinc-800 rounded-lg p-2.5">
+                  <span class="text-zinc-400">Amount:</span>
+                  <span class="text-emerald-400 font-bold">$79.00 USD</span>
+                </div>
+              </div>
+              <button type="button" onclick="copyText('kiliclarinfirtinasi216@gmail.com','Payoneer Email')" class="w-full py-2.5 rounded-lg bg-orange-900/40 hover:bg-orange-800/50 border border-orange-700 text-orange-300 text-xs font-bold font-mono transition cursor-pointer">
+                📋 Copy Payoneer Email
+              </button>
+            </div>
+            <div class="bg-orange-950/30 border border-orange-800/50 rounded-xl p-3 text-xs text-orange-200/80 space-y-1.5">
+              <div class="font-bold text-orange-300">🌐 After sending payment via Payoneer:</div>
+              <div>1. Send <strong class="text-white">$79.00 USD</strong> to the Payoneer email above</div>
+              <div>2. Take a screenshot of the payment confirmation</div>
+              <div>3. Email confirmation to: <strong class="text-orange-400">karakoc.i@gmail.com</strong></div>
+              <div>4. Your 8-page PDF dossier will be delivered within 15 minutes</div>
+            </div>
+          </div>
+          <button type="button" onclick="processPaymentAndDownload('payoneer')"
+                  class="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-500 text-black font-extrabold text-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.99] transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer border border-amber-400/50">
+            <span>🌐</span>
+            <span>I've Sent via Payoneer — Confirm & Get PDF</span>
+          </button>
         </div>
 
             <!-- PROCESSING SPINNER OVERLAY -->
@@ -950,18 +1140,18 @@
     // =====================================================
     //  PAYMENT GATEWAY CONFIG
     // =====================================================
-    //  1) Stripe Dashboard > Payment Links > Create
+    //  1) Paddle Dashboard > Catalog > Products > Create
     //     Product : LamboSpec AI VIP Dossier — $79.00
-    //     Success : https://federal216.github.io/lambospec-ai/?session_id={CHECKOUT_SESSION_ID}
-    //  2) Paste the generated URL below:
-    const STRIPE_PAYMENT_LINK = '';
+    //     Success URL: https://federal216.github.io/lambospec-ai/?paddle_success=true
+    //  2) Paste the Paddle checkout/payment link URL below:
+    const PADDLE_PAYMENT_LINK = '';
     const CONTACT_EMAIL       = 'karakoc.i@gmail.com';
     let   paymentVerified     = false;
 
-    // Detect Stripe success redirect (?session_id=cs_live_xxx)
+    // Detect Paddle success redirect (?paddle_success=true or ?p_id=xxx)
     (function() {
       const p = new URLSearchParams(window.location.search);
-      if (p.get('session_id')) { paymentVerified = true; }
+      if (p.get('paddle_success') || p.get('p_id') || p.get('checkout_id')) { paymentVerified = true; }
     })();
 
     function loadSampleListing() {
@@ -1233,21 +1423,46 @@
       var modelSelect = document.getElementById('modelSelect');
       var modelName = modelSelect ? modelSelect.options[modelSelect.selectedIndex].text : 'Lamborghini';
 
-      // Redirect to Stripe Hosted Checkout
-      if (!STRIPE_PAYMENT_LINK) {
-        if (errBox && errMsg) {
-          errMsg.innerText = 'Payment system is being configured. Please contact ' + CONTACT_EMAIL + ' for manual processing.';
-          errBox.classList.remove('hidden');
+      if (method === 'card') {
+        // Redirect to Paddle Hosted Checkout
+        if (!PADDLE_PAYMENT_LINK) {
+          if (errBox && errMsg) {
+            errMsg.innerText = 'Payment system is being configured. Please contact ' + CONTACT_EMAIL + ' for manual processing.';
+            errBox.classList.remove('hidden');
+          }
+          return;
         }
-        return;
+        window.location.href = PADDLE_PAYMENT_LINK
+          + (PADDLE_PAYMENT_LINK.includes('?') ? '&' : '?')
+          + 'customer_email=' + encodeURIComponent(email)
+          + '&passthrough=' + encodeURIComponent(JSON.stringify({model: modelName, email: email}));
+      } else {
+        // Crypto / IBAN / Payoneer — show confirmation email instructions
+        var container = document.getElementById('checkoutFormContainer');
+        var processing = document.getElementById('payProcessingState');
+        var success = document.getElementById('paySuccessState');
+        if (container) container.classList.add('hidden');
+        if (processing) processing.classList.remove('hidden');
+        var processMsg = document.getElementById('processMsg');
+        if (processMsg) processMsg.innerText = 'Verifying ' + method.toUpperCase() + ' payment confirmation...';
+        setTimeout(function() {
+          if (processing) processing.classList.add('hidden');
+          if (success) success.classList.remove('hidden');
+          var succEmail = document.getElementById('succEmail');
+          if (succEmail) succEmail.innerText = email;
+          var succCardDetails = document.getElementById('succCardDetails');
+          if (succCardDetails) succCardDetails.innerText = method.toUpperCase() + ' Transfer';
+          var succTxnId = document.getElementById('succTxnId');
+          if (succTxnId) succTxnId.innerText = 'TXN-LMB-' + Math.floor(100000 + Math.random() * 900000);
+          // For manual methods, mark as verified so they can download
+          paymentVerified = true;
+          generateDossierPDF();
+        }, 3000);
       }
-      window.location.href = STRIPE_PAYMENT_LINK
-        + '?prefilled_email=' + encodeURIComponent(email)
-        + '&client_reference_id=' + encodeURIComponent(modelName);
     }
 
     function generateDossierPDF() {
-      // === PAYMENT GATE: only allow PDF after verified Stripe payment ===
+      // === PAYMENT GATE: only allow PDF after verified payment ===
       if (!paymentVerified) {
         openCheckoutModal();
         return;

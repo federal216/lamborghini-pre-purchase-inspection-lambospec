@@ -79,6 +79,62 @@
       "worstRating": "1"
     }
   }
+
+    // ── Generic copy-to-clipboard ──
+    function copyText(text, label) {
+      navigator.clipboard.writeText(text).then(function() {
+        alert((label || 'Text') + ' copied!\n' + text);
+      }).catch(function() { prompt('Copy this:', text); });
+    }
+
+    // ── Crypto coin toggle (USDT <-> USDC) ──
+    function switchCryptoCoin(coin) {
+      var usdtV = document.getElementById('cryptoUsdtView');
+      var usdcV = document.getElementById('cryptoUsdcView');
+      var usdtB = document.getElementById('coinUsdtBtn');
+      var usdcB = document.getElementById('coinUsdcBtn');
+      var on  = 'flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1';
+      var off = 'flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 flex items-center justify-center space-x-1';
+      if (coin === 'usdt') {
+        if (usdtV) usdtV.classList.remove('hidden');
+        if (usdcV) usdcV.classList.add('hidden');
+        if (usdtB) usdtB.className = on;
+        if (usdcB) usdcB.className = off;
+      } else {
+        if (usdtV) usdtV.classList.add('hidden');
+        if (usdcV) usdcV.classList.remove('hidden');
+        if (usdtB) usdtB.className = off;
+        if (usdcB) usdcB.className = on;
+      }
+    }
+
+    // ── IBAN currency toggle (USD <-> TL) ──
+    function switchIbanCurrency(curr) {
+      var usdV = document.getElementById('ibanUsdView');
+      var tlV  = document.getElementById('ibanTlView');
+      var usdB = document.getElementById('currUsdBtn');
+      var tlB  = document.getElementById('currTlBtn');
+      var on  = 'flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1';
+      var off = 'flex-1 py-2 rounded-lg text-xs font-bold font-mono transition bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 flex items-center justify-center space-x-1';
+      if (curr === 'usd') {
+        if (usdV) usdV.classList.remove('hidden');
+        if (tlV)  tlV.classList.add('hidden');
+        if (usdB) usdB.className = on;
+        if (tlB)  tlB.className = off;
+      } else {
+        if (usdV) usdV.classList.add('hidden');
+        if (tlV)  tlV.classList.remove('hidden');
+        if (usdB) usdB.className = off;
+        if (tlB)  tlB.className = on;
+      }
+    }
+
+    // ── Auto-download PDF on Stripe success return ──
+    window.addEventListener('DOMContentLoaded', function() {
+      if (paymentVerified) {
+        setTimeout(function() { generateDossierPDF(); }, 600);
+      }
+    });
   </script>
 
   <!-- Google FAQ Rich Snippets (Schema.org/FAQPage) -->
@@ -785,6 +841,12 @@
                  class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition">
         </div>
 
+        <!-- Live Payment Validation Alert (shared across all tabs) -->
+        <div id="paymentErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg mb-4">
+          <span class="text-base">⚠️</span>
+          <span id="paymentErrorMsg">Please check your details.</span>
+        </div>
+
         <!-- Payment Method Tabs (4 Channels) -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 border-b border-zinc-800 pb-3 mb-5">
           <button id="tabCardBtn" type="button" onclick="switchPaymentTab('card')" 
@@ -805,65 +867,35 @@
           </button>
         </div>
 
-        <!-- TAB 1: CREDIT CARD / APPLE PAY -->
+        <!-- TAB 1: CREDIT CARD / APPLE PAY — Stripe Hosted Checkout -->
         <div id="tabCardContent" class="space-y-4">
-          <!-- Live Validation Error Box -->
-          <div id="cardErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg">
-            <span class="text-base">⚠️</span>
-            <span id="cardErrorMsg">Please check your card details.</span>
-          </div>
-
-          <!-- Cardholder Name -->
-          <div>
-            <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Name on Card <span class="text-rose-400">*</span></label>
-            <input type="text" id="cardName" placeholder="FIRSTNAME LASTNAME" autocomplete="cc-name"
-                   class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white uppercase focus:outline-none focus:border-orange-500 font-medium tracking-wide transition">
-          </div>
-
-          <!-- Card Number with dynamic brand badges -->
-          <div>
-            <div class="flex items-center justify-between mb-1">
-              <label class="block text-xs font-mono uppercase text-zinc-400">Card Number <span class="text-rose-400">*</span></label>
-              <span id="cardBrandLabel" class="text-[10px] font-mono text-zinc-400">256-Bit SSL Encrypted</span>
-            </div>
-            <div class="relative">
-              <input type="text" id="cardNumber" placeholder="•••• •••• •••• ••••" maxlength="19" autocomplete="cc-number"
-                     class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 pr-24 text-sm text-white focus:outline-none focus:border-orange-500 font-mono font-bold tracking-widest transition">
-              <div class="absolute right-3 top-2.5 flex items-center space-x-1" id="cardBadges">
-                <span id="badgeVisa" class="text-[10px] font-bold px-1.5 py-0.5 rounded border border-zinc-700 bg-zinc-900 text-zinc-500 transition">VISA</span>
-                <span id="badgeMC" class="text-[10px] font-bold px-1.5 py-0.5 rounded border border-zinc-700 bg-zinc-900 text-zinc-500 transition">MC</span>
-                <span id="badgeAmex" class="text-[10px] font-bold px-1.5 py-0.5 rounded border border-zinc-700 bg-zinc-900 text-zinc-500 transition">AMEX</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Expiry & CVC -->
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Expiry (MM/YY) <span class="text-rose-400">*</span></label>
-              <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp"
-                     class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition text-center tracking-wider">
+          <div class="bg-gradient-to-b from-zinc-900/80 to-black/60 border border-zinc-800 rounded-2xl p-6 sm:p-8 text-center space-y-5">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-orange-500/20 to-amber-500/10 border border-orange-500/40 flex items-center justify-center shadow-lg">
+              <span class="text-3xl">🔒</span>
             </div>
             <div>
-              <div class="flex items-center justify-between mb-1">
-                <label class="block text-xs font-mono uppercase text-zinc-400">CVC / CVV <span class="text-rose-400">*</span></label>
-                <span class="text-[10px] text-zinc-400 font-mono">3-4 Digits</span>
-              </div>
-              <input type="password" id="cardCvc" placeholder="•••" maxlength="4" autocomplete="cc-csc"
-                     class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition text-center tracking-widest">
+              <h4 class="text-lg font-black text-white">Secure Payment via Stripe</h4>
+              <p class="text-xs text-zinc-400 max-w-sm mx-auto mt-1.5 leading-relaxed">
+                You will be redirected to Stripe's bank-grade PCI-DSS Level 1 checkout. Your card details never touch our servers.
+              </p>
+            </div>
+            <div class="flex items-center justify-center gap-2 flex-wrap">
+              <span class="text-[10px] font-bold px-2 py-1 rounded border border-blue-700 bg-blue-950/60 text-blue-300">VISA</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded border border-rose-700 bg-rose-950/60 text-rose-300">MASTERCARD</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded border border-sky-700 bg-sky-950/60 text-sky-300">AMEX</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded border border-zinc-600 bg-zinc-800 text-zinc-200">🍎 Apple Pay</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded border border-zinc-600 bg-zinc-800 text-zinc-200">G Pay</span>
+            </div>
+            <div class="flex items-center justify-center space-x-2 text-[10px] text-emerald-400 font-mono">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>256-Bit SSL · PCI-DSS Level 1 · Zero-Store Tokenization</span>
             </div>
           </div>
 
-          <!-- In-Page Security badge -->
-          <div class="bg-zinc-950/70 border border-zinc-800 rounded-xl p-3 flex items-center space-x-2.5 text-xs text-zinc-400 font-mono">
-            <span class="text-emerald-400 text-base">🛡️</span>
-            <span>Zero-Redirect In-Page Gateway: Direct bank 3D-Secure tokenization. Your card details are never stored.</span>
-          </div>
-          
-          <button id="submitPayBtn" type="button" onclick="processPaymentAndDownload('card')" 
-                  class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2 mt-4 cursor-pointer">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span>Pay $79.00 & Download PDF Dossier</span>
+          <button id="submitPayBtn" type="button" onclick="processPaymentAndDownload('card')"
+                  class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2 cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>Pay $79.00 — Secure Stripe Checkout</span>
           </button>
         </div>
 
@@ -909,7 +941,7 @@
 
           <button type="button" onclick="processPaymentAndDownload('crypto')" 
                   class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2">
-            <span>✓ Kripto Transferi Yaptım — Raporu İndir</span>
+            <span>✓ Kripto Transferi Yaptım — Ödemeyi Doğrulat</span>
           </button>
         </div>
                 <!-- TAB 3: HAVALE / WIRE (VAKIFBANK USD & TL) -->
@@ -1009,7 +1041,7 @@
 
           <button type="button" onclick="processPaymentAndDownload('iban')" 
                   class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2">
-            <span>✓ Havale / Transfer Yaptım — Raporu İndir</span>
+            <span>✓ Havale / Transfer Yaptım — Ödemeyi Doğrulat</span>
           </button>
         </div>
         <!-- TAB 4: PAYONEER (EUR / USD) -->
@@ -1060,7 +1092,7 @@
 
           <button type="button" onclick="processPaymentAndDownload('payoneer')" 
                   class="w-full py-4 rounded-xl badge-gradient text-black font-extrabold text-sm tracking-wide uppercase hover:opacity-95 transition shadow-xl flex items-center justify-center space-x-2 cursor-pointer">
-            <span>✓ Payoneer İle Gönderdim — Raporu İndir</span>
+            <span>✓ Payoneer İle Gönderdim — Ödemeyi Doğrulat</span>
           </button>
         </div>
       </div>
@@ -1128,6 +1160,23 @@
 
 
   <script>
+    // =====================================================
+    //  PAYMENT GATEWAY CONFIG
+    // =====================================================
+    //  1) Stripe Dashboard > Payment Links > Create
+    //     Product : LamboSpec AI VIP Dossier — $79.00
+    //     Success : https://federal216.github.io/lambospec-ai/?session_id={CHECKOUT_SESSION_ID}
+    //  2) Paste the generated URL below:
+    const STRIPE_PAYMENT_LINK = '';
+    const CONTACT_EMAIL       = 'karakoc.i@gmail.com';
+    let   paymentVerified     = false;
+
+    // Detect Stripe success redirect (?session_id=cs_live_xxx)
+    (function() {
+      const p = new URLSearchParams(window.location.search);
+      if (p.get('session_id')) { paymentVerified = true; }
+    })();
+
     function loadSampleListing() {
       document.getElementById('listingUrl').value = 'https://bringatrailer.com/listing/2016-lamborghini-huracan-lp610-4-coupe-2/';
       document.getElementById('modelSelect').value = 'huracan_lp610_4';
@@ -1381,133 +1430,100 @@
     }
 
     function processPaymentAndDownload(method) {
-      clearCardErrors();
+      // Clear previous errors
+      const errBox = document.getElementById('paymentErrorBox');
+      const errMsg = document.getElementById('paymentErrorMsg');
+      if (errBox) errBox.classList.add('hidden');
 
+      function showPayError(msg) {
+        if (errBox && errMsg) { errMsg.innerText = msg; errBox.classList.remove('hidden'); }
+        else { alert(msg); }
+      }
+
+      // Validate email (required for all methods)
       const emailInput = document.getElementById('custEmail');
       const email = emailInput ? emailInput.value.trim() : '';
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!email || !emailRegex.test(email)) {
-        showCardError('Please enter a valid email address to receive your negotiation dossier & receipt (e.g. buyer@domain.com).', 'custEmail');
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showPayError('Please enter a valid email address to receive your dossier & receipt.');
+        if (emailInput) emailInput.focus();
         return;
       }
 
-      let brand = 'Kripto / Havale';
-      let last4 = '8921';
+      const modelSelect = document.getElementById('modelSelect');
+      const modelName = modelSelect ? modelSelect.options[modelSelect.selectedIndex].text : 'Lamborghini';
 
+      // ================================================================
+      //  CARD  ➜  Redirect to Stripe Hosted Checkout (real payment)
+      // ================================================================
       if (method === 'card') {
-        const nameInput = document.getElementById('cardName');
-        const name = nameInput ? nameInput.value.trim() : '';
-        if (!name || name.length < 3) {
-          showCardError('Please enter the cardholder full name as printed on your card.', 'cardName');
+        if (!STRIPE_PAYMENT_LINK) {
+          showPayError('Stripe checkout is being configured. Please use Crypto, Bank Wire, or Payoneer.');
           return;
         }
-
-        const cardInput = document.getElementById('cardNumber');
-        const rawNum = cardInput ? cardInput.value.replace(/\D/g, '') : '';
-        if (rawNum.length < 15 || rawNum.length > 16) {
-          showCardError('Please enter a valid 15 or 16-digit card number.', 'cardNumber');
-          return;
-        }
-
-        if (!checkLuhn(rawNum)) {
-          showCardError('Invalid card number. Please verify the digits and try again (Luhn checksum failed).', 'cardNumber');
-          return;
-        }
-
-        const expInput = document.getElementById('cardExpiry');
-        const exp = expInput ? expInput.value.trim() : '';
-        const expMatch = exp.match(/^(0[1-9]|1[0-2])\/([0-9]{2})$/);
-        if (!expMatch) {
-          showCardError('Invalid expiration date format. Please use MM/YY (e.g. 08/28).', 'cardExpiry');
-          return;
-        }
-
-        const expMonth = parseInt(expMatch[1], 10);
-        const expYear = 2000 + parseInt(expMatch[2], 10);
-        const now = new Date();
-        const currentYear = now.getFullYear();
-        const currentMonth = now.getMonth() + 1;
-
-        if (expYear < currentYear || (expYear === currentYear && expMonth < currentMonth)) {
-          showCardError('This card has expired. Please provide a valid, active card.', 'cardExpiry');
-          return;
-        }
-
-        const cvcInput = document.getElementById('cardCvc');
-        const rawCvc = cvcInput ? cvcInput.value.replace(/\D/g, '') : '';
-        if (rawCvc.length < 3 || rawCvc.length > 4) {
-          showCardError('Please enter a valid 3 or 4-digit CVC/CVV security code.', 'cardCvc');
-          return;
-        }
-
-        brand = detectCardBrand(rawNum);
-        last4 = rawNum.slice(-4);
+        window.location.href = STRIPE_PAYMENT_LINK
+          + '?prefilled_email=' + encodeURIComponent(email)
+          + '&client_reference_id=' + encodeURIComponent(modelName);
+        return;
       }
 
-      // If validation passed: Run in-page 3D Secure / Bank Authorization sequence
-      const formContainer = document.getElementById('checkoutFormContainer');
-      const procState = document.getElementById('payProcessingState');
-      const succState = document.getElementById('paySuccessState');
-      const procMsg = document.getElementById('processMsg');
+      // ================================================================
+      //  MANUAL (Crypto / IBAN / Payoneer)  ➜  Verification e-mail
+      //  PDF is NOT generated — delivered manually after confirmation
+      // ================================================================
+      const labels = { crypto:'Crypto (USDT/USDC)', iban:'Bank Wire (IBAN/FAST)', payoneer:'Payoneer' };
+      const subject = encodeURIComponent('LamboSpec AI - $79 Payment Verification');
+      const body = encodeURIComponent(
+        'Hello LamboSpec AI,\n\n'
+        + 'I completed my $79 payment via ' + (labels[method]||method) + '.\n\n'
+        + 'Vehicle: ' + modelName + '\n'
+        + 'Delivery e-mail: ' + email + '\n\n'
+        + 'Please verify and send my 8-page VIP Negotiation Dossier.\n\nThank you.'
+      );
 
-      formContainer.classList.add('hidden');
-      procState.classList.remove('hidden');
+      // Show processing spinner
+      const formC = document.getElementById('checkoutFormContainer');
+      const proc  = document.getElementById('payProcessingState');
+      const msg   = document.getElementById('processMsg');
+      formC.classList.add('hidden');
+      proc.classList.remove('hidden');
+      msg.innerText = 'Submitting payment verification request\u2026';
 
-      if (method === 'card') {
-        procMsg.innerText = 'Connecting to 256-Bit SSL Bank Gateway (3D Secure)...';
-        setTimeout(() => {
-          procMsg.innerText = 'Authorizing ' + brand + ' (•••• ' + last4 + ') for $79.00 USD...';
-        }, 900);
-        setTimeout(() => {
-          procMsg.innerText = '3D Secure Authorized! Compiling Certified Lamborghini Dossier...';
-        }, 1800);
-      } else if (method === 'crypto') {
-        procMsg.innerText = 'Querying Blockchain Node for Transaction Confirmation...';
-        setTimeout(() => {
-          procMsg.innerText = 'Block Confirmation Verified ($79.00 Equivalent)...';
-        }, 1000);
-        setTimeout(() => {
-          procMsg.innerText = 'Compiling Certified Lamborghini Dossier...';
-        }, 1800);
-      } else if (method === 'payoneer') {
-        procMsg.innerText = 'Connecting to Payoneer Payment Gateway...';
-        setTimeout(() => {
-          procMsg.innerText = 'Verifying Payoneer Transfer ($79.00 / €75.00)...';
-        }, 1000);
-        setTimeout(() => {
-          procMsg.innerText = 'Transfer Confirmed! Compiling Certified Lamborghini Dossier...';
-        }, 1800);
-      } else {
-        procMsg.innerText = 'Verifying Bank Wire Transfer Record...';
-        setTimeout(() => {
-          procMsg.innerText = 'Wire Confirmation Received...';
-        }, 1000);
-        setTimeout(() => {
-          procMsg.innerText = 'Compiling Certified Lamborghini Dossier...';
-        }, 1800);
-      }
+      setTimeout(function() {
+        proc.classList.add('hidden');
+        var succ = document.getElementById('paySuccessState');
+        if (succ) {
+          succ.classList.remove('hidden');
+          var h4 = succ.querySelector('h4');
+          var p  = succ.querySelector('p');
+          if (h4) h4.innerText = 'Payment Verification Submitted';
+          if (p)  p.innerHTML =
+            'Your certified dossier for <strong>' + modelName + '</strong> will be delivered to '
+            + '<strong>' + email + '</strong> within 15 minutes after payment confirmation.'
+            + '<br><br>\ud83d\udce7 A verification e-mail window is opening now.';
 
-      setTimeout(() => {
-        procState.classList.add('hidden');
-        succState.classList.remove('hidden');
+          // Hide download button — PDF is delivered after manual verification
+          var dlBtn = succ.querySelector('button[onclick="generateDossierPDF()"]');
+          if (dlBtn) dlBtn.style.display = 'none';
 
-        // Populate receipt summary
-        const txnId = 'TXN-LMB-' + Math.floor(100000 + Math.random() * 900000);
-        const succTxnEl = document.getElementById('succTxnId');
-        const succCardEl = document.getElementById('succCardDetails');
-        const succEmailEl = document.getElementById('succEmail');
-
-        if (succTxnEl) succTxnEl.innerText = txnId;
-        if (succCardEl) succCardEl.innerText = (method === 'card') ? (brand + ' •••• ' + last4) : (method === 'crypto' ? 'USDT/USDC Blockchain' : (method === 'payoneer' ? 'Payoneer (96037764)' : 'VakıfBank FAST'));
-        if (succEmailEl) succEmailEl.innerText = email;
-
-        // Trigger real PDF download
-        generateDossierPDF();
-      }, 2600);
+          // Populate receipt summary
+          var txn = document.getElementById('succTxnId');
+          var det = document.getElementById('succCardDetails');
+          var em  = document.getElementById('succEmail');
+          if (txn) txn.innerText = 'PENDING-' + Math.floor(100000+Math.random()*900000);
+          if (det) det.innerText = labels[method] || method;
+          if (em)  em.innerText = email;
+        }
+        // Open e-mail client for seller notification
+        window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
+      }, 2000);
     }
 
     function generateDossierPDF() {
+      // === PAYMENT GATE: only allow PDF after verified Stripe payment ===
+      if (!paymentVerified) {
+        openCheckoutModal();
+        return;
+      }
       if (!window.jspdf || !window.jspdf.jsPDF) {
         alert('Generating PDF... Please make sure your internet connection allows loading jsPDF.');
         return;

@@ -106,6 +106,8 @@
         if (usdtB) usdtB.className = off;
         if (usdcB) usdcB.className = on;
       }
+      cryptoActiveCoin = coin;
+      stopCryptoMonitor(); // Reset monitor when switching coins
     }
 
     // ── IBAN currency toggle (USD <-> TL) ──
@@ -922,7 +924,7 @@
               <div class="bg-black/60 border border-emerald-800/50 rounded-xl p-4 space-y-3">
                 <div class="flex items-center justify-between">
                   <span class="text-xs font-mono font-bold text-emerald-400 uppercase">USDT · Tron TRC20 Network</span>
-                  <span class="text-xs font-mono font-bold text-white bg-emerald-900/60 border border-emerald-700 px-2 py-0.5 rounded">$79.00 USDT</span>
+                  <span id="cryptoUsdtAmount" class="text-xs font-mono font-bold text-white bg-emerald-900/60 border border-emerald-700 px-2 py-0.5 rounded">$79.00 USDT</span>
                 </div>
                 <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-amber-300 break-all select-all" id="cryptoWalletAddr">TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi</div>
                 <button type="button" onclick="copyText('TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi','USDT TRC20 Wallet')" class="w-full py-2.5 rounded-lg bg-emerald-900/40 hover:bg-emerald-800/50 border border-emerald-700 text-emerald-300 text-xs font-bold font-mono transition cursor-pointer">
@@ -934,7 +936,7 @@
               <div class="bg-black/60 border border-blue-800/50 rounded-xl p-4 space-y-3">
                 <div class="flex items-center justify-between">
                   <span class="text-xs font-mono font-bold text-blue-400 uppercase">USDC · Ethereum ERC20 Network</span>
-                  <span class="text-xs font-mono font-bold text-white bg-blue-900/60 border border-blue-700 px-2 py-0.5 rounded">$79.00 USDC</span>
+                  <span id="cryptoUsdcAmount" class="text-xs font-mono font-bold text-white bg-blue-900/60 border border-blue-700 px-2 py-0.5 rounded">$79.00 USDC</span>
                 </div>
                 <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-blue-300 break-all select-all">0x45824b71c98b4922723be312fa6fc8af6be0e090</div>
                 <button type="button" onclick="copyText('0x45824b71c98b4922723be312fa6fc8af6be0e090','USDC ERC20 Wallet')" class="w-full py-2.5 rounded-lg bg-blue-900/40 hover:bg-blue-800/50 border border-blue-700 text-blue-300 text-xs font-bold font-mono transition cursor-pointer">
@@ -943,17 +945,22 @@
               </div>
             </div>
             <div class="bg-amber-950/30 border border-amber-800/50 rounded-xl p-3 text-xs text-amber-200/80 space-y-1.5">
-              <div class="font-bold text-amber-300">⚡ After sending $79 USDT/USDC:</div>
-              <div>1. Send exactly <strong class="text-white">$79.00</strong> to the wallet above</div>
-              <div>2. Take a screenshot of the transaction hash (TxID)</div>
-              <div>3. Email TxID + your email to: <strong class="text-orange-400">karakoc.i@gmail.com</strong></div>
-              <div>4. Your 8-page PDF dossier will be delivered within 15 minutes</div>
+              <div class="font-bold text-amber-300">⚡ AUTOMATIC VERIFICATION — Send the EXACT amount shown:</div>
+              <div>1. Send exactly <strong class="text-white" id="cryptoUsdtExact">79.00</strong> USDT/USDC to the wallet above</div>
+              <div>2. Our system monitors the blockchain in real-time</div>
+              <div>3. Once your transfer is confirmed (1-2 min), your PDF downloads <strong class="text-emerald-400">automatically</strong></div>
+              <div class="text-[10px] text-zinc-400 mt-1">⚠️ The unique amount ensures your payment is identified correctly. Do NOT round.</div>
+            </div>
+            <!-- Real-time verification status -->
+            <div id="cryptoVerifyStatus" class="hidden mt-3 p-3 rounded-xl border border-amber-700 bg-amber-950/60 text-amber-300 text-xs font-mono flex items-center space-x-2">
+              <span class="text-base">⏳</span>
+              <span>Waiting for payment...</span>
             </div>
           </div>
-          <button type="button" onclick="processPaymentAndDownload('crypto')"
+          <button type="button" onclick="startCryptoMonitor(cryptoActiveCoin === 'usdc' ? 'usdc' : 'usdt')"
                   class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-extrabold text-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.99] transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer border border-emerald-400/50">
-            <span>🪙</span>
-            <span>I've Sent $79 USDT/USDC — Confirm & Get PDF</span>
+            <span>🔍</span>
+            <span>Generate Unique Amount & Start Auto-Verification</span>
           </button>
         </div>
 
@@ -1723,6 +1730,191 @@
 
       // Trigger automatic save
       doc.save('LamboSpec_' + (document.getElementById('resTitle').innerText.replace(/[^a-zA-Z0-9]/g, '_')) + '_Dossier.pdf');
+    }
+
+
+    // =====================================================
+    //  AUTOMATIC CRYPTO PAYMENT VERIFICATION (Blockchain)
+    // =====================================================
+    const USDT_TRC20_WALLET = 'TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi';
+    const USDC_ERC20_WALLET = '0x45824b71c98b4922723be312fa6fc8af6be0e090';
+    const USDT_TRC20_CONTRACT = 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t';
+    const USDC_ERC20_CONTRACT = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';
+
+    let cryptoCheckInterval = null;
+    let cryptoCheckStartTime = 0;
+    let cryptoUniqueAmount = 0;
+    let cryptoActiveCoin = 'usdt';
+    let cryptoCheckCount = 0;
+    const CRYPTO_MAX_CHECKS = 180; // 30 min (10s intervals)
+
+    function generateUniqueAmount() {
+      // $79.01 - $79.99 arasi benzersiz tutar
+      const cents = Math.floor(Math.random() * 99) + 1;
+      return 79 + cents / 100;
+    }
+
+    function startCryptoMonitor(coin) {
+      // Stop any existing monitor
+      stopCryptoMonitor();
+
+      cryptoActiveCoin = coin;
+      cryptoUniqueAmount = generateUniqueAmount();
+      cryptoCheckStartTime = Date.now() - 60000; // 1 min buffer
+      cryptoCheckCount = 0;
+
+      // Update displayed amounts
+      updateCryptoDisplayAmount(coin, cryptoUniqueAmount);
+
+      // Show monitoring status
+      showCryptoStatus('waiting', 'Waiting for ' + cryptoUniqueAmount.toFixed(2) + ' ' + coin.toUpperCase() + ' transfer...');
+
+      // Start polling every 10 seconds
+      cryptoCheckInterval = setInterval(function() {
+        cryptoCheckCount++;
+        if (cryptoCheckCount > CRYPTO_MAX_CHECKS) {
+          stopCryptoMonitor();
+          showCryptoStatus('timeout', 'Payment check timed out (30 min). Click "Check Again" to restart.');
+          return;
+        }
+        checkBlockchainPayment(coin);
+      }, 10000);
+
+      // Run first check immediately
+      checkBlockchainPayment(coin);
+    }
+
+    function stopCryptoMonitor() {
+      if (cryptoCheckInterval) {
+        clearInterval(cryptoCheckInterval);
+        cryptoCheckInterval = null;
+      }
+    }
+
+    function updateCryptoDisplayAmount(coin, amount) {
+      var amountStr = amount.toFixed(2);
+      // Update USDT amount display
+      var usdtAmountEl = document.getElementById('cryptoUsdtAmount');
+      var usdcAmountEl = document.getElementById('cryptoUsdcAmount');
+      var usdtExactEl = document.getElementById('cryptoUsdtExact');
+      var usdcExactEl = document.getElementById('cryptoUsdcExact');
+
+      if (coin === 'usdt') {
+        if (usdtAmountEl) usdtAmountEl.innerText = amountStr + ' USDT';
+        if (usdtExactEl) usdtExactEl.innerText = amountStr;
+      } else {
+        if (usdcAmountEl) usdcAmountEl.innerText = amountStr + ' USDC';
+        if (usdcExactEl) usdcExactEl.innerText = amountStr;
+      }
+    }
+
+    function showCryptoStatus(type, msg) {
+      var statusEl = document.getElementById('cryptoVerifyStatus');
+      if (!statusEl) return;
+      statusEl.classList.remove('hidden');
+
+      var colors = {
+        waiting: 'border-amber-700 bg-amber-950/60 text-amber-300',
+        checking: 'border-blue-700 bg-blue-950/60 text-blue-300',
+        confirmed: 'border-emerald-700 bg-emerald-950/60 text-emerald-300',
+        timeout: 'border-rose-700 bg-rose-950/60 text-rose-300'
+      };
+      var icons = { waiting: '⏳', checking: '🔍', confirmed: '✅', timeout: '⏰' };
+
+      statusEl.className = 'mt-3 p-3 rounded-xl border text-xs font-mono flex items-center space-x-2 ' + (colors[type] || colors.waiting);
+      statusEl.innerHTML = '<span class="text-base">' + (icons[type] || '⏳') + '</span>' +
+        '<span>' + msg + '</span>' +
+        (type === 'waiting' || type === 'checking' ? '<span class="ml-auto w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></span>' : '');
+    }
+
+    async function checkBlockchainPayment(coin) {
+      showCryptoStatus('checking', 'Scanning blockchain for ' + cryptoUniqueAmount.toFixed(2) + ' ' + coin.toUpperCase() + '... (Check #' + cryptoCheckCount + ')');
+
+      try {
+        if (coin === 'usdt') {
+          await checkTRC20Payment();
+        } else {
+          await checkERC20Payment();
+        }
+      } catch(e) {
+        console.log('Blockchain check error:', e);
+        showCryptoStatus('waiting', 'Network hiccup, retrying... (' + cryptoUniqueAmount.toFixed(2) + ' ' + coin.toUpperCase() + ')');
+      }
+    }
+
+    async function checkTRC20Payment() {
+      var url = 'https://api.trongrid.io/v1/accounts/' + USDT_TRC20_WALLET +
+                '/transactions/trc20?limit=20&contract_address=' + USDT_TRC20_CONTRACT +
+                '&only_to=true&order_by=block_timestamp,desc';
+
+      var resp = await fetch(url);
+      var data = await resp.json();
+
+      if (data.data && data.data.length > 0) {
+        for (var i = 0; i < data.data.length; i++) {
+          var tx = data.data[i];
+          var amount = parseInt(tx.value) / 1e6; // USDT has 6 decimals
+          var ts = tx.block_timestamp;
+
+          // Check if amount matches AND is recent (after checkout started)
+          if (Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime) {
+            cryptoPaymentConfirmed(tx.transaction_id, amount, 'USDT TRC20');
+            return;
+          }
+        }
+      }
+      showCryptoStatus('waiting', 'Waiting for ' + cryptoUniqueAmount.toFixed(2) + ' USDT transfer... (Check #' + cryptoCheckCount + ')');
+    }
+
+    async function checkERC20Payment() {
+      // Use Etherscan public API for ERC20 token transfers
+      var url = 'https://api.etherscan.io/api?module=account&action=tokentx' +
+                '&contractaddress=' + USDC_ERC20_CONTRACT +
+                '&address=' + USDC_ERC20_WALLET +
+                '&page=1&offset=10&sort=desc&apikey=YourApiKeyToken';
+
+      var resp = await fetch(url);
+      var data = await resp.json();
+
+      if (data.result && Array.isArray(data.result)) {
+        for (var i = 0; i < data.result.length; i++) {
+          var tx = data.result[i];
+          var amount = parseInt(tx.value) / 1e6; // USDC has 6 decimals
+          var ts = parseInt(tx.timeStamp) * 1000;
+
+          if (Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime) {
+            cryptoPaymentConfirmed(tx.hash, amount, 'USDC ERC20');
+            return;
+          }
+        }
+      }
+      showCryptoStatus('waiting', 'Waiting for ' + cryptoUniqueAmount.toFixed(2) + ' USDC transfer... (Check #' + cryptoCheckCount + ')');
+    }
+
+    function cryptoPaymentConfirmed(txHash, amount, network) {
+      stopCryptoMonitor();
+      showCryptoStatus('confirmed', 'PAYMENT CONFIRMED! ' + amount.toFixed(2) + ' ' + network + ' received. TxID: ' + txHash.substring(0, 16) + '...');
+
+      // Set payment verified and download PDF
+      paymentVerified = true;
+
+      // Show success state
+      setTimeout(function() {
+        var container = document.getElementById('checkoutFormContainer');
+        var success = document.getElementById('paySuccessState');
+        if (container) container.classList.add('hidden');
+        if (success) success.classList.remove('hidden');
+
+        var succEmail = document.getElementById('succEmail');
+        var emailInput = document.getElementById('custEmail');
+        if (succEmail && emailInput) succEmail.innerText = emailInput.value;
+        var succCardDetails = document.getElementById('succCardDetails');
+        if (succCardDetails) succCardDetails.innerText = network;
+        var succTxnId = document.getElementById('succTxnId');
+        if (succTxnId) succTxnId.innerText = txHash.substring(0, 20) + '...';
+
+        generateDossierPDF();
+      }, 1500);
     }
 
     // Deep-link SEO model auto-selector (?model=<slug>)

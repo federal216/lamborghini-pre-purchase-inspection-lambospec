@@ -25,7 +25,19 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=huracan_performante_spyder</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=huracan_evo</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=huracan_evo_spyder</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -49,7 +61,31 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=huracan_super_trofeo</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=huracan_gt3_evo2</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=huracan_avio</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=aventador_lp700_4</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_lp700_4_roadster</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -61,7 +97,19 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_sv_roadster</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=aventador_s</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_s_roadster</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -73,7 +121,37 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_svj_roadster</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=aventador_ultimae</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_ultimae_roadster</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_j</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_miura_homage</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=aventador_pirelli</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -103,7 +181,37 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=urus_pearl_capsule</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=urus_graphite_capsule</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=urus_mansory</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=urus_novitec</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=revuelto_v12</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=revuelto_opera_unica</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -115,7 +223,19 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=temerario_alleggerita</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_5_0</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_spyder</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -128,6 +248,12 @@
   </url>
   <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_lp560_4</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_lp560_4_spyder</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -151,7 +277,37 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_bicolore</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_tricolore</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_super_trofeo_stradale</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=gallardo_nera</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=murcielago_6_2</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=murcielago_roadster_6_2</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -163,7 +319,31 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=murcielago_lp640_roadster</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=murcielago_lp650_4_roadster</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=murcielago_lp670_sv</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=murcielago_40th_anniversary</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=diablo_standard</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -175,13 +355,115 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=diablo_vt_roadster</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=diablo_sv</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=diablo_se30</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=diablo_se30_jota</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=diablo_gt</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=diablo_gt_r</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_lp400</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_lp400_s</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_5000_s</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_5000_qv</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_25th_anniversary</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_walter_wolf</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_turbo_s</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=countach_lpi800_4</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=miura_p400</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=miura_p400_s</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=miura_p400_sv</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=miura_jota</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=miura_roadster</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -217,12 +499,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://federal216.github.io/lambospec-ai/?model=miura_p400_sv</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_urraco</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -241,25 +517,25 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://federal216.github.io/lambospec-ai/?model=countach_lp400</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://federal216.github.io/lambospec-ai/?model=countach_5000_qv</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=lm002_rambo_lambo</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lm002_americana</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=reventon</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=reventon_roadster</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -277,7 +553,19 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_veneno_roadster</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=centenario</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_centenario_roadster</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -289,7 +577,7 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://federal216.github.io/lambospec-ai/?model=countach_lpi800_4</loc>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_sian_roadster</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -302,6 +590,54 @@
   </url>
   <url>
     <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_invencible</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_sc18_alston</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_sc20</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_egoista</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_asterion</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_lanzador</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_pregunta</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_cala</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://federal216.github.io/lambospec-ai/?model=lamborghini_marzal</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>

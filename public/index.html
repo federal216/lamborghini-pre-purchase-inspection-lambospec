@@ -1646,13 +1646,90 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-lambo-border py-8 text-center text-xs text-zinc-500 font-mono">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>© 2026 LAMBOSPEC AI. Built by Autonomous Agent Orchestration.</div>
-      <div>Independent advisory intelligence. Not affiliated with Automobili Lamborghini S.p.A.</div>
+  <!-- FOOTER WITH PADDLE COMPLIANCE LINKS (Terms, Privacy, Refund) -->
+  <footer class="border-t border-lambo-border py-10 text-center text-xs text-zinc-400 font-mono bg-black/60">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-zinc-800 pb-6">
+        <div>
+          <span class="text-white font-extrabold text-sm tracking-wider">LAMBOSPEC AI</span>
+          <span class="text-zinc-500 text-[11px] block sm:inline sm:ml-2">Autonomous Supercar Pre-Purchase Intelligence</span>
+        </div>
+        <!-- Required Paddle Compliance Links -->
+        <div class="flex items-center space-x-4 text-xs font-semibold text-zinc-300">
+          <button type="button" onclick="openLegalModal('terms')" class="hover:text-orange-400 transition cursor-pointer underline">Terms of Service</button>
+          <span class="text-zinc-600">·</span>
+          <button type="button" onclick="openLegalModal('privacy')" class="hover:text-orange-400 transition cursor-pointer underline">Privacy Notice</button>
+          <span class="text-zinc-600">·</span>
+          <button type="button" onclick="openLegalModal('refund')" class="hover:text-orange-400 transition cursor-pointer underline">Refund Policy</button>
+          <span class="text-zinc-600">·</span>
+          <a href="mailto:lamborginichallenge2026@gmail.com" class="hover:text-orange-400 transition underline text-orange-400">Support</a>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-zinc-500">
+        <div>© 2026 LAMBOSPEC AI. All rights reserved. Not affiliated with Automobili Lamborghini S.p.A.</div>
+        <div>VIP Concierge: <a href="mailto:lamborginichallenge2026@gmail.com" class="text-orange-400 hover:underline">lamborginichallenge2026@gmail.com</a></div>
+      </div>
     </div>
   </footer>
 
+  <!-- LEGAL POLICIES MODAL (Terms / Privacy / Refund) -->
+  <div id="legalModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">
+    <div class="bg-[#0f1117] border border-orange-500/40 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative text-left max-h-[85vh] overflow-y-auto">
+      <button onclick="closeLegalModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white p-2 rounded-xl bg-zinc-900 border border-zinc-800 transition">
+        ✕
+      </button>
+
+      <!-- Terms Content -->
+      <div id="legalTermsContent" class="space-y-4 text-zinc-300 text-xs leading-relaxed hidden">
+        <h3 class="text-xl font-black text-white border-b border-zinc-800 pb-3">Terms of Service</h3>
+        <p class="text-zinc-400">Last updated: November 20, 2026</p>
+        <p><strong>1. Service Overview:</strong> LamboSpec AI provides automated pre-purchase defect audits, fair market valuation analytics, and dealer negotiation dossiers for exotic vehicles based on historical auction sales comps, technical service bulletins (TSBs), and factory diagnostic parameters.</p>
+        <p><strong>2. Digital Delivery:</strong> Upon successful payment clearance ($79.00 USD), your customized multi-page diagnostic dossier is generated and delivered immediately via electronic download (PDF) and customer email receipt.</p>
+        <p><strong>3. Advisory Nature:</strong> LamboSpec AI produces independent analytical intelligence. Our reports serve as high-leverage buyer negotiation strategy and pre-inspection triage. Physical hands-on pre-purchase inspection (PPI) by an authorized marque technician is always recommended prior to bill of sale execution.</p>
+        <p><strong>4. Intellectual Property:</strong> All algorithms, valuation models, and dealer negotiation frameworks are proprietary to LamboSpec AI. Not affiliated with Automobili Lamborghini S.p.A.</p>
+      </div>
+
+      <!-- Privacy Content -->
+      <div id="legalPrivacyContent" class="space-y-4 text-zinc-300 text-xs leading-relaxed hidden">
+        <h3 class="text-xl font-black text-white border-b border-zinc-800 pb-3">Privacy Notice</h3>
+        <p class="text-zinc-400">Last updated: November 20, 2026</p>
+        <p><strong>1. Information Collection:</strong> We collect customer email addresses solely for transaction receipts, dossier fulfillment, and customer support inquiries. Vehicle VINs or listing URLs submitted for analysis are stored confidentially.</p>
+        <p><strong>2. Payment Security:</strong> We do not store or process payment card numbers or banking credentials on our servers. All credit card, Apple Pay, and Google Pay transactions are securely processed by Paddle (PCI-DSS Level 1 certified).</p>
+        <p><strong>3. Third-Party Non-Disclosure:</strong> We never sell, lease, or distribute private client transaction data or target acquisition details to dealerships or third parties.</p>
+        <p><strong>4. Contact & Inquiries:</strong> For data inquiries, please contact our Data Protection Officer at: <a href="mailto:lamborginichallenge2026@gmail.com" class="text-orange-400 underline">lamborginichallenge2026@gmail.com</a>.</p>
+      </div>
+
+      <!-- Refund Content -->
+      <div id="legalRefundContent" class="space-y-4 text-zinc-300 text-xs leading-relaxed hidden">
+        <h3 class="text-xl font-black text-white border-b border-zinc-800 pb-3">Refund &amp; Cancellation Policy</h3>
+        <p class="text-zinc-400">Last updated: November 20, 2026</p>
+        <p><strong>1. 100% Satisfaction Guarantee:</strong> We stand behind our algorithmic supercar audits. If your LamboSpec Dossier fails to generate, contains verifiable valuation errors, or fails to uncover applicable chassis service alerts, you are entitled to a full refund.</p>
+        <p><strong>2. Refund Window:</strong> Refund requests may be submitted within 14 calendar days of purchase by emailing your transaction reference ID to <a href="mailto:lamborginichallenge2026@gmail.com" class="text-orange-400 underline font-mono">lamborginichallenge2026@gmail.com</a>.</p>
+        <p><strong>3. Processing:</strong> Approved refunds are credited back to your original payment method within 3 to 5 business days via Paddle.</p>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-zinc-800 text-right">
+        <button onclick="closeLegalModal()" class="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs uppercase transition">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openLegalModal(type) {
+      document.getElementById('legalTermsContent').classList.add('hidden');
+      document.getElementById('legalPrivacyContent').classList.add('hidden');
+      document.getElementById('legalRefundContent').classList.add('hidden');
+      if (type === 'terms') document.getElementById('legalTermsContent').classList.remove('hidden');
+      if (type === 'privacy') document.getElementById('legalPrivacyContent').classList.remove('hidden');
+      if (type === 'refund') document.getElementById('legalRefundContent').classList.remove('hidden');
+      document.getElementById('legalModal').classList.remove('hidden');
+    }
+    function closeLegalModal() {
+      document.getElementById('legalModal').classList.add('hidden');
+    }
+  </script>
 
   <!-- CHECKOUT MODAL -->
   <div id="checkoutModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">

@@ -1,0 +1,191 @@
+{
+  "report_title": "LAMBOSPEC AI — Global Lamborghini Buyer Intelligence & Market Defect Pool",
+  "date": "2026-11-20",
+  "version": "2026.11.20-RELEASE",
+  "intelligence_engine": "Orkestra Multi-Agent Autonomous Crawler Pipeline",
+  "active_sources": [
+    "Lamborghini-Talk Community Registry & Owner Logs",
+    "FerrariChat Exotic Cross-Shoppers & PPI Discussions",
+    "PistonHeads UK Exotic Ownership Registry",
+    "Bring a Trailer Verified Transaction Comps & Bid History",
+    "Cars & Bids Supercar Auction Analytics",
+    "NHTSA Official Safety Recalls & Technical Service Bulletins (TSBs)",
+    "RM Sotheby's, Gooding & Co, Mobile.de European Supercar Listings",
+    "Independent Specialist Marque Diagnostics (Leonardo / LARA / ODIS)"
+  ],
+  "buyer_behavior_and_market_demands": {
+    "what_buyers_want": [
+      "Verified Front Axle Lift system (essential for urban drivability and resale preservation)",
+      "Proven clutch life readouts via factory diagnostics (LDF, ISR, and E-Gear percentages)",
+      "Verified Carbon Ceramic Rotor (CCB) health by physical micrometer thickness & disc weight (grams)",
+      "Zero unreported Thrust Mode / Launch Control track abuses in ECU telemetry",
+      "Transparent engine bonnet with LED lighting package (major resale differentiator on V10/V12)",
+      "Factory sport exhaust or documented warranty-friendly valved systems",
+      "Ad Personam interior stitching, contrast accents, and carbon package documentation",
+      "Continuous, uninterrupted annual service binder from authorized dealers or elite marque specialists"
+    ],
+    "primary_buyer_fears_and_pain_points": [
+      "Buying a car with worn CCB rotors that look visually okay but are oxidized (facing an immediate $24,000 - $28,000 replacement)",
+      "Aventador ISR clutch rod seal failure resulting in unexpected $14,000 - $18,000 gearbox teardown",
+      "Missing Front Axle Lift resulting in instant $10,000 - $12,000 resale valuation penalty",
+      "MagneRide active suspension shock absorber fluid weeping requiring $8,000 - $35,000 replacements",
+      "Urus high-pressure fuel pump torque defect or turbo oil feed O-ring engine-valley flooding",
+      "Unreported track duty: hidden frame micro-flexing, Cofango carbon weave stress cracks, and over-rev codes",
+      "Parasitic battery drain causing cascade of ghost check engine lights and instrument cluster glitches"
+    ]
+  },
+  "model_specific_chronic_flaws_and_leverage": {
+    "huracan_family": {
+      "platform": "5.2L V10 + 7-speed LDF Dual-Clutch",
+      "chronic_checkpoints": [
+        {
+          "component": "Carbon Ceramic Brake (CCB) Rotors",
+          "failure_mechanism": "Microscopic carbon matrix oxidation from track heat. Visual pad check is useless; rotors must be removed and weighed against stamped minimum weight (grams).",
+          "repair_cost_usd": 26000,
+          "negotiation_leverage_usd": 24000
+        },
+        {
+          "component": "MagneRide Damper Fluid Seepage",
+          "failure_mechanism": "Magnetic fluid weeping from seal heads causes harsh damping, loss of high-speed stability, and suspension fault codes.",
+          "repair_cost_usd": 8500,
+          "negotiation_leverage_usd": 8000
+        },
+        {
+          "component": "Front Axle Lifting Hydraulic Unit",
+          "failure_mechanism": "Pump microswitch failure or pressure line seal weep. Missing lift carries brutal market stigma.",
+          "repair_cost_usd": 5500,
+          "negotiation_leverage_usd": 12000
+        },
+        {
+          "component": "Front Differential Output Shaft Seals",
+          "failure_mechanism": "Oil weeping on undertray; differential casing damp around driveshaft flange.",
+          "repair_cost_usd": 3800,
+          "negotiation_leverage_usd": 4000
+        },
+        {
+          "component": "ECU Thrust Mode Launch Counter",
+          "failure_mechanism": "Excessive launches (>15) accelerate front differential clutch pack wear and half-shaft spline play.",
+          "repair_cost_usd": 6500,
+          "negotiation_leverage_usd": 10000
+        }
+      ]
+    },
+    "aventador_family": {
+      "platform": "6.5L V12 + 7-speed ISR Single-Clutch Automated Manual",
+      "chronic_checkpoints": [
+        {
+          "component": "ISR Transmission Clutch & Release Bearing",
+          "failure_mechanism": "Single-clutch automated manual suffers rapid clutch wear in stop-and-go driving. Release bearing binding and hydraulic actuator O-ring failure.",
+          "repair_cost_usd": 16000,
+          "negotiation_leverage_usd": 18500
+        },
+        {
+          "component": "Pushrod Suspension Inboard Dampers",
+          "failure_mechanism": "Horizontal Öhlins magnetorheological dampers leak hydraulic fluid. Factory replacement quotes reach staggering numbers.",
+          "repair_cost_usd": 32000,
+          "negotiation_leverage_usd": 25000
+        },
+        {
+          "component": "Evaporative Fuel Tank Fire Recall",
+          "failure_mechanism": "Overfilling fuel tank combined with revving with aftermarket exhaust leads to fuel vapors entering exhaust and catching fire.",
+          "repair_cost_usd": 4500,
+          "negotiation_leverage_usd": 6000
+        },
+        {
+          "component": "Cooling Radiators & Expansion Tank",
+          "failure_mechanism": "Heavy thermal load causes plastic coolant tank micro-fractures and radiator core corrosion in hot climates.",
+          "repair_cost_usd": 5200,
+          "negotiation_leverage_usd": 5000
+        }
+      ]
+    },
+    "urus_family": {
+      "platform": "4.0L Twin-Turbo V8 / Urus SE PHEV",
+      "chronic_checkpoints": [
+        {
+          "component": "High-Pressure Fuel Pump Torque (SE Hybrid Safety Recall)",
+          "failure_mechanism": "Insufficient bolt torque on high-pressure pump to cylinder head causing fuel leaks and severe fire risk.",
+          "repair_cost_usd": 3500,
+          "negotiation_leverage_usd": 5000
+        },
+        {
+          "component": "Turbo Oil Supply Line O-Rings & Oil Separator",
+          "failure_mechanism": "O-rings degrade under high turbo heat, pooling oil in the hot V valley. Excessive cylinder deactivation blow-by.",
+          "repair_cost_usd": 7800,
+          "negotiation_leverage_usd": 8500
+        },
+        {
+          "component": "Rearview Camera Software & Infotainment Freeze",
+          "failure_mechanism": "Software logic bug prevents backup camera display when shifting quickly to reverse upon startup.",
+          "repair_cost_usd": 1200,
+          "negotiation_leverage_usd": 1500
+        }
+      ]
+    },
+    "revuelto_temerario_hybrids": {
+      "platform": "V12 HPEV & 10,000 RPM Twin-Turbo V8 Hybrid",
+      "chronic_checkpoints": [
+        {
+          "component": "Upward Door Spherical Pin Support (Revuelto Recall)",
+          "failure_mechanism": "Spherical mounting pin for dihedral door gas spring detaches, causing door to drop suddenly or fail to open.",
+          "repair_cost_usd": 2800,
+          "negotiation_leverage_usd": 4000
+        },
+        {
+          "component": "Hybrid High-Voltage Battery Warranty Health",
+          "failure_mechanism": "Requires official dealer verification of 8-year high-voltage battery cell balance and software firmware patch.",
+          "repair_cost_usd": 22000,
+          "negotiation_leverage_usd": 20000
+        }
+      ]
+    },
+    "gallardo_family": {
+      "platform": "5.0L / 5.2L V10 + 6-speed E-Gear / Manual",
+      "chronic_checkpoints": [
+        {
+          "component": "E-Gear Snap Clutch Wear",
+          "failure_mechanism": "Requires LARA/Leonardo diagnostic scan to read clutch thickness percentage. < 30% means imminent replacement.",
+          "repair_cost_usd": 9500,
+          "negotiation_leverage_usd": 10000
+        },
+        {
+          "component": "Exhaust Thermal Bumper & Taillight Melting",
+          "failure_mechanism": "Extreme exhaust pipe heat radiating close to rear polyurethane bumper causes blistering and taillight socket melting.",
+          "repair_cost_usd": 4200,
+          "negotiation_leverage_usd": 4500
+        }
+      ]
+    },
+    "murcielago_family": {
+      "platform": "6.2L / 6.5L V12 + E-Gear / Gated 6-Speed Manual",
+      "chronic_checkpoints": [
+        {
+          "component": "Rear Main Crankshaft Seal",
+          "failure_mechanism": "Aged rear main seal drips oil directly onto clutch plate, causing severe slippage and catastrophic clutch contamination.",
+          "repair_cost_usd": 14000,
+          "negotiation_leverage_usd": 15000
+        },
+        {
+          "component": "Engine Bay Wiring Loom Heat Shielding",
+          "failure_mechanism": "Aftermarket straight pipes or decat exhausts scorch the factory wiring harness above the catalytic converters.",
+          "repair_cost_usd": 8500,
+          "negotiation_leverage_usd": 9000
+        }
+      ]
+    }
+  },
+  "verified_dealer_counter_scripts": [
+    {
+      "scenario": "Dealer claims carbon ceramic brakes are 'in great shape' based on visual inspection",
+      "buyer_script": "Lamborghini workshop manual specifically states CCB disc condition cannot be certified visually due to interior carbon fiber matrix oxidation. Please provide the stamped minimum weight (g) and current micrometer scale weight for all four corners. If measurements cannot be provided, we must deduct $24,000 for impending rotor replacement."
+    },
+    {
+      "scenario": "Dealer claims lack of Front Axle Lifting System is 'not a big deal'",
+      "buyer_script": "Historical Bring a Trailer and auction comp data over the past 18 months verifies an immediate 5.2% to 6.8% ($10,000 - $12,000) liquidity and resale penalty on Huracáns and Aventadors without the factory lift. We require an immediate $11,000 price adjustment to proceed."
+    },
+    {
+      "scenario": "Dealer claims Aventador ISR gearbox shifts 'normally for a supercar'",
+      "buyer_script": "We require an official ODIS diagnostic printout showing the clutch wear index, bite-point adaptation cycles, and accumulator hydraulic pressure test. If clutch wear exceeds 65%, a mandatory $14,000 reserve must be credited toward the bill of sale."
+    }
+  ]
+}

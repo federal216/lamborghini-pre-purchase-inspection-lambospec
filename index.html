@@ -107,7 +107,11 @@
         if (usdcB) usdcB.className = on;
       }
       cryptoActiveCoin = coin;
-      stopCryptoMonitor(); // Reset monitor when switching coins
+      if (typeof stopCryptoMonitor === 'function') stopCryptoMonitor();
+      var cryptoContent = document.getElementById('tabCryptoContent');
+      if (cryptoContent && !cryptoContent.classList.contains('hidden') && typeof startCryptoMonitor === 'function') {
+        startCryptoMonitor(coin);
+      }
     }
 
     // ── IBAN currency toggle (USD <-> TL) ──
@@ -926,7 +930,11 @@
                   <span class="text-xs font-mono font-bold text-emerald-400 uppercase">USDT · Tron TRC20 Network</span>
                   <span id="cryptoUsdtAmount" class="text-xs font-mono font-bold text-white bg-emerald-900/60 border border-emerald-700 px-2 py-0.5 rounded">$79.00 USDT</span>
                 </div>
-                <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-amber-300 break-all select-all" id="cryptoWalletAddr">TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi</div>
+                <!-- Dynamic QR Code -->
+                <div class="flex justify-center py-1">
+                  <img id="cryptoUsdtQr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&amp;margin=1&amp;data=TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi" class="w-28 h-28 rounded-xl bg-white p-1 border border-emerald-500/40 shadow-lg" alt="USDT TRC20 QR">
+                </div>
+                <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-amber-300 break-all select-all text-center" id="cryptoWalletAddr">TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi</div>
                 <button type="button" onclick="copyText('TUzD8hJcCsdjPZaS1man4vLAufiqzYpKWi','USDT TRC20 Wallet')" class="w-full py-2.5 rounded-lg bg-emerald-900/40 hover:bg-emerald-800/50 border border-emerald-700 text-emerald-300 text-xs font-bold font-mono transition cursor-pointer">
                   📋 Copy USDT TRC20 Wallet Address
                 </button>
@@ -938,29 +946,34 @@
                   <span class="text-xs font-mono font-bold text-blue-400 uppercase">USDC · Ethereum ERC20 Network</span>
                   <span id="cryptoUsdcAmount" class="text-xs font-mono font-bold text-white bg-blue-900/60 border border-blue-700 px-2 py-0.5 rounded">$79.00 USDC</span>
                 </div>
-                <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-blue-300 break-all select-all">0x45824b71c98b4922723be312fa6fc8af6be0e090</div>
+                <!-- Dynamic QR Code -->
+                <div class="flex justify-center py-1">
+                  <img id="cryptoUsdcQr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&amp;margin=1&amp;data=0x45824b71c98b4922723be312fa6fc8af6be0e090" class="w-28 h-28 rounded-xl bg-white p-1 border border-blue-500/40 shadow-lg" alt="USDC ERC20 QR">
+                </div>
+                <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-xs text-blue-300 break-all select-all text-center">0x45824b71c98b4922723be312fa6fc8af6be0e090</div>
                 <button type="button" onclick="copyText('0x45824b71c98b4922723be312fa6fc8af6be0e090','USDC ERC20 Wallet')" class="w-full py-2.5 rounded-lg bg-blue-900/40 hover:bg-blue-800/50 border border-blue-700 text-blue-300 text-xs font-bold font-mono transition cursor-pointer">
                   📋 Copy USDC ERC20 Wallet Address
                 </button>
               </div>
             </div>
             <div class="bg-amber-950/30 border border-amber-800/50 rounded-xl p-3 text-xs text-amber-200/80 space-y-1.5">
-              <div class="font-bold text-amber-300">⚡ AUTOMATIC VERIFICATION — Send the EXACT amount shown:</div>
-              <div>1. Send exactly <strong class="text-white" id="cryptoUsdtExact">79.00</strong> USDT/USDC to the wallet above</div>
-              <div>2. Our system monitors the blockchain in real-time</div>
-              <div>3. Once your transfer is confirmed (1-2 min), your PDF downloads <strong class="text-emerald-400">automatically</strong></div>
-              <div class="text-[10px] text-zinc-400 mt-1">⚠️ The unique amount ensures your payment is identified correctly. Do NOT round.</div>
+              <div class="font-bold text-amber-300">⚡ REAL-TIME BLOCKCHAIN VERIFICATION:</div>
+              <div>1. Send EXACTLY <strong class="text-white font-mono text-sm" id="cryptoExactAmount">$79.00</strong> <span id="cryptoExactCoinLabel">USDT</span> to the address above</div>
+              <div>2. Our live node monitors the blockchain every 10 seconds</div>
+              <div>3. Once your transaction is confirmed on-chain, your PDF opens & downloads <strong class="text-emerald-400">instantly</strong></div>
+              <div class="text-[10px] text-zinc-400 mt-1">⚠️ Unique decimal amount verifies your payment automatically without human intervention. Do not round.</div>
             </div>
             <!-- Real-time verification status -->
-            <div id="cryptoVerifyStatus" class="hidden mt-3 p-3 rounded-xl border border-amber-700 bg-amber-950/60 text-amber-300 text-xs font-mono flex items-center space-x-2">
+            <div id="cryptoVerifyStatus" class="mt-3 p-3 rounded-xl border border-amber-700 bg-amber-950/60 text-amber-300 text-xs font-mono flex items-center space-x-2">
               <span class="text-base">⏳</span>
-              <span>Waiting for payment...</span>
+              <span id="cryptoStatusText">Waiting for transfer...</span>
+              <span class="ml-auto w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></span>
             </div>
           </div>
-          <button type="button" onclick="startCryptoMonitor(cryptoActiveCoin === 'usdc' ? 'usdc' : 'usdt')"
+          <button type="button" onclick="startCryptoMonitor(cryptoActiveCoin)"
                   class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-extrabold text-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.99] transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer border border-emerald-400/50">
-            <span>🔍</span>
-            <span>Generate Unique Amount & Start Auto-Verification</span>
+            <span>🔄</span>
+            <span>Check Blockchain Confirmation Now</span>
           </button>
         </div>
 
@@ -1042,7 +1055,7 @@
           <button type="button" onclick="processPaymentAndDownload('iban')"
                   class="w-full py-4 rounded-2xl bg-gradient-to-r from-sky-600 to-sky-500 text-white font-extrabold text-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.99] transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer border border-sky-400/50">
             <span>🏦</span>
-            <span>I've Sent the Wire — Confirm & Get PDF</span>
+            <span>I've Sent the Wire — Submit Transfer Notice</span>
           </button>
         </div>
 
@@ -1084,7 +1097,7 @@
           <button type="button" onclick="processPaymentAndDownload('payoneer')"
                   class="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-500 text-black font-extrabold text-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.99] transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer border border-amber-400/50">
             <span>🌐</span>
-            <span>I've Sent via Payoneer — Confirm & Get PDF</span>
+            <span>I've Sent via Payoneer — Submit Transfer Notice</span>
           </button>
         </div>
 
@@ -1132,6 +1145,48 @@
           </button>
           <button type="button" onclick="closeCheckoutModal()" class="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs uppercase tracking-wider border border-zinc-700 transition cursor-pointer">
             Close Window
+          </button>
+        </div>
+      </div>
+
+      <!-- MANUAL TRANSFER NOTICE STATE (IBAN / PAYONEER) - NO AUTOMATIC PDF DOWNLOAD -->
+      <div id="payManualNoticeState" class="hidden py-6 text-center space-y-4">
+        <div class="w-16 h-16 rounded-full bg-amber-500/20 border-2 border-amber-500 text-amber-400 flex items-center justify-center text-3xl mx-auto shadow-lg">
+          📩
+        </div>
+        <h4 class="text-2xl font-black text-white">Transfer Notice Received</h4>
+        <p class="text-xs text-zinc-300 max-w-sm mx-auto">
+          Thank you! Your payment notice has been logged. Bank wire and Payoneer transfers require manual account settlement verification.
+        </p>
+
+        <!-- Digital Notice Summary -->
+        <div class="bg-zinc-950/90 border border-zinc-800 rounded-2xl p-4 text-left max-w-md mx-auto space-y-2 text-xs font-mono">
+          <div class="flex justify-between border-b border-zinc-800/80 pb-2 text-zinc-400">
+            <span>Order Reference:</span>
+            <span id="manualRefId" class="text-white font-bold">LMB-718293</span>
+          </div>
+          <div class="flex justify-between border-b border-zinc-800/80 pb-2 text-zinc-400">
+            <span>Payment Method:</span>
+            <span id="manualNoticeMethod" class="text-sky-400 font-bold">IBAN Wire Transfer</span>
+          </div>
+          <div class="flex justify-between border-b border-zinc-800/80 pb-2 text-zinc-400">
+            <span>Delivery Email:</span>
+            <span id="manualNoticeEmail" class="text-orange-400 font-bold">buyer@domain.com</span>
+          </div>
+          <div class="flex justify-between text-zinc-400">
+            <span>Verification Status:</span>
+            <span class="text-amber-400 font-bold">Pending Settlement (15-30 min)</span>
+          </div>
+        </div>
+
+        <div class="p-3 bg-amber-950/30 border border-amber-700/50 rounded-xl text-xs text-amber-200/90 max-w-md mx-auto text-left space-y-1">
+          <div class="font-bold text-amber-300">ℹ️ Next Steps:</div>
+          <div>As soon as your transfer of <strong>$79.00 USD</strong> clears in our account, your certified 8-page Lamborghini Negotiation Dossier will be dispatched directly to your email.</div>
+        </div>
+
+        <div class="pt-2 flex items-center justify-center">
+          <button type="button" onclick="closeCheckoutModal()" class="px-8 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs uppercase tracking-wider border border-zinc-700 transition cursor-pointer">
+            Got It — Close Window
           </button>
         </div>
       </div>
@@ -1212,10 +1267,13 @@
       document.getElementById('checkoutFormContainer').classList.remove('hidden');
       document.getElementById('payProcessingState').classList.add('hidden');
       document.getElementById('paySuccessState').classList.add('hidden');
+      const manualNotice = document.getElementById('payManualNoticeState');
+      if (manualNotice) manualNotice.classList.add('hidden');
       clearCardErrors();
     }
 
     function closeCheckoutModal() {
+      if (typeof stopCryptoMonitor === 'function') stopCryptoMonitor();
       document.getElementById('checkoutModal').classList.add('hidden');
     }
 
@@ -1248,9 +1306,19 @@
       if (payoneerContent) payoneerContent.classList.add('hidden');
 
       if (tab === 'card' && cardContent) cardContent.classList.remove('hidden');
-      if (tab === 'crypto' && cryptoContent) cryptoContent.classList.remove('hidden');
+      if (tab === 'crypto' && cryptoContent) cardContent.classList.remove('hidden');
       if (tab === 'iban' && ibanContent) ibanContent.classList.remove('hidden');
       if (tab === 'payoneer' && payoneerContent) payoneerContent.classList.remove('hidden');
+
+      if (tab === 'crypto') {
+        if (typeof startCryptoMonitor === 'function') {
+          startCryptoMonitor(cryptoActiveCoin || 'usdt');
+        }
+      } else {
+        if (typeof stopCryptoMonitor === 'function') {
+          stopCryptoMonitor();
+        }
+      }
     }
 
     function copyIbanNumber() {
@@ -1454,27 +1522,29 @@
         }
         return;
       } else {
-        // Crypto / IBAN / Payoneer — show confirmation email instructions
+        // IBAN / Payoneer — manual transfer notice ONLY! No unverified PDF download!
         var container = document.getElementById('checkoutFormContainer');
         var processing = document.getElementById('payProcessingState');
-        var success = document.getElementById('paySuccessState');
+        var manualNotice = document.getElementById('payManualNoticeState');
+
         if (container) container.classList.add('hidden');
         if (processing) processing.classList.remove('hidden');
         var processMsg = document.getElementById('processMsg');
-        if (processMsg) processMsg.innerText = 'Verifying ' + method.toUpperCase() + ' payment confirmation...';
+        if (processMsg) processMsg.innerText = 'Registering ' + (method === 'iban' ? 'Wire Transfer' : 'Payoneer') + ' notice...';
+
         setTimeout(function() {
           if (processing) processing.classList.add('hidden');
-          if (success) success.classList.remove('hidden');
-          var succEmail = document.getElementById('succEmail');
-          if (succEmail) succEmail.innerText = email;
-          var succCardDetails = document.getElementById('succCardDetails');
-          if (succCardDetails) succCardDetails.innerText = method.toUpperCase() + ' Transfer';
-          var succTxnId = document.getElementById('succTxnId');
-          if (succTxnId) succTxnId.innerText = 'TXN-LMB-' + Math.floor(100000 + Math.random() * 900000);
-          // For manual methods, mark as verified so they can download
-          paymentVerified = true;
-          generateDossierPDF();
-        }, 3000);
+          if (manualNotice) {
+            manualNotice.classList.remove('hidden');
+            var refEl = document.getElementById('manualRefId');
+            if (refEl) refEl.innerText = 'LMB-' + Math.floor(100000 + Math.random() * 900000);
+            var emailEl = document.getElementById('manualNoticeEmail');
+            if (emailEl) emailEl.innerText = email;
+            var methodEl = document.getElementById('manualNoticeMethod');
+            if (methodEl) methodEl.innerText = (method === 'iban' ? 'VakıfBank Wire Transfer (IBAN)' : 'Payoneer Transfer');
+          }
+          // Intentionally NO paymentVerified = true; NO generateDossierPDF()!
+        }, 1200);
       }
     }
 
@@ -1793,18 +1863,19 @@
 
     function updateCryptoDisplayAmount(coin, amount) {
       var amountStr = amount.toFixed(2);
-      // Update USDT amount display
       var usdtAmountEl = document.getElementById('cryptoUsdtAmount');
       var usdcAmountEl = document.getElementById('cryptoUsdcAmount');
-      var usdtExactEl = document.getElementById('cryptoUsdtExact');
-      var usdcExactEl = document.getElementById('cryptoUsdcExact');
+      var exactEl = document.getElementById('cryptoExactAmount');
+      var exactCoinLabel = document.getElementById('cryptoExactCoinLabel');
 
       if (coin === 'usdt') {
-        if (usdtAmountEl) usdtAmountEl.innerText = amountStr + ' USDT';
-        if (usdtExactEl) usdtExactEl.innerText = amountStr;
+        if (usdtAmountEl) usdtAmountEl.innerText = '$' + amountStr + ' USDT';
+        if (exactEl) exactEl.innerText = '$' + amountStr;
+        if (exactCoinLabel) exactCoinLabel.innerText = 'USDT (TRC20)';
       } else {
-        if (usdcAmountEl) usdcAmountEl.innerText = amountStr + ' USDC';
-        if (usdcExactEl) usdcExactEl.innerText = amountStr;
+        if (usdcAmountEl) usdcAmountEl.innerText = '$' + amountStr + ' USDC';
+        if (exactEl) exactEl.innerText = '$' + amountStr;
+        if (exactCoinLabel) exactCoinLabel.innerText = 'USDC (ERC20)';
       }
     }
 
@@ -1823,7 +1894,7 @@
 
       statusEl.className = 'mt-3 p-3 rounded-xl border text-xs font-mono flex items-center space-x-2 ' + (colors[type] || colors.waiting);
       statusEl.innerHTML = '<span class="text-base">' + (icons[type] || '⏳') + '</span>' +
-        '<span>' + msg + '</span>' +
+        '<span class="flex-1">' + msg + '</span>' +
         (type === 'waiting' || type === 'checking' ? '<span class="ml-auto w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></span>' : '');
     }
 
@@ -1838,7 +1909,7 @@
         }
       } catch(e) {
         console.log('Blockchain check error:', e);
-        showCryptoStatus('waiting', 'Network hiccup, retrying... (' + cryptoUniqueAmount.toFixed(2) + ' ' + coin.toUpperCase() + ')');
+        showCryptoStatus('waiting', 'Network scan in progress... (' + cryptoUniqueAmount.toFixed(2) + ' ' + coin.toUpperCase() + ')');
       }
     }
 
@@ -1867,24 +1938,29 @@
     }
 
     async function checkERC20Payment() {
-      // Use Etherscan public API for ERC20 token transfers
-      var url = 'https://api.etherscan.io/api?module=account&action=tokentx' +
-                '&contractaddress=' + USDC_ERC20_CONTRACT +
-                '&address=' + USDC_ERC20_WALLET +
-                '&page=1&offset=10&sort=desc&apikey=YourApiKeyToken';
+      // Use Blockscout v2 public API for ERC20 token transfers (No API key required)
+      var url = 'https://eth.blockscout.com/api/v2/addresses/' + USDC_ERC20_WALLET + '/token-transfers';
 
       var resp = await fetch(url);
       var data = await resp.json();
 
-      if (data.result && Array.isArray(data.result)) {
-        for (var i = 0; i < data.result.length; i++) {
-          var tx = data.result[i];
-          var amount = parseInt(tx.value) / 1e6; // USDC has 6 decimals
-          var ts = parseInt(tx.timeStamp) * 1000;
+      if (data && Array.isArray(data.items)) {
+        for (var i = 0; i < data.items.length; i++) {
+          var item = data.items[i];
+          if (!item.token || !item.to || !item.total) continue;
 
-          if (Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime) {
-            cryptoPaymentConfirmed(tx.hash, amount, 'USDC ERC20');
-            return;
+          var isUsdc = (item.token.address_hash || '').toLowerCase() === USDC_ERC20_CONTRACT.toLowerCase();
+          var isOurWallet = (item.to.hash || '').toLowerCase() === USDC_ERC20_WALLET.toLowerCase();
+
+          if (isUsdc && isOurWallet) {
+            var decimals = parseInt(item.total.decimals || 6);
+            var amount = parseFloat(item.total.value) / Math.pow(10, decimals);
+            var ts = new Date(item.timestamp).getTime();
+
+            if (Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime) {
+              cryptoPaymentConfirmed(item.transaction_hash, amount, 'USDC ERC20');
+              return;
+            }
           }
         }
       }

@@ -1734,68 +1734,45 @@
           </button>
         </div>
 
-        <!-- TAB 1: CARD FORM -->
+        <!-- TAB 1: CARD (PADDLE ACTIVE) -->
         <div id="tabCardContent" class="space-y-4">
           <!-- Live Validation Error Box for Card -->
           <div id="cardErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg">
             <span class="text-base">⚠️</span>
-            <span id="cardErrorMsg">Please check your card details.</span>
+            <span id="cardErrorMsg">Please check your details.</span>
           </div>
 
-          <!-- Cardholder Name -->
-          <div>
-            <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Cardholder Full Name <span class="text-rose-400">*</span></label>
-            <input type="text" id="cardName" placeholder="FIRSTNAME LASTNAME" autocomplete="cc-name"
-                   class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white uppercase focus:outline-none focus:border-orange-500 font-medium tracking-wide transition">
-          </div>
-
-          <!-- Card Number with dynamic brand badges -->
-          <div>
-            <div class="flex items-center justify-between mb-1">
-              <label class="block text-xs font-mono uppercase text-zinc-400">Card Number <span class="text-rose-400">*</span></label>
-              <span id="cardBrandLabel" class="text-[10px] font-mono text-zinc-400">256-Bit SSL Encrypted</span>
-            </div>
-            <div class="relative">
-              <input type="text" id="cardNumber" placeholder="•••• •••• •••• ••••" maxlength="19" autocomplete="cc-number"
-                     class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 pr-28 text-sm text-white focus:outline-none focus:border-orange-500 font-mono font-bold tracking-widest transition">
-              <div class="absolute right-3 top-2.5 flex items-center space-x-1" id="cardBadges">
-                <span id="badgeVisa" class="text-[10px] font-bold px-1.5 py-0.5 rounded border border-zinc-700 bg-zinc-900 text-zinc-500 transition">VISA</span>
-                <span id="badgeMC" class="text-[10px] font-bold px-1.5 py-0.5 rounded border border-zinc-700 bg-zinc-900 text-zinc-500 transition">MC</span>
-                <span id="badgeAmex" class="text-[10px] font-bold px-1.5 py-0.5 rounded border border-zinc-700 bg-zinc-900 text-zinc-500 transition">AMEX</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Expiry & CVC -->
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block text-xs font-mono uppercase text-zinc-400 mb-1">Expiry (MM/YY) <span class="text-rose-400">*</span></label>
-              <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp"
-                     class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition text-center tracking-wider">
+          <div class="bg-gradient-to-b from-zinc-900/90 to-black/80 border border-zinc-800 rounded-2xl p-6 sm:p-7 text-center space-y-4">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-orange-500/20 to-amber-500/10 border border-orange-500/40 flex items-center justify-center shadow-lg">
+              <span class="text-3xl">💳</span>
             </div>
             <div>
-              <div class="flex items-center justify-between mb-1">
-                <label class="block text-xs font-mono uppercase text-zinc-400">CVC / CVV <span class="text-rose-400">*</span></label>
-                <span class="text-[10px] text-zinc-400 font-mono">3-4 Digits</span>
-              </div>
-              <input type="password" id="cardCvc" placeholder="•••" maxlength="4" autocomplete="cc-csc"
-                     class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition text-center tracking-widest">
+              <h4 class="text-lg font-black text-white">Bank-Grade Card &amp; Mobile Checkout</h4>
+              <p class="text-xs text-zinc-400 max-w-sm mx-auto mt-1 leading-relaxed">
+                Click below to open Paddle’s official 256-bit encrypted checkout overlay. Pay securely with Apple Pay, Google Pay, or Credit Card.
+              </p>
+            </div>
+
+            <!-- Payment badges -->
+            <div class="flex items-center justify-center gap-2 flex-wrap pt-1">
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded border border-blue-700 bg-blue-950/60 text-blue-300 shadow-sm">VISA</span>
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded border border-rose-700 bg-rose-950/60 text-rose-300 shadow-sm">MASTERCARD</span>
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded border border-sky-700 bg-sky-950/60 text-sky-300 shadow-sm">AMEX</span>
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded border border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm">🍎 Apple Pay</span>
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded border border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm">G Pay</span>
+            </div>
+
+            <div class="flex items-center justify-center space-x-2 text-[10px] text-emerald-400 font-mono pt-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>256-Bit SSL · PCI-DSS Level 1 · 3D Secure Verified</span>
             </div>
           </div>
 
-          <!-- Trust Badges & Supported Methods -->
-          <div class="flex items-center justify-between text-[11px] text-zinc-400 font-mono pt-1">
-            <span class="flex items-center space-x-1">
-              <span class="text-emerald-400">🔒</span>
-              <span>256-Bit SSL Encrypted</span>
-            </span>
-            <span>PCI-DSS Level 1 · Apple Pay &amp; Google Pay</span>
-          </div>
-
+          <!-- PRIMARY ACTIVE PADDLE PAY BUTTON -->
           <button id="submitPayBtn" type="button" onclick="processPaymentAndDownload('card')"
                   class="w-full py-4 rounded-2xl badge-gradient text-black font-extrabold text-base tracking-wide uppercase hover:brightness-110 active:scale-[0.99] transition-all shadow-[0_0_35px_rgba(255,107,0,0.55)] flex items-center justify-center space-x-2 cursor-pointer border border-yellow-200/50">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span>Pay $79.00 — Authorize &amp; Instant Download</span>
+            <span>Pay $79.00 — Open Secure Checkout</span>
           </button>
 
           <div class="text-center text-[11px] text-zinc-400 font-mono">
@@ -2224,77 +2201,35 @@
 
       if (!email || !emailRegex.test(email)) {
         showCardError('Please enter a valid email address to receive your negotiation dossier & receipt (e.g. buyer@domain.com).', 'custEmail');
+        if (emailInput) emailInput.focus();
         return;
       }
 
+      const modelSelect = document.getElementById('modelSelect');
+      const modelName = modelSelect ? modelSelect.options[modelSelect.selectedIndex].text : 'Lamborghini';
+
       if (method === 'card') {
-        const nameInput = document.getElementById('cardName');
-        const name = nameInput ? nameInput.value.trim() : '';
-        if (!name || name.length < 3) {
-          showCardError('Please enter the cardholder full name as printed on your card.', 'cardName');
-          return;
+        // Open Official Paddle Checkout Overlay
+        try {
+          if (typeof Paddle !== 'undefined' && Paddle.Checkout) {
+            Paddle.Checkout.open({
+              items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
+              customer: { email: email },
+              customData: { model: modelName },
+              settings: {
+                successUrl: 'https://federal216.github.io/lambospec-ai/?paddle_success=true',
+                theme: 'dark',
+                displayMode: 'overlay'
+              }
+            });
+            return;
+          } else {
+            throw new Error('Paddle library initializing');
+          }
+        } catch(e) {
+          console.warn('Paddle open error:', e);
+          showCardError('Paddle checkout is opening... If blocked by browser, please allow popups or use Crypto payment.', 'custEmail');
         }
-
-        const cardInput = document.getElementById('cardNumber');
-        const rawNum = cardInput ? cardInput.value.replace(/\D/g, '') : '';
-        if (rawNum.length < 15 || rawNum.length > 16) {
-          showCardError('Please enter a valid 15 or 16-digit card number.', 'cardNumber');
-          return;
-        }
-
-        if (!checkLuhn(rawNum)) {
-          showCardError('Invalid card number. Please verify digits and try again (Luhn checksum failed).', 'cardNumber');
-          return;
-        }
-
-        const expInput = document.getElementById('cardExpiry');
-        const exp = expInput ? expInput.value.trim() : '';
-        const expMatch = exp.match(/^(0[1-9]|1[0-2])\/([0-9]{2})$/);
-        if (!expMatch) {
-          showCardError('Invalid expiration date format. Please use MM/YY (e.g. 08/28).', 'cardExpiry');
-          return;
-        }
-
-        const expMonth = parseInt(expMatch[1], 10);
-        const expYear = 2000 + parseInt(expMatch[2], 10);
-        const now = new Date();
-        const currentYear = now.getFullYear();
-        const currentMonth = now.getMonth() + 1;
-
-        if (expYear < currentYear || (expYear === currentYear && expMonth < currentMonth)) {
-          showCardError('This card has expired. Please provide a valid active card.', 'cardExpiry');
-          return;
-        }
-
-        const cvcInput = document.getElementById('cardCvc');
-        const rawCvc = cvcInput ? cvcInput.value.replace(/\D/g, '') : '';
-        if (rawCvc.length < 3 || rawCvc.length > 4) {
-          showCardError('Please enter a valid 3 or 4-digit CVC/CVV security code.', 'cardCvc');
-          return;
-        }
-
-        const cardBrand = detectCardBrand(rawNum);
-        const last4 = rawNum.slice(-4);
-
-        // Hide form and show high-tech processing state
-        document.getElementById('checkoutFormContainer').classList.add('hidden');
-        const proc = document.getElementById('payProcessingState');
-        proc.classList.remove('hidden');
-        document.getElementById('processMsg').innerText = 'Authorizing $79.00 USD via 256-Bit SSL Gateway...';
-
-        setTimeout(function() {
-          paymentVerified = true;
-          proc.classList.add('hidden');
-          document.getElementById('paySuccessState').classList.remove('hidden');
-
-          const randRef = 'TXN-LMB-' + Math.floor(100000 + Math.random() * 900000);
-          document.getElementById('succTxnId').innerText = randRef;
-          document.getElementById('succCardDetails').innerText = cardBrand + ' •••• ' + last4;
-          document.getElementById('succEmail').innerText = email;
-
-          // Automatically trigger certified PDF download
-          generateDossierPDF();
-        }, 2400);
       }
     }
 
@@ -2307,37 +2242,22 @@
 
       if (!email || !emailRegex.test(email)) {
         showCardError('Please enter a valid email address to receive your negotiation dossier & receipt.', 'custEmail');
+        if (emailInput) emailInput.focus();
         return;
       }
 
       const txInput = document.getElementById('cryptoTxidInput');
       const txVal = txInput ? txInput.value.trim() : '';
 
-      if (!txVal || txVal.length < 6) {
-        showCardError('Please paste your Transaction Hash (TxID) or Sender Wallet Address to verify your transfer.', 'cryptoTxidInput');
+      if (!txVal || txVal.length < 8) {
+        showCardError('Please paste your 64-character Transaction Hash (TxID) or sender wallet address to verify your transfer.', 'cryptoTxidInput');
+        if (txInput) txInput.focus();
         return;
       }
 
-      // Hide form and show verification state
-      document.getElementById('checkoutFormContainer').classList.add('hidden');
-      const proc = document.getElementById('payProcessingState');
-      proc.classList.remove('hidden');
-      const coinLabel = (cryptoActiveCoin === 'usdt') ? 'USDT (TRC20)' : 'USDC (ERC20)';
-      document.getElementById('processMsg').innerText = 'Verifying ' + coinLabel + ' On-Chain Transaction & Minting Access Token...';
-
-      setTimeout(function() {
-        paymentVerified = true;
-        proc.classList.add('hidden');
-        document.getElementById('paySuccessState').classList.remove('hidden');
-
-        const displayTx = txVal.length > 18 ? (txVal.slice(0, 8) + '...' + txVal.slice(-6)) : txVal;
-        document.getElementById('succTxnId').innerText = 'TXN-' + displayTx.toUpperCase();
-        document.getElementById('succCardDetails').innerText = coinLabel + ' On-Chain Confirmed ($79.00)';
-        document.getElementById('succEmail').innerText = email;
-
-        // Automatically trigger certified PDF download
-        generateDossierPDF();
-      }, 2200);
+      // Start on-chain monitoring
+      showCryptoStatus('checking', 'Querying blockchain node for TxID ' + (txVal.slice(0, 10)) + '... (Amount: ' + (cryptoUniqueAmount ? cryptoUniqueAmount.toFixed(2) : '79.00') + ')');
+      startCryptoMonitor(cryptoActiveCoin);
     }
 
     function generateDossierPDF() {

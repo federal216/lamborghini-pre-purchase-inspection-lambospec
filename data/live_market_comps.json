@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-22T10:53:25.897157+00:00",
+  "last_updated": "2026-11-22T15:35:51.236950+00:00",
   "total_monitored_models": 106,
   "currency": "USD",
   "active_source_monitors": [
@@ -15,9 +15,9 @@
     "huracan_lp610_4": {
       "name": "Lamborghini Huracán LP610-4",
       "sample_size": 24,
-      "avg_sold_price": 215000,
-      "low_sold_price": 182750,
-      "high_sold_price": 268750,
+      "avg_sold_price": 206500,
+      "low_sold_price": 175525,
+      "high_sold_price": 258125,
       "trend_30d": "+0.8% (Steady Liquid Volume)",
       "recent_notable_sales": [
         {
@@ -31,9 +31,9 @@
     "huracan_lp580_2": {
       "name": "Lamborghini Huracán LP580-2 (RWD)",
       "sample_size": 24,
-      "avg_sold_price": 215000,
-      "low_sold_price": 182750,
-      "high_sold_price": 268750,
+      "avg_sold_price": 193500,
+      "low_sold_price": 164475,
+      "high_sold_price": 241875,
       "trend_30d": "+0.8% (Steady Liquid Volume)",
       "recent_notable_sales": [
         {
@@ -47,9 +47,9 @@
     "huracan_performante": {
       "name": "Lamborghini Huracán Performante",
       "sample_size": 24,
-      "avg_sold_price": 215000,
-      "low_sold_price": 182750,
-      "high_sold_price": 268750,
+      "avg_sold_price": 302500,
+      "low_sold_price": 257125,
+      "high_sold_price": 378125,
       "trend_30d": "+0.8% (Steady Liquid Volume)",
       "recent_notable_sales": [
         {
@@ -79,9 +79,9 @@
     "huracan_evo": {
       "name": "Lamborghini Huracán EVO (AWD & RWD)",
       "sample_size": 24,
-      "avg_sold_price": 215000,
-      "low_sold_price": 182750,
-      "high_sold_price": 268750,
+      "avg_sold_price": 280000,
+      "low_sold_price": 238000,
+      "high_sold_price": 350000,
       "trend_30d": "+0.8% (Steady Liquid Volume)",
       "recent_notable_sales": [
         {
@@ -111,9 +111,9 @@
     "huracan_sto": {
       "name": "Lamborghini Huracán STO (Super Trofeo Omologata)",
       "sample_size": 24,
-      "avg_sold_price": 335000,
-      "low_sold_price": 284750,
-      "high_sold_price": 418750,
+      "avg_sold_price": 370000,
+      "low_sold_price": 314500,
+      "high_sold_price": 462500,
       "trend_30d": "+0.8% (Steady Liquid Volume)",
       "recent_notable_sales": [
         {
@@ -127,9 +127,9 @@
     "huracan_tecnica": {
       "name": "Lamborghini Huracán Tecnica",
       "sample_size": 24,
-      "avg_sold_price": 335000,
-      "low_sold_price": 284750,
-      "high_sold_price": 418750,
+      "avg_sold_price": 327500,
+      "low_sold_price": 278375,
+      "high_sold_price": 409375,
       "trend_30d": "+0.8% (Steady Liquid Volume)",
       "recent_notable_sales": [
         {
@@ -143,9 +143,9 @@
     "huracan_sterrato": {
       "name": "Lamborghini Huracán Sterrato (All-Terrain V10)",
       "sample_size": 24,
-      "avg_sold_price": 335000,
-      "low_sold_price": 284750,
-      "high_sold_price": 418750,
+      "avg_sold_price": 375000,
+      "low_sold_price": 318750,
+      "high_sold_price": 468750,
       "trend_30d": "+0.8% (Steady Liquid Volume)",
       "recent_notable_sales": [
         {
@@ -207,9 +207,9 @@
     "aventador_lp700_4": {
       "name": "Lamborghini Aventador LP700-4",
       "sample_size": 24,
-      "avg_sold_price": 345000,
-      "low_sold_price": 293250,
-      "high_sold_price": 431250,
+      "avg_sold_price": 305000,
+      "low_sold_price": 259250,
+      "high_sold_price": 381250,
       "trend_30d": "+1.8% (Strong Resale Value)",
       "recent_notable_sales": [
         {
@@ -239,9 +239,9 @@
     "aventador_lp750_4_sv": {
       "name": "Lamborghini Aventador LP750-4 SuperVeloce (SV)",
       "sample_size": 24,
-      "avg_sold_price": 345000,
-      "low_sold_price": 293250,
-      "high_sold_price": 431250,
+      "avg_sold_price": 547500,
+      "low_sold_price": 465375,
+      "high_sold_price": 684375,
       "trend_30d": "+1.8% (Strong Resale Value)",
       "recent_notable_sales": [
         {
@@ -271,9 +271,9 @@
     "aventador_s": {
       "name": "Lamborghini Aventador S (4-Wheel Steering)",
       "sample_size": 24,
-      "avg_sold_price": 345000,
-      "low_sold_price": 293250,
-      "high_sold_price": 431250,
+      "avg_sold_price": 390000,
+      "low_sold_price": 331500,
+      "high_sold_price": 487500,
       "trend_30d": "+1.8% (Strong Resale Value)",
       "recent_notable_sales": [
         {
@@ -303,9 +303,9 @@
     "aventador_svj": {
       "name": "Lamborghini Aventador SVJ (Super Veloce Jota)",
       "sample_size": 24,
-      "avg_sold_price": 485000,
-      "low_sold_price": 412250,
-      "high_sold_price": 606250,
+      "avg_sold_price": 705000,
+      "low_sold_price": 599250,
+      "high_sold_price": 881250,
       "trend_30d": "+1.8% (Strong Resale Value)",
       "recent_notable_sales": [
         {
@@ -335,9 +335,9 @@
     "aventador_ultimae": {
       "name": "Lamborghini Aventador LP780-4 Ultimae",
       "sample_size": 24,
-      "avg_sold_price": 485000,
-      "low_sold_price": 412250,
-      "high_sold_price": 606250,
+      "avg_sold_price": 835000,
+      "low_sold_price": 709750,
+      "high_sold_price": 1043750,
       "trend_30d": "+1.8% (Strong Resale Value)",
       "recent_notable_sales": [
         {
@@ -415,9 +415,9 @@
     "urus_suv": {
       "name": "Lamborghini Urus (4.0L Twin-Turbo V8)",
       "sample_size": 24,
-      "avg_sold_price": 185000,
-      "low_sold_price": 157250,
-      "high_sold_price": 231250,
+      "avg_sold_price": 208500,
+      "low_sold_price": 177225,
+      "high_sold_price": 260625,
       "trend_30d": "-1.2% (Depreciation Stabilization)",
       "recent_notable_sales": [
         {
@@ -431,9 +431,9 @@
     "urus_s": {
       "name": "Lamborghini Urus S",
       "sample_size": 24,
-      "avg_sold_price": 185000,
-      "low_sold_price": 157250,
-      "high_sold_price": 231250,
+      "avg_sold_price": 267500,
+      "low_sold_price": 227375,
+      "high_sold_price": 334375,
       "trend_30d": "-1.2% (Depreciation Stabilization)",
       "recent_notable_sales": [
         {
@@ -447,9 +447,9 @@
     "urus_performante": {
       "name": "Lamborghini Urus Performante",
       "sample_size": 24,
-      "avg_sold_price": 235000,
-      "low_sold_price": 199750,
-      "high_sold_price": 293750,
+      "avg_sold_price": 310000,
+      "low_sold_price": 263500,
+      "high_sold_price": 387500,
       "trend_30d": "-1.2% (Depreciation Stabilization)",
       "recent_notable_sales": [
         {
@@ -463,9 +463,9 @@
     "urus_se": {
       "name": "Lamborghini Urus SE (PHEV V8)",
       "sample_size": 24,
-      "avg_sold_price": 235000,
-      "low_sold_price": 199750,
-      "high_sold_price": 293750,
+      "avg_sold_price": 352500,
+      "low_sold_price": 299625,
+      "high_sold_price": 440625,
       "trend_30d": "-1.2% (Depreciation Stabilization)",
       "recent_notable_sales": [
         {
@@ -543,9 +543,9 @@
     "revuelto_v12": {
       "name": "Lamborghini Revuelto (V12 HPEV Flagship)",
       "sample_size": 24,
-      "avg_sold_price": 485000,
-      "low_sold_price": 412250,
-      "high_sold_price": 606250,
+      "avg_sold_price": 800000,
+      "low_sold_price": 680000,
+      "high_sold_price": 1000000,
       "trend_30d": "+1.8% (Strong Resale Value)",
       "recent_notable_sales": [
         {
@@ -575,9 +575,9 @@
     "temerario_v8": {
       "name": "Lamborghini Temerario (10,000 RPM Twin-Turbo V8 Hybrid)",
       "sample_size": 24,
-      "avg_sold_price": 250000,
-      "low_sold_price": 212500,
-      "high_sold_price": 312500,
+      "avg_sold_price": 435000,
+      "low_sold_price": 369750,
+      "high_sold_price": 543750,
       "trend_30d": "+1.0% (Collector Stable)",
       "recent_notable_sales": [
         {
@@ -607,9 +607,9 @@
     "gallardo_5_0": {
       "name": "Lamborghini Gallardo 5.0 V10 (First Gen)",
       "sample_size": 24,
-      "avg_sold_price": 115000,
-      "low_sold_price": 97750,
-      "high_sold_price": 143750,
+      "avg_sold_price": 105000,
+      "low_sold_price": 89250,
+      "high_sold_price": 131250,
       "trend_30d": "+1.5% (Entry V10 Peak Demand)",
       "recent_notable_sales": [
         {
@@ -639,9 +639,9 @@
     "gallardo_superleggera_first": {
       "name": "Lamborghini Gallardo Superleggera (2007-2008)",
       "sample_size": 24,
-      "avg_sold_price": 155000,
-      "low_sold_price": 131750,
-      "high_sold_price": 193750,
+      "avg_sold_price": 177500,
+      "low_sold_price": 150875,
+      "high_sold_price": 221875,
       "trend_30d": "+1.5% (Entry V10 Peak Demand)",
       "recent_notable_sales": [
         {
@@ -655,9 +655,9 @@
     "gallardo_lp560_4": {
       "name": "Lamborghini Gallardo LP560-4",
       "sample_size": 24,
-      "avg_sold_price": 115000,
-      "low_sold_price": 97750,
-      "high_sold_price": 143750,
+      "avg_sold_price": 125000,
+      "low_sold_price": 106250,
+      "high_sold_price": 156250,
       "trend_30d": "+1.5% (Entry V10 Peak Demand)",
       "recent_notable_sales": [
         {
@@ -687,9 +687,9 @@
     "gallardo_lp550_2_vb": {
       "name": "Lamborghini Gallardo LP550-2 Valentino Balboni",
       "sample_size": 24,
-      "avg_sold_price": 115000,
-      "low_sold_price": 97750,
-      "high_sold_price": 143750,
+      "avg_sold_price": 207500,
+      "low_sold_price": 176375,
+      "high_sold_price": 259375,
       "trend_30d": "+1.5% (Entry V10 Peak Demand)",
       "recent_notable_sales": [
         {
@@ -703,9 +703,9 @@
     "gallardo_lp570_4_superleggera": {
       "name": "Lamborghini Gallardo LP570-4 Superleggera / Performante",
       "sample_size": 24,
-      "avg_sold_price": 155000,
-      "low_sold_price": 131750,
-      "high_sold_price": 193750,
+      "avg_sold_price": 205000,
+      "low_sold_price": 174250,
+      "high_sold_price": 256250,
       "trend_30d": "+1.5% (Entry V10 Peak Demand)",
       "recent_notable_sales": [
         {
@@ -719,9 +719,9 @@
     "gallardo_squadra_corse": {
       "name": "Lamborghini Gallardo Squadra Corse (Final Track Edition)",
       "sample_size": 24,
-      "avg_sold_price": 155000,
-      "low_sold_price": 131750,
-      "high_sold_price": 193750,
+      "avg_sold_price": 285000,
+      "low_sold_price": 242250,
+      "high_sold_price": 356250,
       "trend_30d": "+1.5% (Entry V10 Peak Demand)",
       "recent_notable_sales": [
         {
@@ -799,9 +799,9 @@
     "murcielago_6_2": {
       "name": "Lamborghini Murciélago 6.2 (Early Generation)",
       "sample_size": 24,
-      "avg_sold_price": 275000,
-      "low_sold_price": 233750,
-      "high_sold_price": 343750,
+      "avg_sold_price": 265000,
+      "low_sold_price": 225250,
+      "high_sold_price": 331250,
       "trend_30d": "+4.2% (Gated Manual Era Boom)",
       "recent_notable_sales": [
         {
@@ -831,9 +831,9 @@
     "murcielago_lp640": {
       "name": "Lamborghini Murciélago LP640 (Coupe & Roadster)",
       "sample_size": 24,
-      "avg_sold_price": 425000,
-      "low_sold_price": 361250,
-      "high_sold_price": 531250,
+      "avg_sold_price": 352500,
+      "low_sold_price": 299625,
+      "high_sold_price": 440625,
       "trend_30d": "+4.2% (Gated Manual Era Boom)",
       "recent_notable_sales": [
         {
@@ -879,9 +879,9 @@
     "murcielago_lp670_sv": {
       "name": "Lamborghini Murciélago LP670-4 SuperVeloce (SV)",
       "sample_size": 24,
-      "avg_sold_price": 425000,
-      "low_sold_price": 361250,
-      "high_sold_price": 531250,
+      "avg_sold_price": 750000,
+      "low_sold_price": 637500,
+      "high_sold_price": 937500,
       "trend_30d": "+4.2% (Gated Manual Era Boom)",
       "recent_notable_sales": [
         {
@@ -927,9 +927,9 @@
     "diablo_vt": {
       "name": "Lamborghini Diablo VT / VT 6.0",
       "sample_size": 24,
-      "avg_sold_price": 365000,
-      "low_sold_price": 310250,
-      "high_sold_price": 456250,
+      "avg_sold_price": 315000,
+      "low_sold_price": 267750,
+      "high_sold_price": 393750,
       "trend_30d": "+2.9% (Vintage Appreciation)",
       "recent_notable_sales": [
         {
@@ -959,9 +959,9 @@
     "diablo_sv": {
       "name": "Lamborghini Diablo SV (SuperVeloce)",
       "sample_size": 24,
-      "avg_sold_price": 365000,
-      "low_sold_price": 310250,
-      "high_sold_price": 456250,
+      "avg_sold_price": 415000,
+      "low_sold_price": 352750,
+      "high_sold_price": 518750,
       "trend_30d": "+2.9% (Vintage Appreciation)",
       "recent_notable_sales": [
         {
@@ -1007,9 +1007,9 @@
     "diablo_gt": {
       "name": "Lamborghini Diablo GT (Homologation Special)",
       "sample_size": 24,
-      "avg_sold_price": 365000,
-      "low_sold_price": 310250,
-      "high_sold_price": 456250,
+      "avg_sold_price": 1075000,
+      "low_sold_price": 913750,
+      "high_sold_price": 1343750,
       "trend_30d": "+2.9% (Vintage Appreciation)",
       "recent_notable_sales": [
         {
@@ -1039,9 +1039,9 @@
     "countach_lp400": {
       "name": "Lamborghini Countach LP400 'Periscopio'",
       "sample_size": 24,
-      "avg_sold_price": 650000,
-      "low_sold_price": 552500,
-      "high_sold_price": 812500,
+      "avg_sold_price": 1250000,
+      "low_sold_price": 1062500,
+      "high_sold_price": 1562500,
       "trend_30d": "+3.5% (High Collector Demand)",
       "recent_notable_sales": [
         {
@@ -1151,9 +1151,9 @@
     "countach_lpi800_4": {
       "name": "Lamborghini Countach LPI 800-4 (Modern 50th Homage)",
       "sample_size": 24,
-      "avg_sold_price": 650000,
-      "low_sold_price": 552500,
-      "high_sold_price": 812500,
+      "avg_sold_price": 3050000,
+      "low_sold_price": 2592500,
+      "high_sold_price": 3812500,
       "trend_30d": "+3.5% (High Collector Demand)",
       "recent_notable_sales": [
         {
@@ -1199,9 +1199,9 @@
     "miura_p400_sv": {
       "name": "Lamborghini Miura P400SV (Split-Sump Masterpiece)",
       "sample_size": 24,
-      "avg_sold_price": 1850000,
-      "low_sold_price": 1572500,
-      "high_sold_price": 2312500,
+      "avg_sold_price": 2650000,
+      "low_sold_price": 2252500,
+      "high_sold_price": 3312500,
       "trend_30d": "+3.5% (High Collector Demand)",
       "recent_notable_sales": [
         {
@@ -1295,9 +1295,9 @@
     "espada_400_gt": {
       "name": "Lamborghini Espada 400 GT (Series I / II / III)",
       "sample_size": 24,
-      "avg_sold_price": 250000,
-      "low_sold_price": 212500,
-      "high_sold_price": 312500,
+      "avg_sold_price": 115000,
+      "low_sold_price": 97750,
+      "high_sold_price": 143750,
       "trend_30d": "+1.0% (Collector Stable)",
       "recent_notable_sales": [
         {
@@ -1375,9 +1375,9 @@
     "lm002_rambo_lambo": {
       "name": "Lamborghini LM002 'Rambo Lambo' (V12 Off-Roader)",
       "sample_size": 24,
-      "avg_sold_price": 250000,
-      "low_sold_price": 212500,
-      "high_sold_price": 312500,
+      "avg_sold_price": 405000,
+      "low_sold_price": 344250,
+      "high_sold_price": 506250,
       "trend_30d": "+1.0% (Collector Stable)",
       "recent_notable_sales": [
         {
@@ -1407,9 +1407,9 @@
     "reventon": {
       "name": "Lamborghini Reventón (Fighter Jet Few-Off)",
       "sample_size": 24,
-      "avg_sold_price": 650000,
-      "low_sold_price": 552500,
-      "high_sold_price": 812500,
+      "avg_sold_price": 2000000,
+      "low_sold_price": 1700000,
+      "high_sold_price": 2500000,
       "trend_30d": "+3.5% (High Collector Demand)",
       "recent_notable_sales": [
         {
@@ -1455,9 +1455,9 @@
     "veneno": {
       "name": "Lamborghini Veneno (Limited 4 Coupes)",
       "sample_size": 24,
-      "avg_sold_price": 1850000,
-      "low_sold_price": 1572500,
-      "high_sold_price": 2312500,
+      "avg_sold_price": 8000000,
+      "low_sold_price": 6800000,
+      "high_sold_price": 10000000,
       "trend_30d": "+3.5% (High Collector Demand)",
       "recent_notable_sales": [
         {
@@ -1487,9 +1487,9 @@
     "centenario": {
       "name": "Lamborghini Centenario LP770-4",
       "sample_size": 24,
-      "avg_sold_price": 650000,
-      "low_sold_price": 552500,
-      "high_sold_price": 812500,
+      "avg_sold_price": 3100000,
+      "low_sold_price": 2635000,
+      "high_sold_price": 3875000,
       "trend_30d": "+3.5% (High Collector Demand)",
       "recent_notable_sales": [
         {
@@ -1519,9 +1519,9 @@
     "sian_fkp37": {
       "name": "Lamborghini Sián FKP 37 (Supercapacitor V12)",
       "sample_size": 24,
-      "avg_sold_price": 1850000,
-      "low_sold_price": 1572500,
-      "high_sold_price": 2312500,
+      "avg_sold_price": 3750000,
+      "low_sold_price": 3187500,
+      "high_sold_price": 4687500,
       "trend_30d": "+3.5% (High Collector Demand)",
       "recent_notable_sales": [
         {

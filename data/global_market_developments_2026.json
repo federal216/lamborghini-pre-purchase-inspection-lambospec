@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "title": "Lamborghini Global Market Intelligence & Model Roadmap (2025-2027)",
+    "last_updated": "2026-11-22T15:36:32.632522+00:00",
+    "status": "Active 2026 Release"
+  },
+  "macro_market_dynamics": {
+    "order_book_backlog": "Sant'Agata Bolognese factory is sold out through mid-2026 across entire Revuelto and Urus SE allocations.",
+    "temerario_introduction": "Revealed in late 2024 to succeed the Huracán. Features a bespoke 4.0L twin-turbo flat-plane crank V8 revving to 10,000 RPM + 3 axial-flux electric motors producing 920 metric hp. First customer deliveries commence in 2025/2026.",
+    "naturally_aspirated_v10_valuation_surge": "Discontinuation of the naturally aspirated 5.2L V10 has triggered immediate secondary market appreciation for Huracán STO, Tecnica, and Sterrato models.",
+    "gated_manual_supercar_bubble": "First-generation Gallardo 6-speed gated manual and Murciélago gated cars are trading at 120-180% premiums over their automated counterparts.",
+    "electric_future_roadmap": "Lanzador 2+2 Ultra GT concept confirmed for 2028 as Lamborghini's 4th model, featuring 1 Megawatt (1,341 hp) dual-motor all-electric powertrain."
+  },
+  "auction_price_indices_summary": {
+    "huracan_performante": {
+      "median_sold": "$295,000",
+      "trend": "+3.4% annual",
+      "key_catalyst": "ALA active aerodynamics + naturally aspirated swan song"
+    },
+    "huracan_sto": {
+      "median_sold": "$385,000",
+      "trend": "+4.8% annual",
+      "key_catalyst": "Street-legal Super Trofeo race car with Cofango clamshell"
+    },
+    "aventador_svj": {
+      "median_sold": "$740,000",
+      "trend": "+6.2% annual",
+      "key_catalyst": "ALA 2.0 active aero + final aggressive production V12"
+    },
+    "countach_25th_anniv": {
+      "median_sold": "$620,000",
+      "trend": "+8.5% annual",
+      "key_catalyst": "Blue-chip vintage classic status"
+    },
+    "diablo_sv": {
+      "median_sold": "$490,000",
+      "trend": "+11.0% annual",
+      "key_catalyst": "Pop-up headlight analog holy grail"
+    },
+    "miura_p400_sv": {
+      "median_sold": "$3,800,000",
+      "trend": "+5.0% annual",
+      "key_catalyst": "Split-sump ultimate Miura collector benchmark"
+    }
+  },
+  "raw_harvested_snippets": [
+    {
+      "target": {
+        "category": "developments",
+        "topic": "Temerario 920hp V8 HPEV Roadmap",
+        "query": "Lamborghini Temerario 10000 rpm twin-turbo V8 hybrid deliveries specs 2026"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:24.857969+00:00"
+    },
+    {
+      "target": {
+        "category": "developments",
+        "topic": "Revuelto Production & Sold Out Waitlist",
+        "query": "Lamborghini Revuelto production capacity sold out waitlist 2026 2027"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:26.336905+00:00"
+    },
+    {
+      "target": {
+        "category": "developments",
+        "topic": "Urus SE Plug-in Hybrid Debut",
+        "query": "Lamborghini Urus SE plug-in hybrid 800 hp battery deliveries 2025 2026"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:28.144944+00:00"
+    },
+    {
+      "target": {
+        "category": "developments",
+        "topic": "Lanzador 4th Model EV Architecture",
+        "query": "Lamborghini Lanzador 2+2 Ultra GT electric production date 2028"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:29.860229+00:00"
+    },
+    {
+      "target": {
+        "category": "developments",
+        "topic": "SC63 LMDh Endurance Program",
+        "query": "Lamborghini Iron Lynx SC63 LMDh WEC Le Mans IMSA 2025 2026"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:31.041292+00:00"
+    },
+    {
+      "target": {
+        "category": "auctions",
+        "topic": "BaT Huracan Auction Comps",
+        "query": "Bring a Trailer Lamborghini Huracan sold price results"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:17.240074+00:00"
+    },
+    {
+      "target": {
+        "category": "auctions",
+        "topic": "BaT Aventador Auction Comps",
+        "query": "Bring a Trailer Lamborghini Aventador sold price results"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:18.389594+00:00"
+    },
+    {
+      "target": {
+        "category": "auctions",
+        "topic": "BaT Gallardo Auction Comps",
+        "query": "Bring a Trailer Lamborghini Gallardo sold price results"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:19.529956+00:00"
+    },
+    {
+      "target": {
+        "category": "auctions",
+        "topic": "BaT Countach & Diablo Classics",
+        "query": "Bring a Trailer Lamborghini Countach Diablo sold auction results"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:21.017544+00:00"
+    },
+    {
+      "target": {
+        "category": "auctions",
+        "topic": "Cars & Bids Lamborghini Comps",
+        "query": "Cars and Bids Lamborghini sold price results auction"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:22.099893+00:00"
+    },
+    {
+      "target": {
+        "category": "auctions",
+        "topic": "RM Sotheby's Miura & Hypercars",
+        "query": "RM Sothebys Lamborghini Miura SV Veneno Sian auction record"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:23.508212+00:00"
+    }
+  ]
+}

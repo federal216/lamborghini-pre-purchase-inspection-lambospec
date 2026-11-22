@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Lamborghini Official NHTSA & Safety Recall Intelligence Registry",
+    "last_updated": "2026-11-22T15:36:32.632017+00:00",
+    "regulatory_bodies": [
+      "NHTSA (USA)",
+      "KBA (Germany)",
+      "RAPEX (European Commission)",
+      "DVSA (UK)"
+    ]
+  },
+  "critical_active_campaigns": [
+    {
+      "model": "Revuelto",
+      "model_years": "2024 - 2025",
+      "nhtsa_campaign_id": "26V053000",
+      "component": "Rear Visibility - Backup Camera Software",
+      "defect_summary": "Software defect causes backup camera image to fail to display on instrument cluster when shifting into reverse, violating FMVSS 111.",
+      "consequence": "Reduced driver visibility increases risk of collision or pedestrian injury when reversing.",
+      "remedy": "Authorized dealers update rearview camera software free of charge via factory diagnostic terminal."
+    },
+    {
+      "model": "Revuelto",
+      "model_years": "2024 - 2025",
+      "nhtsa_campaign_id": "25V477000",
+      "component": "Scissor Door Gas Strut Spherical Support Pins",
+      "defect_summary": "Gas springs holding the scissor doors open may disconnect due to improperly assembled spherical support pins.",
+      "consequence": "The heavy scissor door could unexpectedly shut, creating injury risk to occupants entering or exiting.",
+      "remedy": "Dealers inspect and tighten spherical support pins to certified torque specifications."
+    },
+    {
+      "model": "Revuelto",
+      "model_years": "2024",
+      "nhtsa_campaign_id": "24V945000",
+      "component": "Engine Oil Circuit Connection Flange Screws",
+      "defect_summary": "Improper torque on oil line connection flange from the radiator to oil tank can lead to oil leakage.",
+      "consequence": "Leaked oil contacting hot exhaust components increases the hazard of engine compartment fire.",
+      "remedy": "Dealers inspect and retorque flange screws or replace affected seal gaskets."
+    },
+    {
+      "model": "Urus",
+      "model_years": "2019 - 2024",
+      "nhtsa_campaign_id": "24V283000 / 23V419000",
+      "component": "Fuel Line Quick Connector & High-Pressure Pump",
+      "defect_summary": "Engine compartment heat can cause quick-connect fuel line fittings to soften and seep fuel vapor/liquid.",
+      "consequence": "Fuel smell in cabin and elevated fire danger in extreme hot climates.",
+      "remedy": "Dealers replace fuel line assembly with updated heat-shielded connector free of charge."
+    },
+    {
+      "model": "Aventador",
+      "model_years": "2012 - 2017",
+      "nhtsa_campaign_id": "17V073000 (Recall L616)",
+      "component": "Fuel System / EVAP Purge Canister Overflow",
+      "defect_summary": "Under certain driving conditions (overfilling tank and aggressive deceleration), raw fuel enters EVAP system.",
+      "consequence": "Vapor contacts hot exhaust gases, creating tailpipe flames that can ignite rear bumper plastic and carbon diffuser.",
+      "remedy": "Dealers install upgraded fuel tank EVAP purge valve with secondary roll-over protection."
+    },
+    {
+      "model": "Huracan",
+      "model_years": "2015 - 2020",
+      "nhtsa_campaign_id": "19V281000",
+      "component": "Front Suspension Upper Control Arm Camber Bolts",
+      "defect_summary": "Camber adjustment bolts may not have been torqued to factory specifications, allowing alignment slippage.",
+      "consequence": "Sudden change in front wheel camber under high lateral load impairs steering control.",
+      "remedy": "Dealers inspect and replace camber adjustment bolts with hardened fasteners torqued to revised spec."
+    }
+  ],
+  "raw_harvested_snippets": [
+    {
+      "target": {
+        "category": "recalls",
+        "topic": "Revuelto NHTSA Recalls",
+        "query": "Lamborghini Revuelto NHTSA recall door gas struts camera oil leak"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:11.418590+00:00"
+    },
+    {
+      "target": {
+        "category": "recalls",
+        "topic": "Urus Fuel Line & Software Recall",
+        "query": "Lamborghini Urus NHTSA recall fuel line quick connector software"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:12.564805+00:00"
+    },
+    {
+      "target": {
+        "category": "recalls",
+        "topic": "Aventador EVAP Fire Recall",
+        "query": "Lamborghini Aventador NHTSA recall fire fuel vapor EVAP purge canister"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:14.408980+00:00"
+    },
+    {
+      "target": {
+        "category": "recalls",
+        "topic": "Huracan Suspension & Airbag Recalls",
+        "query": "Lamborghini Huracan NHTSA recall suspension camber bolts passenger airbag"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:15.863540+00:00"
+    }
+  ]
+}

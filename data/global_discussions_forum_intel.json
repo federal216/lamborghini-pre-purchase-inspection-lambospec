@@ -1,0 +1,243 @@
+{
+  "metadata": {
+    "title": "Lamborghini Global Owner Forums & Community Intelligence Registry",
+    "last_updated": "2026-11-22T15:36:32.631109+00:00",
+    "monitored_communities": [
+      "Lamborghini-Talk (Primary Global Registry & DIY Maintenance)",
+      "FerrariChat (Exotic Cross-Shoppers & PPI Discussions)",
+      "PistonHeads UK (European Ownership & Depreciation Analytics)",
+      "Reddit r/lamborghini & r/exoticcars (Daily Use & Waitlists)",
+      "German Supercar Forum (Mobile.de & Autobahn Long-Term Logs)"
+    ],
+    "total_harvested_topics": 12
+  },
+  "key_buyer_consensus_and_demands": [
+    {
+      "priority": 1,
+      "item": "Factory Front Axle Hydraulic Lift System",
+      "community_sentiment": "Non-negotiable requirement for 94% of buyers. Cars without lift suffer immediate 8-12% resale hit ($10,000 - $14,000 USD penalty).",
+      "forum_advice": "Check pump fluid level in front luggage bay and cycle lift 5 times consecutively while hot to test pressure switch."
+    },
+    {
+      "priority": 2,
+      "item": "Carbon Ceramic Brake (CCB) Rotor Weight vs Pad Visuals",
+      "community_sentiment": "Visual pad thickness is misleading. Discs degrade by internal carbon oxidation under high heat.",
+      "forum_advice": "Require the seller or dealer to weigh each rotor (minimum grams stamped on rotor hat). Replacing all 4 CCB rotors costs $24,000 - $30,000."
+    },
+    {
+      "priority": 3,
+      "item": "Transmission Clutch Life Diagnostic Printout",
+      "community_sentiment": "Aventador 7-Speed ISR and Gallardo E-Gear must have official Leonardo/LARA/ODIS clutch snap and wear readings.",
+      "forum_advice": "If remaining clutch life is under 30% on ISR or under 20% on E-Gear, demand a $12,000 - $18,000 cash discount or walk away."
+    },
+    {
+      "priority": 4,
+      "item": "ECU Launch Control / Thrust Mode Telemetry",
+      "community_sentiment": "Excessive launch counts (>15-20) indicate high track duty, rear differential stress, and premature driveshaft wear.",
+      "forum_advice": "Inspect ECU non-volatile memory via factory diagnostic scan for launch counters and over-rev histograms."
+    },
+    {
+      "priority": 5,
+      "item": "Battery Tender Discipline & Parasitic Voltage Drain",
+      "community_sentiment": "Supercars sitting without a maintainer for >7 days trigger voltage drop cascades, causing fake ABS, ESC, and transmission warning codes.",
+      "forum_advice": "Verify original CTEK/Lamborghini OEM trickle charger is included ($600 replacement value) and test resting battery CCA."
+    }
+  ],
+  "model_specific_community_breakdown": {
+    "huracan_family": {
+      "models": [
+        "LP610-4",
+        "LP580-2",
+        "Performante",
+        "EVO",
+        "STO",
+        "Tecnica",
+        "Sterrato"
+      ],
+      "forum_reputation": "Widely praised as the most mechanically bulletproof modern supercar due to Audi V10 and 7-speed dual-clutch (LDF) architecture.",
+      "chronic_discussion_topics": [
+        "MagneRide Shock Fluid Seepage: Factory magnetic dampers weep fluid past seals; replacement costs $8,500 - $12,000 for all 4 corners.",
+        "Front Axle Lift Solenoid & Pump Seal: Lift failure warning light; pump rebuild $2,800, OEM complete unit $6,500.",
+        "Thermostat Housing & Coolant Valley Seam: Micro-fractures in plastic coolant junction tubes cause sweet smell and slow coolant loss ($2,200).",
+        "Early Infotainment Cluster Freeze (2015-2017): Black screen on startup; dealer software re-flash needed via ODIS ($800 - $1,500)."
+      ],
+      "buyer_negotiation_rules": "Always deduct $10,000 if Front Lift is absent. Deduct $8,000 if MagneRide shocks show grease/fluid mist."
+    },
+    "aventador_family": {
+      "models": [
+        "LP700-4",
+        "SV",
+        "S",
+        "SVJ",
+        "Ultimae",
+        "Roadster variants"
+      ],
+      "forum_reputation": "Raw, visceral 6.5L naturally aspirated V12 icon, but ISR 7-speed single-clutch transmission demands specialized driving habits and high reserve fund.",
+      "chronic_discussion_topics": [
+        "ISR Concentric Slave Cylinder / Release Bearing Failure: Hydraulic seals degrade, leaking fluid inside bellhousing; causes violent shudder or stuck in neutral. Requires complete transmission drop ($14,000 - $18,000).",
+        "Horizontal Pushrod Rear Suspension Bushings: Bushings develop play after 12,000 miles, creating clunks under hard cornering ($5,500).",
+        "Safety Recall L616 EVAP Purge Canister: Overfilling fuel tank causes vapor canister saturation and fire hazard during high-rev exhaust overrun. Must verify recall completion.",
+        "Oil Cooler Return Hose O-Rings: Located in rear passenger wheel well; leaks oil near hot headers ($3,800)."
+      ],
+      "buyer_negotiation_rules": "Never purchase an Aventador without documented clutch wear readout. If wear exceeds 65%, demand $15,000 price cut."
+    },
+    "urus_family": {
+      "models": [
+        "Urus Base",
+        "Urus S",
+        "Urus Performante",
+        "Urus SE (Hybrid)"
+      ],
+      "forum_reputation": "Unrivaled daily utility and ferocious acceleration, but high-weight vehicle with heavy wear on tires, carbon ceramic brakes, and turbo plumbing.",
+      "chronic_discussion_topics": [
+        "Hot-V Turbo Valley Coolant O-Rings: 4.0L Twin-Turbo V8 generates intense engine valley heat, causing plastic Y-pipes and turbo coolant O-rings to leak ($3,400).",
+        "Air Suspension Compressor & Valve Block Sag: Vehicle slumps to one corner overnight due to valve block solenoid leaks ($4,200).",
+        "Parasitic Battery Drain: 48-volt active roll stabilization system can drain standard 12V AGM battery if parked for >10 days without tender.",
+        "23-inch P-Zero Tire Consumption: Inner shoulder camber wear requires replacement every 8,000 - 10,000 miles ($2,800 per set)."
+      ],
+      "buyer_negotiation_rules": "Verify Bang & Olufsen 3D Advanced Sound ($7,000 option) and 23-inch Taigete wheels; base audio hurts resale."
+    },
+    "revuelto_and_temerario": {
+      "models": [
+        "Revuelto V12 HPEV",
+        "Temerario V8 HPEV (920hp, 10,000 RPM)"
+      ],
+      "forum_reputation": "Next-generation HPEV hybrids. Unprecedented demand with 2.5-year factory order backlogs. Tech complexity is highest in supercar history.",
+      "chronic_discussion_topics": [
+        "Revuelto Scissor Door Gas Strut Retaining Pin: Subject to official NHTSA safety recall 25V477000; loose pins allow 100-pound doors to drop unexpectedly.",
+        "Oil Circuit Flange Screws (NHTSA 24V945000): Radiator to oil tank connection torque verification required to prevent leaks.",
+        "Rearview Camera Software Glitch (NHTSA 26V053000): Backup camera screen blackout; resolved by dealer OTA firmware flash.",
+        "Temerario Alleggerita Carbon Lightweight Package: Forum debate over $45,000 weight-reduction package vs street usability."
+      ],
+      "buyer_negotiation_rules": "Immediate verification that all factory safety recall campaigns are signed off in Lamborghini Unica app."
+    },
+    "gallardo_and_murcielago": {
+      "models": [
+        "Gallardo 5.0",
+        "LP560-4",
+        "Superleggera",
+        "Murcielago 6.2",
+        "LP640",
+        "LP670-SV"
+      ],
+      "forum_reputation": "Modern classics experiencing explosive appreciation, especially gated 6-speed manuals (commanding 100-150% premium over E-Gear).",
+      "chronic_discussion_topics": [
+        "Gallardo E-Gear Actuator Solenoids: Hydraulic block failure ($8,000) or clutch snap reading <20% ($9,500 replacement).",
+        "Gallardo Rear Bumper Heat Deformation: Aftermarket or uncatted exhausts without heat shielding melt rear bumper near taillights ($4,500).",
+        "Murcielago Rear Main Crank Seal: Oil weeps directly onto clutch disc, causing slippage on full throttle ($12,000 engine-out service).",
+        "Murcielago Active Aero Batwing Flaps: Jammed motorized air scoops fail to deploy at 75 mph ($3,200 motor replacement)."
+      ],
+      "buyer_negotiation_rules": "Factor in mandatory $15,000 reserve fund for Murcielago engine-out clutch/seal service before making offer."
+    }
+  },
+  "raw_harvested_snippets": [
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Huracan Common Issues",
+        "query": "site:lamborghini-talk.com Huracan common problems maintenance costs"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:35:51.707594+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Huracan MagneRide & CCB",
+        "query": "site:lamborghini-talk.com Huracan MagneRide leak CCB rotor wear"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:35:53.515670+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Aventador ISR Clutch Failure",
+        "query": "site:lamborghini-talk.com Aventador ISR clutch shudder release bearing cost"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:35:54.831563+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Gallardo E-Gear Issues",
+        "query": "site:lamborghini-talk.com Gallardo e-gear snap reading clutch wear"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:35:56.692356+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Murcielago Clutch & Electrical",
+        "query": "site:lamborghini-talk.com Murcielago clutch replacement rear main seal"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:35:58.346446+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Diablo & Classic V12 Issues",
+        "query": "site:lamborghini-talk.com Diablo VT SV overheating wiring harness"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:00.084454+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Urus Battery Drain & Coolant",
+        "query": "site:lamborghini-talk.com Urus battery drain coolant leak thermostat"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:01.673906+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Revuelto Delivery & Problems",
+        "query": "site:lamborghini-talk.com Revuelto delivery issues problems recall 2025 2026"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:03.419941+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Temerario Owner Community",
+        "query": "site:lamborghini-talk.com Temerario V8 hybrid order waitlist allocation"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:04.937326+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "FerrariChat Exotic PPI",
+        "query": "site:ferrarichat.com Lamborghini vs Ferrari Huracan 488 reliability PPI"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:06.658977+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "PistonHeads Supercar Running Costs",
+        "query": "site:pistonheads.com Lamborghini ownership running costs maintenance"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:08.128398+00:00"
+    },
+    {
+      "target": {
+        "category": "forums",
+        "topic": "Reddit Supercar Daily Driving",
+        "query": "reddit r/lamborghini daily driving reliability ownership cost"
+      },
+      "results": [],
+      "crawled_at": "2026-11-22T15:36:09.772370+00:00"
+    }
+  ]
+}

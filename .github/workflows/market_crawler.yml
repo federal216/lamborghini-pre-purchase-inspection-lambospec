@@ -28,6 +28,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 requests
+
       - name: Run Market Crawler
         run: |
           python engine/market_crawler.py
@@ -37,4 +42,4 @@ jobs:
           git config --local user.name "LamboSpec Intelligence Bot"
           git config --local user.email "bot@lambospec.ai"
           git add data/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): Auto-update supercar market auction comps [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): Auto-update supercar market intelligence and comps [skip ci]" && git push)

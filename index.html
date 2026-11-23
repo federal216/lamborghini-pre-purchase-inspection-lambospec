@@ -1801,19 +1801,72 @@
           <span id="paymentErrorMsg">Please check your details.</span>
         </div>
 
-        <!-- PAYMENT METHOD TABS: 100% AUTOMATED ONLY -->
-        <div class="grid grid-cols-2 gap-3 mb-5">
-          <button id="tabCardBtn" type="button" onclick="switchPaymentTab('card')" class="py-3 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2 cursor-pointer shadow-sm">
-            <span>💳</span><span>Card / Apple &amp; Google Pay</span>
+        <!-- PAYMENT METHOD TABS: DUAL GATEWAY (IYZICO + PADDLE + CRYPTO) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-5">
+          <button id="tabIyzicoBtn" type="button" onclick="switchPaymentTab('iyzico')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
+            <span>🛡️</span><span>iyzico (Kart / 3DS)</span>
           </button>
-          <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" class="py-3 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2 cursor-pointer shadow-sm">
-            <span>🪙</span><span>Crypto (Instant Auto-Verify)</span>
+          <button id="tabPaddleBtn" type="button" onclick="switchPaymentTab('paddle')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
+            <span>🌐</span><span>Paddle (Apple/GPay)</span>
+          </button>
+          <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
+            <span>🪙</span><span>Crypto (USDT/USDC)</span>
           </button>
         </div>
 
-        <!-- TAB 1: CARD (PADDLE ACTIVE) -->
-        <div id="tabCardContent" class="space-y-4">
-          <!-- Live Validation Error Box for Card -->
+        <!-- TAB 1: IYZICO (DOMESTIC & GLOBAL 3D SECURE CARDS / TAKSİT / TROY) -->
+        <div id="tabIyzicoContent" class="space-y-4">
+          <!-- Live Validation Error Box for iyzico -->
+          <div id="iyzicoErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg">
+            <span class="text-base">⚠️</span>
+            <span id="iyzicoErrorMsg">Please check your details.</span>
+          </div>
+
+          <div class="bg-gradient-to-b from-zinc-900/90 to-black/80 border border-zinc-800 rounded-2xl p-6 sm:p-7 text-center space-y-4">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-500/10 border border-blue-500/40 flex items-center justify-center shadow-lg">
+              <span class="text-3xl">🛡️</span>
+            </div>
+            <div>
+              <div class="flex items-center justify-center gap-2 mb-1">
+                <span class="text-[11px] font-bold font-mono uppercase bg-blue-500/20 text-blue-400 border border-blue-500/40 px-2 py-0.5 rounded">TCMB &amp; BDDK Lisanslı</span>
+                <span class="text-[11px] font-bold font-mono uppercase bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-2 py-0.5 rounded">3D Secure</span>
+              </div>
+              <h4 class="text-lg font-black text-white">iyzico Güvenli Kartlı Ödeme</h4>
+              <p class="text-xs text-zinc-400 max-w-sm mx-auto mt-1 leading-relaxed">
+                Tüm yerli ve uluslararası kredi/banka kartları (Troy, Visa, Mastercard, Amex) ile 256-bit SSL korumalı ödeme. Türk banka kartlarına taksit imkanı.
+              </p>
+            </div>
+
+            <!-- Payment badges -->
+            <div class="flex items-center justify-center gap-1.5 flex-wrap pt-1">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-blue-700 bg-blue-950/60 text-blue-300 shadow-sm">VISA</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-rose-700 bg-rose-950/60 text-rose-300 shadow-sm">MASTERCARD</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-sky-700 bg-sky-950/60 text-sky-300 shadow-sm">AMEX</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-teal-700 bg-teal-950/60 text-teal-300 shadow-sm">TROY</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-zinc-700 bg-zinc-800 text-zinc-300 shadow-sm">Bonus · World · Maximum · Axess</span>
+            </div>
+
+            <div class="flex items-center justify-center space-x-2 text-[10px] text-emerald-400 font-mono pt-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>iyzico Korumalı Alışveriş · 256-Bit SSL · PCI-DSS Seviye 1</span>
+            </div>
+          </div>
+
+          <!-- PRIMARY ACTIVE IYZICO PAY BUTTON -->
+          <button id="submitIyzicoPayBtn" type="button" onclick="processPaymentAndDownload('iyzico')"
+                  class="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-amber-500 text-white font-extrabold text-base tracking-wide uppercase hover:brightness-110 active:scale-[0.99] transition-all shadow-[0_0_35px_rgba(59,130,246,0.45)] flex items-center justify-center space-x-2 cursor-pointer border border-blue-400/40">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>Öde: $79.00 USD (~2.750 ₺) — iyzico Güvenli Checkout</span>
+          </button>
+
+          <div class="text-center text-[11px] text-zinc-400 font-mono">
+            Direct Concierge: <a href="mailto:lamborginichallenge2026@gmail.com" class="text-blue-400 hover:underline">lamborginichallenge2026@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- TAB 2: PADDLE (GLOBAL CARDS, APPLE PAY, GOOGLE PAY) -->
+        <div id="tabPaddleContent" class="hidden space-y-4">
+          <!-- Live Validation Error Box for Paddle -->
           <div id="cardErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg">
             <span class="text-base">⚠️</span>
             <span id="cardErrorMsg">Please check your details.</span>
@@ -1821,12 +1874,16 @@
 
           <div class="bg-gradient-to-b from-zinc-900/90 to-black/80 border border-zinc-800 rounded-2xl p-6 sm:p-7 text-center space-y-4">
             <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-orange-500/20 to-amber-500/10 border border-orange-500/40 flex items-center justify-center shadow-lg">
-              <span class="text-3xl">💳</span>
+              <span class="text-3xl">🌐</span>
             </div>
             <div>
-              <h4 class="text-lg font-black text-white">Bank-Grade Card &amp; Mobile Checkout</h4>
+              <div class="flex items-center justify-center gap-2 mb-1">
+                <span class="text-[11px] font-bold font-mono uppercase bg-orange-500/20 text-orange-400 border border-orange-500/40 px-2 py-0.5 rounded">Global Merchant of Record</span>
+                <span class="text-[11px] font-bold font-mono uppercase bg-zinc-800 text-zinc-300 border border-zinc-700 px-2 py-0.5 rounded">Apple &amp; Google Pay</span>
+              </div>
+              <h4 class="text-lg font-black text-white">Paddle Global Checkout</h4>
               <p class="text-xs text-zinc-400 max-w-sm mx-auto mt-1 leading-relaxed">
-                Click below to open Paddle’s official 256-bit encrypted checkout overlay. Pay securely with Apple Pay, Google Pay, or Credit Card.
+                Paddle’s official 256-bit encrypted checkout overlay for global buyers. Pay with Apple Pay, Google Pay, PayPal, or international card.
               </p>
             </div>
 
@@ -1841,15 +1898,15 @@
 
             <div class="flex items-center justify-center space-x-2 text-[10px] text-emerald-400 font-mono pt-1">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>256-Bit SSL · PCI-DSS Level 1 · 3D Secure Verified</span>
+              <span>256-Bit SSL · PCI-DSS Level 1 · Paddle Verified Reseller</span>
             </div>
           </div>
 
           <!-- PRIMARY ACTIVE PADDLE PAY BUTTON -->
-          <button id="submitPayBtn" type="button" onclick="processPaymentAndDownload('card')"
+          <button id="submitPayBtn" type="button" onclick="processPaymentAndDownload('paddle')"
                   class="w-full py-4 rounded-2xl badge-gradient text-black font-extrabold text-base tracking-wide uppercase hover:brightness-110 active:scale-[0.99] transition-all shadow-[0_0_35px_rgba(255,107,0,0.55)] flex items-center justify-center space-x-2 cursor-pointer border border-yellow-200/50">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span>Pay $79.00 — Open Secure Checkout</span>
+            <span>Pay $79.00 — Open Paddle Checkout</span>
           </button>
 
           <div class="text-center text-[11px] text-zinc-400 font-mono">
@@ -2016,17 +2073,29 @@
 
   <script>
     // =====================================================
-    //  PAYMENT GATEWAY CONFIG
+    //  DUAL PAYMENT GATEWAYS CONFIG (IYZICO + PADDLE)
     // =====================================================
-    // ── Paddle.js Checkout Config ──
-    const PADDLE_PRICE_ID = 'pri_01m7wnbynzbf08mydbbj8vgkd5';
-    const CONTACT_EMAIL       = 'lamborginichallenge2026@gmail.com';
-    let   paymentVerified     = false;
+    // ── iyzico Config ──
+    const IYZICO_CONFIG = {
+      mode: 'api', // 'api' (kendi Vercel/Node backendiniz) veya 'link' (iyzico Panelinden iyziLink)
+      apiEndpoint: '/api/iyzico/initialize',
+      iyziLinkUrl: '', // İsteğe bağlı doğrudan iyziLink URL'si (örn: https://iyzi.link/xxxxxx)
+      currency: 'TRY', // 'TRY' (2.750 TL) veya 'USD' ($79.00)
+      priceUsd: '79.00',
+      priceTry: '2750.00'
+    };
 
-    // Detect Paddle success redirect (?paddle_success=true or ?p_id=xxx)
+    // ── Paddle.js Config ──
+    const PADDLE_PRICE_ID = 'pri_01m7wnbynzbf08mydbbj8vgkd5';
+    const CONTACT_EMAIL   = 'lamborginichallenge2026@gmail.com';
+    let   paymentVerified = false;
+
+    // Detect Payment Success (Paddle or iyzico return: ?paddle_success=true, ?payment_success=true, ?token=xxx, ?iyzi_paid=true)
     (function() {
       const p = new URLSearchParams(window.location.search);
-      if (p.get('paddle_success') || p.get('p_id') || p.get('checkout_id')) { paymentVerified = true; }
+      if (p.get('paddle_success') || p.get('p_id') || p.get('checkout_id') || p.get('payment_success') || p.get('token') || p.get('iyzi_paid')) {
+        paymentVerified = true;
+      }
     })();
 
     function loadSampleListing() {
@@ -2091,24 +2160,33 @@
     }
 
     function switchPaymentTab(tab) {
-      const cardBtn = document.getElementById('tabCardBtn');
+      const iyzicoBtn = document.getElementById('tabIyzicoBtn');
+      const paddleBtn = document.getElementById('tabPaddleBtn');
       const cryptoBtn = document.getElementById('tabCryptoBtn');
-      const cardContent = document.getElementById('tabCardContent');
+
+      const iyzicoContent = document.getElementById('tabIyzicoContent');
+      const paddleContent = document.getElementById('tabPaddleContent');
       const cryptoContent = document.getElementById('tabCryptoContent');
 
-      const activeClass = 'py-3 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-2 cursor-pointer shadow-sm';
-      const inactiveClass = 'py-3 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-2 cursor-pointer shadow-sm';
+      const activeClass = 'py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm';
+      const inactiveClass = 'py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm';
 
-      if (cardBtn) cardBtn.className = (tab === 'card') ? activeClass : inactiveClass;
-      if (cryptoBtn) cryptoBtn.className = (tab === 'crypto') ? activeClass : inactiveClass;
+      const isIyzico = (tab === 'iyzico' || tab === 'card');
+      const isPaddle = (tab === 'paddle');
+      const isCrypto = (tab === 'crypto');
 
-      if (cardContent) cardContent.classList.add('hidden');
+      if (iyzicoBtn) iyzicoBtn.className = isIyzico ? activeClass : inactiveClass;
+      if (paddleBtn) paddleBtn.className = isPaddle ? activeClass : inactiveClass;
+      if (cryptoBtn) cryptoBtn.className = isCrypto ? activeClass : inactiveClass;
+
+      if (iyzicoContent) iyzicoContent.classList.add('hidden');
+      if (paddleContent) paddleContent.classList.add('hidden');
       if (cryptoContent) cryptoContent.classList.add('hidden');
 
-      if (tab === 'card' && cardContent) cardContent.classList.remove('hidden');
-      if (tab === 'crypto' && cryptoContent) cardContent.classList.remove('hidden');
-
-      if (tab === 'crypto') {
+      if (isIyzico && iyzicoContent) iyzicoContent.classList.remove('hidden');
+      if (isPaddle && paddleContent) paddleContent.classList.remove('hidden');
+      if (isCrypto && cryptoContent) {
+        cryptoContent.classList.remove('hidden');
         if (typeof startCryptoMonitor === 'function') {
           startCryptoMonitor(cryptoActiveCoin || 'usdt');
         }
@@ -2269,15 +2347,35 @@
       initCardFormatters();
     }
 
+    function showIyzicoError(msg, targetInputId) {
+      const errorBox = document.getElementById('iyzicoErrorBox');
+      const errorMsg = document.getElementById('iyzicoErrorMsg');
+      if (errorBox && errorMsg) {
+        errorMsg.innerText = msg;
+        errorBox.classList.remove('hidden');
+      }
+      if (targetInputId) {
+        const input = document.getElementById(targetInputId);
+        if (input) {
+          input.classList.remove('border-zinc-700');
+          input.classList.add('border-rose-500');
+        }
+      }
+    }
+
     function processPaymentAndDownload(method) {
       clearCardErrors();
+      const iyzicoErr = document.getElementById('iyzicoErrorBox');
+      if (iyzicoErr) iyzicoErr.classList.add('hidden');
 
       const emailInput = document.getElementById('custEmail');
       const email = emailInput ? emailInput.value.trim() : '';
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (!email || !emailRegex.test(email)) {
-        showCardError('Please enter a valid email address to receive your negotiation dossier & receipt (e.g. buyer@domain.com).', 'custEmail');
+        const errTxt = 'Please enter a valid email address to receive your negotiation dossier & receipt (e.g. buyer@domain.com).';
+        showCardError(errTxt, 'custEmail');
+        showIyzicoError(errTxt, 'custEmail');
         if (emailInput) emailInput.focus();
         return;
       }
@@ -2285,8 +2383,84 @@
       const modelSelect = document.getElementById('modelSelect');
       const modelName = modelSelect ? modelSelect.options[modelSelect.selectedIndex].text : 'Lamborghini';
 
-      if (method === 'card') {
-        // Open Official Paddle Checkout Overlay
+      // 1. iyzico Payment Flow (Domestic & Global 3D Secure / Taksit)
+      if (method === 'iyzico') {
+        const iyzicoBtn = document.getElementById('submitIyzicoPayBtn');
+        const origBtnHtml = iyzicoBtn ? iyzicoBtn.innerHTML : '';
+
+        // Mode A: iyziLink (Zero Backend Direct Link)
+        if (IYZICO_CONFIG.mode === 'link' && IYZICO_CONFIG.iyziLinkUrl) {
+          try {
+            sessionStorage.setItem('lambospec_pending_payment', JSON.stringify({
+              email: email,
+              model: modelName,
+              gateway: 'iyzico_link',
+              timestamp: Date.now()
+            }));
+            window.location.href = IYZICO_CONFIG.iyziLinkUrl;
+            return;
+          } catch(e) {
+            console.warn('iyziLink redirection error:', e);
+          }
+        }
+
+        // Mode B: iyzico Checkout Form API (Backend / Serverless)
+        if (iyzicoBtn) {
+          iyzicoBtn.disabled = true;
+          iyzicoBtn.innerHTML = '<span class="inline-block animate-spin mr-2">🔄</span> iyzico 3D Secure Bağlanıyor...';
+        }
+
+        fetch(IYZICO_CONFIG.apiEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            modelName: modelName,
+            currency: IYZICO_CONFIG.currency,
+            buyerName: email.split('@')[0] || 'VIP',
+            buyerSurname: 'Client'
+          })
+        })
+        .then(function(res) {
+          if (!res.ok) {
+            return res.json().then(function(errData) {
+              throw new Error(errData.errorMessage || ('Status: ' + res.status));
+            });
+          }
+          return res.json();
+        })
+        .then(function(data) {
+          if (data.status === 'success' && data.paymentPageUrl) {
+            sessionStorage.setItem('lambospec_pending_payment', JSON.stringify({
+              email: email,
+              model: modelName,
+              token: data.token,
+              gateway: 'iyzico_api',
+              timestamp: Date.now()
+            }));
+            // Redirect to official iyzico 3D Secure payment page
+            window.location.href = data.paymentPageUrl;
+          } else {
+            throw new Error(data.errorMessage || 'Failed to initialize iyzico checkout form.');
+          }
+        })
+        .catch(function(err) {
+          console.warn('iyzico initialization error:', err);
+          if (iyzicoBtn) {
+            iyzicoBtn.disabled = false;
+            iyzicoBtn.innerHTML = origBtnHtml;
+          }
+          if (IYZICO_CONFIG.iyziLinkUrl) {
+            window.location.href = IYZICO_CONFIG.iyziLinkUrl;
+          } else {
+            showIyzicoError('iyzico bağlantısı: ' + (err.message || 'Servis yanıt vermedi') + '. Paddle sekmesinden veya Crypto ile de ödeyebilirsiniz.', 'custEmail');
+          }
+        });
+        return;
+      }
+
+      // 2. Paddle Payment Flow (Global / Apple Pay / GPay)
+      if (method === 'paddle' || method === 'card') {
         try {
           if (typeof Paddle !== 'undefined' && Paddle.Checkout) {
             Paddle.Checkout.open({
@@ -2305,7 +2479,7 @@
           }
         } catch(e) {
           console.warn('Paddle open error:', e);
-          showCardError('Paddle checkout is opening... If blocked by browser, please allow popups or use Crypto payment.', 'custEmail');
+          showCardError('Paddle checkout is opening... If waiting for verification, you can use iyzico (3D Secure) or Crypto.', 'custEmail');
         }
       }
     }
@@ -2960,7 +3134,7 @@
           Autonomous pre-purchase defect forensics, historical auction valuation comps, and dealer negotiation counter-scripts for all 106 Lamborghini production models.
         </p>
         <p class="text-[11px] text-zinc-500 leading-relaxed max-w-md">
-          <strong>Merchant of Record Notice:</strong> Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and returns.
+          <strong>Merchant of Record Notice:</strong> Our order process is conducted by our online reseller Paddle.com. Orders are securely processed by authorized payment providers: iyzico (TCMB &amp; BDDK licensed, PCI-DSS Level 1) for domestic &amp; global 3D Secure card processing, and Paddle.com as Merchant of Record for international checkouts (Apple Pay, Google Pay).
         </p>
       </div>
       <div class="space-y-3">
@@ -2989,7 +3163,7 @@
       <div class="flex items-center space-x-4 text-zinc-500">
         <span>🔒 256-bit SSL Encrypted</span>
         <span>•</span>
-        <span>Verified Merchant of Record: Paddle.com</span>
+        <span>Verified Gateways: iyzico &amp; Paddle.com</span>
       </div>
     </div>
   </footer>

@@ -25,6 +25,35 @@ Bu belge, LamboSpec AI projesinde kullanılan tüm ödeme altyapılarını, baş
 
 ---
 
+## 🏦 Resmi Payoneer & Banka Hesap Bilgileri
+* **Banka Adı:** Citibank N.A. (Payoneer US Receiving Account)
+* **Adres:** 111 Wall Street, New York, NY 10043, United States
+* **ABA Routing Numarası:** `031100209`
+* **Hesap Numarası:** `70580640002590994`
+* **Lehtar / Hesap Sahibi:** İbrahim Karakoç
+* **Kayıtlı Payoneer E-Postası:** `kiliclarinfirtinasi216@gmail.com`
+* **Yurtiçi VakıfBank IBAN:** `TR890001500158007314606045` (SWIFT: `TVBATR2A`)
+
+---
+
+## 🔐 Dodo Payments İki Faktörlü Doğrulama (2FA) Kurtarma Kodları
+*(Oturum açma veya cihaz kaybı durumunda acil giriş için yedek kodlar)*
+
+```text
+1.  E2MQ-UHZG-8UG7
+2.  WYKX-G9GK-UEEP
+3.  KANR-E25L-37RH
+4.  PUWR-96Z8-NPRE
+5.  MRH9-Z5QS-MTCD
+6.  4HAD-DD8G-AXHP
+7.  D2R9-Q4LP-WEHU
+8.  G3F8-YM77-L32W
+9.  DL6V-6EC9-NCB5
+10. VPJ7-YZEW-AWFA
+```
+
+---
+
 ## 🔑 Gerekli Ortam Değişkenleri (.env)
 
 ```bash

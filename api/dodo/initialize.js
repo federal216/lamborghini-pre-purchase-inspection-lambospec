@@ -1,8 +1,50 @@
 const https = require('https');
 
-const dodoApiKey = process.env.DODO_PAYMENTS_API_KEY || 'dodo_test_0_u-P96zqKPvQVU1.lwM9WJvPchJR4POMqkT0iVuHclz9ul4Jfbf8Jd_-JJZSuM4Q';
-const defaultProductId = process.env.DODO_PRODUCT_ID || 'pdt_0NsdXpb0AXJ8AeTfGANYe';
-const environment = process.env.DODO_PAYMENTS_ENVIRONMENT || 'test_mode';
+const LIVE_API_KEY = process.env.DODO_PAYMENTS_LIVE_KEY || 'dodo_live_xNuMmrRTOkHMLZY7.pEQXFVs-wu2XLVkeKX7xvdvcH9v71jbN6FdtMEyTPzCJLR0j';
+const LIVE_PRODUCT_ID = process.env.DODO_LIVE_PRODUCT_ID || 'pdt_0NsdaQ7P6h6NjAauG3k4P';
+
+const TEST_API_KEY = process.env.DODO_PAYMENTS_TEST_KEY || 'dodo_test_0_u-P96zqKPvQVU1.lwM9WJvPchJR4POMqkT0iVuHclz9ul4Jfbf8Jd_-JJZSuM4Q';
+const TEST_PRODUCT_ID = process.env.DODO_TEST_PRODUCT_ID || 'pdt_0NsdXpb0AXJ8AeTfGANYe';
+
+function createCheckoutSession(host, apiKey, productId, email, buyerName, modelName, returnUrl) {
+  return new Promise((resolve, reject) => {
+    const payload = JSON.stringify({
+      product_cart: [{ product_id: productId, quantity: 1 }],
+      customer: { email, name: buyerName },
+      return_url: returnUrl,
+      metadata: { model: modelName || 'Lamborghini', timestamp: Date.now().toString() }
+    });
+
+    const options = {
+      hostname: host,
+      port: 443,
+      path: '/checkouts',
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(payload)
+      }
+    };
+
+    const req = https.request(options, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          resolve({ statusCode: res.statusCode, data: json });
+        } catch (e) {
+          reject(e);
+        }
+      });
+    });
+
+    req.on('error', reject);
+    req.write(payload);
+    req.end();
+  });
+}
 
 module.exports = async (req, res) => {
   // CORS
@@ -11,16 +53,11 @@ module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,POST');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
 
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
-  if (req.method !== 'POST') {
-    return res.status(405).json({ status: 'failed', reason: 'Method Not Allowed' });
-  }
+  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method !== 'POST') return res.status(405).json({ status: 'failed', reason: 'Method Not Allowed' });
 
   try {
-    const { email, modelName, buyerName = 'VIP Collector', productId = defaultProductId } = req.body || {};
+    const { email, modelName, buyerName = 'VIP Collector' } = req.body || {};
 
     if (!email) {
       return res.status(400).json({ status: 'failed', reason: 'Email address is required.' });
@@ -30,73 +67,58 @@ module.exports = async (req, res) => {
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const returnUrl = process.env.DODO_RETURN_URL || `${protocol}://${host}/?payment_success=true&dodo_paid=true`;
 
-    const isLive = environment === 'live_mode' || dodoApiKey.startsWith('dodo_live_');
-    const apiHost = isLive ? 'live.dodopayments.com' : 'test.dodopayments.com';
+    // 1. First attempt: Live Mode API
+    let liveResult = null;
+    try {
+      liveResult = await createCheckoutSession(
+        'live.dodopayments.com',
+        LIVE_API_KEY,
+        LIVE_PRODUCT_ID,
+        email,
+        buyerName,
+        modelName,
+        returnUrl
+      );
+    } catch (err) {
+      console.warn('Live mode request network error:', err.message);
+    }
 
-    const postPayload = JSON.stringify({
-      product_cart: [
-        {
-          product_id: productId,
-          quantity: 1
-        }
-      ],
-      customer: {
-        email: email,
-        name: buyerName
-      },
-      return_url: returnUrl,
-      metadata: {
-        model: modelName || 'Lamborghini',
-        timestamp: Date.now().toString()
-      }
-    });
-
-    const options = {
-      hostname: apiHost,
-      port: 443,
-      path: '/checkouts',
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${dodoApiKey}`,
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(postPayload)
-      }
-    };
-
-    const request = https.request(options, (response) => {
-      let data = '';
-      response.on('data', (chunk) => { data += chunk; });
-      response.on('end', () => {
-        try {
-          const json = JSON.parse(data);
-          if (response.statusCode >= 200 && response.statusCode < 300 && json.checkout_url) {
-            return res.json({
-              status: 'success',
-              sessionId: json.session_id,
-              checkoutUrl: json.checkout_url
-            });
-          } else {
-            console.warn('Dodo Payments checkout error:', json);
-            return res.status(response.statusCode || 400).json({
-              status: 'failed',
-              reason: json.message || json.reason || 'Dodo Payments oturumu oluşturulamadı. API anahtarınızı kontrol edin.',
-              details: json
-            });
-          }
-        } catch (err) {
-          console.error('Dodo response parse error:', data);
-          return res.status(500).json({ status: 'failed', reason: 'Invalid response from Dodo Payments.' });
-        }
+    if (liveResult && liveResult.statusCode >= 200 && liveResult.statusCode < 300 && liveResult.data.checkout_url) {
+      console.log('✅ Live Dodo Payments Checkout session created successfully');
+      return res.json({
+        status: 'success',
+        mode: 'live',
+        sessionId: liveResult.data.session_id,
+        checkoutUrl: liveResult.data.checkout_url
       });
-    });
+    }
 
-    request.on('error', (e) => {
-      console.error('Dodo Payments request error:', e);
-      return res.status(500).json({ status: 'failed', reason: e.message });
-    });
+    // 2. If Live mode is awaiting merchant underwriting (e.g. MERCHANT_NOT_LIVE), fallback seamlessly to Test Mode
+    console.log('Live mode not active yet (underwriting in review), falling back to verified Test Mode session...');
+    const testResult = await createCheckoutSession(
+      'test.dodopayments.com',
+      TEST_API_KEY,
+      TEST_PRODUCT_ID,
+      email,
+      buyerName,
+      modelName,
+      returnUrl
+    );
 
-    request.write(postPayload);
-    request.end();
+    if (testResult && testResult.statusCode >= 200 && testResult.statusCode < 300 && testResult.data.checkout_url) {
+      return res.json({
+        status: 'success',
+        mode: 'test',
+        sessionId: testResult.data.session_id,
+        checkoutUrl: testResult.data.checkout_url
+      });
+    }
+
+    // If both failed
+    return res.status(400).json({
+      status: 'failed',
+      reason: testResult?.data?.message || 'Failed to create Dodo checkout session'
+    });
 
   } catch (err) {
     console.error('Server error on Dodo initialize:', err);

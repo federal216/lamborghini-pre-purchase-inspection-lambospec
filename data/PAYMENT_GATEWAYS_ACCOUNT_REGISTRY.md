@@ -9,7 +9,7 @@ Bu belge, LamboSpec AI projesinde kullanılan tüm ödeme altyapılarını, baş
 | Ödeme Altyapısı | Kayıtlı / Başvurulan E-Posta | Başvuru / Referans No | Ürün & Para Birimi | Durum |
 | :--- | :--- | :--- | :--- | :--- |
 | **PayTR** | `karakoc.i@gmail.com` | `17CC89H551P35576` | Sanal POS ($79.00 USD / TL) | ⏳ Ön başvuru yapıldı, onay bekleniyor |
-| **Dodo Payments (MoR)** | `karakoc.i@gmail.com` | Business: `bus_0NsdOsgyw5JvaPeKIIn2R` <br> Product ID: `pdt_0NsdXpb0AXJ8AeTfGANYe` | $79.00 USD (Apple Pay, GPay, Kart) | ✅ Canlı Test Doğrulandı (200 OK) |
+| **Dodo Payments (MoR)** | `karakoc.i@gmail.com` | Live Prod: `pdt_0NsdaQ7P6h6NjAauG3k4P` <br> Test Prod: `pdt_0NsdXpb0AXJ8AeTfGANYe` | $79.00 USD (Apple Pay, GPay, Kart) | 🚀 Canlı Anahtar Bağlandı (Otomatik Fallback Aktif) |
 | **Paddle (MoR)** | `karakoc.i@gmail.com` / `lamborginichallenge2026@gmail.com` | Price ID: `pri_01m7wnbynzbf08mydbbj8vgkd5` | $79.00 USD Global Checkout | ⏳ Başvuru inceleniyor |
 | **iyzico** | `karakoc.i@gmail.com` / `lamborginichallenge2026@gmail.com` | Sanal POS Entegrasyonu | $79.00 USD / 2.750 TL (3D Secure) | ⏳ Başvuru inceleniyor |
 | **Kripto (Web3)** | *Doğrudan Cüzdan* | USDT TRC-20: `TDV1Q...` | $79 USDT / USDC | ✅ Kodda aktif ve hazır |
@@ -64,10 +64,13 @@ PAYTR_MERCHANT_SALT=
 PAYTR_TEST_MODE=1
 
 # Dodo Payments (Panel: Developers -> API Keys & Products)
-DODO_PAYMENTS_API_KEY=dodo_test_0_u-P96zqKPvQVU1.lwM9WJvPchJR4POMqkT0iVuHclz9ul4Jfbf8Jd_-JJZSuM4Q
-DODO_PRODUCT_ID=pdt_0NsdXpb0AXJ8AeTfGANYe
+DODO_PAYMENTS_LIVE_KEY=dodo_live_xNuMmrRTOkHMLZY7.pEQXFVs-wu2XLVkeKX7xvdvcH9v71jbN6FdtMEyTPzCJLR0j
+DODO_LIVE_PRODUCT_ID=pdt_0NsdaQ7P6h6NjAauG3k4P
+
+DODO_PAYMENTS_TEST_KEY=dodo_test_0_u-P96zqKPvQVU1.lwM9WJvPchJR4POMqkT0iVuHclz9ul4Jfbf8Jd_-JJZSuM4Q
+DODO_TEST_PRODUCT_ID=pdt_0NsdXpb0AXJ8AeTfGANYe
+
 DODO_BUSINESS_ID=bus_0NsdOsgyw5JvaPeKIIn2R
-DODO_PAYMENTS_ENVIRONMENT=test_mode # Canlı onay gelince live_mode yapılacak
 
 # Paddle (Panel: Developer Tools -> Authentication)
 PADDLE_CLIENT_TOKEN=7sexx0tq6f10248f7ekcdh9zp29dhmdrbswga92as1g0bhmy7c

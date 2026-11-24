@@ -16,9 +16,12 @@ Bu belge, LamboSpec AI projesinde kullanılan tüm ödeme altyapılarını, baş
 
 ---
 
-## 📬 Resmi İletişim ve Müşteri Destek E-Postası
-* **Sitede Görünen VIP Destek & Concierge Maili:** `lamborginichallenge2026@gmail.com`
-* **Yönetici / Kurucu Ana Maili:** `karakoc.i@gmail.com`
+## 👤 Yönetici & Platform Giriş Bilgisi (Primary Admin Login)
+* 🔑 **Tüm Servis ve Panellere Giriş Yapılan Ana E-Posta:** `karakoc.i@gmail.com`
+  * **Dodo Payments Girişi:** Doğrudan `karakoc.i@gmail.com` hesabı ile giriş yapılmıştır.
+  * **PayTR Başvurusu & Girişi:** `karakoc.i@gmail.com` ile yapılmıştır (Başvuru Ref No: `17CC89H551P35576`).
+  * **GitHub Deposu & Proje Sahibi:** `karakoc.i@gmail.com` / `federal216`.
+* 🛡️ **Müşterilere Gösterilen VIP Destek / Concierge E-Postası:** `lamborginichallenge2026@gmail.com` *(Sitede dışa açık destek maili olarak bu görünür; tüm idari ve ödeme girişleri `karakoc.i@gmail.com` üzerindedir).*
 
 ---
 

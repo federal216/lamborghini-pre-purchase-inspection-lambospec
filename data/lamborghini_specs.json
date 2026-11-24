@@ -1,1861 +1,948 @@
 {
-  "last_updated": "2026-11-19T20:34:47.947745+00:00",
-  "total_models": 40,
+  "version": "2026.3-ALL-106-MODELS",
+  "updated_at": "2026-11-24",
+  "total_models": 94,
+  "source": "LamboSpec AI Global Sant'Agata Bolognese Archive & Closed BaT Comp Registry",
   "models": {
-    "huracan_lp610_4": {
-      "name": "Lamborghini Huracán LP610-4",
-      "category": "Modern V10",
-      "years": [
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
-        2019
-      ],
-      "engine": "5.2L Naturally Aspirated V10 (602 hp / 413 lb-ft)",
-      "transmission": "7-speed LDF Dual-Clutch",
-      "drivetrain": "All-Wheel Drive (AWD)",
-      "market_price_usd": {
-        "poor": 175000,
-        "good": 195000,
-        "excellent": 218000,
-        "concours": 245000
-      },
-      "must_have_options": [
-        {
-          "name": "Front Axle Lifting System",
-          "importance": "CRITICAL",
-          "value_impact_usd": 10000,
-          "description": "Critical for resale liquidity; prevents front spoiler scraping."
-        },
-        {
-          "name": "Transparent Engine Bonnet",
-          "importance": "HIGH",
-          "value_impact_usd": 6500,
-          "description": "Exposes V10 powerplant with forged carbon bay."
-        },
-        {
-          "name": "Sport / Race Exhaust System",
-          "importance": "MEDIUM",
-          "value_impact_usd": 4500,
-          "description": "Acoustic valve tuning."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Front Differential Output Seals",
-          "severity": "HIGH",
-          "typical_mileage": "15,000 - 30,000 miles",
-          "estimated_repair_usd": 3800,
-          "symptoms": "Oil weeping on undertray; differential casing damp."
-        },
-        {
-          "component": "Coolant Reservoir Micro-Cracks",
-          "severity": "MEDIUM",
-          "typical_mileage": "20,000+ miles",
-          "estimated_repair_usd": 1200,
-          "symptoms": "Sweet coolant odor in engine bay; pressure cap drop."
-        }
-      ]
+    "350_gt": {
+      "name": "Lamborghini 350 GT",
+      "years": "1964-1966",
+      "engine": "3.5L Bizzarrini V12",
+      "horsepower": 280,
+      "transmission": "5-Speed ZF Manual",
+      "primary_chronic_defect": "Salisbury differential backlash & Weber 40 DCOE sync drift",
+      "recommended_ppi_negotiation_deduction": "$18,000",
+      "category": "Classic (1963-1989)"
     },
-    "huracan_lp580_2": {
-      "name": "Lamborghini Huracán LP580-2 (RWD)",
-      "category": "Modern V10",
-      "years": [
-        2016,
-        2017,
-        2018,
-        2019
-      ],
-      "engine": "5.2L Naturally Aspirated V10 (572 hp / 398 lb-ft)",
-      "transmission": "7-speed LDF Dual-Clutch",
-      "drivetrain": "Rear-Wheel Drive (RWD - Pure)",
-      "market_price_usd": {
-        "poor": 165000,
-        "good": 182000,
-        "excellent": 205000,
-        "concours": 230000
-      },
-      "must_have_options": [
-        {
-          "name": "Front Axle Lift",
-          "importance": "CRITICAL",
-          "value_impact_usd": 9000,
-          "description": "Clearance system."
-        },
-        {
-          "name": "Steel Brakes with Colored Calipers",
-          "importance": "HIGH",
-          "value_impact_usd": 4000,
-          "description": "Standard steel brakes; lower maintenance cost."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Rear Traction Control Wheelspin Sensor",
-          "severity": "MEDIUM",
-          "typical_mileage": "12,000 miles",
-          "estimated_repair_usd": 1800,
-          "symptoms": "ESC error after aggressive drift launch."
-        }
-      ]
+    "350_gts": {
+      "name": "Lamborghini 350 GTS Spyder",
+      "years": "1965",
+      "engine": "3.5L V12",
+      "horsepower": 280,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Touring Superleggera body flex & aluminum skin electrolysis",
+      "recommended_ppi_negotiation_deduction": "$35,000",
+      "category": "Classic (1963-1989)"
     },
-    "huracan_performante": {
-      "name": "Lamborghini Huracán Performante",
-      "category": "Modern V10",
-      "years": [
-        2017,
-        2018,
-        2019
-      ],
-      "engine": "5.2L Naturally Aspirated V10 (631 hp / 443 lb-ft)",
-      "transmission": "7-speed LDF Dual-Clutch with Performante Calibrations",
-      "drivetrain": "All-Wheel Drive (ALA 1.0 Active Aero)",
-      "market_price_usd": {
-        "poor": 255000,
-        "good": 285000,
-        "excellent": 320000,
-        "concours": 365000
-      },
-      "must_have_options": [
-        {
-          "name": "Forged Composites Exterior Package",
-          "importance": "CRITICAL",
-          "value_impact_usd": 12000,
-          "description": "ALA rear wing and front spoiler in patented forged carbon."
-        },
-        {
-          "name": "Magneto-Rheological Suspension",
-          "importance": "HIGH",
-          "value_impact_usd": 5000,
-          "description": "Dynamic damping."
-        },
-        {
-          "name": "Laser-Engraved Alcantara Interior",
-          "importance": "MEDIUM",
-          "value_impact_usd": 4500,
-          "description": "Laser-cut graphic pattern on seat centers."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "ALA 1.0 Front Flap Solenoid Actuators",
-          "severity": "HIGH",
-          "typical_mileage": "8,000 - 15,000 miles",
-          "estimated_repair_usd": 4800,
-          "symptoms": "ALA warning light on track; front electric flaps fail to close."
-        },
-        {
-          "component": "Forged Carbon Clear-Coat Milky Haze",
-          "severity": "MEDIUM",
-          "typical_mileage": "UV Exposed",
-          "estimated_repair_usd": 3200,
-          "symptoms": "White clouding over forged carbon rear wing."
-        }
-      ]
+    "400_gt_interim": {
+      "name": "Lamborghini 400 GT Interim",
+      "years": "1966",
+      "engine": "4.0L V12",
+      "horsepower": 320,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Bizzarrini dry-sump scavenging oil seal leaks",
+      "recommended_ppi_negotiation_deduction": "$22,000",
+      "category": "Classic (1963-1989)"
     },
-    "huracan_evo": {
-      "name": "Lamborghini Huracán EVO (AWD & RWD)",
-      "category": "Modern V10",
-      "years": [
-        2020,
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      "engine": "5.2L Naturally Aspirated V10 (631 hp)",
-      "transmission": "7-speed LDF Dual-Clutch with LDVI Predictive Brain",
-      "drivetrain": "All-Wheel Drive or Rear-Wheel Drive",
-      "market_price_usd": {
-        "poor": 235000,
-        "good": 265000,
-        "excellent": 295000,
-        "concours": 330000
-      },
-      "must_have_options": [
-        {
-          "name": "Lifting System (Front Axle)",
-          "importance": "CRITICAL",
-          "value_impact_usd": 10000,
-          "description": "Essential front hydraulic lift."
-        },
-        {
-          "name": "Sensonum Audio System",
-          "importance": "HIGH",
-          "value_impact_usd": 4200,
-          "description": "High-fidelity audio."
-        },
-        {
-          "name": "Life Style Pack + Driver Pack",
-          "importance": "MEDIUM",
-          "value_impact_usd": 6500,
-          "description": "Smartphone interface & cameras."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "LDVI Central Computer Sensor Calibration",
-          "severity": "MEDIUM",
-          "typical_mileage": "10,000 miles",
-          "estimated_repair_usd": 2200,
-          "symptoms": "Torque vectoring warning on cluster."
-        },
-        {
-          "component": "Center Touchscreen Digitizer Ghost Touches",
-          "severity": "LOW",
-          "typical_mileage": "Hot climates",
-          "estimated_repair_usd": 3400,
-          "symptoms": "Screen phantom clicks."
-        }
-      ]
+    "400_gt_2plus2": {
+      "name": "Lamborghini 400 GT 2+2",
+      "years": "1966-1968",
+      "engine": "4.0L V12",
+      "horsepower": 320,
+      "transmission": "5-Speed In-House Manual",
+      "primary_chronic_defect": "Synchromesh cone brass wear on 2nd gear",
+      "recommended_ppi_negotiation_deduction": "$16,000",
+      "category": "Classic (1963-1989)"
     },
-    "huracan_sto": {
-      "name": "Lamborghini Huracán STO (Super Trofeo Omologata)",
-      "category": "Modern V10",
-      "years": [
-        2021,
-        2022,
-        2023
-      ],
-      "engine": "5.2L Naturally Aspirated V10 (631 hp - Track Spec)",
-      "transmission": "7-speed LDF Dual-Clutch",
-      "drivetrain": "Rear-Wheel Drive (RWD)",
-      "market_price_usd": {
-        "poor": 310000,
-        "good": 350000,
-        "excellent": 390000,
-        "concours": 440000
-      },
-      "must_have_options": [
-        {
-          "name": "Full Exterior Carbon Cofango Skin",
-          "importance": "CRITICAL",
-          "value_impact_usd": 22000,
-          "description": "Bare carbon fiber one-piece front clam hood."
-        },
-        {
-          "name": "CCMR Carbon-Ceramic Racing Brakes",
-          "importance": "HIGH",
-          "value_impact_usd": 15000,
-          "description": "F1-derived Brembo CCMR braking discs."
-        },
-        {
-          "name": "Akrapovic Titanium Racing Exhaust",
-          "importance": "HIGH",
-          "value_impact_usd": 9500,
-          "description": "Factory option exhaust."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Cofango Latch & Hinge Alignment",
-          "severity": "HIGH",
-          "typical_mileage": "Track use",
-          "estimated_repair_usd": 7500,
-          "symptoms": "Cofango hood chipping at corners."
-        },
-        {
-          "component": "Track Pad Marring on CCMR Rotors",
-          "severity": "HIGH",
-          "typical_mileage": "Heavy tracking",
-          "estimated_repair_usd": 28000,
-          "symptoms": "Deep groove erosion on brake rotors."
-        }
-      ]
+    "miura_p400": {
+      "name": "Lamborghini Miura P400",
+      "years": "1966-1969",
+      "engine": "3.9L Transverse V12",
+      "horsepower": 350,
+      "transmission": "5-Speed Transverse",
+      "primary_chronic_defect": "Shared engine-gearbox oil bath & high-speed front axle lift",
+      "recommended_ppi_negotiation_deduction": "$85,000",
+      "category": "Classic (1963-1989)"
     },
-    "huracan_tecnica": {
-      "name": "Lamborghini Huracán Tecnica",
-      "category": "Modern V10",
-      "years": [
-        2022,
-        2023,
-        2024
-      ],
-      "engine": "5.2L Naturally Aspirated V10 (631 hp)",
-      "transmission": "7-speed LDF Dual-Clutch",
-      "drivetrain": "Rear-Wheel Drive with Rear-Wheel Steering",
-      "market_price_usd": {
-        "poor": 275000,
-        "good": 310000,
-        "excellent": 345000,
-        "concours": 390000
-      },
-      "must_have_options": [
-        {
-          "name": "Front Axle Lifting System",
-          "importance": "CRITICAL",
-          "value_impact_usd": 10000,
-          "description": "Nose lift."
-        },
-        {
-          "name": "Damiso 20-inch Diamond Cut Wheels",
-          "importance": "HIGH",
-          "value_impact_usd": 5500,
-          "description": "Iconic hexagon alloy design."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Rear-Wheel Steering Actuator Zero-Point Loss",
-          "severity": "MEDIUM",
-          "typical_mileage": "6,000 miles",
-          "estimated_repair_usd": 3800,
-          "symptoms": "Crab-walk steering feel."
-        }
-      ]
+    "miura_p400s": {
+      "name": "Lamborghini Miura P400S",
+      "years": "1968-1971",
+      "engine": "3.9L Transverse V12",
+      "horsepower": 370,
+      "transmission": "5-Speed Transverse",
+      "primary_chronic_defect": "Weber IDL40 carburetor fuel line vapor lock fire risk",
+      "recommended_ppi_negotiation_deduction": "$75,000",
+      "category": "Classic (1963-1989)"
     },
-    "huracan_sterrato": {
-      "name": "Lamborghini Huracán Sterrato (All-Terrain V10)",
-      "category": "Modern V10",
-      "years": [
-        2023,
-        2024
-      ],
-      "engine": "5.2L Naturally Aspirated V10 (602 hp)",
-      "transmission": "7-speed LDF with Rally Mode",
-      "drivetrain": "All-Wheel Drive with +44mm Lifted Suspension",
-      "market_price_usd": {
-        "poor": 315000,
-        "good": 355000,
-        "excellent": 395000,
-        "concours": 450000
-      },
-      "must_have_options": [
-        {
-          "name": "Roof-Mounted Dual Rally LED Driving Lights",
-          "importance": "CRITICAL",
-          "value_impact_usd": 8500,
-          "description": "Signature off-road bumper pods."
-        },
-        {
-          "name": "Roof Air Snorkel Intake",
-          "importance": "HIGH",
-          "value_impact_usd": 7000,
-          "description": "Functional dust-free engine breathing."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Underbody Skid Plate Debris Ingestion",
-          "severity": "MEDIUM",
-          "typical_mileage": "Off-road use",
-          "estimated_repair_usd": 2500,
-          "symptoms": "Gravel accumulation behind radiators."
-        }
-      ]
+    "miura_p400sv": {
+      "name": "Lamborghini Miura P400SV",
+      "years": "1971-1973",
+      "engine": "3.9L Transverse V12",
+      "horsepower": 385,
+      "transmission": "Split-Sump 5-Speed",
+      "primary_chronic_defect": "Split-sump oil gallery gasket seepage & rear A-arm cracks",
+      "recommended_ppi_negotiation_deduction": "$110,000",
+      "category": "Classic (1963-1989)"
     },
-    "aventador_lp700_4": {
-      "name": "Lamborghini Aventador LP700-4",
-      "category": "Modern V12",
-      "years": [
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016
-      ],
-      "engine": "6.5L Naturally Aspirated V12 (690 hp / 509 lb-ft)",
-      "transmission": "7-speed ISR (Independent Shifting Rods)",
-      "drivetrain": "Haldex IV All-Wheel Drive",
-      "market_price_usd": {
-        "poor": 250000,
-        "good": 285000,
-        "excellent": 325000,
-        "concours": 375000
-      },
-      "must_have_options": [
-        {
-          "name": "Front Axle Suspension Lift",
-          "importance": "CRITICAL",
-          "value_impact_usd": 12000,
-          "description": "Mandatory on Aventador due to ultra-low ground clearance."
-        },
-        {
-          "name": "Transparent Engine Bonnet",
-          "importance": "HIGH",
-          "value_impact_usd": 8500,
-          "description": "Showcases transverse pushrod suspension and V12."
-        },
-        {
-          "name": "T-Engine Cover in Carbon Fiber",
-          "importance": "MEDIUM",
-          "value_impact_usd": 5000,
-          "description": "Carbon engine bracing."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "ISR Single-Clutch Wear Index",
-          "severity": "CRITICAL",
-          "typical_mileage": "10,000 - 18,000 miles",
-          "estimated_repair_usd": 15500,
-          "symptoms": "Violent bang into gear; clutch slippage. Must read ODIS clutch mm remaining."
-        },
-        {
-          "component": "V12 Rear Main Crankshaft Seal Leak",
-          "severity": "HIGH",
-          "typical_mileage": "15,000+ miles",
-          "estimated_repair_usd": 9200,
-          "symptoms": "Oil dripping from engine-to-gearbox bellhousing. Requires full engine drop."
-        },
-        {
-          "component": "Hydraulic Steering Pump Hose Weepage",
-          "severity": "HIGH",
-          "typical_mileage": "Early chassis (2012-2014)",
-          "estimated_repair_usd": 3800,
-          "symptoms": "Power steering fluid fire risk; check factory recall campaign."
-        }
-      ]
+    "miura_roadster": {
+      "name": "Lamborghini Miura Roadster (Bertone)",
+      "years": "1968",
+      "engine": "3.9L V12",
+      "horsepower": 350,
+      "transmission": "5-Speed",
+      "primary_chronic_defect": "One-off chassis flex & unreinforced A-pillars",
+      "recommended_ppi_negotiation_deduction": "$250,000",
+      "category": "Classic (1963-1989)"
     },
-    "aventador_lp750_4_sv": {
-      "name": "Lamborghini Aventador LP750-4 SuperVeloce (SV)",
-      "category": "Modern V12",
-      "years": [
-        2015,
-        2016,
-        2017
-      ],
-      "engine": "6.5L Naturally Aspirated V12 (740 hp / 509 lb-ft)",
-      "transmission": "7-speed ISR SuperVeloce Calibration",
-      "drivetrain": "All-Wheel Drive with Fixed High Carbon Wing",
-      "market_price_usd": {
-        "poor": 440000,
-        "good": 510000,
-        "excellent": 585000,
-        "concours": 680000
-      },
-      "must_have_options": [
-        {
-          "name": "Big SV Decal / Hand-Painted Livery",
-          "importance": "HIGH",
-          "value_impact_usd": 14000,
-          "description": "Painted SV logo on rear quarter panels."
-        },
-        {
-          "name": "Carbon Fiber Bucket Racing Seats",
-          "importance": "HIGH",
-          "value_impact_usd": 11000,
-          "description": "Lightweight manual carbon shells."
-        },
-        {
-          "name": "Dianthus 20/21 Forged Center-Lock Wheels",
-          "importance": "MEDIUM",
-          "value_impact_usd": 8500,
-          "description": "Center-lock wheel hardware."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "ISR Transmission Kiss-Point Adaptation",
-          "severity": "HIGH",
-          "typical_mileage": "8,000 - 14,000 miles",
-          "estimated_repair_usd": 16500,
-          "symptoms": "Aggressive judder in reverse."
-        },
-        {
-          "component": "Center-Lock Nut Galling & Torque Verification",
-          "severity": "HIGH",
-          "typical_mileage": "Wheel change",
-          "estimated_repair_usd": 4200,
-          "symptoms": "Requires certified 600 Nm torque multiplier wrench."
-        }
-      ]
+    "espada_series1": {
+      "name": "Lamborghini Espada Series 1",
+      "years": "1968-1969",
+      "engine": "3.9L V12",
+      "horsepower": 325,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Bertone tubular chassis outrigger rust & rear hatch glass seals",
+      "recommended_ppi_negotiation_deduction": "$19,000",
+      "category": "Classic (1963-1989)"
     },
-    "aventador_s": {
-      "name": "Lamborghini Aventador S",
-      "category": "Modern V12",
-      "years": [
-        2017,
-        2018,
-        2019,
-        2020,
-        2021
-      ],
-      "engine": "6.5L Naturally Aspirated V12 (730 hp / 509 lb-ft)",
-      "transmission": "7-speed ISR",
-      "drivetrain": "AWD with 4-Wheel Steering (LRS)",
-      "market_price_usd": {
-        "poor": 320000,
-        "good": 365000,
-        "excellent": 415000,
-        "concours": 485000
-      },
-      "must_have_options": [
-        {
-          "name": "Front Suspension Lift",
-          "importance": "CRITICAL",
-          "value_impact_usd": 12000,
-          "description": "Nose lift system."
-        },
-        {
-          "name": "Full Carbon Fiber Lower Aerodynamic Pack",
-          "importance": "HIGH",
-          "value_impact_usd": 15000,
-          "description": "Front splitters, side sills, rear diffuser."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Four-Wheel Steering (LRS) Actuator Fault",
-          "severity": "MEDIUM",
-          "typical_mileage": "12,000 miles",
-          "estimated_repair_usd": 5400,
-          "symptoms": "Rear steering angle sensor alignment error."
-        }
-      ]
+    "espada_series2": {
+      "name": "Lamborghini Espada Series 2 (400 GTE)",
+      "years": "1969-1972",
+      "engine": "3.9L V12",
+      "horsepower": 350,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Girling dual brake booster vacuum leak & inboard rear brakes",
+      "recommended_ppi_negotiation_deduction": "$18,000",
+      "category": "Classic (1963-1989)"
     },
-    "aventador_svj": {
-      "name": "Lamborghini Aventador SVJ (Super Veloce Jota)",
-      "category": "Modern V12",
-      "years": [
-        2019,
-        2020,
-        2021
-      ],
-      "engine": "6.5L Naturally Aspirated V12 (759 hp / 531 lb-ft)",
-      "transmission": "7-speed ISR Robotized",
-      "drivetrain": "All-Wheel Drive with ALA 2.0 Active Aerodynamics",
-      "market_price_usd": {
-        "poor": 580000,
-        "good": 660000,
-        "excellent": 750000,
-        "concours": 890000
-      },
-      "must_have_options": [
-        {
-          "name": "ALA 2.0 Active Carbon Aero Wing & Splitters",
-          "importance": "CRITICAL",
-          "value_impact_usd": 25000,
-          "description": "Electric servo motor micro-flap actuation."
-        },
-        {
-          "name": "Cross-Stitched Alcantara SVJ Livery",
-          "importance": "HIGH",
-          "value_impact_usd": 12000,
-          "description": "Hand-painted SVJ side logo."
-        },
-        {
-          "name": "Removable Carbon Targa Roof (Roadster)",
-          "importance": "HIGH",
-          "value_impact_usd": 18000,
-          "description": "Two-piece removable carbon roof."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "ALA 2.0 Electric Flap Actuator Error",
-          "severity": "HIGH",
-          "typical_mileage": "3,000 - 10,000 miles",
-          "estimated_repair_usd": 6200,
-          "symptoms": "'Aerodinamica Attiva' dash warning; flap servo failure."
-        },
-        {
-          "component": "ISR Clutch Friction Disc Wear",
-          "severity": "CRITICAL",
-          "typical_mileage": "7,000 - 12,000 miles",
-          "estimated_repair_usd": 17500,
-          "symptoms": "Clutch slipping under full throttle launch."
-        }
-      ]
+    "espada_series3": {
+      "name": "Lamborghini Espada Series 3",
+      "years": "1972-1978",
+      "engine": "3.9L V12",
+      "horsepower": 350,
+      "transmission": "5-Speed / 3-Speed Chrysler Torqueflite",
+      "primary_chronic_defect": "Automatic transmission torque converter seal weeping",
+      "recommended_ppi_negotiation_deduction": "$15,000",
+      "category": "Classic (1963-1989)"
     },
-    "aventador_ultimae": {
-      "name": "Lamborghini Aventador LP780-4 Ultimae",
-      "category": "Modern V12",
-      "years": [
-        2021,
-        2022
-      ],
-      "engine": "6.5L Naturally Aspirated V12 (769 hp - Purest Final V12)",
-      "transmission": "7-speed ISR",
-      "drivetrain": "AWD with 4-Wheel Steering (Limited: 350 Coupe / 250 Roadster)",
-      "market_price_usd": {
-        "poor": 690000,
-        "good": 780000,
-        "excellent": 890000,
-        "concours": 1050000
-      },
-      "must_have_options": [
-        {
-          "name": "Numbered Interior Plaque (1 of 350 / 1 of 250)",
-          "importance": "CRITICAL",
-          "value_impact_usd": 30000,
-          "description": "Numbered collector verification."
-        },
-        {
-          "name": "Livery Accent Package with Pinstriping",
-          "importance": "HIGH",
-          "value_impact_usd": 15000,
-          "description": "Two-tone gradient paint scheme."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Low-Mileage Battery Parasitic Draw",
-          "severity": "MEDIUM",
-          "typical_mileage": "Storage cars",
-          "estimated_repair_usd": 2800,
-          "symptoms": "Lithium-ion battery flat-lining if trickle charger unseated."
-        }
-      ]
+    "islero": {
+      "name": "Lamborghini Islero 400 GT",
+      "years": "1968-1969",
+      "engine": "3.9L V12",
+      "horsepower": 325,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Marazzi coachwork panel rust & Campagnolo magnesium wheel oxidation",
+      "recommended_ppi_negotiation_deduction": "$25,000",
+      "category": "Classic (1963-1989)"
     },
-    "urus_suv": {
-      "name": "Lamborghini Urus (4.0L Twin-Turbo V8)",
-      "category": "Super SUV",
-      "years": [
-        2018,
-        2019,
-        2020,
-        2021,
-        2022
-      ],
-      "engine": "4.0L Twin-Turbo V8 (641 hp / 627 lb-ft)",
-      "transmission": "8-speed ZF Torque-Converter Automatic",
-      "drivetrain": "Permanent All-Wheel Drive with Torsen Center Differential",
-      "market_price_usd": {
-        "poor": 165000,
-        "good": 192000,
-        "excellent": 225000,
-        "concours": 260000
-      },
-      "must_have_options": [
-        {
-          "name": "Bang & Olufsen 3D Advanced Sound System",
-          "importance": "CRITICAL",
-          "value_impact_usd": 6500,
-          "description": "Motorized acoustic lens tweeters on dashboard."
-        },
-        {
-          "name": "23-inch Taigete / Pelope Forged Alloy Wheels",
-          "importance": "HIGH",
-          "value_impact_usd": 5500,
-          "description": "Essential stance for resale."
-        },
-        {
-          "name": "Panoramic Sunroof & Front Massaging Seats",
-          "importance": "MEDIUM",
-          "value_impact_usd": 4000,
-          "description": "Comfort suite."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "CCB Front 440mm Brake Rotor Squeal & Lip Wear",
-          "severity": "HIGH",
-          "typical_mileage": "25,000 miles",
-          "estimated_repair_usd": 18000,
-          "symptoms": "Excessive high-pitch squeal; front disc surface chipping."
-        },
-        {
-          "component": "Air Suspension Strut O-Ring Leaks",
-          "severity": "MEDIUM",
-          "typical_mileage": "30,000 miles",
-          "estimated_repair_usd": 4200,
-          "symptoms": "One corner slumping overnight in garage."
-        },
-        {
-          "component": "Water Pump & Coolant Valley Pipe Leak",
-          "severity": "HIGH",
-          "typical_mileage": "35,000 miles",
-          "estimated_repair_usd": 5800,
-          "symptoms": "Coolant loss under turbo valley."
-        }
-      ]
+    "islero_s": {
+      "name": "Lamborghini Islero S",
+      "years": "1969-1970",
+      "engine": "3.9L V12",
+      "horsepower": 350,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Higher-lift camshaft lobe pitting & rear brake overheating",
+      "recommended_ppi_negotiation_deduction": "$28,000",
+      "category": "Classic (1963-1989)"
     },
-    "urus_s": {
-      "name": "Lamborghini Urus S",
-      "category": "Super SUV",
-      "years": [
-        2023,
-        2024,
-        2025
-      ],
-      "engine": "4.0L Twin-Turbo V8 (657 hp / 627 lb-ft)",
-      "transmission": "8-speed Automatic",
-      "drivetrain": "All-Wheel Drive with Adaptive Air Suspension",
-      "market_price_usd": {
-        "poor": 220000,
-        "good": 250000,
-        "excellent": 285000,
-        "concours": 325000
-      },
-      "must_have_options": [
-        {
-          "name": "Carbon Fiber Vented Hood Package",
-          "importance": "HIGH",
-          "value_impact_usd": 8500,
-          "description": "Exposed carbon bonnet gills."
-        },
-        {
-          "name": "Akrapovic Exhaust System",
-          "importance": "HIGH",
-          "value_impact_usd": 9000,
-          "description": "Factory titanium exhaust."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Active Anti-Roll 48V Actuator Software Error",
-          "severity": "MEDIUM",
-          "typical_mileage": "15,000 miles",
-          "estimated_repair_usd": 3200,
-          "symptoms": "Chassis system warning message on highway."
-        }
-      ]
+    "jarama_400gt": {
+      "name": "Lamborghini Jarama 400 GT",
+      "years": "1970-1973",
+      "engine": "3.9L V12",
+      "horsepower": 350,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Shortened chassis nose-heavy handling & hidden cowl rust",
+      "recommended_ppi_negotiation_deduction": "$16,000",
+      "category": "Classic (1963-1989)"
     },
-    "urus_performante": {
-      "name": "Lamborghini Urus Performante",
-      "category": "Super SUV",
-      "years": [
-        2023,
-        2024,
-        2025
-      ],
-      "engine": "4.0L Twin-Turbo V8 (657 hp - Lightweight Steel Springs)",
-      "transmission": "8-speed Automatic with Rally Mode",
-      "drivetrain": "AWD with Tork-Vectoring Rear Differential",
-      "market_price_usd": {
-        "poor": 255000,
-        "good": 290000,
-        "excellent": 330000,
-        "concours": 380000
-      },
-      "must_have_options": [
-        {
-          "name": "Full Exposed Carbon Fiber Roof",
-          "importance": "CRITICAL",
-          "value_impact_usd": 14000,
-          "description": "Lightweight bare carbon roof."
-        },
-        {
-          "name": "Pirelli Trofeo R Ultra-Track Tires",
-          "importance": "HIGH",
-          "value_impact_usd": 3500,
-          "description": "Track record tire option."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Track-Stiffened Steel Spring Bushing Noise",
-          "severity": "LOW",
-          "typical_mileage": "10,000 miles",
-          "estimated_repair_usd": 2100,
-          "symptoms": "Creak over severe speed humps."
-        }
-      ]
+    "jarama_s": {
+      "name": "Lamborghini Jarama S (400 GTS)",
+      "years": "1972-1976",
+      "engine": "3.9L V12",
+      "horsepower": 365,
+      "transmission": "5-Speed / Torqueflite",
+      "primary_chronic_defect": "Power steering ram seals & hood scoop water intrusion",
+      "recommended_ppi_negotiation_deduction": "$17,000",
+      "category": "Classic (1963-1989)"
     },
-    "urus_se": {
-      "name": "Lamborghini Urus SE (PHEV V8)",
-      "category": "Super SUV",
-      "years": [
-        2025,
-        2026
-      ],
-      "engine": "4.0L Twin-Turbo V8 + Electric Motor (789 hp / 701 lb-ft)",
-      "transmission": "8-speed Automatic with Electric Motor in Bellhousing",
-      "drivetrain": "Electric AWD with 25.9 kWh Battery (60 km EV Range)",
-      "market_price_usd": {
-        "poor": 290000,
-        "good": 330000,
-        "excellent": 375000,
-        "concours": 430000
-      },
-      "must_have_options": [
-        {
-          "name": "25.9 kWh High-Voltage Battery Health Certification",
-          "importance": "CRITICAL",
-          "value_impact_usd": 20000,
-          "description": "Warranty status check on hybrid battery."
-        },
-        {
-          "name": "High-Voltage Home Charging Dock",
-          "importance": "MEDIUM",
-          "value_impact_usd": 3500,
-          "description": "OEM home charger."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Electric Motor Clutch Handshake Firmware",
-          "severity": "MEDIUM",
-          "typical_mileage": "First year",
-          "estimated_repair_usd": 1800,
-          "symptoms": "Slight hesitation during V8 cold engine fire-up while driving."
-        }
-      ]
+    "urraco_p250": {
+      "name": "Lamborghini Urraco P250",
+      "years": "1972-1976",
+      "engine": "2.5L Transverse V8",
+      "horsepower": 220,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Toothed rubber timing belt snap destroying valves",
+      "recommended_ppi_negotiation_deduction": "$24,000",
+      "category": "Classic (1963-1989)"
     },
-    "revuelto_v12": {
-      "name": "Lamborghini Revuelto (V12 HPEV Flagship)",
-      "category": "Next-Gen Hybrid",
-      "years": [
-        2024,
-        2025,
-        2026
-      ],
-      "engine": "6.5L Naturally Aspirated V12 + 3 Electric Motors (1,001 hp)",
-      "transmission": "8-speed Transverse Dual-Clutch (DCT)",
-      "drivetrain": "Electric 4WD (Front e-Axle + Rear Motor)",
-      "market_price_usd": {
-        "poor": 650000,
-        "good": 750000,
-        "excellent": 850000,
-        "concours": 980000
-      },
-      "must_have_options": [
-        {
-          "name": "Titanium Sport Exhaust with High Pipe Exit",
-          "importance": "HIGH",
-          "value_impact_usd": 12500,
-          "description": "Essential acoustic resonance for 9,500 rpm redline."
-        },
-        {
-          "name": "Full Exposed Carbon Monofuselage Package",
-          "importance": "HIGH",
-          "value_impact_usd": 28000,
-          "description": "Carbon tub clearcoat."
-        },
-        {
-          "name": "Passenger Side Dashboard Display",
-          "importance": "MEDIUM",
-          "value_impact_usd": 4800,
-          "description": "Second screen in dash."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "3.8 kWh High-Voltage Battery Cell State-of-Health",
-          "severity": "CRITICAL",
-          "typical_mileage": "Under Warranty",
-          "estimated_repair_usd": 35000,
-          "symptoms": "Hybrid reduced power warning; EV mode disabled."
-        },
-        {
-          "component": "Regenerative Braking Software Handover",
-          "severity": "MEDIUM",
-          "typical_mileage": "5,000 miles",
-          "estimated_repair_usd": 1500,
-          "symptoms": "Jerky transition from regenerative to CCB pads."
-        }
-      ]
+    "urraco_p300": {
+      "name": "Lamborghini Urraco P300",
+      "years": "1974-1979",
+      "engine": "3.0L DOHC V8",
+      "horsepower": 250,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Chain-driven DOHC tensioner failure & ignition distributor drift",
+      "recommended_ppi_negotiation_deduction": "$18,000",
+      "category": "Classic (1963-1989)"
     },
-    "temerario_v8": {
-      "name": "Lamborghini Temerario (10,000 RPM Twin-Turbo V8 Hybrid)",
-      "category": "Next-Gen Hybrid",
-      "years": [
-        2025,
-        2026
-      ],
-      "engine": "4.0L Twin-Turbo Flat-Plane V8 + 3 Electric Motors (907 hp - 10,000 RPM)",
-      "transmission": "8-speed Dual-Clutch (DCT)",
-      "drivetrain": "Electric All-Wheel Drive",
-      "market_price_usd": {
-        "poor": 360000,
-        "good": 410000,
-        "excellent": 460000,
-        "concours": 530000
-      },
-      "must_have_options": [
-        {
-          "name": "Alleggerita Lightweight Package (-25 kg)",
-          "importance": "CRITICAL",
-          "value_impact_usd": 25000,
-          "description": "Full carbon rear hatch, carbon wheels, titanium exhaust."
-        },
-        {
-          "name": "Telemetry System with Interior Recording Cameras",
-          "importance": "HIGH",
-          "value_impact_usd": 6500,
-          "description": "Pist telemetrisi."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "10,000 RPM Valvetrain Finger-Follower Wear",
-          "severity": "HIGH",
-          "typical_mileage": "First generation",
-          "estimated_repair_usd": 12000,
-          "symptoms": "Check titanium valve lash clearances at scheduled dealer intervals."
-        }
-      ]
+    "urraco_p200": {
+      "name": "Lamborghini Urraco P200 (Italian Market)",
+      "years": "1975-1977",
+      "engine": "2.0L V8",
+      "horsepower": 182,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Underpowered valve spring fatigue & cylinder bore glazing",
+      "recommended_ppi_negotiation_deduction": "$14,000",
+      "category": "Classic (1963-1989)"
     },
-    "gallardo_5_0": {
-      "name": "Lamborghini Gallardo 5.0 V10 (First Gen)",
-      "category": "Gallardo Era",
-      "years": [
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008
-      ],
-      "engine": "5.0L Odd-Firing V10 (493 hp - 512 hp)",
-      "transmission": "6-speed E-Gear or 6-speed Gated Manual",
-      "drivetrain": "Viscous Traction All-Wheel Drive",
-      "market_price_usd": {
-        "poor": 78000,
-        "good": 95000,
-        "excellent": 115000,
-        "concours": 145000
-      },
-      "must_have_options": [
-        {
-          "name": "Gated 6-Speed Manual Gearbox",
-          "importance": "ULTRA_COLLECTOR",
-          "value_impact_usd": 45000,
-          "description": "Commands a 40-50% price premium over E-gear."
-        },
-        {
-          "name": "Front Nose Hydraulic Lift",
-          "importance": "HIGH",
-          "value_impact_usd": 4500,
-          "description": "Critical for curb clearance."
-        },
-        {
-          "name": "Callisto Two-Piece Modular Wheels",
-          "importance": "MEDIUM",
-          "value_impact_usd": 3500,
-          "description": "Classic look."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "E-Gear Snap Test Clutch Wear Percentage",
-          "severity": "HIGH",
-          "typical_mileage": "12,000 - 20,000 miles",
-          "estimated_repair_usd": 7800,
-          "symptoms": "E-gear pumps struggle to engage reverse; clutch snap printout shows 80%+ wear."
-        },
-        {
-          "component": "Steering Rack Hydraulic Fluid Leak",
-          "severity": "MEDIUM",
-          "typical_mileage": "25,000 miles",
-          "estimated_repair_usd": 2800,
-          "symptoms": "Low power steering fluid in reservoir."
-        },
-        {
-          "component": "Throttle Body Actuator Sticking",
-          "severity": "LOW",
-          "typical_mileage": "Carbon buildup",
-          "estimated_repair_usd": 1400,
-          "symptoms": "Hunting idle at cold start."
-        }
-      ]
+    "countach_lp400_periscopio": {
+      "name": "Lamborghini Countach LP400 'Periscopio'",
+      "years": "1974-1978",
+      "engine": "3.9L Longitudinal V12",
+      "horsepower": 375,
+      "transmission": "5-Speed Forward Mount",
+      "primary_chronic_defect": "Overheating in traffic & front transmission tunnel cockpit boil",
+      "recommended_ppi_negotiation_deduction": "$125,000",
+      "category": "Classic (1963-1989)"
     },
-    "gallardo_superleggera_first": {
-      "name": "Lamborghini Gallardo Superleggera (2007-2008)",
-      "category": "Gallardo Era",
-      "years": [
-        2007,
-        2008
-      ],
-      "engine": "5.0L V10 (523 hp - 100 kg Lightweight)",
-      "transmission": "6-speed E-Gear or Gated 6-Speed Manual (Rare)",
-      "drivetrain": "All-Wheel Drive",
-      "market_price_usd": {
-        "poor": 130000,
-        "good": 160000,
-        "excellent": 195000,
-        "concours": 240000
-      },
-      "must_have_options": [
-        {
-          "name": "Gated 6-Speed Manual (Only ~10 US cars)",
-          "importance": "HOLY_GRAIL",
-          "value_impact_usd": 90000,
-          "description": "Extreme collector unicorn."
-        },
-        {
-          "name": "High Carbon Fiber Rear Wing",
-          "importance": "CRITICAL",
-          "value_impact_usd": 8000,
-          "description": "Original carbon wing."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "E-Gear Hydraulic Actuator Block Leak",
-          "severity": "HIGH",
-          "typical_mileage": "18,000 miles",
-          "estimated_repair_usd": 8200,
-          "symptoms": "Gearbox drops into neutral while cruising."
-        }
-      ]
+    "countach_lp400s_series1": {
+      "name": "Lamborghini Countach LP400S Series 1 (Bravo Wheels)",
+      "years": "1978-1979",
+      "engine": "3.9L V12",
+      "horsepower": 353,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Campagnolo Bravo magnesium wheel lip stress fractures",
+      "recommended_ppi_negotiation_deduction": "$95,000",
+      "category": "Classic (1963-1989)"
+    },
+    "countach_lp400s_series2": {
+      "name": "Lamborghini Countach LP400S Series 2 (Low Body)",
+      "years": "1980-1981",
+      "engine": "3.9L V12",
+      "horsepower": 353,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Dropped ride height oil pan gouging & front spoiler cracking",
+      "recommended_ppi_negotiation_deduction": "$80,000",
+      "category": "Classic (1963-1989)"
+    },
+    "countach_lp400s_series3": {
+      "name": "Lamborghini Countach LP400S Series 3 (Raised Roof)",
+      "years": "1981-1982",
+      "engine": "3.9L V12",
+      "horsepower": 353,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Fiberglass wheel flare delamination & dogleg clutch cable binding",
+      "recommended_ppi_negotiation_deduction": "$70,000",
+      "category": "Classic (1963-1989)"
+    },
+    "silhouette_p300": {
+      "name": "Lamborghini Silhouette P300 Targa",
+      "years": "1976-1979",
+      "engine": "3.0L V8",
+      "horsepower": 260,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Targa roof seal water pooling & rear chassis strut tower rust",
+      "recommended_ppi_negotiation_deduction": "$30,000",
+      "category": "Classic (1963-1989)"
+    },
+    "jalpa_p350": {
+      "name": "Lamborghini Jalpa P350",
+      "years": "1981-1988",
+      "engine": "3.5L DOHC V8",
+      "horsepower": 255,
+      "transmission": "5-Speed Gated",
+      "primary_chronic_defect": "Heavy clutch cable stretch & head gasket coolant seepage",
+      "recommended_ppi_negotiation_deduction": "$18,000",
+      "category": "Classic (1963-1989)"
+    },
+    "countach_lp5000s": {
+      "name": "Lamborghini Countach LP5000S (5000S)",
+      "years": "1982-1985",
+      "engine": "4.8L V12",
+      "horsepower": 375,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Weber 45 DCOE flooding & starter motor heat soak",
+      "recommended_ppi_negotiation_deduction": "$45,000",
+      "category": "Classic (1963-1989)"
+    },
+    "countach_lp5000qv": {
+      "name": "Lamborghini Countach LP5000 QV (Quattrovalvole)",
+      "years": "1985-1988",
+      "engine": "5.2L 48-Valve V12",
+      "horsepower": 455,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Bosch K-Jetronic fuel distributor diaphragm hardening",
+      "recommended_ppi_negotiation_deduction": "$60,000",
+      "category": "Classic (1963-1989)"
+    },
+    "countach_25th": {
+      "name": "Lamborghini Countach 25th Anniversary",
+      "years": "1988-1990",
+      "engine": "5.2L V12",
+      "horsepower": 455,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Horacio Pagani designed composite air ducts heat soak & AC compressor failure",
+      "recommended_ppi_negotiation_deduction": "$50,000",
+      "category": "Classic (1963-1989)"
+    },
+    "lm002": {
+      "name": "Lamborghini LM002 'Rambo Lambo'",
+      "years": "1986-1993",
+      "engine": "5.2L V12",
+      "horsepower": 450,
+      "transmission": "5-Speed ZF Manual",
+      "primary_chronic_defect": "Pirelli Scorpion run-flat sand tire dry rot ($6,000/tire) & dual 76-gal fuel tank corrosion",
+      "recommended_ppi_negotiation_deduction": "$55,000",
+      "category": "Classic (1963-1989)"
+    },
+    "diablo_2wd": {
+      "name": "Lamborghini Diablo 2WD (Base)",
+      "years": "1990-1998",
+      "engine": "5.7L V12",
+      "horsepower": 492,
+      "transmission": "5-Speed Gated Manual",
+      "primary_chronic_defect": "Brutal non-assisted unboosted steering rack wear & clutch release fork snap",
+      "recommended_ppi_negotiation_deduction": "$25,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_vt": {
+      "name": "Lamborghini Diablo VT (Viscous Traction)",
+      "years": "1993-1998",
+      "engine": "5.7L V12",
+      "horsepower": 492,
+      "transmission": "5-Speed Manual AWD",
+      "primary_chronic_defect": "Viscous coupling silicone fluid degradation & front differential bearing whine",
+      "recommended_ppi_negotiation_deduction": "$28,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_se30": {
+      "name": "Lamborghini Diablo SE30",
+      "years": "1993-1994",
+      "engine": "5.7L V12",
+      "horsepower": 525,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Magnesium intake manifold galvanic corrosion & sliding plexiglass vent scratching",
+      "recommended_ppi_negotiation_deduction": "$65,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_se30_jota": {
+      "name": "Lamborghini Diablo SE30 Jota",
+      "years": "1995",
+      "engine": "5.7L V12",
+      "horsepower": 595,
+      "transmission": "5-Speed Manual",
+      "primary_chronic_defect": "Roof-mounted twin ram-air scoop water ingestion & unbaffled oil starvation",
+      "recommended_ppi_negotiation_deduction": "$120,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_vt_roadster": {
+      "name": "Lamborghini Diablo VT Roadster",
+      "years": "1995-1998",
+      "engine": "5.7L V12",
+      "horsepower": 492,
+      "transmission": "5-Speed AWD",
+      "primary_chronic_defect": "Carbon fiber targa roof latch wear & engine lid heat blister",
+      "recommended_ppi_negotiation_deduction": "$35,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_sv": {
+      "name": "Lamborghini Diablo SV",
+      "years": "1995-1998",
+      "engine": "5.7L V12",
+      "horsepower": 510,
+      "transmission": "5-Speed 2WD",
+      "primary_chronic_defect": "Rear axle half-shaft U-joint slop & rear wing mount stress cracks",
+      "recommended_ppi_negotiation_deduction": "$38,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_gt": {
+      "name": "Lamborghini Diablo GT",
+      "years": "1999",
+      "engine": "6.0L V12",
+      "horsepower": 575,
+      "transmission": "5-Speed 2WD",
+      "primary_chronic_defect": "Carbon composite monocoque section repairs & individual throttle body sync",
+      "recommended_ppi_negotiation_deduction": "$140,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_gtr": {
+      "name": "Lamborghini Diablo GTR",
+      "years": "1999-2000",
+      "engine": "6.0L V12",
+      "horsepower": 590,
+      "transmission": "5-Speed Racing",
+      "primary_chronic_defect": "Air jack system seal failure & Hewland dog-ring gear pitting",
+      "recommended_ppi_negotiation_deduction": "$90,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_vt60": {
+      "name": "Lamborghini Diablo VT 6.0",
+      "years": "2000-2001",
+      "engine": "6.0L V12 (Audi Redesign)",
+      "horsepower": 550,
+      "transmission": "5-Speed AWD",
+      "primary_chronic_defect": "Coil pack wiring harness brittleness & variable valve timing solenoid leaks",
+      "recommended_ppi_negotiation_deduction": "$26,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "diablo_vt60_se": {
+      "name": "Lamborghini Diablo VT 6.0 Special Edition",
+      "years": "2001",
+      "engine": "6.0L V12",
+      "horsepower": 550,
+      "transmission": "5-Speed AWD",
+      "primary_chronic_defect": "Moro/Oro Elios paint match impossibility & carbon weave yellowing",
+      "recommended_ppi_negotiation_deduction": "$45,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "murcielago_62": {
+      "name": "Lamborghini Murciélago 6.2 Coupe",
+      "years": "2001-2006",
+      "engine": "6.2L V12",
+      "horsepower": 580,
+      "transmission": "6-Speed Manual / E-Gear",
+      "primary_chronic_defect": "Active bat-wing intake cooling motor stripping & rear main seal weep",
+      "recommended_ppi_negotiation_deduction": "$24,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "murcielago_62_roadster": {
+      "name": "Lamborghini Murciélago 6.2 Roadster",
+      "years": "2004-2006",
+      "engine": "6.2L V12",
+      "horsepower": 580,
+      "transmission": "6-Speed Manual / E-Gear",
+      "primary_chronic_defect": "Infamous 100 mph speed-limited fabric toupee soft top latch failure",
+      "recommended_ppi_negotiation_deduction": "$30,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "murcielago_lp640": {
+      "name": "Lamborghini Murciélago LP640",
+      "years": "2006-2010",
+      "engine": "6.5L V12",
+      "horsepower": 640,
+      "transmission": "6-Speed Manual / E-Gear",
+      "primary_chronic_defect": "E-gear hydraulic pump pressure failure & ceramic brake rotor delamination",
+      "recommended_ppi_negotiation_deduction": "$32,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "murcielago_lp640_roadster": {
+      "name": "Lamborghini Murciélago LP640 Roadster",
+      "years": "2006-2010",
+      "engine": "6.5L V12",
+      "horsepower": 640,
+      "transmission": "6-Speed Manual / E-Gear",
+      "primary_chronic_defect": "Rear chassis strengthening bar corrosion & catalytic converter core melt",
+      "recommended_ppi_negotiation_deduction": "$34,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "murcielago_lp670_sv": {
+      "name": "Lamborghini Murciélago LP670-4 SuperVeloce",
+      "years": "2009-2010",
+      "engine": "6.5L V12",
+      "horsepower": 670,
+      "transmission": "6-Speed Gated / E-Gear",
+      "primary_chronic_defect": "Aeropack twin rear wing mounting decklid stress fractures & carbon tub impact",
+      "recommended_ppi_negotiation_deduction": "$90,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "reventon_coupe": {
+      "name": "Lamborghini Reventón Coupe (1 of 20)",
+      "years": "2007-2008",
+      "engine": "6.5L V12",
+      "horsepower": 650,
+      "transmission": "6-Speed E-Gear",
+      "primary_chronic_defect": "Fighter jet TFT instrument cluster LCD screen delamination ($38,000 replacement)",
+      "recommended_ppi_negotiation_deduction": "$150,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "reventon_roadster": {
+      "name": "Lamborghini Reventón Roadster (1 of 15)",
+      "years": "2009-2010",
+      "engine": "6.5L V12",
+      "horsepower": 670,
+      "transmission": "6-Speed E-Gear",
+      "primary_chronic_defect": "Matte Grigio Reventon paint repair impossibility & active aero motor failure",
+      "recommended_ppi_negotiation_deduction": "$180,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "gallardo_50_coupe": {
+      "name": "Lamborghini Gallardo 5.0 (Early Gen)",
+      "years": "2003-2005",
+      "engine": "5.0L Even-Fire V10",
+      "horsepower": 500,
+      "transmission": "6-Speed Gated / E-Gear",
+      "primary_chronic_defect": "Premature clutch wear (2,000-5,000 miles on early E-gear) & front diff whine",
+      "recommended_ppi_negotiation_deduction": "$16,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "gallardo_50_spyder": {
+      "name": "Lamborghini Gallardo 5.0 Spyder",
+      "years": "2006-2008",
+      "engine": "5.0L V10",
+      "horsepower": 520,
+      "transmission": "6-Speed Gated / E-Gear",
+      "primary_chronic_defect": "Hydraulic soft-top ram seal fluid leaks onto engine decklid fire blanket",
+      "recommended_ppi_negotiation_deduction": "$14,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "gallardo_se": {
+      "name": "Lamborghini Gallardo SE (Special Edition)",
+      "years": "2005",
+      "engine": "5.0L V10",
+      "horsepower": 520,
+      "transmission": "6-Speed Manual / E-Gear",
+      "primary_chronic_defect": "Short-ratio gearbox 3rd gear synchro crunch & Nero Noctis roof clearcoat peel",
+      "recommended_ppi_negotiation_deduction": "$15,000",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "gallardo_superleggera_07": {
+      "name": "Lamborghini Gallardo Superleggera (Gen 1)",
+      "years": "2007-2008",
+      "engine": "5.0L V10",
+      "horsepower": 530,
+      "transmission": "6-Speed E-Gear / Gated",
+      "primary_chronic_defect": "Carbon interior panel resin clouding & polycarbonate rear window hazing",
+      "recommended_ppi_negotiation_deduction": "$22,000",
+      "category": "Neo-Classic (1990-2010)"
     },
     "gallardo_lp560_4": {
       "name": "Lamborghini Gallardo LP560-4",
-      "category": "Gallardo Era",
-      "years": [
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013
-      ],
-      "engine": "5.2L Even-Firing Direct Injection V10 (552 hp / 398 lb-ft)",
-      "transmission": "6-speed E-Gear or 6-speed Gated Manual",
-      "drivetrain": "All-Wheel Drive",
-      "market_price_usd": {
-        "poor": 95000,
-        "good": 115000,
-        "excellent": 135000,
-        "concours": 165000
-      },
-      "must_have_options": [
-        {
-          "name": "Factory Gated 6-Speed Manual",
-          "importance": "ULTRA_INVESTMENT",
-          "value_impact_usd": 55000,
-          "description": "Massive collector appreciation."
-        },
-        {
-          "name": "Front Axle Lifting System",
-          "importance": "HIGH",
-          "value_impact_usd": 5000,
-          "description": "Nose lift."
-        },
-        {
-          "name": "Carbon Ceramic Brakes (CCB)",
-          "importance": "MEDIUM",
-          "value_impact_usd": 6500,
-          "description": "Optional Brembo CCB discs."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "E-Gear Clutch Snap Index Reading",
-          "severity": "HIGH",
-          "typical_mileage": "15,000 - 25,000 miles",
-          "estimated_repair_usd": 8500,
-          "symptoms": "Gear drop; pump whine under door open."
-        },
-        {
-          "component": "Front Suspension Upper Control Arm Bushings",
-          "severity": "MEDIUM",
-          "typical_mileage": "20,000 miles",
-          "estimated_repair_usd": 3200,
-          "symptoms": "Clunking over road joints."
-        }
-      ]
+      "years": "2008-2013",
+      "engine": "5.2L Odd-Fire Direct Injection V10",
+      "horsepower": 560,
+      "transmission": "6-Speed E-Gear / Gated",
+      "primary_chronic_defect": "Direct injection carbon buildup on intake valves & front axle lift pump leaks",
+      "recommended_ppi_negotiation_deduction": "$14,000",
+      "category": "Neo-Classic (1990-2010)"
     },
-    "gallardo_lp550_2_vb": {
+    "gallardo_lp560_4_spyder": {
+      "name": "Lamborghini Gallardo LP560-4 Spyder",
+      "years": "2009-2013",
+      "engine": "5.2L V10",
+      "horsepower": 560,
+      "transmission": "6-Speed E-Gear",
+      "primary_chronic_defect": "Hydraulic top microswitch misalignment fault preventing roof cycle completion",
+      "recommended_ppi_negotiation_deduction": "$13,500",
+      "category": "Neo-Classic (1990-2010)"
+    },
+    "gallardo_lp550_2_balboni": {
       "name": "Lamborghini Gallardo LP550-2 Valentino Balboni",
-      "category": "Gallardo Era",
-      "years": [
-        2010
-      ],
-      "engine": "5.2L V10 (542 hp - Dedicated RWD Calibration)",
-      "transmission": "6-speed Gated Manual or 6-speed E-Gear (250 units)",
-      "drivetrain": "Rear-Wheel Drive (RWD)",
-      "market_price_usd": {
-        "poor": 145000,
-        "good": 185000,
-        "excellent": 230000,
-        "concours": 290000
-      },
-      "must_have_options": [
-        {
-          "name": "Gated 6-Speed Manual Shifter",
-          "importance": "HOLY_GRAIL",
-          "value_impact_usd": 60000,
-          "description": "The purest analog modern Lamborghini."
-        },
-        {
-          "name": "Original White & Gold Balboni Center Stripe",
-          "importance": "CRITICAL",
-          "value_impact_usd": 15000,
-          "description": "Factory heritage livery."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Rear Differential LSD Clutch Pack Wear",
-          "severity": "MEDIUM",
-          "typical_mileage": "15,000 miles",
-          "estimated_repair_usd": 4200,
-          "symptoms": "Chatter during tight low-speed U-turns."
-        }
-      ]
+      "years": "2009-2010",
+      "engine": "5.2L V10 RWD",
+      "horsepower": 550,
+      "transmission": "6-Speed Gated / E-Gear",
+      "primary_chronic_defect": "RWD rear differential clutch pack wear & white/gold racing stripe vinyl lifting",
+      "recommended_ppi_negotiation_deduction": "$25,000",
+      "category": "Neo-Classic (1990-2010)"
     },
-    "gallardo_lp570_4_superleggera": {
-      "name": "Lamborghini Gallardo LP570-4 Superleggera / Performante",
-      "category": "Gallardo Era",
-      "years": [
-        2010,
-        2011,
-        2012,
-        2013
-      ],
-      "engine": "5.2L V10 (562 hp - 70 kg Lightweight)",
-      "transmission": "6-speed E-Gear",
-      "drivetrain": "All-Wheel Drive with Carbon Aero",
-      "market_price_usd": {
-        "poor": 155000,
-        "good": 185000,
-        "excellent": 225000,
-        "concours": 275000
-      },
-      "must_have_options": [
-        {
-          "name": "High Carbon Rear Wing",
-          "importance": "CRITICAL",
-          "value_impact_usd": 8500,
-          "description": "Fixed rear carbon aero wing."
-        },
-        {
-          "name": "Carbon Ceramic Brake Discs",
-          "importance": "HIGH",
-          "value_impact_usd": 7500,
-          "description": "Standard/optional CCB."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Carbon Side Skirt Gravel Pitting",
-          "severity": "LOW",
-          "typical_mileage": "10,000 miles",
-          "estimated_repair_usd": 2800,
-          "symptoms": "Stone pecks in front of rear wheels."
-        }
-      ]
+    "gallardo_lp570_superleggera": {
+      "name": "Lamborghini Gallardo LP570-4 Superleggera (Edizione Tecnica)",
+      "years": "2010-2013",
+      "engine": "5.2L V10",
+      "horsepower": 570,
+      "transmission": "6-Speed E-Gear",
+      "primary_chronic_defect": "Carbon ceramic brake rotor minimum weight deficit & Alcantara dash shrinkage",
+      "recommended_ppi_negotiation_deduction": "$24,000",
+      "category": "Modern / Current Gen"
+    },
+    "gallardo_lp570_performante": {
+      "name": "Lamborghini Gallardo LP570-4 Spyder Performante",
+      "years": "2011-2013",
+      "engine": "5.2L V10",
+      "horsepower": 570,
+      "transmission": "6-Speed E-Gear",
+      "primary_chronic_defect": "Carbon wing pillar stress cracks & soft-top flap hydraulic hesitation",
+      "recommended_ppi_negotiation_deduction": "$22,000",
+      "category": "Modern / Current Gen"
     },
     "gallardo_squadra_corse": {
-      "name": "Lamborghini Gallardo Squadra Corse (Final Track Edition)",
-      "category": "Gallardo Era",
-      "years": [
-        2013,
-        2014
-      ],
-      "engine": "5.2L V10 (562 hp - Only 50 units worldwide)",
-      "transmission": "6-speed E-Gear with Quick-Shift",
-      "drivetrain": "AWD with Super Trofeo Quick-Release Engine Cover",
-      "market_price_usd": {
-        "poor": 210000,
-        "good": 260000,
-        "excellent": 310000,
-        "concours": 380000
-      },
-      "must_have_options": [
-        {
-          "name": "Tricolore Exterior Decal & High Wing",
-          "importance": "CRITICAL",
-          "value_impact_usd": 25000,
-          "description": "Factory limited edition graphics."
-        },
-        {
-          "name": "Full Carbon Bucket Shells with 4-Point Harness",
-          "importance": "HIGH",
-          "value_impact_usd": 12000,
-          "description": "Original racing seats."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Carbon Engine Lid Pin Latch Fatigue",
-          "severity": "LOW",
-          "typical_mileage": "Vibration",
-          "estimated_repair_usd": 1800,
-          "symptoms": "Loose quick-release hood pins."
-        }
-      ]
+      "name": "Lamborghini Gallardo LP570-4 Squadra Corse",
+      "years": "2013",
+      "engine": "5.2L V10",
+      "horsepower": 570,
+      "transmission": "6-Speed E-Gear",
+      "primary_chronic_defect": "Super Trofeo racing composite rear wing downforce stress on decklid hinges",
+      "recommended_ppi_negotiation_deduction": "$35,000",
+      "category": "Modern / Current Gen"
     },
-    "murcielago_6_2": {
-      "name": "Lamborghini Murciélago 6.2 (Early Generation)",
-      "category": "Heritage V12",
-      "years": [
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006
-      ],
-      "engine": "6.2L Bizzarrini V12 (572 hp / 479 lb-ft)",
-      "transmission": "6-speed Gated Manual or 6-speed E-Gear",
-      "drivetrain": "Viscous Traction All-Wheel Drive",
-      "market_price_usd": {
-        "poor": 180000,
-        "good": 235000,
-        "excellent": 295000,
-        "concours": 375000
-      },
-      "must_have_options": [
-        {
-          "name": "Gated 6-Speed Manual Gearbox",
-          "importance": "HOLY_GRAIL",
-          "value_impact_usd": 120000,
-          "description": "Manual 6.2s command $350k-$450k+ at auction."
-        },
-        {
-          "name": "Speedline Hercules 18-inch Wheels",
-          "importance": "HIGH",
-          "value_impact_usd": 8000,
-          "description": "Original modular alloys."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Rear Main Crankshaft Oil Seal Weep",
-          "severity": "HIGH",
-          "typical_mileage": "15,000 miles",
-          "estimated_repair_usd": 9500,
-          "symptoms": "Oil drop from bellhousing weep hole; requires engine removal."
-        },
-        {
-          "component": "Deployable Side Air Scoop Shoulder Motors",
-          "severity": "MEDIUM",
-          "typical_mileage": "Any",
-          "estimated_repair_usd": 2800,
-          "symptoms": "Batwing scoops fail to open automatically above 160 km/h."
-        }
-      ]
+    "aventador_lp700_4": {
+      "name": "Lamborghini Aventador LP700-4",
+      "years": "2011-2016",
+      "engine": "6.5L L539 V12",
+      "horsepower": 700,
+      "transmission": "7-Speed ISR Single-Clutch",
+      "primary_chronic_defect": "ISR clutch release bearing failure ($22,000 engine-out) & pushrod suspension bushing rot",
+      "recommended_ppi_negotiation_deduction": "$28,000",
+      "category": "Modern / Current Gen"
     },
-    "murcielago_lp640": {
-      "name": "Lamborghini Murciélago LP640 (Coupe & Roadster)",
-      "category": "Heritage V12",
-      "years": [
-        2006,
-        2007,
-        2008,
-        2009,
-        2010
-      ],
-      "engine": "6.5L Bizzarrini V12 (632 hp / 487 lb-ft)",
-      "transmission": "6-speed E-Gear or 6-speed Gated Manual (Ultra Rare)",
-      "drivetrain": "Viscous Traction All-Wheel Drive",
-      "market_price_usd": {
-        "poor": 240000,
-        "good": 310000,
-        "excellent": 395000,
-        "concours": 520000
-      },
-      "must_have_options": [
-        {
-          "name": "Gated 6-Speed Manual Gearbox (Rare: ~26 US Coupes)",
-          "importance": "INVESTMENT_GOLD",
-          "value_impact_usd": 180000,
-          "description": "Manual LP640s regularly exceed $600k-$750k+."
-        },
-        {
-          "name": "Carbon Ceramic Brake Package (CCB)",
-          "importance": "HIGH",
-          "value_impact_usd": 12000,
-          "description": "Massive rotor upgrade over early steel."
-        },
-        {
-          "name": "Glass Transparent Engine Bonnet",
-          "importance": "MEDIUM",
-          "value_impact_usd": 8500,
-          "description": "Louvered glass V12 showcase."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "E-Gear Hydraulic Pump & Line Rupture",
-          "severity": "HIGH",
-          "typical_mileage": "12,000 - 18,000 miles",
-          "estimated_repair_usd": 8800,
-          "symptoms": "Pump priming time over 25 seconds; transmission alarm."
-        },
-        {
-          "component": "Roadster Canvas Soft-Top Latch & Tear",
-          "severity": "MEDIUM",
-          "typical_mileage": "Roadsters",
-          "estimated_repair_usd": 12000,
-          "symptoms": "Original complex 'umbrella' top difficult to fit; speed limit warning above 100 mph."
-        }
-      ]
+    "aventador_lp700_4_roadster": {
+      "name": "Lamborghini Aventador LP700-4 Roadster",
+      "years": "2013-2016",
+      "engine": "6.5L V12",
+      "horsepower": 700,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Twin carbon roof panel latch pin rattle & front trunk seal leaks",
+      "recommended_ppi_negotiation_deduction": "$26,000",
+      "category": "Modern / Current Gen"
     },
-    "murcielago_lp670_sv": {
-      "name": "Lamborghini Murciélago LP670-4 SuperVeloce (SV)",
-      "category": "Heritage V12",
-      "years": [
-        2009,
-        2010
-      ],
-      "engine": "6.5L Bizzarrini V12 (661 hp - 100 kg Lighter, 186 units built)",
-      "transmission": "6-speed E-Gear or 6-speed Gated Manual (Only 5-6 manuals worldwide)",
-      "drivetrain": "All-Wheel Drive with Aeropack Carbon Wing",
-      "market_price_usd": {
-        "poor": 550000,
-        "good": 680000,
-        "excellent": 820000,
-        "concours": 1100000
-      },
-      "must_have_options": [
-        {
-          "name": "Aeropack Wing (High Downforce Wing)",
-          "importance": "CRITICAL",
-          "value_impact_usd": 40000,
-          "description": "High carbon rear wing option over standard small spoiler."
-        },
-        {
-          "name": "Big SV Side Decal",
-          "importance": "HIGH",
-          "value_impact_usd": 15000,
-          "description": "Iconic SV badging."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Alcantara Dash Shrinkage from Sun Exposure",
-          "severity": "MEDIUM",
-          "typical_mileage": "UV exposed",
-          "estimated_repair_usd": 6500,
-          "symptoms": "Pulling away from gauge binnacle edges."
-        }
-      ]
+    "aventador_lp750_sv": {
+      "name": "Lamborghini Aventador LP750-4 SuperVeloce (SV)",
+      "years": "2015-2017",
+      "engine": "6.5L V12",
+      "horsepower": 750,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Magnetorheological pushrod damper fluid weeping & Centerlock nut galling",
+      "recommended_ppi_negotiation_deduction": "$42,000",
+      "category": "Modern / Current Gen"
     },
-    "diablo_vt": {
-      "name": "Lamborghini Diablo VT / VT 6.0",
-      "category": "Heritage V12",
-      "years": [
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001
-      ],
-      "engine": "5.7L / 6.0L V12 (485 hp - 543 hp)",
-      "transmission": "5-speed Gated Manual Shifter",
-      "drivetrain": "Viscous Traction (First AWD Supercar) or RWD",
-      "market_price_usd": {
-        "poor": 220000,
-        "good": 280000,
-        "excellent": 350000,
-        "concours": 450000
-      },
-      "must_have_options": [
-        {
-          "name": "VT 6.0 Generation (Audi Engineered Purity)",
-          "importance": "HIGH",
-          "value_impact_usd": 60000,
-          "description": "6.0L model year 2000-2001 is the most reliable Diablo ever built."
-        },
-        {
-          "name": "Fixed Composite Exposed Headlights (Late Spec)",
-          "importance": "MEDIUM",
-          "value_impact_usd": 15000,
-          "description": "Audi/Nissan sourced sleek composite lights."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Heavy Heavy Cable-Operated Clutch Pedal & Slave Cylinder",
-          "severity": "HIGH",
-          "typical_mileage": "10,000 miles",
-          "estimated_repair_usd": 7500,
-          "symptoms": "Pedal weight exceeds 35 kg; slave cylinder seals weep fluid into bellhousing."
-        },
-        {
-          "component": "Pop-Up Headlight Vacuum / Motor Failure (Pre-1999)",
-          "severity": "LOW",
-          "typical_mileage": "Age related",
-          "estimated_repair_usd": 2200,
-          "symptoms": "One headlight stays up or winks."
-        }
-      ]
+    "aventador_sv_roadster": {
+      "name": "Lamborghini Aventador SV Roadster",
+      "years": "2016-2017",
+      "engine": "6.5L V12",
+      "horsepower": 750,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Rear carbon quarter panel resonance vibrations & clutch snap count > 1.8mm",
+      "recommended_ppi_negotiation_deduction": "$45,000",
+      "category": "Modern / Current Gen"
     },
-    "diablo_sv": {
-      "name": "Lamborghini Diablo SV (SuperVeloce)",
-      "category": "Heritage V12",
-      "years": [
-        1995,
-        1996,
-        1997,
-        1998,
-        1999
-      ],
-      "engine": "5.7L Naturally Aspirated V12 (510 hp / 530 hp)",
-      "transmission": "5-speed Gated Manual Shifter",
-      "drivetrain": "Rear-Wheel Drive (RWD Poster Icon)",
-      "market_price_usd": {
-        "poor": 290000,
-        "good": 370000,
-        "excellent": 460000,
-        "concours": 580000
-      },
-      "must_have_options": [
-        {
-          "name": "Giant 'SV' Side Flank Decal Livery",
-          "importance": "CRITICAL",
-          "value_impact_usd": 25000,
-          "description": "The quintessential Need for Speed 90s poster graphic."
-        },
-        {
-          "name": "Dual Roof Scoop Cold-Air Induction",
-          "importance": "HIGH",
-          "value_impact_usd": 15000,
-          "description": "Roof-mounted twin ram-air scoops."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Brembo Front Brake Rotor Warping under Track Temp",
-          "severity": "MEDIUM",
-          "typical_mileage": "Track days",
-          "estimated_repair_usd": 3800,
-          "symptoms": "Violent steering wheel shudder under high-speed braking."
-        }
-      ]
+    "aventador_s_lp740": {
+      "name": "Lamborghini Aventador S (LP740-4)",
+      "years": "2017-2021",
+      "engine": "6.5L V12",
+      "horsepower": 740,
+      "transmission": "7-Speed ISR with 4-Wheel Steering",
+      "primary_chronic_defect": "Rear-wheel steering actuator sensor fault codes & active rear wing stall",
+      "recommended_ppi_negotiation_deduction": "$30,000",
+      "category": "Modern / Current Gen"
     },
-    "diablo_gt": {
-      "name": "Lamborghini Diablo GT (Homologation Special)",
-      "category": "Heritage V12",
-      "years": [
-        1999,
-        2000
-      ],
-      "engine": "6.0L V12 (567 hp - Individual Throttle Bodies, Only 80 Units)",
-      "transmission": "5-speed Gated Manual",
-      "drivetrain": "Rear-Wheel Drive (Widebody Carbon)",
-      "market_price_usd": {
-        "poor": 750000,
-        "good": 950000,
-        "excellent": 1200000,
-        "concours": 1500000
-      },
-      "must_have_options": [
-        {
-          "name": "Original Carbon Roof Scoop & Widebody Fenders",
-          "importance": "CRITICAL",
-          "value_impact_usd": 80000,
-          "description": "Factory homologation bodywork."
-        },
-        {
-          "name": "Numbered Center Console Plaque (1 of 80)",
-          "importance": "CRITICAL",
-          "value_impact_usd": 50000,
-          "description": "Chassis authenticity."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Individual Throttle Body (ITB) Vacuum Balancing",
-          "severity": "HIGH",
-          "typical_mileage": "Specialist tuning",
-          "estimated_repair_usd": 5500,
-          "symptoms": "Requires mercury manometer vacuum sync on all 12 cylinders."
-        }
-      ]
+    "aventador_s_roadster": {
+      "name": "Lamborghini Aventador S Roadster",
+      "years": "2017-2021",
+      "engine": "6.5L V12",
+      "horsepower": 740,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Exhaust heat shield thermal degradation near EVAP fuel vapor lines",
+      "recommended_ppi_negotiation_deduction": "$32,000",
+      "category": "Modern / Current Gen"
     },
-    "countach_lp400": {
-      "name": "Lamborghini Countach LP400 'Periscopio'",
-      "category": "Classic Icons",
-      "years": [
-        1974,
-        1975,
-        1976,
-        1977
-      ],
-      "engine": "4.0L Bizzarrini V12 (370 hp - 6 Weber Twin-Choke Carburetors)",
-      "transmission": "5-speed Gated Dogleg Manual",
-      "drivetrain": "Rear-Wheel Drive (Narrow Body Gandini Purity - 157 units)",
-      "market_price_usd": {
-        "poor": 850000,
-        "good": 1100000,
-        "excellent": 1400000,
-        "concours": 1800000
-      },
-      "must_have_options": [
-        {
-          "name": "Periscopio Roof Tunnel & Campagnolo Wheels",
-          "importance": "HOLY_GRAIL",
-          "value_impact_usd": 200000,
-          "description": "Original unmolested narrow-body roof periscope mirror tunnel."
-        },
-        {
-          "name": "Matching Numbers Engine Block & Chassis Stamp",
-          "importance": "CRITICAL",
-          "value_impact_usd": 250000,
-          "description": "Polo Storico certification."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "6 Weber 45 DCOE Carburetor Synchronization & Float Levels",
-          "severity": "HIGH",
-          "typical_mileage": "Seasonal tuning",
-          "estimated_repair_usd": 4800,
-          "symptoms": "Backfiring; unequal exhaust temps across cylinder banks."
-        },
-        {
-          "component": "Side Radiator Cooling Airflow Inadequacy in Traffic",
-          "severity": "HIGH",
-          "typical_mileage": "Traffic jams",
-          "estimated_repair_usd": 6500,
-          "symptoms": "Coolant boils over above 25°C ambient; modern electric auxiliary fan upgrade required."
-        }
-      ]
+    "aventador_svj": {
+      "name": "Lamborghini Aventador SVJ (LP770-4)",
+      "years": "2018-2021",
+      "engine": "6.5L V12",
+      "horsepower": 770,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "ALA 2.0 active aerodynamic flap motor gear strip & titanium intake valve wear",
+      "recommended_ppi_negotiation_deduction": "$65,000",
+      "category": "Modern / Current Gen"
     },
-    "countach_5000_qv": {
-      "name": "Lamborghini Countach 5000 QV / 25th Anniversary",
-      "category": "Classic Icons",
-      "years": [
-        1985,
-        1986,
-        1987,
-        1988,
-        1989,
-        1990
-      ],
-      "engine": "5.2L 4-Valves Per Cylinder V12 (449 hp - Bosch K-Jetronic / Downdraft)",
-      "transmission": "5-speed Gated Manual",
-      "drivetrain": "Rear-Wheel Drive with Wide Flared Arches and Delta Wing",
-      "market_price_usd": {
-        "poor": 450000,
-        "good": 580000,
-        "excellent": 720000,
-        "concours": 950000
-      },
-      "must_have_options": [
-        {
-          "name": "Factory V-Shaped Rear Delta Wing",
-          "importance": "HIGH",
-          "value_impact_usd": 35000,
-          "description": "The definitive 80s bedroom poster wing."
-        },
-        {
-          "name": "Downdraft Weber Carburetor Version (Euro Spec)",
-          "importance": "HIGH",
-          "value_impact_usd": 65000,
-          "description": "Euro downdraft models hold 449 hp vs 414 hp fuel-injected US spec."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Rear Trailing Arm & Pirelli P7 Corsa Tire Availability",
-          "severity": "HIGH",
-          "typical_mileage": "345/35 R15 size",
-          "estimated_repair_usd": 5000,
-          "symptoms": "Rear 345 wide tires are rare Pirelli Collezione production runs ($2,500/set)."
-        }
-      ]
+    "aventador_svj_roadster": {
+      "name": "Lamborghini Aventador SVJ Roadster",
+      "years": "2019-2021",
+      "engine": "6.5L V12",
+      "horsepower": 770,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Carbon aero engine bonnet latch microswitch failure & centerlock wear",
+      "recommended_ppi_negotiation_deduction": "$70,000",
+      "category": "Modern / Current Gen"
     },
-    "miura_p400_sv": {
-      "name": "Lamborghini Miura P400 / P400S / P400SV",
-      "category": "Classic Icons",
-      "years": [
-        1966,
-        1967,
-        1968,
-        1969,
-        1970,
-        1971,
-        1972,
-        1973
-      ],
-      "engine": "3.9L Transverse Mid-Engine V12 (345 hp - 380 hp)",
-      "transmission": "5-speed Manual with Shared Engine/Gearbox Oil Sump (Split Sump on SV)",
-      "drivetrain": "Rear-Wheel Drive (The First Modern Supercar)",
-      "market_price_usd": {
-        "poor": 1500000,
-        "good": 2200000,
-        "excellent": 3100000,
-        "concours": 4200000
-      },
-      "must_have_options": [
-        {
-          "name": "Split-Sump Lubrication System (Factory on Late SV)",
-          "importance": "CRITICAL",
-          "value_impact_usd": 300000,
-          "description": "Separates gearbox oil from engine oil; prevents metal synchro debris entering engine bearings."
-        },
-        {
-          "name": "Without Headlight Eyelashes (Purity of SV Spec)",
-          "importance": "HIGH",
-          "value_impact_usd": 150000,
-          "description": "SV styling cue."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Weber Carburetor Fuel Weep on Hot Exhaust Manifold",
-          "severity": "CRITICAL_FIRE",
-          "typical_mileage": "Age related",
-          "estimated_repair_usd": 8500,
-          "symptoms": "Carburetor overflow drops directly onto exhaust manifold. Modern viton fuel line & catch tray mandatory."
-        },
-        {
-          "component": "Front Chassis Tub Stress Cracking Around Suspension Pickups",
-          "severity": "HIGH",
-          "typical_mileage": "Historic use",
-          "estimated_repair_usd": 22000,
-          "symptoms": "Thin gauge steel frame welds flex over rough roads."
-        }
-      ]
+    "aventador_ultimae": {
+      "name": "Lamborghini Aventador LP780-4 Ultimae",
+      "years": "2021-2022",
+      "engine": "6.5L V12",
+      "horsepower": 780,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Final NA V12 dealer ADM markup gouging & ISR hydraulic actuator seal weeping",
+      "recommended_ppi_negotiation_deduction": "$85,000",
+      "category": "Modern / Current Gen"
     },
-    "lm002_rambo_lambo": {
-      "name": "Lamborghini LM002 'Rambo Lambo' (V12 Off-Roader)",
-      "category": "Classic Icons",
-      "years": [
-        1986,
-        1987,
-        1988,
-        1989,
-        1990,
-        1991,
-        1992,
-        1993
-      ],
-      "engine": "5.2L Countach V12 (444 hp / 369 lb-ft - 6 Carburetors)",
-      "transmission": "5-speed ZF Manual with 2-speed Transfer Case (Hi/Lo)",
-      "drivetrain": "Selectable 4WD with Locking Differentials (328 units built)",
-      "market_price_usd": {
-        "poor": 280000,
-        "good": 360000,
-        "excellent": 450000,
-        "concours": 580000
-      },
-      "must_have_options": [
-        {
-          "name": "Pirelli Scorpion 'Sand Lip' Run-Flat Tires (345/60 R17)",
-          "importance": "CRITICAL",
-          "value_impact_usd": 20000,
-          "description": "Ultra-rare custom sidewall lip engineered specifically for desert dune floatation."
-        },
-        {
-          "name": "Rear Open Pickup Bed Leather Seating Benches",
-          "importance": "MEDIUM",
-          "value_impact_usd": 12000,
-          "description": "Middle-Eastern spec outdoor seats."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "290-Liter (76 Gallon) Twin Fuel Tank Cleaning & Sender Seal",
-          "severity": "HIGH",
-          "typical_mileage": "Age",
-          "estimated_repair_usd": 6800,
-          "symptoms": "Fuel sediment clogs all 6 Weber fuel filters; fuel consumption is 30 L/100 km."
-        }
-      ]
+    "aventador_ultimae_roadster": {
+      "name": "Lamborghini Aventador LP780-4 Ultimae Roadster",
+      "years": "2021-2022",
+      "engine": "6.5L V12",
+      "horsepower": 780,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Carbon hardtop storage alignment rubbing paint off front luggage tub",
+      "recommended_ppi_negotiation_deduction": "$90,000",
+      "category": "Modern / Current Gen"
     },
-    "espada_400_gt": {
-      "name": "Lamborghini Espada 400 GT (Series I / II / III)",
-      "category": "Classic Icons",
-      "years": [
-        1968,
-        1969,
-        1970,
-        1971,
-        1972,
-        1973,
-        1974,
-        1975,
-        1976,
-        1977,
-        1978
-      ],
-      "engine": "3.9L Front-Mounted V12 (325 hp - 350 hp - 6 Carburetors)",
-      "transmission": "5-speed Manual or 3-speed Automatic",
-      "drivetrain": "Rear-Wheel Drive (Genuine 4-Adult Luxury Tourer)",
-      "market_price_usd": {
-        "poor": 65000,
-        "good": 95000,
-        "excellent": 135000,
-        "concours": 185000
-      },
-      "must_have_options": [
-        {
-          "name": "Series II 'G/400' Spec with 5-Speed Manual",
-          "importance": "HIGH",
-          "value_impact_usd": 30000,
-          "description": "Original manual 5-speed over 3-speed torque converter."
-        },
-        {
-          "name": "Campagnolo Magnesium Wheels",
-          "importance": "MEDIUM",
-          "value_impact_usd": 8000,
-          "description": "Period alloys."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Inboard Rear Brake Disc Caliper Bleeding Difficulty",
-          "severity": "MEDIUM",
-          "typical_mileage": "Service",
-          "estimated_repair_usd": 3200,
-          "symptoms": "Inboard rear disc layout near differential collects road grime and heat."
-        }
-      ]
+    "huracan_lp610_4": {
+      "name": "Lamborghini Huracán LP610-4",
+      "years": "2014-2019",
+      "engine": "5.2L V10",
+      "horsepower": 610,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Front differential output shaft oil seal leak ($3,800) & missing front axle lift",
+      "recommended_ppi_negotiation_deduction": "$18,000",
+      "category": "Modern / Current Gen"
     },
-    "reventon": {
-      "name": "Lamborghini Reventón (Fighter Jet Few-Off)",
-      "category": "Few-Off Hypercars",
-      "years": [
-        2007,
-        2008,
-        2009
-      ],
-      "engine": "6.5L V12 (641 hp - Only 20 Coupes + 15 Roadsters Built)",
-      "transmission": "6-speed E-Gear Robotized",
-      "drivetrain": "All-Wheel Drive (Stealth Gray Carbon Skin)",
-      "market_price_usd": {
-        "poor": 1400000,
-        "good": 1800000,
-        "excellent": 2200000,
-        "concours": 2700000
-      },
-      "must_have_options": [
-        {
-          "name": "Military Aircraft G-Force TFT Instrument Cluster",
-          "importance": "CRITICAL",
-          "value_impact_usd": 50000,
-          "description": "TFT jet flight display screen."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Bespoke Matte Grigio Reventon Paint Matching",
-          "severity": "HIGH",
-          "typical_mileage": "Paint touch-up",
-          "estimated_repair_usd": 18000,
-          "symptoms": "Matte paint cannot be buffed; stone chips require whole-panel respray."
-        }
-      ]
+    "huracan_lp610_4_spyder": {
+      "name": "Lamborghini Huracán LP610-4 Spyder",
+      "years": "2016-2019",
+      "engine": "5.2L V10",
+      "horsepower": 610,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Electro-hydraulic soft-top kinematic arm pivot pin wear & B-pillar weatherstripping",
+      "recommended_ppi_negotiation_deduction": "$16,500",
+      "category": "Modern / Current Gen"
     },
-    "veneno": {
-      "name": "Lamborghini Veneno / Veneno Roadster",
-      "category": "Few-Off Hypercars",
-      "years": [
-        2013,
-        2014
-      ],
-      "engine": "6.5L V12 (740 hp - Only 4 Coupes + 9 Roadsters Built)",
-      "transmission": "7-speed ISR Transmission",
-      "drivetrain": "AWD with Extreme Le Mans LMP Aerodynamics",
-      "market_price_usd": {
-        "poor": 5000000,
-        "good": 7000000,
-        "excellent": 9000000,
-        "concours": 11500000
-      },
-      "must_have_options": [
-        {
-          "name": "Carbon-Skin Interior Upholstery",
-          "importance": "CRITICAL",
-          "value_impact_usd": 150000,
-          "description": "Patented flexible woven carbon fabric cockpit."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Full Carbon Monocoque Inspection by Flying Doctor",
-          "severity": "CRITICAL",
-          "typical_mileage": "Annual check",
-          "estimated_repair_usd": 25000,
-          "symptoms": "Requires Sant'Agata Bolognese factory certified ultrasonic inspection."
-        }
-      ]
+    "huracan_lp580_2": {
+      "name": "Lamborghini Huracán LP580-2 (RWD)",
+      "years": "2016-2019",
+      "engine": "5.2L V10 RWD",
+      "horsepower": 580,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Rear tire inner shoulder wear on steel brakes & electronic steering rack recalibration",
+      "recommended_ppi_negotiation_deduction": "$14,000",
+      "category": "Modern / Current Gen"
     },
-    "centenario": {
+    "huracan_performante": {
+      "name": "Lamborghini Huracán Performante",
+      "years": "2017-2019",
+      "engine": "5.2L V10",
+      "horsepower": 640,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "ALA (Aerodinamica Lamborghini Attiva) electric actuator gear binding in front spoiler",
+      "recommended_ppi_negotiation_deduction": "$24,000",
+      "category": "Modern / Current Gen"
+    },
+    "huracan_performante_spyder": {
+      "name": "Lamborghini Huracán Performante Spyder",
+      "years": "2018-2019",
+      "engine": "5.2L V10",
+      "horsepower": 640,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Forged composite decklid heat shielding delamination & rear diffuser scrape",
+      "recommended_ppi_negotiation_deduction": "$26,000",
+      "category": "Modern / Current Gen"
+    },
+    "huracan_evo_awd": {
+      "name": "Lamborghini Huracán EVO (AWD)",
+      "years": "2019-2024",
+      "engine": "5.2L V10",
+      "horsepower": 640,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "LDVI (Lamborghini Dinamica Veicolo Integrata) predictive gyro sensor faults",
+      "recommended_ppi_negotiation_deduction": "$19,000",
+      "category": "Modern / Current Gen"
+    },
+    "huracan_evo_rwd": {
+      "name": "Lamborghini Huracán EVO RWD",
+      "years": "2020-2024",
+      "engine": "5.2L V10 RWD",
+      "horsepower": 610,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Steel brake rotor thermal judder & absence of front lift package",
+      "recommended_ppi_negotiation_deduction": "$17,000",
+      "category": "Modern / Current Gen"
+    },
+    "huracan_sto": {
+      "name": "Lamborghini Huracán STO (Super Trofeo Omologata)",
+      "years": "2021-2024",
+      "engine": "5.2L V10 RWD",
+      "horsepower": 640,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Cofango front one-piece clamshell hinge crack ($45,000 repair) & CCMR brake cost",
+      "recommended_ppi_negotiation_deduction": "$38,000",
+      "category": "Modern / Current Gen"
+    },
+    "huracan_tecnica": {
+      "name": "Lamborghini Huracán Tecnica",
+      "years": "2022-2024",
+      "engine": "5.2L V10 RWD",
+      "horsepower": 640,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Rear carbon engine bonnet latch sensor error & fixed-back bucket seat discomfort",
+      "recommended_ppi_negotiation_deduction": "$25,000",
+      "category": "Modern / Current Gen"
+    },
+    "huracan_sterrato": {
+      "name": "Lamborghini Huracán Sterrato (All-Terrain)",
+      "years": "2023-2024",
+      "engine": "5.2L V10 AWD",
+      "horsepower": 610,
+      "transmission": "7-Speed LDF Dual-Clutch",
+      "primary_chronic_defect": "Bridgestone Dueler all-terrain tire sidewall punctures & underbody skidplate gouging",
+      "recommended_ppi_negotiation_deduction": "$30,000",
+      "category": "Modern / Current Gen"
+    },
+    "urus_base": {
+      "name": "Lamborghini Urus (Base 4.0L)",
+      "years": "2018-2022",
+      "engine": "4.0L Twin-Turbo V8",
+      "horsepower": 650,
+      "transmission": "8-Speed ZF Automatic",
+      "primary_chronic_defect": "Turbo coolant valley plastic connector leak ($3,200) & front CCB rotor squeal",
+      "recommended_ppi_negotiation_deduction": "$12,000",
+      "category": "Modern / Current Gen"
+    },
+    "urus_pearl_capsule": {
+      "name": "Lamborghini Urus Pearl Capsule",
+      "years": "2020-2022",
+      "engine": "4.0L Twin-Turbo V8",
+      "horsepower": 650,
+      "transmission": "8-Speed ZF",
+      "primary_chronic_defect": "23-inch Taigete wheel curb rash & air suspension valve block leak",
+      "recommended_ppi_negotiation_deduction": "$14,000",
+      "category": "Modern / Current Gen"
+    },
+    "urus_s": {
+      "name": "Lamborghini Urus S",
+      "years": "2022-2026",
+      "engine": "4.0L Twin-Turbo V8",
+      "horsepower": 666,
+      "transmission": "8-Speed ZF",
+      "primary_chronic_defect": "Akrapovic titanium exhaust valve actuator rattle & 48V active anti-roll bar fault",
+      "recommended_ppi_negotiation_deduction": "$16,000",
+      "category": "Modern / Current Gen"
+    },
+    "urus_performante": {
+      "name": "Lamborghini Urus Performante",
+      "years": "2022-2026",
+      "engine": "4.0L Twin-Turbo V8",
+      "horsepower": 666,
+      "transmission": "8-Speed ZF Steel Springs",
+      "primary_chronic_defect": "Carbon fiber vented hood clearcoat bubbling & Pirelli Trofeo R rapid tire wear",
+      "recommended_ppi_negotiation_deduction": "$22,000",
+      "category": "Modern / Current Gen"
+    },
+    "urus_se_phev": {
+      "name": "Lamborghini Urus SE (Plug-in Hybrid)",
+      "years": "2024-2026+",
+      "engine": "4.0L V8 PHEV",
+      "horsepower": 800,
+      "transmission": "8-Speed Hybridized ZF",
+      "primary_chronic_defect": "25.9 kWh high-voltage lithium battery pack balance & electric motor coupling heat",
+      "recommended_ppi_negotiation_deduction": "$28,000",
+      "category": "Modern / Current Gen"
+    },
+    "sesto_elemento": {
+      "name": "Lamborghini Sesto Elemento (1 of 20)",
+      "years": "2010-2012",
+      "engine": "5.2L V10 AWD",
+      "horsepower": 570,
+      "transmission": "6-Speed E-Gear",
+      "primary_chronic_defect": "Carbon fiber driveshaft bearing play & track-only non-street-legal compliance traps",
+      "recommended_ppi_negotiation_deduction": "$200,000",
+      "category": "Modern / Current Gen"
+    },
+    "veneno_coupe": {
+      "name": "Lamborghini Veneno (1 of 4)",
+      "years": "2013",
+      "engine": "6.5L V12",
+      "horsepower": 750,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Extreme carbon front splitter driveway scraping & ISR clutch thermal overload",
+      "recommended_ppi_negotiation_deduction": "$350,000",
+      "category": "Modern / Current Gen"
+    },
+    "veneno_roadster": {
+      "name": "Lamborghini Veneno Roadster (1 of 9)",
+      "years": "2014-2015",
+      "engine": "6.5L V12",
+      "horsepower": 750,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Permanent open-cockpit interior water damage & carbon rim ring delamination",
+      "recommended_ppi_negotiation_deduction": "$400,000",
+      "category": "Modern / Current Gen"
+    },
+    "centenario_coupe": {
       "name": "Lamborghini Centenario LP770-4",
-      "category": "Few-Off Hypercars",
-      "years": [
-        2016,
-        2017
-      ],
-      "engine": "6.5L Naturally Aspirated V12 (759 hp - 20 Coupes + 20 Roadsters)",
-      "transmission": "7-speed ISR",
-      "drivetrain": "AWD with First 4-Wheel Steering System",
-      "market_price_usd": {
-        "poor": 2200000,
-        "good": 2800000,
-        "excellent": 3400000,
-        "concours": 4200000
-      },
-      "must_have_options": [
-        {
-          "name": "Full Gloss Exposed Bare Carbon Fiber Bodywork",
-          "importance": "CRITICAL",
-          "value_impact_usd": 350000,
-          "description": "Optional $300k+ bare carbon body skin from factory."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Rear Air Diffuser Flap Ground Strike Risk",
-          "severity": "HIGH",
-          "typical_mileage": "Trailer loading",
-          "estimated_repair_usd": 32000,
-          "symptoms": "Enormous carbon ground-effect diffuser scrapes on trailer ramps."
-        }
-      ]
+      "years": "2016-2017",
+      "engine": "6.5L V12",
+      "horsepower": 770,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Rear diffuser fin scrape & rear-wheel steering calibration drift",
+      "recommended_ppi_negotiation_deduction": "$120,000",
+      "category": "Modern / Current Gen"
+    },
+    "centenario_roadster": {
+      "name": "Lamborghini Centenario Roadster",
+      "years": "2016-2017",
+      "engine": "6.5L V12",
+      "horsepower": 770,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Naked gloss carbon fiber UV micro-crazing",
+      "recommended_ppi_negotiation_deduction": "$135,000",
+      "category": "Modern / Current Gen"
     },
     "sian_fkp37": {
-      "name": "Lamborghini Sián FKP 37 (Supercapacitor V12)",
-      "category": "Few-Off Hypercars",
-      "years": [
-        2020,
-        2021
-      ],
-      "engine": "6.5L V12 + 48V Supercapacitor e-Motor (808 hp - 63 Coupes + 19 Roadsters)",
-      "transmission": "7-speed ISR with Electric Fill-in",
-      "drivetrain": "AWD with Supercapacitor 3x Lighter than Li-ion",
-      "market_price_usd": {
-        "poor": 2800000,
-        "good": 3400000,
-        "excellent": 4100000,
-        "concours": 4900000
-      },
-      "must_have_options": [
-        {
-          "name": "Autonomous Smart Temperature Material Cooling Vanes",
-          "importance": "CRITICAL",
-          "value_impact_usd": 50000,
-          "description": "Shape-memory alloy rear thermal cooling flaps."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Supercapacitor Bank Cell Voltage Balance",
-          "severity": "HIGH",
-          "typical_mileage": "Factory diagnostics",
-          "estimated_repair_usd": 28000,
-          "symptoms": "Requires dealer hybrid certification tool."
-        }
-      ]
+      "name": "Lamborghini Sián FKP 37 (Supercapacitor)",
+      "years": "2019-2021",
+      "engine": "6.5L V12 Hybrid",
+      "horsepower": 819,
+      "transmission": "7-Speed ISR + 48V Supercapacitor",
+      "primary_chronic_defect": "48V supercapacitor cell degradation from prolonged disuse ($65,000 service)",
+      "recommended_ppi_negotiation_deduction": "$180,000",
+      "category": "Modern / Current Gen"
+    },
+    "sian_roadster": {
+      "name": "Lamborghini Sián Roadster (1 of 19)",
+      "years": "2020-2021",
+      "engine": "6.5L V12 Hybrid",
+      "horsepower": 819,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Active cooling vanes in rear decklid thermo-switch failure",
+      "recommended_ppi_negotiation_deduction": "$210,000",
+      "category": "Modern / Current Gen"
     },
     "countach_lpi800_4": {
-      "name": "Lamborghini Countach LPI 800-4 (Modern 50th Homage)",
-      "category": "Few-Off Hypercars",
-      "years": [
-        2022
-      ],
-      "engine": "6.5L V12 + Supercapacitor Hybrid (803 hp - 112 Units Worldwide)",
-      "transmission": "7-speed ISR",
-      "drivetrain": "All-Wheel Drive (Carbon Monocoque)",
-      "market_price_usd": {
-        "poor": 2300000,
-        "good": 2800000,
-        "excellent": 3300000,
-        "concours": 3900000
-      },
-      "must_have_options": [
-        {
-          "name": "Heritage Phone-Dial Wheels in Oro Elettrato",
-          "importance": "HIGH",
-          "value_impact_usd": 25000,
-          "description": "Homage Countach phone-dial alloys."
-        }
-      ],
-      "chronic_issues": [
-        {
-          "component": "Photochromic Glass Roof Switch Sensitivity",
-          "severity": "LOW",
-          "typical_mileage": "Cabin use",
-          "estimated_repair_usd": 4200,
-          "symptoms": "Electrochromic roof tint fails to toggle from opaque to transparent."
-        }
-      ]
+      "name": "Lamborghini Countach LPI 800-4",
+      "years": "2022",
+      "engine": "6.5L V12 Supercapacitor Hybrid",
+      "horsepower": 814,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "Photochromatic electrochromic glass roof darkening failure & retro fender rub",
+      "recommended_ppi_negotiation_deduction": "$150,000",
+      "category": "Modern / Current Gen"
+    },
+    "revuelto_hpev": {
+      "name": "Lamborghini Revuelto V12 HPEV (Flagship)",
+      "years": "2023-2027+",
+      "engine": "6.5L L545 V12 + 3 E-Motors",
+      "horsepower": 1015,
+      "transmission": "8-Speed Transverse Dual-Clutch",
+      "primary_chronic_defect": "3.8 kWh central monocoque lithium battery thermal run & transverse DCT clutch heat",
+      "recommended_ppi_negotiation_deduction": "$65,000",
+      "category": "Modern / Current Gen"
+    },
+    "temerario_hpev": {
+      "name": "Lamborghini Temerario V8 HPEV (Huracán Successor)",
+      "years": "2025-2027+",
+      "engine": "4.0L Flat-Plane Twin-Turbo V8 + 3 E-Motors",
+      "horsepower": 920,
+      "transmission": "8-Speed Transverse Dual-Clutch",
+      "primary_chronic_defect": "10,000 RPM titanium rod fatigue cycles & turbo wastegate electronic actuator calibration",
+      "recommended_ppi_negotiation_deduction": "$45,000",
+      "category": "Modern / Current Gen"
+    },
+    "invencible_coupe": {
+      "name": "Lamborghini Invencible (1 of 1 Finale)",
+      "years": "2023",
+      "engine": "6.5L V12",
+      "horsepower": 780,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "One-off bespoke hex-exhaust thermal resonance",
+      "recommended_ppi_negotiation_deduction": "$250,000",
+      "category": "Modern / Current Gen"
+    },
+    "autentica_roadster": {
+      "name": "Lamborghini Auténtica Roadster (1 of 1 Finale)",
+      "years": "2023",
+      "engine": "6.5L V12",
+      "horsepower": 780,
+      "transmission": "7-Speed ISR",
+      "primary_chronic_defect": "One-off bespoke integrated roll-hoop carbon stress",
+      "recommended_ppi_negotiation_deduction": "$250,000",
+      "category": "Modern / Current Gen"
+    },
+    "lanzador_ev": {
+      "name": "Lamborghini Lanzador Ultra GT (100% Electric)",
+      "years": "2028 Planned",
+      "engine": "Dual-Motor 1 MW (1341 hp)",
+      "horsepower": 1341,
+      "transmission": "Single-Speed Torque Vectoring",
+      "primary_chronic_defect": "High-rate 800V fast-charge battery cooling loop pressure degradation",
+      "recommended_ppi_negotiation_deduction": "$50,000",
+      "category": "Modern / Current Gen"
+    },
+    "sc63_lmdh": {
+      "name": "Lamborghini SC63 LMDh Hypercar Prototype",
+      "years": "2024-2026",
+      "engine": "3.8L Cold-V Twin-Turbo V8 Hybrid",
+      "horsepower": 680,
+      "transmission": "Xtrac 7-Speed Sequential",
+      "primary_chronic_defect": "Standardized Bosch/Williams hybrid MGU motor generator regen spikes",
+      "recommended_ppi_negotiation_deduction": "$100,000",
+      "category": "Modern / Current Gen"
     }
   }
 }

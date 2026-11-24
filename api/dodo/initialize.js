@@ -1,7 +1,7 @@
 const https = require('https');
 
-const dodoApiKey = process.env.DODO_PAYMENTS_API_KEY || 'dodo_test_placeholder';
-const defaultProductId = process.env.DODO_PRODUCT_ID || 'pdt_0NsdXpb0AXJ9AeTfGANYe';
+const dodoApiKey = process.env.DODO_PAYMENTS_API_KEY || 'dodo_test_0_u-P96zqKPvQVU1.lwM9WJvPchJR4POMqkT0iVuHclz9ul4Jfbf8Jd_-JJZSuM4Q';
+const defaultProductId = process.env.DODO_PRODUCT_ID || 'pdt_0NsdXpb0AXJ8AeTfGANYe';
 const environment = process.env.DODO_PAYMENTS_ENVIRONMENT || 'test_mode';
 
 module.exports = async (req, res) => {

@@ -1,7 +1,7 @@
 const https = require('https');
 
 const dodoApiKey = process.env.DODO_PAYMENTS_API_KEY || 'dodo_test_placeholder';
-const defaultProductId = process.env.DODO_PRODUCT_ID || 'prod_lambospec_vip_79';
+const defaultProductId = process.env.DODO_PRODUCT_ID || 'pdt_0NsdXpb0AXJ9AeTfGANYe';
 const environment = process.env.DODO_PAYMENTS_ENVIRONMENT || 'test_mode';
 
 module.exports = async (req, res) => {

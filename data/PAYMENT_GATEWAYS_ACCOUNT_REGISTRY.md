@@ -9,7 +9,7 @@ Bu belge, LamboSpec AI projesinde kullanılan tüm ödeme altyapılarını, baş
 | Ödeme Altyapısı | Kayıtlı / Başvurulan E-Posta | Başvuru / Referans No | Ürün & Para Birimi | Durum |
 | :--- | :--- | :--- | :--- | :--- |
 | **PayTR** | `karakoc.i@gmail.com` | `17CC89H551P35576` | Sanal POS ($79.00 USD / TL) | ⏳ Ön başvuru yapıldı, onay bekleniyor |
-| **Dodo Payments (MoR)** | `karakoc.i@gmail.com` | *Açılış aşamasında* | $79.00 USD (Apple Pay, GPay, Kart) | 🚀 Kod altyapısı hazır, API anahtarı bekleniyor |
+| **Dodo Payments (MoR)** | `karakoc.i@gmail.com` | Product ID: `pdt_0NsdXpb0AXJ9AeTfGANYe` | $79.00 USD (Apple Pay, GPay, Kart) | 🚀 Kod altyapısı hazır, API anahtarı bekleniyor |
 | **Paddle (MoR)** | `karakoc.i@gmail.com` / `lamborginichallenge2026@gmail.com` | Price ID: `pri_01m7wnbynzbf08mydbbj8vgkd5` | $79.00 USD Global Checkout | ⏳ Başvuru inceleniyor |
 | **iyzico** | `karakoc.i@gmail.com` / `lamborginichallenge2026@gmail.com` | Sanal POS Entegrasyonu | $79.00 USD / 2.750 TL (3D Secure) | ⏳ Başvuru inceleniyor |
 | **Kripto (Web3)** | *Doğrudan Cüzdan* | USDT TRC-20: `TDV1Q...` | $79 USDT / USDC | ✅ Kodda aktif ve hazır |

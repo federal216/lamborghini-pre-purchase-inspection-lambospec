@@ -6,6 +6,10 @@
       "use": "@vercel/node"
     },
     {
+      "src": "api/paytr/*.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "*.html",
       "use": "@vercel/static"
     },
@@ -26,6 +30,14 @@
     {
       "src": "/api/iyzico/callback",
       "dest": "/api/iyzico/callback.js"
+    },
+    {
+      "src": "/api/paytr/initialize",
+      "dest": "/api/paytr/initialize.js"
+    },
+    {
+      "src": "/api/paytr/callback",
+      "dest": "/api/paytr/callback.js"
     },
     {
       "src": "/(.*)",

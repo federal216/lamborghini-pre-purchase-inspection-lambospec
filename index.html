@@ -1801,21 +1801,79 @@
           <span id="paymentErrorMsg">Please check your details.</span>
         </div>
 
-        <!-- PAYMENT METHOD TABS: DUAL GATEWAY (IYZICO + PADDLE + CRYPTO) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-5">
-          <button id="tabIyzicoBtn" type="button" onclick="switchPaymentTab('iyzico')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
-            <span>🛡️</span><span>iyzico (Kart / 3DS)</span>
+        <!-- PAYMENT METHOD TABS: MULTI-GATEWAY (PAYTR + IYZICO + PADDLE + CRYPTO) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-5">
+          <button id="tabPaytrBtn" type="button" onclick="switchPaymentTab('paytr')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
+            <span>⚡</span><span>PayTR (USD)</span>
+          </button>
+          <button id="tabIyzicoBtn" type="button" onclick="switchPaymentTab('iyzico')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
+            <span>🛡️</span><span>iyzico (3DS)</span>
           </button>
           <button id="tabPaddleBtn" type="button" onclick="switchPaymentTab('paddle')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
-            <span>🌐</span><span>Paddle (Apple/GPay)</span>
+            <span>🌐</span><span>Paddle</span>
           </button>
           <button id="tabCryptoBtn" type="button" onclick="switchPaymentTab('crypto')" class="py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm">
-            <span>🪙</span><span>Crypto (USDT/USDC)</span>
+            <span>🪙</span><span>Crypto</span>
           </button>
         </div>
 
+        <!-- TAB 0: PAYTR (VIRTUAL POS / USD & GLOBAL CARDS / 3D SECURE) -->
+        <div id="tabPaytrContent" class="space-y-4">
+          <!-- Live Validation Error Box for PayTR -->
+          <div id="paytrErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg">
+            <span class="text-base">⚠️</span>
+            <span id="paytrErrorMsg">Please check your details.</span>
+          </div>
+
+          <div class="bg-gradient-to-b from-zinc-900/90 to-black/80 border border-zinc-800 rounded-2xl p-6 sm:p-7 text-center space-y-4">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/10 border border-amber-500/40 flex items-center justify-center shadow-lg">
+              <span class="text-3xl">⚡</span>
+            </div>
+            <div>
+              <div class="flex items-center justify-center gap-2 mb-1">
+                <span class="text-[11px] font-bold font-mono uppercase bg-amber-500/20 text-amber-400 border border-amber-500/40 px-2 py-0.5 rounded">TCMB Lisanslı</span>
+                <span class="text-[11px] font-bold font-mono uppercase bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-2 py-0.5 rounded">3D Secure 2.0</span>
+                <span class="text-[11px] font-bold font-mono uppercase bg-blue-500/20 text-blue-400 border border-blue-500/40 px-2 py-0.5 rounded">USD &amp; TL</span>
+              </div>
+              <h4 class="text-lg font-black text-white">PayTR Güvenli Kartlı Ödeme</h4>
+              <p class="text-xs text-zinc-400 max-w-sm mx-auto mt-1 leading-relaxed">
+                Tüm yerli ve uluslararası kredi/banka kartları (Visa, Mastercard, Amex, Troy) ile 256-bit SSL korumalı anlık ödeme. Yurt dışı kartlar ve USD tahsilatı desteklenir.
+              </p>
+            </div>
+
+            <!-- Payment badges -->
+            <div class="flex items-center justify-center gap-1.5 flex-wrap pt-1">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-blue-700 bg-blue-950/60 text-blue-300 shadow-sm">VISA</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-rose-700 bg-rose-950/60 text-rose-300 shadow-sm">MASTERCARD</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-sky-700 bg-sky-950/60 text-sky-300 shadow-sm">AMEX</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border border-teal-700 bg-teal-950/60 text-teal-300 shadow-sm">TROY</span>
+            </div>
+
+            <div class="flex items-center justify-center space-x-2 text-[10px] text-emerald-400 font-mono pt-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>PayTR PCI-DSS Level 1 · 256-Bit SSL Koruma</span>
+            </div>
+          </div>
+
+          <!-- PRIMARY ACTIVE PAYTR PAY BUTTON -->
+          <button id="submitPaytrPayBtn" type="button" onclick="processPaymentAndDownload('paytr')"
+                  class="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 text-white font-extrabold text-base tracking-wide uppercase hover:brightness-110 active:scale-[0.99] transition-all shadow-[0_0_35px_rgba(245,158,11,0.45)] flex items-center justify-center space-x-2 cursor-pointer border border-amber-400/40">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>Öde: $79.00 USD (~2.750 ₺) — PayTR Güvenli Checkout</span>
+          </button>
+
+          <!-- PAYTR EMBEDDED IFRAME CONTAINER -->
+          <div id="paytrIframeWrapper" class="hidden mt-4 rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 p-2 shadow-2xl">
+            <iframe id="paytrIframe" src="" frameborder="0" scrolling="no" class="w-full min-h-[480px] rounded-xl bg-white"></iframe>
+          </div>
+
+          <div class="text-center text-[11px] text-zinc-400 font-mono">
+            Direct Concierge: <a href="mailto:lamborginichallenge2026@gmail.com" class="text-amber-400 hover:underline">lamborginichallenge2026@gmail.com</a>
+          </div>
+        </div>
+
         <!-- TAB 1: IYZICO (DOMESTIC & GLOBAL 3D SECURE CARDS / TAKSİT / TROY) -->
-        <div id="tabIyzicoContent" class="space-y-4">
+        <div id="tabIyzicoContent" class="hidden space-y-4">
           <!-- Live Validation Error Box for iyzico -->
           <div id="iyzicoErrorBox" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-500 text-rose-300 text-xs font-mono flex items-center space-x-2 shadow-lg">
             <span class="text-base">⚠️</span>
@@ -2073,8 +2131,16 @@
 
   <script>
     // =====================================================
-    //  DUAL PAYMENT GATEWAYS CONFIG (IYZICO + PADDLE)
+    //  MULTI PAYMENT GATEWAYS CONFIG (PAYTR + IYZICO + PADDLE)
     // =====================================================
+    // ── PayTR Config ──
+    const PAYTR_CONFIG = {
+      apiEndpoint: '/api/paytr/initialize',
+      currency: 'USD',
+      priceUsd: '79.00',
+      priceTry: '2750.00'
+    };
+
     // ── iyzico Config ──
     const IYZICO_CONFIG = {
       mode: 'api', // 'api' (kendi Vercel/Node backendiniz) veya 'link' (iyzico Panelinden iyziLink)
@@ -2090,10 +2156,10 @@
     const CONTACT_EMAIL   = 'lamborginichallenge2026@gmail.com';
     let   paymentVerified = false;
 
-    // Detect Payment Success (Paddle or iyzico return: ?paddle_success=true, ?payment_success=true, ?token=xxx, ?iyzi_paid=true)
+    // Detect Payment Success (Paddle, iyzico, or PayTR return: ?paddle_success=true, ?payment_success=true, ?token=xxx, ?iyzi_paid=true, ?paytr=1)
     (function() {
       const p = new URLSearchParams(window.location.search);
-      if (p.get('paddle_success') || p.get('p_id') || p.get('checkout_id') || p.get('payment_success') || p.get('token') || p.get('iyzi_paid')) {
+      if (p.get('paddle_success') || p.get('p_id') || p.get('checkout_id') || p.get('payment_success') || p.get('token') || p.get('iyzi_paid') || p.get('paytr')) {
         paymentVerified = true;
       }
     })();
@@ -2160,10 +2226,12 @@
     }
 
     function switchPaymentTab(tab) {
+      const paytrBtn = document.getElementById('tabPaytrBtn');
       const iyzicoBtn = document.getElementById('tabIyzicoBtn');
       const paddleBtn = document.getElementById('tabPaddleBtn');
       const cryptoBtn = document.getElementById('tabCryptoBtn');
 
+      const paytrContent = document.getElementById('tabPaytrContent');
       const iyzicoContent = document.getElementById('tabIyzicoContent');
       const paddleContent = document.getElementById('tabPaddleContent');
       const cryptoContent = document.getElementById('tabCryptoContent');
@@ -2171,18 +2239,22 @@
       const activeClass = 'py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-orange-500/20 text-orange-400 border border-orange-500/40 flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm';
       const inactiveClass = 'py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm';
 
-      const isIyzico = (tab === 'iyzico' || tab === 'card');
+      const isPaytr = (tab === 'paytr');
+      const isIyzico = (tab === 'iyzico');
       const isPaddle = (tab === 'paddle');
       const isCrypto = (tab === 'crypto');
 
+      if (paytrBtn) paytrBtn.className = isPaytr ? activeClass : inactiveClass;
       if (iyzicoBtn) iyzicoBtn.className = isIyzico ? activeClass : inactiveClass;
       if (paddleBtn) paddleBtn.className = isPaddle ? activeClass : inactiveClass;
       if (cryptoBtn) cryptoBtn.className = isCrypto ? activeClass : inactiveClass;
 
+      if (paytrContent) paytrContent.classList.add('hidden');
       if (iyzicoContent) iyzicoContent.classList.add('hidden');
       if (paddleContent) paddleContent.classList.add('hidden');
       if (cryptoContent) cryptoContent.classList.add('hidden');
 
+      if (isPaytr && paytrContent) paytrContent.classList.remove('hidden');
       if (isIyzico && iyzicoContent) iyzicoContent.classList.remove('hidden');
       if (isPaddle && paddleContent) paddleContent.classList.remove('hidden');
       if (isCrypto && cryptoContent) {
@@ -2382,6 +2454,76 @@
 
       const modelSelect = document.getElementById('modelSelect');
       const modelName = modelSelect ? modelSelect.options[modelSelect.selectedIndex].text : 'Lamborghini';
+
+      // 0. PayTR Payment Flow (Virtual POS / USD & Global Cards)
+      if (method === 'paytr') {
+        const paytrBtn = document.getElementById('submitPaytrPayBtn');
+        const origBtnHtml = paytrBtn ? paytrBtn.innerHTML : '';
+        const paytrErr = document.getElementById('paytrErrorBox');
+        if (paytrErr) paytrErr.classList.add('hidden');
+
+        if (paytrBtn) {
+          paytrBtn.disabled = true;
+          paytrBtn.innerHTML = '<span class="inline-block animate-spin mr-2">🔄</span> PayTR Güvenli Ödeme Açılıyor...';
+        }
+
+        fetch(PAYTR_CONFIG.apiEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            modelName: modelName,
+            currency: PAYTR_CONFIG.currency,
+            buyerName: email.split('@')[0] || 'VIP Collector'
+          })
+        })
+        .then(function(res) {
+          return res.json().then(function(data) {
+            if (!res.ok || data.status !== 'success') {
+              throw new Error(data.reason || ('Status: ' + res.status));
+            }
+            return data;
+          });
+        })
+        .then(function(data) {
+          if (data.status === 'success' && data.iframeUrl) {
+            sessionStorage.setItem('lambospec_pending_payment', JSON.stringify({
+              email: email,
+              model: modelName,
+              token: data.token,
+              gateway: 'paytr',
+              timestamp: Date.now()
+            }));
+
+            const wrapper = document.getElementById('paytrIframeWrapper');
+            const iframe = document.getElementById('paytrIframe');
+            if (wrapper && iframe) {
+              iframe.src = data.iframeUrl;
+              wrapper.classList.remove('hidden');
+              wrapper.scrollIntoView({ behavior: 'smooth' });
+              if (paytrBtn) paytrBtn.classList.add('hidden');
+            } else {
+              window.location.href = data.iframeUrl;
+            }
+          } else {
+            throw new Error(data.reason || 'Failed to initialize PayTR.');
+          }
+        })
+        .catch(function(err) {
+          console.warn('PayTR initialization error:', err);
+          if (paytrBtn) {
+            paytrBtn.disabled = false;
+            paytrBtn.innerHTML = origBtnHtml;
+          }
+          const box = document.getElementById('paytrErrorBox');
+          const msg = document.getElementById('paytrErrorMsg');
+          if (box && msg) {
+            msg.innerText = 'PayTR bağlantısı: ' + (err.message || 'Servis yanıt vermedi') + '. iyzico veya Paddle sekmesinden de ödeyebilirsiniz.';
+            box.classList.remove('hidden');
+          }
+        });
+        return;
+      }
 
       // 1. iyzico Payment Flow (Domestic & Global 3D Secure / Taksit)
       if (method === 'iyzico') {

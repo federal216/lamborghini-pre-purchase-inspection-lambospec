@@ -220,6 +220,15 @@ app.get('/api/iyzico/verify/:token', (req, res) => {
   });
 });
 
+/**
+ * PayTR Gateway Endpoints
+ */
+const paytrInitialize = require('./api/paytr/initialize');
+const paytrCallback = require('./api/paytr/callback');
+
+app.all('/api/paytr/initialize', paytrInitialize);
+app.all('/api/paytr/callback', paytrCallback);
+
 app.listen(PORT, () => {
   console.log(`🚀 LamboSpec AI Server running on port ${PORT}`);
   console.log(`🌐 Local preview: http://localhost:${PORT}`);

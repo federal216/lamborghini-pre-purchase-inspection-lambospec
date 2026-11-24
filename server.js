@@ -229,6 +229,12 @@ const paytrCallback = require('./api/paytr/callback');
 app.all('/api/paytr/initialize', paytrInitialize);
 app.all('/api/paytr/callback', paytrCallback);
 
+/**
+ * Dodo Payments Gateway Endpoint
+ */
+const dodoInitialize = require('./api/dodo/initialize');
+app.all('/api/dodo/initialize', dodoInitialize);
+
 app.listen(PORT, () => {
   console.log(`🚀 LamboSpec AI Server running on port ${PORT}`);
   console.log(`🌐 Local preview: http://localhost:${PORT}`);

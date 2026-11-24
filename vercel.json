@@ -10,6 +10,10 @@
       "use": "@vercel/node"
     },
     {
+      "src": "api/dodo/*.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "*.html",
       "use": "@vercel/static"
     },
@@ -38,6 +42,10 @@
     {
       "src": "/api/paytr/callback",
       "dest": "/api/paytr/callback.js"
+    },
+    {
+      "src": "/api/dodo/initialize",
+      "dest": "/api/dodo/initialize.js"
     },
     {
       "src": "/(.*)",

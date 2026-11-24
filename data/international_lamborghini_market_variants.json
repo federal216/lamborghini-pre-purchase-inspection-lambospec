@@ -1,0 +1,52 @@
+{
+  "version": "2026.1-GLOBAL-MARKET-HOMOLOGATION",
+  "updated_at": "2026-11-24",
+  "source": "Sant'Agata Bolognese Export Archives, NHTSA Homologation Files & European TUV Registries",
+  "market_homologation_divergences": {
+    "us_market_vs_euro_spec": {
+      "bumperettes_and_crash_structures": {
+        "impact": "US Federal 5-mph bumper regulations (FMVSS 215) forced Lamborghini to bolt heavy rubber bumper extensions onto Countach 5000 QV, Diablo, Murciélago, and early Gallardo.",
+        "resale_delta": "Euro-spec clean bumper cars command a +$15,000 to +$30,000 collector premium in the US market under the 25-year import exemption rule."
+      },
+      "emissions_and_horsepower_penalties": {
+        "countach_lp5000_qv_penalty": "European spec with 6 Weber downdraft carburetors produces 455 HP. US spec forced to adopt Bosch KE-Jetronic fuel injection and catalytic converters, dropping output to 414 HP (-41 HP deficit).",
+        "diablo_obd2_compliance": "1996+ US Diablos require strict OBD-II dual ECU compliance (LIE engine computers); catalytic converter thermocouple failures frequently trigger false Check Engine lights."
+      },
+      "lighting_and_side_markers": {
+        "dot_regulations": "US requires amber rectangular front sidemarkers and red rear sidemarkers embedded in bumper corners. European cars utilize clean front fenders with subtle amber turn indicators."
+      }
+    },
+    "gulf_middle_east_gcc_spec": {
+      "thermal_management_package": "GCC-spec vehicles (Dubai, Abu Dhabi, Qatar, Saudi Arabia) feature high-output air conditioning compressors, upgraded auxiliary transmission oil coolers, and sand/dust air intake filters.",
+      "collector_considerations": "Ex-GCC cars imported to Europe/US often exhibit interior leather shrinkage and dashboard warping from extreme ambient desert heat (>50°C)."
+    },
+    "japanese_spec_homologation": {
+      "strict_shaken_compliance": "Japanese domestic market (JDM) Lamborghinis feature specialized catalytic exhaust temperature warning sensors, rear license plate illumination brackets, and modified exhaust flapper valve default-closed parameters for noise zoning."
+    }
+  },
+  "country_exclusive_limited_editions": {
+    "gallardo_tricolore": {
+      "market": "Italy / Global",
+      "tribute": "150th Anniversary of Italian Unification (1861-2011)",
+      "details": "Offset green-white-red racing stripe running over roof, bonnet, and driver's seat. 150 units produced."
+    },
+    "gallardo_lp550_2_gz8": {
+      "market": "China (Guangzhou)",
+      "details": "Exclusive to Guangzhou province; 8 units built featuring metallic orange roof, black carbon wing, and GZ8 emblem."
+    },
+    "murcielago_lp670_sv_china_limited": {
+      "market": "China",
+      "production": "10 individually numbered units",
+      "details": "Flat matte Grigio Telesto with central orange and black racing stripe; Alcantara interior with Mandarin commemorative plaque."
+    },
+    "huracan_avio": {
+      "market": "Global / Italian Air Force",
+      "production": "250 units",
+      "details": "Matte military paint (Grigio Falco / Verde Turbine) with L63 (Lamborghini 1963) roundels and tricolor aviation cockade."
+    },
+    "urus_performante_essenza_scv12": {
+      "market": "Exclusive Private Allocation (Only for the 40 Essenza track-car owners)",
+      "details": "Two-tone livery matching owner's bespoke track hypercar, exposed glossy carbon fiber hood, roof, and 23-inch high-gloss black wheels with red calipers."
+    }
+  }
+}

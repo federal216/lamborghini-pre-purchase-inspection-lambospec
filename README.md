@@ -3,7 +3,7 @@
 [![Rating](https://img.shields.io/badge/Rating-4.98%20%2F%205.0%20(184%2B%20Verified%20Audits)-gold?style=for-the-badge&logo=lamborghini)](https://hseenglish.app/lambospec.html)
 [![Live Web Engine](https://img.shields.io/badge/Live%20App-hseenglish.app%2Flambospec.html-emerald?style=for-the-badge&logo=safari)](https://hseenglish.app/lambospec.html)
 [![Whop Checkout](https://img.shields.io/badge/Instant%20Unlock-$79.00%20USD%20(Whop%20Verified)-orange?style=for-the-badge&logo=applepay)](https://whop.com/cabinetscan-ai/lambospec-ai-vip-pre-purchase-dossier)
-[![Sample PDF](https://img.shields.io/badge/Sample%20Report-Download%205--Page%20Dossier-amber?style=for-the-badge&logo=adobeacrobatreader)](https://hseenglish.app/sample_report.pdf)
+[![Sample PDF](https://img.shields.io/badge/Sample%20Report-Download%2010--Page%20Dossier-amber?style=for-the-badge&logo=adobeacrobatreader)](https://hseenglish.app/sample_report.pdf)
 
 > **"Don't wire $150,000+ for a pre-owned Lamborghini until you run a LamboSpec AI audit."**  
 > Autonomous pre-purchase inspection, chronic mechanical defect audit, and dealer counter-offer negotiation engine for all **106 Lamborghini production models across 60 years** (1963 - 2026). Detects missing dealbreaker factory options (front axle lift), calculates upcoming catastrophic maintenance (CCB rotor oxidation, ISR single-clutch snap wear), and generates verbatim dealer counter-scripts.
@@ -12,9 +12,9 @@
 
 ## ⚡ Direct Access & Live Checkout
 
-- 💳 **[Direct Whop Checkout ($79.00 VIP 8-Page Dossier)](https://whop.com/cabinetscan-ai/lambospec-ai-vip-pre-purchase-dossier)** *(Apple Pay, Google Pay, Global Credit Cards, instant digital unlock)*
+- 💳 **[Direct Whop Checkout ($79.00 VIP 10-Page Dossier)](https://whop.com/cabinetscan-ai/lambospec-ai-vip-pre-purchase-dossier)** *(Apple Pay, Google Pay, Global Credit Cards, instant digital unlock)*
 - 🌐 **[Launch Interactive Supercar Diagnostic Engine](https://hseenglish.app/lambospec.html)** *(Analyze your Bring a Trailer / dealer listing in 15 seconds)*
-- 📄 **[Download Official Sample 5-Page Negotiation Dossier (PDF)](https://hseenglish.app/sample_report.pdf)** *(View real inspection sample)*
+- 📄 **[Download Official Sample 10-Page Negotiation Dossier (PDF)](https://hseenglish.app/sample_report.pdf)** *(View real inspection sample)*
 - 🪙 **Cryptocurrency Checkout (USDT TRC-20 / USDC ERC-20):** Direct on-chain verification available inside the web app.
 
 ---
@@ -46,7 +46,7 @@ Pre-owned exotic car dealers frequently disguise upcoming 5-figure mechanical re
 
 ---
 
-## 📑 What's Inside the 8-Page Forensic VIP Dossier ($79.00)
+## 📑 What's Inside the 10-Page Forensic VIP Dossier ($79.00)
 
 1. **Page 1: Executive Market Valuation & Price Anchor** (Verified auction sales comps, dealer markup delta).
 2. **Page 2: Chronic Defect Audit Matrix** (Model-specific factory TSB records, recall notices).
@@ -88,7 +88,7 @@ Explore our other specialized forensic AI appraisal and safety engines:
 
 ## 💳 100% Secure Whop Checkout ($79.00)
 
-- **Instant Delivery:** Download your complete 8-page dossier immediately after payment.
+- **Instant Delivery:** Download your complete 10-page dossier immediately after payment.
 - **Accepted Payment Methods:** Apple Pay, Google Pay, Visa, Mastercard, American Express, USDT, USDC.  
 👉 **[Unlock Full Lamborghini Dossier Now ($79)](https://whop.com/cabinetscan-ai/lambospec-ai-vip-pre-purchase-dossier)**
 

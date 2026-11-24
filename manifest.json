@@ -1,23 +1,16 @@
 {
-  "name": "LamboSpec AI — Pre-Purchase Lamborghini Defect Audit",
-  "short_name": "LamboSpec AI",
-  "description": "Autonomous AI Pre-Purchase Inspection and Dealer Negotiation Engine for 50 Lamborghini Models.",
-  "start_url": "/lambospec-ai/",
+  "name": "LamboSpec AI — Pre-Purchase Supercar Intelligence",
+  "short_name": "LamboSpec",
+  "description": "Autonomous Lamborghini Pre-Purchase Inspection & Mechanical Negotiation Dossier",
+  "start_url": "/lambospec.html",
   "display": "standalone",
-  "background_color": "#08090C",
-  "theme_color": "#FF6B00",
-  "orientation": "portrait-primary",
+  "background_color": "#08090d",
+  "theme_color": "#f97316",
   "icons": [
     {
-      "src": "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=192&auto=format&fit=crop&q=80",
-      "sizes": "192x192",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=512&auto=format&fit=crop&q=80",
+      "src": "presenter_poster.jpg",
       "sizes": "512x512",
       "type": "image/jpeg"
     }
-  ],
-  "categories": ["finance", "utilities", "shopping", "lifestyle"]
+  ]
 }

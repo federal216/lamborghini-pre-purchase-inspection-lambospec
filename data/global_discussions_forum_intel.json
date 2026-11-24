@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Lamborghini Global Owner Forums & Community Intelligence Registry",
-    "last_updated": "2026-11-24T10:12:09.930985+00:00",
+    "last_updated": "2026-11-24T10:43:12.278408+00:00",
     "monitored_communities": [
       "Lamborghini-Talk (Primary Global Registry & DIY Maintenance)",
       "FerrariChat (Exotic Cross-Shoppers & PPI Discussions)",
@@ -138,7 +138,7 @@
         "query": "site:lamborghini-talk.com Huracan common problems maintenance costs"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:35.259052+00:00"
+      "crawled_at": "2026-11-24T10:42:38.546590+00:00"
     },
     {
       "target": {
@@ -146,8 +146,29 @@
         "topic": "Huracan MagneRide & CCB",
         "query": "site:lamborghini-talk.com Huracan MagneRide leak CCB rotor wear"
       },
-      "results": [],
-      "crawled_at": "2026-11-24T10:11:36.938310+00:00"
+      "results": [
+        {
+          "title": "CCB Rotor Replacement for Huracan | Lamborghini Talk",
+          "snippet": "Home ForumsLamborghiniForumsHuracanWarren-RB Hello, We are a brake company specialized inccbbrakes (rotors, pads, components, and complete brake system) and are glad to be a sponsor of this from. Here is our replacementrotorsforHuracanSTO with 390/360mmrotors, it can also be installed as an upgrade from non-STO with 380/356mmrotors.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fccb%2Drotor%2Dreplacement%2Dfor%2Dhuracan.235398%2F&rut=61856cd3442263b2bfe3c5111c40104e140047cab4e95ba55653d9276769eaba"
+        },
+        {
+          "title": "Troubled areas or common failures on huracans? | Lamborghini Talk",
+          "snippet": "On my 4 year service, my dealer performed an engine out repair on a Lower rear timing chain coverleak1 year out of OEM warranty. The dealer covered the repair out of goodwill as theleakwas noted on the 3 year service but the Lambo Master Technician felt it didn't require repair at the time.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Ftroubled%2Dareas%2Dor%2Dcommon%2Dfailures%2Don%2Dhuracans.229841%2F&rut=431d4a63f4911042d918e9af51a3e90f49b5f1640e63f18b50e67cd6da483f4f"
+        },
+        {
+          "title": "Huracan - Lamborghini Talk",
+          "snippet": "HuracanCluster screen stuck \"software updater\" toptierinvestments20 Dec 26, 2023 29 2.6K",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fforums%2Fhuracan.202%2F&rut=dc5787dcfa34cf4204a5ee8c23cfb324d114c97e5ce9041a90fc88f22b680e1c"
+        },
+        {
+          "title": "Carbon Ceramic Brake Rotor Cracks - Lamborghini Talk",
+          "snippet": "The other concern is to change the brake pads when they are at thewearbars because you don't want to chance wearing out the pad (to the plate) and having the plate contact therotorand damage it.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fcarbon%2Dceramic%2Dbrake%2Drotor%2Dcracks.23805%2F&rut=05d53ab2b8dd56b5eb31f79729cca654c2cee051f7ccecbdeb0c88bee63e3f7e"
+        }
+      ],
+      "crawled_at": "2026-11-24T10:42:40.152711+00:00"
     },
     {
       "target": {
@@ -156,7 +177,7 @@
         "query": "site:lamborghini-talk.com Aventador ISR clutch shudder release bearing cost"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:38.111156+00:00"
+      "crawled_at": "2026-11-24T10:42:41.551076+00:00"
     },
     {
       "target": {
@@ -165,7 +186,7 @@
         "query": "site:lamborghini-talk.com Gallardo e-gear snap reading clutch wear"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:39.603290+00:00"
+      "crawled_at": "2026-11-24T10:42:43.102120+00:00"
     },
     {
       "target": {
@@ -174,7 +195,7 @@
         "query": "site:lamborghini-talk.com Murcielago clutch replacement rear main seal"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:40.640862+00:00"
+      "crawled_at": "2026-11-24T10:42:44.649063+00:00"
     },
     {
       "target": {
@@ -183,7 +204,7 @@
         "query": "site:lamborghini-talk.com Diablo VT SV overheating wiring harness"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:41.641981+00:00"
+      "crawled_at": "2026-11-24T10:42:45.829602+00:00"
     },
     {
       "target": {
@@ -192,7 +213,7 @@
         "query": "site:lamborghini-talk.com Urus battery drain coolant leak thermostat"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:43.185693+00:00"
+      "crawled_at": "2026-11-24T10:42:46.916787+00:00"
     },
     {
       "target": {
@@ -201,7 +222,7 @@
         "query": "site:lamborghini-talk.com Revuelto delivery issues problems recall 2025 2026"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:44.833770+00:00"
+      "crawled_at": "2026-11-24T10:42:48.377824+00:00"
     },
     {
       "target": {
@@ -210,7 +231,7 @@
         "query": "site:lamborghini-talk.com Temerario V8 hybrid order waitlist allocation"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:46.123144+00:00"
+      "crawled_at": "2026-11-24T10:42:49.327100+00:00"
     },
     {
       "target": {
@@ -219,7 +240,7 @@
         "query": "site:ferrarichat.com Lamborghini vs Ferrari Huracan 488 reliability PPI"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:47.424882+00:00"
+      "crawled_at": "2026-11-24T10:42:50.217807+00:00"
     },
     {
       "target": {
@@ -228,7 +249,7 @@
         "query": "site:pistonheads.com Lamborghini ownership running costs maintenance"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:48.406142+00:00"
+      "crawled_at": "2026-11-24T10:42:51.387354+00:00"
     },
     {
       "target": {
@@ -237,7 +258,7 @@
         "query": "reddit r/lamborghini daily driving reliability ownership cost"
       },
       "results": [],
-      "crawled_at": "2026-11-24T10:11:49.995020+00:00"
+      "crawled_at": "2026-11-24T10:42:52.810212+00:00"
     }
   ]
 }

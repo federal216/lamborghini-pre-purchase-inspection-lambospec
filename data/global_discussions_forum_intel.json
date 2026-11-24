@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Lamborghini Global Owner Forums & Community Intelligence Registry",
-    "last_updated": "2026-11-23T11:59:52.120283+00:00",
+    "last_updated": "2026-11-24T10:12:09.930985+00:00",
     "monitored_communities": [
       "Lamborghini-Talk (Primary Global Registry & DIY Maintenance)",
       "FerrariChat (Exotic Cross-Shoppers & PPI Discussions)",
@@ -138,7 +138,7 @@
         "query": "site:lamborghini-talk.com Huracan common problems maintenance costs"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:11.187781+00:00"
+      "crawled_at": "2026-11-24T10:11:35.259052+00:00"
     },
     {
       "target": {
@@ -146,29 +146,8 @@
         "topic": "Huracan MagneRide & CCB",
         "query": "site:lamborghini-talk.com Huracan MagneRide leak CCB rotor wear"
       },
-      "results": [
-        {
-          "title": "CCB Rotor Replacement for Huracan | Lamborghini Talk",
-          "snippet": "Home ForumsLamborghiniForumsHuracanWarren-RB Hello, We are a brake company specialized inccbbrakes (rotors, pads, components, and complete brake system) and are glad to be a sponsor of this from. Here is our replacementrotorsforHuracanSTO with 390/360mmrotors, it can also be installed as an upgrade from non-STO with 380/356mmrotors.",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fccb%2Drotor%2Dreplacement%2Dfor%2Dhuracan.235398%2F&rut=5c06907af687e01a6275ab25932104e17ecf513f87f931b3d039504e8bae90f6"
-        },
-        {
-          "title": "Huracan Problems/Common issues to look for - Lamborghini Talk",
-          "snippet": "Hi! I'm new to this forum. This question has probably been asked many times but I don't see much about it. I'm getting ready to buy a Pre owned 2015Huracanthat is a Private sale. It's got about 11,500Km on it. Before buying, is there any common issues with these things to look for? Front lift failure, Engine or trannys failures, any common electrical problems? I just turned 21 and ...",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhuracan%2Dproblems%2Dcommon%2Dissues%2Dto%2Dlook%2Dfor.231732%2F&rut=a8067debd07165739da839e0dab6bd32271bb7bf5c09f728179e53c0a660b939"
-        },
-        {
-          "title": "Fluid Leak Question | Lamborghini Talk",
-          "snippet": "Hello, This is a fluidleakfrom my 2019Huracan. Does this look like a transmissionleakor oilleak? It's obviously just below my transmission. Thx chris",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Ffluid%2Dleak%2Dquestion.237455%2F&rut=d43253a399baf5b3d29057b2f9c5b52a242f8160b34b61f8b2417022b205158b"
-        },
-        {
-          "title": "Troubled areas or common failures on huracans? | Lamborghini Talk",
-          "snippet": "On my 4 year service, my dealer performed an engine out repair on a Lower rear timing chain coverleak1 year out of OEM warranty. The dealer covered the repair out of goodwill as theleakwas noted on the 3 year service but the Lambo Master Technician felt it didn't require repair at the time.",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Ftroubled%2Dareas%2Dor%2Dcommon%2Dfailures%2Don%2Dhuracans.229841%2F&rut=3af4ee38dfbfdcb5dc7f9d5177c7d0e8eb9738c5ce77688eadb1e782a1f2d877"
-        }
-      ],
-      "crawled_at": "2026-11-23T11:59:13.068422+00:00"
+      "results": [],
+      "crawled_at": "2026-11-24T10:11:36.938310+00:00"
     },
     {
       "target": {
@@ -177,7 +156,7 @@
         "query": "site:lamborghini-talk.com Aventador ISR clutch shudder release bearing cost"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:14.776818+00:00"
+      "crawled_at": "2026-11-24T10:11:38.111156+00:00"
     },
     {
       "target": {
@@ -186,7 +165,7 @@
         "query": "site:lamborghini-talk.com Gallardo e-gear snap reading clutch wear"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:16.127731+00:00"
+      "crawled_at": "2026-11-24T10:11:39.603290+00:00"
     },
     {
       "target": {
@@ -195,7 +174,7 @@
         "query": "site:lamborghini-talk.com Murcielago clutch replacement rear main seal"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:17.287950+00:00"
+      "crawled_at": "2026-11-24T10:11:40.640862+00:00"
     },
     {
       "target": {
@@ -204,7 +183,7 @@
         "query": "site:lamborghini-talk.com Diablo VT SV overheating wiring harness"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:18.371903+00:00"
+      "crawled_at": "2026-11-24T10:11:41.641981+00:00"
     },
     {
       "target": {
@@ -213,7 +192,7 @@
         "query": "site:lamborghini-talk.com Urus battery drain coolant leak thermostat"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:19.866424+00:00"
+      "crawled_at": "2026-11-24T10:11:43.185693+00:00"
     },
     {
       "target": {
@@ -222,7 +201,7 @@
         "query": "site:lamborghini-talk.com Revuelto delivery issues problems recall 2025 2026"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:21.419814+00:00"
+      "crawled_at": "2026-11-24T10:11:44.833770+00:00"
     },
     {
       "target": {
@@ -231,7 +210,7 @@
         "query": "site:lamborghini-talk.com Temerario V8 hybrid order waitlist allocation"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:23.068335+00:00"
+      "crawled_at": "2026-11-24T10:11:46.123144+00:00"
     },
     {
       "target": {
@@ -240,7 +219,7 @@
         "query": "site:ferrarichat.com Lamborghini vs Ferrari Huracan 488 reliability PPI"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:24.664875+00:00"
+      "crawled_at": "2026-11-24T10:11:47.424882+00:00"
     },
     {
       "target": {
@@ -249,7 +228,7 @@
         "query": "site:pistonheads.com Lamborghini ownership running costs maintenance"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:26.436039+00:00"
+      "crawled_at": "2026-11-24T10:11:48.406142+00:00"
     },
     {
       "target": {
@@ -258,7 +237,7 @@
         "query": "reddit r/lamborghini daily driving reliability ownership cost"
       },
       "results": [],
-      "crawled_at": "2026-11-23T11:59:28.196255+00:00"
+      "crawled_at": "2026-11-24T10:11:49.995020+00:00"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Lamborghini Global Owner Forums & Community Intelligence Registry",
-    "last_updated": "2026-11-25T11:38:42.718133+00:00",
+    "last_updated": "2026-11-25T11:54:58.690008+00:00",
     "monitored_communities": [
       "Lamborghini-Talk (Primary Global Registry & DIY Maintenance)",
       "FerrariChat (Exotic Cross-Shoppers & PPI Discussions)",
@@ -138,7 +138,7 @@
         "query": "site:lamborghini-talk.com Huracan common problems maintenance costs"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:09.714143+00:00"
+      "crawled_at": "2026-11-25T11:54:21.241393+00:00"
     },
     {
       "target": {
@@ -158,17 +158,17 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Flamborghini%2Dhuracan%2Dlp560%2Dlp570%2Daudi%2Dr8%2Dcarbon%2Dceramic%2Drear%2Dbrake%2Drotors%2Ddiscs.137041%2F&rut=fe0f57c9193156c04f5050f64c5a742a53ccf07fca93dcb9d548c7365b41c8b8"
         },
         {
+          "title": "Troubled areas or common failures on huracans? | Lamborghini Talk",
+          "snippet": "On my 4 year service, my dealer performed an engine out repair on a Lower rear timing chain coverleak1 year out of OEM warranty. The dealer covered the repair out of goodwill as theleakwas noted on the 3 year service but the Lambo Master Technician felt it didn't require repair at the time.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Ftroubled%2Dareas%2Dor%2Dcommon%2Dfailures%2Don%2Dhuracans.229841%2F&rut=d9df0d2919123a42fa57ac2785ac4c537391459d0ac5b2a95192b411672a9471"
+        },
+        {
           "title": "Huracan STO brake replacement for heavy track use",
           "snippet": "LamborghiniHuracan(Centerlock) Front IronRotorConversion We design, manufacture, and sell 2-piece, fully-floating brakerotorsfor Porsche, BMW, Subaru, and more.",
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhuracan%2Dsto%2Dbrake%2Dreplacement%2Dfor%2Dheavy%2Dtrack%2Duse.229512%2F&rut=cb4ebb23ad34030588c77903ea213ee5574e6fe6b7896e32a10eae412b5f3e40"
-        },
-        {
-          "title": "Huracan - Lamborghini Talk",
-          "snippet": "Custom carbon fiber floor mats forHuracanSTO/Perf/Technica and more MF5ive Feb 14, 2026 27 863",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fforums%2Fhuracan.202%2F&rut=0bf288fd6f477a9adb30df8499251bd8958eaf8014f9e6bf9a74d8e37263b0df"
         }
       ],
-      "crawled_at": "2026-11-25T11:38:11.527215+00:00"
+      "crawled_at": "2026-11-25T11:54:23.163565+00:00"
     },
     {
       "target": {
@@ -176,8 +176,29 @@
         "topic": "Aventador ISR Clutch Failure",
         "query": "site:lamborghini-talk.com Aventador ISR clutch shudder release bearing cost"
       },
-      "results": [],
-      "crawled_at": "2026-11-25T11:38:12.556815+00:00"
+      "results": [
+        {
+          "title": "Aventador clutch bleed problem - Lamborghini Talk",
+          "snippet": "Hey guys. Did anyone ever bled hisclutchreleasecylinder? I had a leakingreleasebearingand change everything including theclutch(because it was worn 100% and the work is much more worse, than the parts price) . Now I'm not sure how to correctly refill and bleed the system. I did it many times on the Gallardo and other cars. But theAventadoris totally different and has no canister to ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Faventador%2Dclutch%2Dbleed%2Dproblem.229747%2F&rut=80ed5b0d4ef528e80700cd71249d3ab5b4237f320981632cd51403f3588e8e81"
+        },
+        {
+          "title": "Clutch/transmission problem? - Lamborghini Talk",
+          "snippet": "I just got myAventador. When starting in first gear from a dead stop, itshuddersa great deal. This happens no matter what mode I have the transmission in (Strada, Sport, or Corsa). Sometimes the shuddering is so violent that I worry the car is going to be damaged. It is worse when it is...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fclutch%2Dtransmission%2Dproblem.25729%2F&rut=bd56ef188eb1a21c24855fd50f6b2c3bce16a873be9beafc15d7414a3503f64b"
+        },
+        {
+          "title": "Measuring Aventador clutch wear - Lamborghini Talk",
+          "snippet": "Hi all, I have a 2012Aventador(with a 2015 transmission) only done 8,700miles (14kms). My tech on the car measured theclutchwear the other day. The current wear reading is 1.6mm. I have seen a Lambo dealer diagnostic on my car (when I bought it that said 1.4mm and the MAXIMUMclutchtravel...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fmeasuring%2Daventador%2Dclutch%2Dwear.220352%2F&rut=31eee6ebe94887f967f585471517f6e0f6638c66e2c2af58b1ddbbd9d6e9be23"
+        },
+        {
+          "title": "Aventador clutch reading - please help! | Lamborghini Talk",
+          "snippet": "Did anyone ever bled hisclutchreleasecylinder? I had a leakingreleasebearingand change everything including theclutch(because it was worn 100% and the work is much more worse, than the parts price) .",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Faventador%2Dclutch%2Dreading%2Dplease%2Dhelp.231408%2F&rut=bf314f3147e8a6ee5ff341958026e63458c00d7f4b33e7e98265ae8eb0cbc6e1"
+        }
+      ],
+      "crawled_at": "2026-11-25T11:54:25.284651+00:00"
     },
     {
       "target": {
@@ -185,8 +206,29 @@
         "topic": "Gallardo E-Gear Issues",
         "query": "site:lamborghini-talk.com Gallardo e-gear snap reading clutch wear"
       },
-      "results": [],
-      "crawled_at": "2026-11-25T11:38:13.812176+00:00"
+      "results": [
+        {
+          "title": "Interpreting eGear Snap | Lamborghini Talk",
+          "snippet": "Gallardospec is 5.6mm,Murci spec is 7.6mm,these are the maxwearon the Disc (s) before you need to replace,after that your on borrowed time. When you look at thesnapdata see where Channel 27 is at and Channel 19 is, subtract the higher number minus the smaller number its in mm. This determineswearonclutchthe higher number is whenclutchwas new,the smaller number is where its now, this ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Finterpreting%2Degear%2Dsnap.11509%2F&rut=4bf6871d4f44a0fb84359932d26053d8e3ed87649befb78fbdc555bdf5a1a382"
+        },
+        {
+          "title": "Adjust Gallardo E-Gear settings - mid clutch life",
+          "snippet": "I'll try running, Read_clutch_Gallardo.dra reads the degree ofclutchwearine-gearcars. I believe this will just return the same value I am seeing on the SCCP from theSnaptest.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fadjust%2Dgallardo%2De%2Dgear%2Dsettings%2Dmid%2Dclutch%2Dlife.239930%2F&rut=8f3b5fc1949e716fa4588f5bd633c049f9a0e566ee5223593f38839c884a35d7"
+        },
+        {
+          "title": "VCDS - Ross-Tech and E-Gear - Lamborghini Talk",
+          "snippet": "VCDS - Ross-Tech andE-Gearreset/adaptation Hello, Latest version of VCDS can reset Audi R8 R-Tronic transmission afterclutchchange. I know it is possible to seeE-Gearsnapvia VCDS, but did any one try to resetE-Gear? Thanks",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fvcds%2Dross%2Dtech%2Dand%2De%2Dgear.216676%2F&rut=d9d6f46c929ebcecbc15e5f886333a9e38dfc9c42353b8aaa896b012b2ad030b"
+        },
+        {
+          "title": "E-gear initialization after clutch replacement - Lamborghini Talk",
+          "snippet": "Read_clutch_Gallardo.dra (reads the degree ofclutchwearine-gearcars Read_write_clutch_Gallardo.dra (ine-gearcars, allows the initialclutchwearvalue to be written after theclutchhas been replaced.) Selflearning_egear_Gallardo (allows thee-gearsystem to be re-calibrated if the control unit or the entire system is replaced.)",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fe%2Dgear%2Dinitialization%2Dafter%2Dclutch%2Dreplacement.189385%2F&rut=c9fa6713d81738ff4df067edf91a95e1441d6142b76ee6fa3317f953a624ead6"
+        }
+      ],
+      "crawled_at": "2026-11-25T11:54:26.788975+00:00"
     },
     {
       "target": {
@@ -195,7 +237,7 @@
         "query": "site:lamborghini-talk.com Murcielago clutch replacement rear main seal"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:14.741181+00:00"
+      "crawled_at": "2026-11-25T11:54:28.157484+00:00"
     },
     {
       "target": {
@@ -204,7 +246,7 @@
         "query": "site:lamborghini-talk.com Diablo VT SV overheating wiring harness"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:15.714989+00:00"
+      "crawled_at": "2026-11-25T11:54:29.247893+00:00"
     },
     {
       "target": {
@@ -213,7 +255,7 @@
         "query": "site:lamborghini-talk.com Urus battery drain coolant leak thermostat"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:17.185475+00:00"
+      "crawled_at": "2026-11-25T11:54:30.385672+00:00"
     },
     {
       "target": {
@@ -222,7 +264,7 @@
         "query": "site:lamborghini-talk.com Revuelto delivery issues problems recall 2025 2026"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:18.215686+00:00"
+      "crawled_at": "2026-11-25T11:54:32.038711+00:00"
     },
     {
       "target": {
@@ -231,7 +273,7 @@
         "query": "site:lamborghini-talk.com Temerario V8 hybrid order waitlist allocation"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:19.405820+00:00"
+      "crawled_at": "2026-11-25T11:54:33.406223+00:00"
     },
     {
       "target": {
@@ -240,7 +282,7 @@
         "query": "site:ferrarichat.com Lamborghini vs Ferrari Huracan 488 reliability PPI"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:20.314268+00:00"
+      "crawled_at": "2026-11-25T11:54:34.532966+00:00"
     },
     {
       "target": {
@@ -249,7 +291,7 @@
         "query": "site:pistonheads.com Lamborghini ownership running costs maintenance"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:21.507366+00:00"
+      "crawled_at": "2026-11-25T11:54:35.835752+00:00"
     },
     {
       "target": {
@@ -258,7 +300,7 @@
         "query": "reddit r/lamborghini daily driving reliability ownership cost"
       },
       "results": [],
-      "crawled_at": "2026-11-25T11:38:23.075036+00:00"
+      "crawled_at": "2026-11-25T11:54:37.509701+00:00"
     }
   ]
 }

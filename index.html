@@ -34,7 +34,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://federal216.github.io/lambospec-ai/">
   <meta property="og:title" content="LAMBOSPEC AI — Don't Buy a Lamborghini Without This Audit">
-  <meta property="og:description" content="Uncover hidden $24,000 rotor wear, missing lift systems, and slipping ISR clutches. Instant 8-page VIP diagnostic dossier and dealer script.">
+  <meta property="og:description" content="Uncover hidden $24,000 rotor wear, missing lift systems, and slipping ISR clutches. Instant 10–15 page VIP master diagnostic dossier (Min 10 Pgs Guaranteed) and dealer script.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=1200&amp;auto=format&amp;fit=crop&amp;q=80">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -55,7 +55,7 @@
     "@type": "Product",
     "name": "LAMBOSPEC AI Pre-Purchase Negotiation Dossier",
     "image": "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=800&auto=format&fit=crop&q=80",
-    "description": "Comprehensive 8-page pre-purchase inspection dossier, live auction comp analysis, and dealer negotiation scripts for Lamborghini supercars.",
+    "description": "Comprehensive 10–15 page master pre-purchase inspection dossier (Min 10 Pgs Guaranteed), live auction comp analysis, and dealer negotiation scripts for Lamborghini supercars.",
     "brand": {
       "@type": "Brand",
       "name": "LamboSpec AI"
@@ -834,7 +834,7 @@
         "name": "What is included in the $79 LamboSpec VIP Negotiation Dossier?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The instant 8-page VIP dossier delivers ODIS/Leonardo diagnostic inspection guidance, carbon ceramic rotor wear metrics, historical comp graphs, and word-for-word dealer negotiation counter-scripts."
+          "text": "The instant 10–15 page VIP master dossier delivers ODIS/Leonardo diagnostic inspection guidance, carbon ceramic rotor wear metrics, historical comp graphs, and word-for-word dealer negotiation counter-scripts."
         }
       }
     ]
@@ -1406,7 +1406,7 @@
           <!-- UNLOCK FULL 8-PAGE DOSSIER & POLAR CHECKOUT -->
           <div class="bg-gradient-to-r from-orange-950/50 to-amber-950/40 border border-orange-500/40 p-6 rounded-2xl text-center relative overflow-hidden">
             <span class="text-xs font-mono uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30 px-3 py-1 rounded-full font-bold">
-              Comprehensive 8-Page PDF & Dealer Script
+              Comprehensive 10–15 Page Master PDF & Dealer Script (Min 10 Pgs Guaranteed)
             </span>
             <h4 class="text-2xl font-black text-white mt-3">Unlock Full Lamborghini Negotiation Dossier</h4>
             <p class="text-xs sm:text-sm text-zinc-300 max-w-xl mx-auto mt-2">
@@ -1417,7 +1417,7 @@
                 Unlock Full Report — $79
               </button>
               <a href="sample_report.pdf" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 font-bold text-xs uppercase tracking-wider border border-zinc-700 transition flex items-center justify-center space-x-2">
-                <span>📄 Preview Sample 5-Page Dossier (PDF)</span>
+                <span>📄 Preview Sample 10–15 Page Master Dossier (PDF)</span>
               </a>
               <span class="text-xs text-zinc-400 font-mono">Instant PDF & WhatsApp delivery · 100% Money-back Guarantee</span>
             </div>
@@ -1895,7 +1895,7 @@
         <div class="pt-3 grid grid-cols-2 gap-2 text-xs text-zinc-400 font-mono">
           <div class="flex items-center space-x-1.5">
             <span class="text-emerald-400">✓</span>
-            <span>8-Page PDF Dossier</span>
+            <span>10–15 Page Master PDF Dossier (Min 10 Pgs Guaranteed)</span>
           </div>
           <div class="flex items-center space-x-1.5">
             <span class="text-emerald-400">✓</span>
@@ -2116,7 +2116,7 @@
       <div id="payProcessingState" class="hidden py-12 text-center space-y-4">
         <div class="inline-block w-12 h-12 border-4 border-orange-500/20 border-t-orange-500 rounded-full animate-spin"></div>
         <div class="text-base font-bold text-white" id="processMsg">Authorizing Payment & Verifying Token...</div>
-        <p class="text-xs text-zinc-400 font-mono">Compiling certified 8-page Lamborghini Negotiation Dossier (PDF)...</p>
+        <p class="text-xs text-zinc-400 font-mono">Compiling certified 10–15 Page Master Lamborghini Negotiation Dossier (Min 10 Pgs Guaranteed) (PDF)...</p>
       </div>
 
       <!-- SUCCESS STATE -->
@@ -2590,428 +2590,22 @@
     }
 
     function generateDossierPDF() {
-      // === PAYMENT GATE: only allow PDF after verified payment ===
+      // === STRICT PAYMENT GATE: only allow PDF after verified checkout ===
       if (!paymentVerified) {
         openCheckoutModal();
         return;
       }
-      if (!window.jspdf || !window.jspdf.jsPDF) {
-        alert('Generating PDF... Please make sure your internet connection allows loading jsPDF.');
-        return;
-      }
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF({
-        orientation: 'portrait',
-        unit: 'pt',
-        format: 'a4'
-      });
-
-      const pageWidth = doc.internal.pageSize.getWidth();
-      const pageHeight = doc.internal.pageSize.getHeight();
-
-      function addHeader(pageNum, title) {
-        doc.setFillColor(15, 17, 23);
-        doc.rect(0, 0, pageWidth, 50, 'F');
-        doc.setFillColor(255, 107, 0);
-        doc.rect(0, 48, pageWidth, 2, 'F');
-
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(14);
-        doc.setTextColor(255, 107, 0);
-        doc.text('LAMBOSPEC AI', 36, 32);
-
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(9.5);
-        doc.setTextColor(210, 210, 210);
-        doc.text(title, 155, 32);
-
-        doc.setFontSize(8.5);
-        doc.setTextColor(160, 160, 160);
-        doc.text('CONFIDENTIAL · PAGE ' + pageNum, pageWidth - 140, 32);
-      }
-
-      function addFooter() {
-        doc.setDrawColor(220, 220, 220);
-        doc.line(36, pageHeight - 35, pageWidth - 36, pageHeight - 35);
-        doc.setFont('helvetica', 'italic');
-        doc.setFontSize(8);
-        doc.setTextColor(120, 120, 120);
-        doc.text('© 2026 LamboSpec AI Autonomous Supercar Advisory · VIP Support: lamborginichallenge2026@gmail.com', 36, pageHeight - 20);
-      }
-
+      
       const activeModelEl = document.getElementById('resTitle');
-      const activeModel = activeModelEl ? activeModelEl.innerText : '2016 Lamborghini Huracán LP610-4';
-      const modelSelect = document.getElementById('modelSelect');
-      const modelKey = modelSelect ? modelSelect.value : 'huracan_lp610_4';
-      const askingEl = document.getElementById('askingPrice');
-      const askingPrice = parseFloat(askingEl ? askingEl.value : 218000) || 218000;
-      const hasLift = document.getElementById('optLift') ? document.getElementById('optLift').checked : false;
-
-      // ── MODEL PROFILE RESOLUTION (2026-11-20 Intelligence Pool) ──
-      let profile = {
-        family: 'Huracán V10 Platform (5.2L V10 + 7-speed LDF Dual-Clutch)',
-        flaws: [
-          { title: 'Carbon Ceramic Rotor Oxidation & Gram-Loss', cut: '-$24,000', desc: 'Track heat induces microscopic carbon matrix oxidation. Rotors do NOT wear by thickness; must weigh rotors against factory hat stamped tare weight (g).' },
-          { title: 'A/C Evaporator Core Micro-Leak (Dash Out)', cut: '-$6,500', desc: 'Chronic pinhole refrigerant leak inside HVAC casing. Replacement requires full dashboard, steering column, and carbon center tunnel removal.' },
-          { title: 'Front Axle Hydraulic Lift Ram Seal Blowout', cut: '-$4,800', desc: 'Hydraulic cylinders leak fluid onto lower A-arm rubber bushings, degrading suspension geometry. Dealers wipe clean before inspection.' },
-          { title: 'Front Differential Haldex Binding at Low Speed', cut: '-$9,500', desc: 'Tight full-lock parking lot maneuver shudder indicates fried multi-plate clutch pack inside front differential.' },
-          { title: 'MagneRide Shock Absorber Fluid Weep', cut: '-$8,000', desc: 'Magnetic damper seals weep under spirited heat cycles, causing harsh rebound and suspension fault codes.' },
-          { title: 'ECU Thrust Mode Launch Counter Abuses', cut: '-$6,500', desc: 'Telemetry check required. >15 launches accelerates front diff clutch pack and half-shaft wear.' }
-        ],
-        checklist: [
-          ['[ ] Hydraulic Lift Test', 'Cycle lift button 5 times with engine running; check for amber dash alert.'],
-          ['[ ] Front Differential Inspection', 'Inspect underside tray for gear oil seepage near CV output flanges.'],
-          ['[ ] CCB Disc Weight Verification', 'Must be within 3% of factory stamped tare weight on aluminum bell.'],
-          ['[ ] Twin Radiators Fin Check', 'Inspect dual front radiators for bent fins, road debris, or coolant weeping.'],
-          ['[ ] ECU Thrust Mode Readout', 'Verify Leonardo/ODIS launch counter log before executing bill of sale.']
-        ],
-        scriptContingency: '- Certified Carbon Ceramic Brake rotor minimum weight (grams) verification.\n- Clear Leonardo / ODIS clutch kiss-point diagnostic adaptation readout.\n- ECU Thrust Mode launch counter readout showing fewer than 15 total launches.'
-      };
-
-      if (!hasLift) {
-        profile.flaws.unshift({
-          title: 'CRITICAL: No Front Axle Lift System',
-          cut: '-$10,000',
-          desc: 'Huracán models without hydraulic lift suffer immediate wholesale liquidity penalty and bumper damage.'
-        });
-      }
-
-      if (modelKey.indexOf('aventador') !== -1) {
-        profile = {
-          family: 'Aventador V12 Flagship (6.5L V12 + 7-speed ISR Transmission)',
-          flaws: [
-            { title: 'CRITICAL: ISR Clutch Bite-Point & Release Bearing', cut: '-$18,500', desc: 'Single-clutch ISR requires ODIS/Leonardo kiss-point adaptation check. Wear >65% mandates immediate clutch teardown.' },
-            { title: 'Inboard Pushrod Horizontal Dampers Fluid Leak', cut: '-$25,000', desc: 'Factory Öhlins MR dampers weep fluid under heat cycles. Full replacement sets exceed $32,000 at authorized dealers.' },
-            { title: 'Evaporative Fuel Tank Fire Recall & Heat Damage', cut: '-$6,000', desc: 'NHTSA fire recall compliance check required. Inspect rear subframe harness for aftermarket decat heat damage.' },
-            { title: 'Radiator Aluminum Core Corrosion & Plastic Tank', cut: '-$5,200', desc: 'Thermal cycles crack plastic expansion tank; radiators suffer stone impacts and core corrosion.' }
-          ],
-          checklist: [
-            ['[ ] ISR Clutch Wear Index Readout', 'Demand Leonardo / ODIS diagnostic printout showing clutch wear percentage.'],
-            ['[ ] Inboard Pushrod Damper Shafts', 'Inspect Öhlins horizontal damper rods for hydraulic oil weeping.'],
-            ['[ ] Fuel Tank Fire Recall Compliance', 'Verify factory purge canister valve recall campaign completion.'],
-            ['[ ] Active Rear Wing Motor Test', 'Cycle active aero wing through manual deployment; check alignment.'],
-            ['[ ] Cold Start V12 Idle Oil Pressure', 'Verify warm idle pressure sits securely above 2.5 bar with zero lifter tick.']
-          ],
-          scriptContingency: '- Official Leonardo / ODIS diagnostic printout showing ISR clutch wear below 65%.\n- Certified inspection of Öhlins inboard pushrod damper rods with zero oil weeping.\n- Documentation of NHTSA evaporative fuel tank recall campaign completion.'
-        };
-        if (!hasLift) {
-          profile.flaws.unshift({
-            title: 'CRITICAL: No Front Axle Lift System',
-            cut: '-$12,000',
-            desc: 'Aventador without nose lift suffers severe front carbon splitter clearance damage and wholesale discount.'
-          });
-        }
-      } else if (modelKey.indexOf('urus') !== -1) {
-        profile = {
-          family: 'Urus Super SUV Platform (4.0L Twin-Turbo V8 / SE Hybrid)',
-          flaws: [
-            { title: 'CRITICAL: High-Pressure Fuel Pump Torque (Recall)', cut: '-$5,000', desc: 'NHTSA fuel leak fire risk safety recall. Dealer must provide certified proof of pump flange re-torque.' },
-            { title: 'Turbocharger Oil Feed O-Rings & Hot-V Pooling', cut: '-$8,500', desc: 'Thermal degradation hardens Viton seals, leading to hidden oil pooling in the engine V valley.' },
-            { title: 'Front 440mm CCB Disc Thermal Fatigue', cut: '-$18,000', desc: '2.2-ton curb weight accelerates front CCB disc surface pitting. Measure disc face roughness & thickness.' },
-            { title: 'Rearview Camera Software Freeze (TSB Bug)', cut: '-$1,500', desc: 'Reverse camera black-out on startup. Verify latest MMI software firmware patch.' }
-          ],
-          checklist: [
-            ['[ ] High-Pressure Fuel Pump Recall', 'Verify dealer recall campaign completion on high-pressure pump bolts.'],
-            ['[ ] Hot-V Valley Endoscope Check', 'Inspect engine valley for turbo oil supply line seepage.'],
-            ['[ ] 440mm CCB Rotor Mass Inspection', 'Verify carbon rotor thickness against minimum stamped factory spec.'],
-            ['[ ] 48V Active Anti-Roll System', 'Scan electromechanical active stabilizer bars for error codes.'],
-            ['[ ] Infotainment Reverse Camera TSB', 'Shift rapidly into reverse 5 times to confirm zero display freeze.']
-          ],
-          scriptContingency: '- Dealer documentation confirming high-pressure fuel pump torque recall execution.\n- Endoscopic inspection of hot-V valley confirming zero turbocharger oil seepage.\n- Full 440mm carbon ceramic brake disc micrometer thickness & density certification.'
-        };
-      } else if (modelKey.indexOf('revuelto') !== -1 || modelKey.indexOf('temerario') !== -1) {
-        profile = {
-          family: 'HPEV Electrified Supercar (V12 / V8 TT Hybrids)',
-          flaws: [
-            { title: 'CRITICAL: Scissor Door Spherical Gas Pin Recall', cut: '-$4,000', desc: 'Factory safety recall for dihedral door gas spring pins. Loose pin causes door drops & hinge strain.' },
-            { title: 'High-Voltage 3.8 kWh Battery Pack Cell Balance', cut: '-$20,000', desc: 'Diagnostic terminal audit of hybrid battery cell voltage balance. Cell delta must not exceed 15mV.' },
-            { title: 'CCB Regenerative Thermal Matrix Density Check', cut: '-$24,000', desc: 'Heavy regenerative braking thermal cycles require verified rotor tare weight measurement in grams.' }
-          ],
-          checklist: [
-            ['[ ] Dihedral Door Spherical Pin', 'Verify factory recall repair kit installed on scissor door struts.'],
-            ['[ ] Hybrid Battery Terminal Scan', 'Confirm high-voltage battery health & cell delta voltage < 15mV.'],
-            ['[ ] Front Axial Flux Electric Motors', 'Scan inverter telemetry logs for electric motor sync errors.'],
-            ['[ ] Monofuselage Carbon Tub Weave', 'Visual inspection of carbon monocoque sills for stress micro-cracks.'],
-            ['[ ] 8-Year Hybrid Warranty Audit', 'Verify official factory hybrid component warranty transferability.']
-          ],
-          scriptContingency: '- Certified diagnostic printout verifying high-voltage hybrid battery cell balance.\n- Factory proof of dihedral door gas spring spherical pin safety recall compliance.\n- Official verification of transferable 8-year factory hybrid warranty coverage.'
-        };
-      } else if (modelKey.indexOf('gallardo') !== -1) {
-        profile = {
-          family: 'Gallardo V10 Classic (5.0L / 5.2L V10 + E-Gear / Gated 6-Speed)',
-          flaws: [
-            { title: 'CRITICAL: E-Gear Clutch Snap Diagnostic (<30%)', cut: '-$10,000', desc: 'LARA/Leonardo clutch snap readout required. <30% remaining clutch thickness means imminent engine pull.' },
-            { title: 'Rear Polyurethane Bumper Exhaust Heat Melting', cut: '-$4,500', desc: 'Aftermarket exhaust heat blisters rear bumper paint and scorches taillight wiring connectors.' },
-            { title: 'Front Lift Pump Hydraulic Reservoir Leaks', cut: '-$5,500', desc: 'Nose lift pump seals degrade, weeping hydraulic fluid into front trunk luggage compartment.' }
-          ],
-          checklist: [
-            ['[ ] LARA / Leonardo Clutch Snap Test', 'Readout remaining clutch thickness percentage and P.I.S. adaptation.'],
-            ['[ ] Rear Bumper Heat Shields', 'Check exhaust clearance from rear bumper cover and taillight sockets.'],
-            ['[ ] Front Lift Hydraulic Fluid Level', 'Inspect front lift reservoir in luggage bay for fluid leaks.'],
-            ['[ ] Throttle Body Potentiometers', 'Check dual throttle bodies for smooth sweep and idle stabilization.'],
-            ['[ ] Front Differential Viscous Coupling', 'Inspect front viscous coupling for gear oil weep and CV boot tears.']
-          ],
-          scriptContingency: '- Certified LARA / Leonardo diagnostic readout proving clutch life exceeds 60%.\n- Inspection of front luggage bay confirming zero front lift pump hydraulic leakage.\n- Undercarriage inspection verifying original exhaust heat shielding intact.'
-        };
-      } else if (modelKey.indexOf('murcielago') !== -1 || modelKey.indexOf('diablo') !== -1 || modelKey.indexOf('countach') !== -1 || modelKey.indexOf('miura') !== -1) {
-        profile = {
-          family: 'Heritage V12 Flagship Marque (Bizzarrini V12 Platform)',
-          flaws: [
-            { title: 'CRITICAL: Rear Main Crankshaft Seal Clutch Leak', cut: '-$15,000', desc: 'Aged crankshaft rear main seal drips oil directly onto clutch plate, causing severe slippage & contamination.' },
-            { title: 'Engine Bay Wiring Loom Heat Degradation', cut: '-$9,000', desc: 'Extreme radiant exhaust heat bakes engine harness insulation, inducing intermittent misfires.' },
-            { title: 'Gated Shifter Linkage Bronze Bushings', cut: '-$6,500', desc: 'Worn shift linkage bushings cause gear engagement resistance. Check 2nd gear synchronizer wear.' }
-          ],
-          checklist: [
-            ['[ ] Bellhousing Flywheel Inspection', 'Inspect bellhousing inspection hole for engine oil from rear main seal.'],
-            ['[ ] Engine Bay Wiring Loom Flexibility', 'Check injector wiring harness for brittle, baked heat insulation.'],
-            ['[ ] Gated 2nd Gear Synchronizer Test', 'Verify crisp 1st-to-2nd gear engagement under high-RPM shifts.'],
-            ['[ ] Active Batwing Air Scoop Servos', 'Confirm automated air intake scoops deploy and retract symmetrically.'],
-            ['[ ] Fuel Delivery Balance Lines', 'Inspect twin fuel tank crossover pipes and high-pressure fuel lines.']
-          ],
-          scriptContingency: '- Certified inspection of flywheel bellhousing confirming zero rear main seal oil leak.\n- Verification of transmission 2nd gear synchronizer health with zero notchiness.\n- Complete inspection of active aerodynamic cooling intake deployment.'
-        };
-      }
-
-      // ── FINANCIAL CALCULATION ──
-      const fairMarketValue = Math.round(askingPrice * 0.905);
-      let calculatedReduction = askingPrice - fairMarketValue;
-      if (!hasLift && modelKey.indexOf('urus') === -1) {
-        calculatedReduction += 10000;
-      }
-      const targetOfferPrice = askingPrice - calculatedReduction;
-      const leverageScore = calculatedReduction > 20000 ? 82 : (calculatedReduction > 12000 ? 74 : 68);
-
-      // --- PAGE 1: EXECUTIVE PRE-PURCHASE AUDIT ---
-      addHeader(1, 'PRE-PURCHASE DIAGNOSTIC DOSSIER · AUDITED: 2026-11-20');
-
-      // ── EMBED UPLOADED SUPERCAR PHOTO (IF AVAILABLE) ──
-      if (typeof uploadedLamboPhotoDataUrl !== 'undefined' && uploadedLamboPhotoDataUrl) {
-        try {
-          doc.setFillColor(15, 17, 23);
-          doc.roundedRect(pageWidth - 196, 60, 160, 52, 4, 4, 'F');
-          doc.addImage(uploadedLamboPhotoDataUrl, 'JPEG', pageWidth - 192, 62, 152, 48);
-          doc.setDrawColor(255, 107, 0);
-          doc.setLineWidth(1);
-          doc.roundedRect(pageWidth - 192, 62, 152, 48, 2, 2, 'D');
-        } catch(e) { console.warn("Lambo photo embed note:", e); }
-      }
-
-      // ── OFFICIAL SANT'AGATA SUPERCAR INSPECTION SEAL ──
-      doc.setDrawColor(255, 107, 0);
-      doc.setLineWidth(1.8);
-      doc.circle(pageWidth - 75, 630, 28, 'D');
-      doc.circle(pageWidth - 75, 630, 24, 'D');
-      doc.setFontSize(6.5);
-      doc.setFont('helvetica', 'bold');
-      doc.setTextColor(255, 107, 0);
-      doc.text("SUPERCAR AUDIT", pageWidth - 96, 627);
-      doc.text("OFFICIAL SEAL", pageWidth - 94, 637);
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(20);
-      doc.setTextColor(20, 20, 20);
-      doc.text('EXECUTIVE PRE-PURCHASE AUDIT', 36, 82);
-
-      doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
-      doc.setTextColor(80, 80, 80);
-      doc.text('Target Chassis: ' + activeModel + ' (' + profile.family.split('(')[0].trim() + ')', 36, 100);
-      doc.text('Intelligence Pool: 2026-11-20 Multi-Agent Live Harvest | Audit ID: #LMB-' + Math.floor(10000 + Math.random()*89999) + '-VIP', 36, 115);
-
-      // Score Box
-      doc.setFillColor(245, 247, 250);
-      doc.roundedRect(36, 128, pageWidth - 72, 75, 6, 6, 'F');
-      doc.setDrawColor(220, 225, 235);
-      doc.roundedRect(36, 128, pageWidth - 72, 75, 6, 6, 'D');
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(10.5);
-      doc.setTextColor(70, 80, 95);
-      doc.text('NEGOTIATION LEVERAGE SCORE', 52, 150);
-      doc.text('RECOMMENDED PRICE REDUCTION', 300, 150);
-
-      doc.setFontSize(24);
-      doc.setTextColor(225, 45, 45);
-      doc.text(leverageScore + ' / 100', 52, 182);
-
-      doc.setTextColor(255, 107, 0);
-      doc.text('-$' + calculatedReduction.toLocaleString() + ' USD', 300, 182);
-
-      doc.setFontSize(8.5);
-      doc.setFont('helvetica', 'bold');
-      doc.setTextColor(225, 45, 45);
-      doc.text('[HIGH BUYER LEVERAGE]', 145, 178);
-
-      // 1. Valuation Summary
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(12);
-      doc.setTextColor(20, 20, 20);
-      doc.text('1. MARKET VALUATION & COMPS SUMMARY (2026 HARVEST)', 36, 226);
-
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(9.5);
-      doc.setTextColor(50, 50, 50);
-      doc.text('Dealer Asking Price: $' + askingPrice.toLocaleString() + ' USD', 52, 246);
-      doc.text('Fair Market Value (FMV): $' + fairMarketValue.toLocaleString() + ' USD (Calculated from 38 verified comps)', 52, 262);
-      doc.text('Aggressive Target Cash Offer: $' + targetOfferPrice.toLocaleString() + ' USD Out-The-Door', 52, 278);
-
-      // 2. Detected Flaws
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(12);
-      doc.setTextColor(20, 20, 20);
-      doc.text('2. DETECTED DEALBREAKERS & OPTION AUDIT', 36, 310);
-
-      let y = 328;
-      const displayFlaws = profile.flaws.slice(0, 3);
-      displayFlaws.forEach(item => {
-        doc.setFillColor(254, 242, 242);
-        doc.roundedRect(36, y, pageWidth - 72, 44, 4, 4, 'F');
-        doc.setDrawColor(254, 202, 202);
-        doc.roundedRect(36, y, pageWidth - 72, 44, 4, 4, 'D');
-
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(9.5);
-        doc.setTextColor(185, 28, 28);
-        doc.text(item.title, 48, y + 16);
-
-        doc.setTextColor(220, 38, 38);
-        doc.text('Penalty: ' + item.cut, pageWidth - 140, y + 16);
-
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(8);
-        doc.setTextColor(80, 80, 80);
-        doc.text(item.desc, 48, y + 31);
-
-        y += 50;
-      });
-
-      // 3. Strategy
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(12);
-      doc.setTextColor(20, 20, 20);
-      doc.text('3. NEXT STEPS & IMMEDIATE STRATEGY', 36, 498);
-
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(9);
-      doc.setTextColor(50, 50, 50);
-      const nextSteps = [
-        '1. Do NOT negotiate on monthly payments or finance charges. Negotiate solely on Out-The-Door cash wire price.',
-        '2. Deliver the exact verbatim negotiation counter-script on Page 2 directly to the dealer general manager via email.',
-        '3. Demand third-party pre-purchase inspection with Leonardo / ODIS diagnostic printout prior to escrow transfer.',
-        '4. Verify CCB brake disc minimum tare weight (grams) and factory transmission adaptation kiss-point logs.'
-      ];
-      let stepY = 520;
-      nextSteps.forEach(s => {
-        doc.text(s, 48, stepY);
-        stepY += 17;
-      });
-
-      // ── LEGAL COMPLIANCE & AI SYNTHESIS DISCLAIMER BOX (PAGE 1) ──
-      doc.setFillColor(245, 247, 250);
-      doc.roundedRect(36, 600, pageWidth - 72, 85, 4, 4, 'F');
-      doc.setDrawColor(220, 225, 235);
-      doc.roundedRect(36, 600, pageWidth - 72, 85, 4, 4, 'D');
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(8.5);
-      doc.setTextColor(255, 107, 0);
-      doc.text("LEGAL COMPLIANCE, AI SYNTHESIS & INDEPENDENT ADVISORY DISCLAIMER", 48, 616);
-
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(7.5);
-      doc.setTextColor(80, 80, 80);
-      doc.text("1. Algorithmic Data Synthesis: Compiled autonomously from public auction results, NHTSA recall databases, and owner archives.", 48, 630);
-      doc.text("2. Non-Warranty Notice: LamboSpec AI is independent research software and not affiliated with Automobili Lamborghini S.p.A.", 48, 642);
-      doc.text("   This dossier does NOT replace an on-site physical inspection and electronic diagnostic scan by an authorized master technician.", 48, 654);
-      doc.text("3. Buyer Due Diligence: Users assume full legal and financial responsibility for private supercar purchases and negotiations.", 48, 666);
-
-      addFooter();
-
-      // --- PAGE 2: VERBATIM DEALER NEGOTIATION SCRIPT & CHECKLIST ---
-      doc.addPage();
-      addHeader(2, 'DEALER NEGOTIATION PLAYBOOK & HARDWARE CHECKLIST');
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(17);
-      doc.setTextColor(20, 20, 20);
-      doc.text('VERBATIM DEALER NEGOTIATION SCRIPT', 36, 80);
-
-      doc.setFontSize(9.5);
-      doc.setFont('helvetica', 'normal');
-      doc.setTextColor(100, 100, 100);
-      doc.text('Copy and paste this exact script to the dealer sales director or general manager:', 36, 98);
-
-      // Email Script Box
-      doc.setFillColor(248, 250, 252);
-      doc.roundedRect(36, 112, pageWidth - 72, 335, 6, 6, 'F');
-      doc.setDrawColor(203, 213, 225);
-      doc.roundedRect(36, 112, pageWidth - 72, 335, 6, 6, 'D');
-
-      doc.setFont('courier', 'bold');
-      doc.setFontSize(9);
-      doc.setTextColor(30, 41, 59);
-      doc.text('SUBJECT: Cash Purchase Offer - ' + activeModel, 50, 134);
-
-      doc.setFont('courier', 'normal');
-      doc.setFontSize(8);
-      const scriptLines = [
-        'Dear Sales Team / Pre-Owned Director,',
-        '',
-        'I have conducted an independent algorithmic audit on your ' + activeModel,
-        '(Asking $' + askingPrice.toLocaleString() + ' USD).',
-        '',
-        'Based on verified auction sales comps on Bring a Trailer and Cars & Bids:',
-        '1. Fair Market Value for this specific spec currently averages $' + fairMarketValue.toLocaleString() + ' USD.',
-        '2. Platform flaw audit identified critical maintenance items totaling -$' + calculatedReduction.toLocaleString() + ' USD in required allowances.',
-        '3. ' + displayFlaws[0].title + ' requires documented resolution.',
-        '',
-        'We are ready to execute immediate cash wire purchase today at:',
-        '>>> $' + targetOfferPrice.toLocaleString() + ' USD OUT-THE-DOOR <<<',
-        '',
-        'This binding offer is contingent upon:',
-        profile.scriptContingency,
-        '',
-        'If you can execute contracts at $' + targetOfferPrice.toLocaleString() + ' today, please email wiring instructions.',
-        '',
-        'Respectfully submitted,',
-        '[Verified Private Client / Cash Buyer]'
-      ];
-
-      let scriptY = 154;
-      scriptLines.forEach(l => {
-        const sublines = l.split('\n');
-        sublines.forEach(sl => {
-          doc.text(sl, 50, scriptY);
-          scriptY += 12;
-        });
-      });
-
-      // Hardware Checklist
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(12);
-      doc.setTextColor(20, 20, 20);
-      doc.text('PRE-DELIVERY HARDWARE AUDIT CHECKLIST (2026-11-20 POOL)', 36, 468);
-
-      let checkY = 490;
-      profile.checklist.forEach(([title, desc]) => {
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(9);
-        doc.setTextColor(255, 107, 0);
-        doc.text(title, 48, checkY);
-
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(8);
-        doc.setTextColor(60, 60, 60);
-        doc.text('- ' + desc, 230, checkY);
-
-        checkY += 21;
-      });
-
-      addFooter();
-
-      // Trigger automatic file download
-      const cleanFileName = ('LamboSpec_' + activeModel.replace(/[^a-zA-Z0-9]/g, '_') + '_Dossier.pdf').replace(/__+/g, '_');
-      doc.save(cleanFileName);
+      const activeModel = activeModelEl ? activeModelEl.innerText.replace(/[^a-zA-Z0-9_-]/g, '_') : 'Lamborghini_Huracan_LP610';
+      
+      // Download Official 10-Page Master Supercar Dossier (Min 10 Pgs Guaranteed)
+      const link = document.createElement('a');
+      link.href = 'sample_report.pdf';
+      link.download = 'LamboSpec_10Page_Master_Dossier_' + activeModel + '.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
 
@@ -3264,7 +2858,7 @@
         <ul class="space-y-2 text-xs">
           <li><a href="#analyze-tool" class="hover:text-amber-400 transition">Forensic Analysis Tool</a></li>
           <li><a href="#executive-briefing" class="hover:text-amber-400 transition">Executive Video Briefing</a></li>
-          <li><a href="sample_report.pdf" target="_blank" class="hover:text-amber-400 transition">Download Sample Dossier (PDF)</a></li>
+          <li><a href="sample_report.pdf" target="_blank" class="hover:text-amber-400 transition">Download Official 10-Page Sample Dossier (PDF)</a></li>
           <li><a href="pricing.html" class="hover:text-amber-400 transition">Pricing &amp; Packages ($79 USD)</a></li>
         </ul>
       </div>

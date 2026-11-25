@@ -1,7 +1,7 @@
 {
   "name": "lambospec-ai",
   "version": "1.0.0",
-  "description": "LamboSpec AI - The $79 Supercar Defect & Negotiation Engine with iyzico Payment Gateway",
+  "description": "LamboSpec AI - The $79 Supercar Defect & Negotiation Engine",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -10,7 +10,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "iyzipay": "^2.0.71"
+    "express": "^4.21.2"
   }
 }

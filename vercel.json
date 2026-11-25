@@ -2,10 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/iyzico/*.js",
-      "use": "@vercel/node"
-    },
-    {
       "src": "api/paytr/*.js",
       "use": "@vercel/node"
     },
@@ -27,14 +23,6 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/iyzico/initialize",
-      "dest": "/api/iyzico/initialize.js"
-    },
-    {
-      "src": "/api/iyzico/callback",
-      "dest": "/api/iyzico/callback.js"
-    },
     {
       "src": "/api/paytr/initialize",
       "dest": "/api/paytr/initialize.js"

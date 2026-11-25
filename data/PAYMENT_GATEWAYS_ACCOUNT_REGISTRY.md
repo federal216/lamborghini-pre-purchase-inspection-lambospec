@@ -11,8 +11,9 @@ Bu belge, LamboSpec AI projesinde kullanılan tüm ödeme altyapılarını, baş
 | **PayTR** | `karakoc.i@gmail.com` | `17CC89H551P35576` | Sanal POS ($79.00 USD / TL) | ⏳ Ön başvuru yapıldı, onay bekleniyor |
 | **Dodo Payments (MoR)** | `karakoc.i@gmail.com` | Live Prod: `pdt_0NsdaQ7P6h6NjAauG3k4P` <br> Test Prod: `pdt_0NsdXpb0AXJ8AeTfGANYe` | $79.00 USD (Apple Pay, GPay, Kart) | 🚀 Canlı Anahtar Bağlandı (Otomatik Fallback Aktif) |
 | **Paddle (MoR)** | `karakoc.i@gmail.com` / `lamborginichallenge2026@gmail.com` | Price ID: `pri_01m7wnbynzbf08mydbbj8vgkd5` | $79.00 USD Global Checkout | ⏳ Başvuru inceleniyor |
-| **iyzico** | `karakoc.i@gmail.com` / `lamborginichallenge2026@gmail.com` | Sanal POS Entegrasyonu | $79.00 USD / 2.750 TL (3D Secure) | ⏳ Başvuru inceleniyor |
+| **Whop (MoR)** | `karakoc.i@gmail.com` | Plan: Direct Checkout | $79.00 USD (Apple Pay, GPay, Kart) | ✅ Sitede ve Kodda Aktif |
 | **Kripto (Web3)** | *Doğrudan Cüzdan* | USDT TRC-20: `TDV1Q...` | $79 USDT / USDC | ✅ Kodda aktif ve hazır |
+| ~~**iyzico**~~ | `karakoc.i@gmail.com` | Sanal POS Entegrasyonu | $79.00 USD / 2.750 TL | ❌ **İPTAL EDİLDİ** (Şirket/Vergi levhası şartı nedeniyle kaldırıldı) |
 
 ---
 
@@ -76,10 +77,7 @@ DODO_BUSINESS_ID=bus_0NsdOsgyw5JvaPeKIIn2R
 PADDLE_CLIENT_TOKEN=7sexx0tq6f10248f7ekcdh9zp29dhmdrbswga92as1g0bhmy7c
 PADDLE_PRICE_ID=pri_01m7wnbynzbf08mydbbj8vgkd5
 
-# iyzico
-IYZICO_API_KEY=
-IYZICO_SECRET_KEY=
-IYZICO_BASE_URL=https://api.iyzipay.com
+# iyzico (İPTAL - Vergi levhası zorunluluğu nedeniyle kaldırıldı)
 ```
 
-*Son Güncelleme: 24 Kasım 2026*
+*Son Güncelleme: 25 Kasım 2026 (iyzico iptal edildi; MoR altyapıları Dodo/Whop/Paddle ve Kripto aktif)*

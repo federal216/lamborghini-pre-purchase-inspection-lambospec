@@ -2333,6 +2333,7 @@
           btn.disabled = true;
           btn.innerHTML = `<span class="flex items-center justify-center gap-2"><svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg><span>Connecting to Dodo Payments...</span></span>`;
         }
+        const directDodoUrl = 'https://test.checkout.dodopayments.com/buy/pdt_0NsdXpb0AXJ8AeTfGANYe';
         try {
           const res = await fetch('/api/dodo/initialize', {
             method: 'POST',
@@ -2345,16 +2346,15 @@
             return;
           }
         } catch (e) {
-          console.warn('Dodo API redirecting fallback:', e);
+          console.warn('Dodo API redirecting fallback to direct link:', e);
         } finally {
           if (btn) {
             btn.disabled = false;
             btn.innerHTML = origText;
           }
         }
-        // Direct Whop fallback if on static host
-        const whopUrl = 'https://whop.com/cabinetscan-ai/lambospec-ai-vip-pre-purchase-dossier';
-        window.open(whopUrl, '_blank') || (window.location.href = whopUrl);
+        // Direct Dodo Checkout URL fallback for static GitHub Pages host
+        window.location.href = directDodoUrl;
         return;
       }
 

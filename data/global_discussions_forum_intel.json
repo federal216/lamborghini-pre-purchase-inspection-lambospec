@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Lamborghini Global Owner Forums & Community Intelligence Registry",
-    "last_updated": "2026-11-25T10:37:31.807448+00:00",
+    "last_updated": "2026-11-25T11:38:42.718133+00:00",
     "monitored_communities": [
       "Lamborghini-Talk (Primary Global Registry & DIY Maintenance)",
       "FerrariChat (Exotic Cross-Shoppers & PPI Discussions)",
@@ -138,7 +138,7 @@
         "query": "site:lamborghini-talk.com Huracan common problems maintenance costs"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:36:56.708497+00:00"
+      "crawled_at": "2026-11-25T11:38:09.714143+00:00"
     },
     {
       "target": {
@@ -146,8 +146,29 @@
         "topic": "Huracan MagneRide & CCB",
         "query": "site:lamborghini-talk.com Huracan MagneRide leak CCB rotor wear"
       },
-      "results": [],
-      "crawled_at": "2026-11-25T10:36:57.976631+00:00"
+      "results": [
+        {
+          "title": "CCB Rotor Replacement for Huracan | Lamborghini Talk",
+          "snippet": "Home ForumsLamborghiniForumsHuracanWarren-RB Hello, We are a brake company specialized inccbbrakes (rotors, pads, components, and complete brake system) and are glad to be a sponsor of this from. Here is our replacementrotorsforHuracanSTO with 390/360mmrotors, it can also be installed as an upgrade from non-STO with 380/356mmrotors.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fccb%2Drotor%2Dreplacement%2Dfor%2Dhuracan.235398%2F&rut=74893b2c71f3b7fb9f0655b405fe86c8d7b491af8ca9cf3d56841f5bc722a034"
+        },
+        {
+          "title": "Lamborghini Huracan LP560 LP570 Audi R8 Carbon Ceramic...",
+          "snippet": "LamborghiniHuracanLP560 LP570 Audi R8 Carbon Ceramic Rear BrakeRotorsDiscs 420615601L -Left 420615602F -Right -CCB- CCM This is for the sale of 1 pair of rear Carbon Ceramicrotorsthat fit several cars listed below that had this as a factory option. Theserotorsare also interchangeable...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Flamborghini%2Dhuracan%2Dlp560%2Dlp570%2Daudi%2Dr8%2Dcarbon%2Dceramic%2Drear%2Dbrake%2Drotors%2Ddiscs.137041%2F&rut=fe0f57c9193156c04f5050f64c5a742a53ccf07fca93dcb9d548c7365b41c8b8"
+        },
+        {
+          "title": "Huracan STO brake replacement for heavy track use",
+          "snippet": "LamborghiniHuracan(Centerlock) Front IronRotorConversion We design, manufacture, and sell 2-piece, fully-floating brakerotorsfor Porsche, BMW, Subaru, and more.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhuracan%2Dsto%2Dbrake%2Dreplacement%2Dfor%2Dheavy%2Dtrack%2Duse.229512%2F&rut=cb4ebb23ad34030588c77903ea213ee5574e6fe6b7896e32a10eae412b5f3e40"
+        },
+        {
+          "title": "Huracan - Lamborghini Talk",
+          "snippet": "Custom carbon fiber floor mats forHuracanSTO/Perf/Technica and more MF5ive Feb 14, 2026 27 863",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fforums%2Fhuracan.202%2F&rut=0bf288fd6f477a9adb30df8499251bd8958eaf8014f9e6bf9a74d8e37263b0df"
+        }
+      ],
+      "crawled_at": "2026-11-25T11:38:11.527215+00:00"
     },
     {
       "target": {
@@ -156,7 +177,7 @@
         "query": "site:lamborghini-talk.com Aventador ISR clutch shudder release bearing cost"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:36:59.552275+00:00"
+      "crawled_at": "2026-11-25T11:38:12.556815+00:00"
     },
     {
       "target": {
@@ -165,7 +186,7 @@
         "query": "site:lamborghini-talk.com Gallardo e-gear snap reading clutch wear"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:01.196077+00:00"
+      "crawled_at": "2026-11-25T11:38:13.812176+00:00"
     },
     {
       "target": {
@@ -174,7 +195,7 @@
         "query": "site:lamborghini-talk.com Murcielago clutch replacement rear main seal"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:02.311666+00:00"
+      "crawled_at": "2026-11-25T11:38:14.741181+00:00"
     },
     {
       "target": {
@@ -183,7 +204,7 @@
         "query": "site:lamborghini-talk.com Diablo VT SV overheating wiring harness"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:03.348460+00:00"
+      "crawled_at": "2026-11-25T11:38:15.714989+00:00"
     },
     {
       "target": {
@@ -192,7 +213,7 @@
         "query": "site:lamborghini-talk.com Urus battery drain coolant leak thermostat"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:04.960031+00:00"
+      "crawled_at": "2026-11-25T11:38:17.185475+00:00"
     },
     {
       "target": {
@@ -201,7 +222,7 @@
         "query": "site:lamborghini-talk.com Revuelto delivery issues problems recall 2025 2026"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:05.948327+00:00"
+      "crawled_at": "2026-11-25T11:38:18.215686+00:00"
     },
     {
       "target": {
@@ -210,7 +231,7 @@
         "query": "site:lamborghini-talk.com Temerario V8 hybrid order waitlist allocation"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:06.869985+00:00"
+      "crawled_at": "2026-11-25T11:38:19.405820+00:00"
     },
     {
       "target": {
@@ -219,7 +240,7 @@
         "query": "site:ferrarichat.com Lamborghini vs Ferrari Huracan 488 reliability PPI"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:08.136065+00:00"
+      "crawled_at": "2026-11-25T11:38:20.314268+00:00"
     },
     {
       "target": {
@@ -228,7 +249,7 @@
         "query": "site:pistonheads.com Lamborghini ownership running costs maintenance"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:09.415565+00:00"
+      "crawled_at": "2026-11-25T11:38:21.507366+00:00"
     },
     {
       "target": {
@@ -237,7 +258,7 @@
         "query": "reddit r/lamborghini daily driving reliability ownership cost"
       },
       "results": [],
-      "crawled_at": "2026-11-25T10:37:11.033733+00:00"
+      "crawled_at": "2026-11-25T11:38:23.075036+00:00"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Lamborghini Global Owner Forums & Community Intelligence Registry",
-    "last_updated": "2026-11-25T12:14:17.382436+00:00",
+    "last_updated": "2026-11-25T12:29:01.192936+00:00",
     "monitored_communities": [
       "Lamborghini-Talk (Primary Global Registry & DIY Maintenance)",
       "FerrariChat (Exotic Cross-Shoppers & PPI Discussions)",
@@ -137,29 +137,8 @@
         "topic": "Huracan Common Issues",
         "query": "site:lamborghini-talk.com Huracan common problems maintenance costs"
       },
-      "results": [
-        {
-          "title": "Huracan EVO Maintenance/Service costs - Lamborghini Talk",
-          "snippet": "Anyone know the approximatecostfor a 2020huracanrwd evo, for the 4 th year service. Was quoted 8k for spark plugs, oil service, coolant, brake flush, cabin filter Evo has 4k miles only . Any recs? Seems to be steep!",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhuracan%2Devo%2Dmaintenance%2Dservice%2Dcosts.226875%2F&rut=5146cb797628aad59329625e0a2515ca9649761e54abd639e28746f47ee5e5d6"
-        },
-        {
-          "title": "Huracan Problems/Common issues to look for - Lamborghini Talk",
-          "snippet": "It's got about 11,500Km on it. Before buying, is there anycommonissues with these things to look for? Front lift failure, Engine or trannys failures, anycommonelectricalproblems? I just turned 21 and looking for my 2nd supercar, though I can afford the car, I don't know if I can afford to throw in a new Engine or Transmission Lol.",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhuracan%2Dproblems%2Dcommon%2Dissues%2Dto%2Dlook%2Dfor.231732%2F&rut=29d8c73f9cc31d10686b8926a24e57bb7b2d418e71c537c74201acf67e48a473"
-        },
-        {
-          "title": "Huracan - Lamborghini Talk",
-          "snippet": "Custom carbon fiber floor mats forHuracanSTO/Perf/Technica and more MF5ive Feb 14, 2026 27 863",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fforums%2Fhuracan.202%2F&rut=0bf288fd6f477a9adb30df8499251bd8958eaf8014f9e6bf9a74d8e37263b0df"
-        },
-        {
-          "title": "Maintenance cost questions - Lamborghini Talk",
-          "snippet": "Home ForumsLamborghiniForumsHuracanJohn2219 J Does anyone have the dealer prices for the below repairs to a hurucan? Fogged tail light Serpentine belt replaced O2 sensor replacement New windshield New tires Brakes and rotors Air filter replacement. Pollen filter replacement",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fmaintenance%2Dcost%2Dquestions.234448%2F&rut=4031c3e8626d8ddcaae1a103bbd3cb3f5a987eadcbcb4ffdd75cada9ec4bb032"
-        }
-      ],
-      "crawled_at": "2026-11-25T12:13:39.849324+00:00"
+      "results": [],
+      "crawled_at": "2026-11-25T12:28:27.900423+00:00"
     },
     {
       "target": {
@@ -168,7 +147,7 @@
         "query": "site:lamborghini-talk.com Huracan MagneRide leak CCB rotor wear"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:41.402003+00:00"
+      "crawled_at": "2026-11-25T12:28:28.771810+00:00"
     },
     {
       "target": {
@@ -177,7 +156,7 @@
         "query": "site:lamborghini-talk.com Aventador ISR clutch shudder release bearing cost"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:42.709412+00:00"
+      "crawled_at": "2026-11-25T12:28:30.167808+00:00"
     },
     {
       "target": {
@@ -186,7 +165,7 @@
         "query": "site:lamborghini-talk.com Gallardo e-gear snap reading clutch wear"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:44.368589+00:00"
+      "crawled_at": "2026-11-25T12:28:31.188806+00:00"
     },
     {
       "target": {
@@ -195,7 +174,7 @@
         "query": "site:lamborghini-talk.com Murcielago clutch replacement rear main seal"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:45.906299+00:00"
+      "crawled_at": "2026-11-25T12:28:32.161425+00:00"
     },
     {
       "target": {
@@ -204,7 +183,7 @@
         "query": "site:lamborghini-talk.com Diablo VT SV overheating wiring harness"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:47.419465+00:00"
+      "crawled_at": "2026-11-25T12:28:33.474162+00:00"
     },
     {
       "target": {
@@ -213,7 +192,7 @@
         "query": "site:lamborghini-talk.com Urus battery drain coolant leak thermostat"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:48.771632+00:00"
+      "crawled_at": "2026-11-25T12:28:34.651133+00:00"
     },
     {
       "target": {
@@ -222,7 +201,7 @@
         "query": "site:lamborghini-talk.com Revuelto delivery issues problems recall 2025 2026"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:50.163774+00:00"
+      "crawled_at": "2026-11-25T12:28:35.898998+00:00"
     },
     {
       "target": {
@@ -231,7 +210,7 @@
         "query": "site:lamborghini-talk.com Temerario V8 hybrid order waitlist allocation"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:51.525641+00:00"
+      "crawled_at": "2026-11-25T12:28:37.365033+00:00"
     },
     {
       "target": {
@@ -240,7 +219,7 @@
         "query": "site:ferrarichat.com Lamborghini vs Ferrari Huracan 488 reliability PPI"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:52.845739+00:00"
+      "crawled_at": "2026-11-25T12:28:38.532218+00:00"
     },
     {
       "target": {
@@ -249,7 +228,7 @@
         "query": "site:pistonheads.com Lamborghini ownership running costs maintenance"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:54.418871+00:00"
+      "crawled_at": "2026-11-25T12:28:40.060686+00:00"
     },
     {
       "target": {
@@ -258,7 +237,7 @@
         "query": "reddit r/lamborghini daily driving reliability ownership cost"
       },
       "results": [],
-      "crawled_at": "2026-11-25T12:13:55.623545+00:00"
+      "crawled_at": "2026-11-25T12:28:41.321173+00:00"
     }
   ]
 }

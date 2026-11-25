@@ -2774,6 +2774,29 @@
       // --- PAGE 1: EXECUTIVE PRE-PURCHASE AUDIT ---
       addHeader(1, 'PRE-PURCHASE DIAGNOSTIC DOSSIER · AUDITED: 2026-11-20');
 
+      // ── EMBED UPLOADED SUPERCAR PHOTO (IF AVAILABLE) ──
+      if (typeof uploadedLamboPhotoDataUrl !== 'undefined' && uploadedLamboPhotoDataUrl) {
+        try {
+          doc.setFillColor(15, 17, 23);
+          doc.roundedRect(pageWidth - 196, 60, 160, 52, 4, 4, 'F');
+          doc.addImage(uploadedLamboPhotoDataUrl, 'JPEG', pageWidth - 192, 62, 152, 48);
+          doc.setDrawColor(255, 107, 0);
+          doc.setLineWidth(1);
+          doc.roundedRect(pageWidth - 192, 62, 152, 48, 2, 2, 'D');
+        } catch(e) { console.warn("Lambo photo embed note:", e); }
+      }
+
+      // ── OFFICIAL SANT'AGATA SUPERCAR INSPECTION SEAL ──
+      doc.setDrawColor(255, 107, 0);
+      doc.setLineWidth(1.8);
+      doc.circle(pageWidth - 75, 630, 28, 'D');
+      doc.circle(pageWidth - 75, 630, 24, 'D');
+      doc.setFontSize(6.5);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(255, 107, 0);
+      doc.text("SUPERCAR AUDIT", pageWidth - 96, 627);
+      doc.text("OFFICIAL SEAL", pageWidth - 94, 637);
+
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(20);
       doc.setTextColor(20, 20, 20);

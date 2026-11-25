@@ -2280,7 +2280,7 @@
       initCardFormatters();
     }
 
-    function processPaymentAndDownload(method) {
+    async function processPaymentAndDownload(method) {
       clearCardErrors();
 
       const emailInput = document.getElementById('custEmail');

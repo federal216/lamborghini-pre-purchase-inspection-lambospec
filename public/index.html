@@ -2147,15 +2147,23 @@
       if (cryptoContent) cryptoContent.classList.add('hidden');
 
       if (tab === 'card' && cardContent) cardContent.classList.remove('hidden');
-      if (tab === 'crypto' && cryptoContent) cardContent.classList.remove('hidden');
+      if (tab === 'crypto' && cryptoContent) cryptoContent.classList.remove('hidden');
 
       if (tab === 'crypto') {
-        if (typeof startCryptoMonitor === 'function') {
-          startCryptoMonitor(cryptoActiveCoin || 'usdt');
+        try {
+          if (typeof startCryptoMonitor === 'function') {
+            startCryptoMonitor((typeof cryptoActiveCoin !== 'undefined' && cryptoActiveCoin) ? cryptoActiveCoin : 'usdt');
+          }
+        } catch (e) {
+          console.warn('Crypto monitor start:', e);
         }
       } else {
-        if (typeof stopCryptoMonitor === 'function') {
-          stopCryptoMonitor();
+        try {
+          if (typeof stopCryptoMonitor === 'function') {
+            stopCryptoMonitor();
+          }
+        } catch (e) {
+          console.warn('Crypto monitor stop:', e);
         }
       }
     }

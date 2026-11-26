@@ -2,15 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/paytr/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/dodo/*.js",
-      "use": "@vercel/node"
+      "src": "api/**/*.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "sample_report.pdf",
+          "lib/**"
+        ]
+      }
     },
     {
       "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.pdf",
       "use": "@vercel/static"
     },
     {
@@ -24,6 +30,10 @@
   ],
   "routes": [
     {
+      "src": "/api/status",
+      "dest": "/api/status.js"
+    },
+    {
       "src": "/api/paytr/initialize",
       "dest": "/api/paytr/initialize.js"
     },
@@ -34,6 +44,18 @@
     {
       "src": "/api/dodo/initialize",
       "dest": "/api/dodo/initialize.js"
+    },
+    {
+      "src": "/api/deliver-pdf",
+      "dest": "/api/deliver-pdf.js"
+    },
+    {
+      "src": "/api/webhooks/dodo",
+      "dest": "/api/webhooks/dodo.js"
+    },
+    {
+      "src": "/api/webhooks/whop",
+      "dest": "/api/webhooks/whop.js"
     },
     {
       "src": "/(.*)",

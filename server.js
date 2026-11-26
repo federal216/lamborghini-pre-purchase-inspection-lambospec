@@ -8,7 +8,12 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
-app.use(express.json());
+app.use(express.json({
+  limit: '25mb',
+  verify: (req, res, buf) => {
+    req.rawBody = buf.toString('utf8');
+  }
+}));
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static frontend files
@@ -32,19 +37,8 @@ console.log('----------------------------------------------------');
 /**
  * Healthcheck & Configuration Status
  */
-app.get('/api/status', (req, res) => {
-  res.json({
-    active: true,
-    priceUsd: DEFAULT_PRICE_USD,
-    priceTry: DEFAULT_PRICE_TRY,
-    gateways: {
-      paytr: true,
-      dodo: true,
-      paddle: true,
-      crypto: true
-    }
-  });
-});
+const statusHandler = require('./api/status');
+app.all('/api/status', statusHandler);
 
 /**
  * PayTR Gateway Endpoints
@@ -61,7 +55,21 @@ app.all('/api/paytr/callback', paytrCallback);
 const dodoInitialize = require('./api/dodo/initialize');
 app.all('/api/dodo/initialize', dodoInitialize);
 
-app.listen(PORT, () => {
-  console.log(`🚀 LamboSpec AI Server running on port ${PORT}`);
-  console.log(`🌐 Local preview: http://localhost:${PORT}`);
-});
+/**
+ * PDF Email Delivery & Payment Webhooks (Customer + karakoc.i@gmail.com)
+ */
+const deliverPdf = require('./api/deliver-pdf');
+const dodoWebhook = require('./api/webhooks/dodo');
+const whopWebhook = require('./api/webhooks/whop');
+app.all('/api/deliver-pdf', deliverPdf);
+app.all('/api/webhooks/dodo', dodoWebhook);
+app.all('/api/webhooks/whop', whopWebhook);
+
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 LamboSpec AI Server running on port ${PORT}`);
+    console.log(`🌐 Local preview: http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;

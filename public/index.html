@@ -2186,6 +2186,8 @@
           </div>
         </div>
 
+        <p id="lamboEmailDeliveryBanner" class="hidden text-xs font-mono text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 rounded-xl p-3 max-w-md mx-auto"></p>
+
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           <button type="button" onclick="generateDossierPDF()" class="px-6 py-3 rounded-xl badge-gradient text-black font-extrabold text-xs uppercase tracking-wider hover:opacity-95 transition shadow-lg flex items-center space-x-1.5 cursor-pointer">
             <span>📥</span>
@@ -2220,15 +2222,145 @@
     // ── Paddle.js Checkout Config ──
     const PADDLE_PRICE_ID = 'pri_01m7wnbynzbf08mydbbj8vgkd5';
     const CONTACT_EMAIL       = 'lamborginichallenge2026@gmail.com';
+    const LAMBO_API_BASE_KEY  = 'FEDERAL216_API_BASE';
+    const LAMBO_PENDING_KEY   = 'LAMBOSPEC_PENDING_ORDER';
     let   paymentVerified     = false;
 
-    // Detect Whop / Payment success redirect (?paid=true, ?status=success, etc.)
+    function getLamboApiUrl(path) {
+      const custom = (localStorage.getItem(LAMBO_API_BASE_KEY) || window.FEDERAL216_API_BASE || '').trim().replace(/\/+$/, '');
+      return custom ? `${custom}${path}` : path;
+    }
+
+    function isValidLamboEmail(email) {
+      return /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]{2,}$/.test(String(email || '').trim());
+    }
+
+    function getLamboCustomerEmail() {
+      const el = document.getElementById('custEmail');
+      if (el && isValidLamboEmail(el.value)) return el.value.trim();
+      try {
+        const pending = JSON.parse(localStorage.getItem(LAMBO_PENDING_KEY) || '{}');
+        if (isValidLamboEmail(pending.email)) return pending.email.trim();
+      } catch {}
+      const saved = localStorage.getItem('LAMBOSPEC_CUSTOMER_EMAIL');
+      return isValidLamboEmail(saved) ? saved.trim() : '';
+    }
+
+    function saveLamboPendingOrder(extra = {}) {
+      const email = getLamboCustomerEmail();
+      const modelSelect = document.getElementById('modelSelect');
+      const modelName = modelSelect ? modelSelect.options[modelSelect.selectedIndex].text : 'Lamborghini';
+      const record = {
+        productKey: 'lambospec',
+        email,
+        modelName,
+        timestamp: Date.now(),
+        ...extra
+      };
+      localStorage.setItem(LAMBO_PENDING_KEY, JSON.stringify(record));
+      if (email) localStorage.setItem('LAMBOSPEC_CUSTOMER_EMAIL', email);
+    }
+
+    async function deliverLamboPdfByEmail({ paymentMethod, paymentId, sessionId, transactionId, network, customerEmail, statusTargetId }) {
+      const email = isValidLamboEmail(customerEmail) ? customerEmail.trim() : getLamboCustomerEmail();
+      const banner = document.getElementById(statusTargetId || 'lamboEmailDeliveryBanner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.innerText = email
+          ? `📧 Sending 10-page Master Dossier PDF to ${email} & karakoc.i@gmail.com...`
+          : '📧 Verifying delivery with server...';
+      }
+
+      let pdfBase64 = null;
+      let filename = 'LamboSpec_10Page_Master_Dossier.pdf';
+      try {
+        const built = generateDossierPDF({ returnBase64Only: true });
+        if (built && built.pdfBase64) {
+          pdfBase64 = built.pdfBase64;
+          filename = built.filename || filename;
+        }
+      } catch (e) {}
+
+      const activeModelEl = document.getElementById('resTitle');
+      const modelName = activeModelEl ? activeModelEl.innerText : (document.getElementById('modelSelect')?.selectedOptions?.[0]?.text || 'Lamborghini');
+      const targetPrice = document.getElementById('resFair')?.innerText || '';
+      const summaryText = `Model: ${modelName}${targetPrice ? ` | Target Fair Offer: ${targetPrice}` : ''}`;
+
+      try {
+        const res = await fetch(getLamboApiUrl('/api/deliver-pdf'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            productKey: 'lambospec',
+            customerEmail: email,
+            buyerName: 'VIP Collector',
+            paymentMethod,
+            paymentId,
+            sessionId,
+            transactionId,
+            network,
+            pdfBase64,
+            filename,
+            summaryText
+          })
+        });
+        const data = await res.json();
+        if (res.ok && data.ok) {
+          if (banner) {
+            banner.innerText = `✅ 10-Page PDF Dossier emailed to ${data.customerEmail} and karakoc.i@gmail.com!`;
+            banner.className = 'text-xs font-mono text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 rounded-xl p-3 max-w-md mx-auto';
+          }
+          return data;
+        }
+        if (banner) {
+          banner.innerText = `⚠️ Delivery note: ${data.error || 'Pending gateway webhook/server config.'}`;
+          banner.className = 'text-xs font-mono text-amber-300 bg-amber-950/50 border border-amber-500/40 rounded-xl p-3 max-w-md mx-auto';
+        }
+      } catch (err) {
+        if (banner) {
+          banner.innerText = 'ℹ️ PDF downloaded locally. Server-side email delivery requires Vercel/Node backend & Dodo/Whop webhooks.';
+          banner.className = 'text-xs font-mono text-amber-300 bg-amber-950/50 border border-amber-500/40 rounded-xl p-3 max-w-md mx-auto';
+        }
+      }
+      return null;
+    }
+
+    // Detect Dodo / Whop / Payment success redirect (?paid=true, ?status=success, etc.)
     (function() {
       const p = new URLSearchParams(window.location.search);
-      if (p.get('paddle_success') || p.get('p_id') || p.get('checkout_id') || p.get('paid') || p.get('unlocked') || p.get('status') === 'success') {
+      if (p.get('paddle_success') || p.get('p_id') || p.get('checkout_id') || p.get('paid') || p.get('unlocked') || p.get('dodo_paid') || p.get('whop_paid') || p.get('payment_success') || p.get('status') === 'success' || p.get('payment_id')) {
         paymentVerified = true;
         setTimeout(function() {
+          if (typeof openCheckoutModal === 'function') openCheckoutModal();
+          var container = document.getElementById('checkoutFormContainer');
+          var success = document.getElementById('paySuccessState');
+          if (container) container.classList.add('hidden');
+          if (success) success.classList.remove('hidden');
+
+          let pending = {};
+          try { pending = JSON.parse(localStorage.getItem(LAMBO_PENDING_KEY) || '{}'); } catch {}
+          const savedEmail = pending.email || getLamboCustomerEmail();
+          const succEmail = document.getElementById('succEmail');
+          if (succEmail && savedEmail) succEmail.innerText = savedEmail;
+          const paymentId = p.get('payment_id') || p.get('paymentId') || '';
+          const sessionId = p.get('session_id') || pending.sessionId || '';
+          const succTxn = document.getElementById('succTxnId');
+          if (succTxn && (paymentId || sessionId)) succTxn.innerText = paymentId || sessionId;
+
           if (typeof generateDossierPDF === 'function') generateDossierPDF();
+
+          if (!sessionStorage.getItem('LAMBOSPEC_RETURN_DELIVERED')) {
+            sessionStorage.setItem('LAMBOSPEC_RETURN_DELIVERED', 'true');
+            const method = p.get('whop_paid') === 'true' ? 'whop' : (pending.paymentMethod || 'dodo');
+            if (paymentId || sessionId) {
+              deliverLamboPdfByEmail({
+                paymentMethod: method,
+                paymentId,
+                sessionId,
+                customerEmail: savedEmail
+              });
+            }
+          }
         }, 800);
       }
     })();
@@ -2566,15 +2698,18 @@
           btn.disabled = true;
           btn.innerHTML = `<span class="flex items-center justify-center gap-2"><svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg><span>Connecting to Dodo Payments...</span></span>`;
         }
-        const directDodoUrl = 'https://test.checkout.dodopayments.com/buy/pdt_0NsdXpb0AXJ8AeTfGANYe';
+        saveLamboPendingOrder({ paymentMethod: 'dodo' });
+        const returnUrl = `${window.location.origin}${window.location.pathname}?payment_success=true&dodo_paid=true`;
+        const directDodoUrl = `https://test.checkout.dodopayments.com/buy/pdt_0NsdXpb0AXJ8AeTfGANYe?email=${encodeURIComponent(email)}`;
         try {
-          const res = await fetch('/api/dodo/initialize', {
+          const res = await fetch(getLamboApiUrl('/api/dodo/initialize'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, modelName, buyerName: 'VIP Collector' })
+            body: JSON.stringify({ email, modelName, buyerName: 'VIP Collector', returnUrl })
           });
           const data = await res.json();
           if (data && data.checkoutUrl) {
+            saveLamboPendingOrder({ paymentMethod: 'dodo', sessionId: data.sessionId });
             window.location.href = data.checkoutUrl;
             return;
           }
@@ -2592,8 +2727,9 @@
       }
 
       if (method === 'whop' || method === 'card') {
+        saveLamboPendingOrder({ paymentMethod: 'whop' });
         // Open Whop Secure Checkout
-        const whopUrl = 'https://whop.com/cabinetscan-ai/lambospec-ai-vip-pre-purchase-dossier';
+        const whopUrl = `https://whop.com/cabinetscan-ai/lambospec-ai-vip-pre-purchase-dossier?email=${encodeURIComponent(email)}`;
         window.open(whopUrl, '_blank') || (window.location.href = whopUrl);
         return;
       }
@@ -2622,15 +2758,16 @@
       }
 
       // Start on-chain monitoring
+      saveLamboPendingOrder({ paymentMethod: 'crypto', submittedTxid: txVal });
       showCryptoStatus('checking', 'Querying blockchain node for TxID ' + (txVal.slice(0, 10)) + '... (Amount: ' + (cryptoUniqueAmount ? cryptoUniqueAmount.toFixed(2) : '79.00') + ')');
-      startCryptoMonitor(cryptoActiveCoin);
+      startCryptoMonitor(cryptoActiveCoin, txVal);
     }
 
-    function generateDossierPDF() {
+    function generateDossierPDF(options) {
       // === PAYMENT GATE: only allow PDF after verified payment ===
       if (!paymentVerified) {
         openCheckoutModal();
-        return;
+        return null;
       }
       if (!window.jspdf || !window.jspdf.jsPDF) {
         alert('Generating PDF... Please make sure your internet connection allows loading jsPDF.');
@@ -3046,8 +3183,14 @@
 
       addFooter();
 
-      // Trigger automatic file download
+      // Trigger automatic file download or return base64
       const cleanFileName = ('LamboSpec_' + activeModel.replace(/[^a-zA-Z0-9]/g, '_') + '_Dossier.pdf').replace(/__+/g, '_');
+      if (options && options.returnBase64Only) {
+        return {
+          filename: cleanFileName,
+          pdfBase64: doc.output('datauristring')
+        };
+      }
       doc.save(cleanFileName);
     }
 
@@ -3073,11 +3216,19 @@
       return 79 + cents / 100;
     }
 
-    function startCryptoMonitor(coin) {
+    let cryptoSubmittedTxid = '';
+
+    function startCryptoMonitor(coin, submittedTxid = '') {
       // Stop any existing monitor
       stopCryptoMonitor();
 
       cryptoActiveCoin = coin;
+      if (submittedTxid) {
+        cryptoSubmittedTxid = submittedTxid.trim();
+      } else {
+        const txEl = document.getElementById('cryptoTxidInput');
+        cryptoSubmittedTxid = txEl ? txEl.value.trim() : '';
+      }
       cryptoUniqueAmount = generateUniqueAmount();
       cryptoCheckStartTime = Date.now() - 60000; // 1 min buffer
       cryptoCheckCount = 0;
@@ -3164,7 +3315,7 @@
 
     async function checkTRC20Payment() {
       var url = 'https://api.trongrid.io/v1/accounts/' + USDT_TRC20_WALLET +
-                '/transactions/trc20?limit=20&contract_address=' + USDT_TRC20_CONTRACT +
+                '/transactions/trc20?limit=30&contract_address=' + USDT_TRC20_CONTRACT +
                 '&only_to=true&order_by=block_timestamp,desc';
 
       var resp = await fetch(url);
@@ -3176,17 +3327,54 @@
           var amount = parseInt(tx.value) / 1e6; // USDT has 6 decimals
           var ts = tx.block_timestamp;
 
-          // Check if amount matches AND is recent (after checkout started)
-          if (Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime) {
+          var txMatch = cryptoSubmittedTxid && String(tx.transaction_id || '').toLowerCase() === cryptoSubmittedTxid.toLowerCase() && amount >= 78.5;
+          var amtMatch = Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime;
+          if (txMatch || amtMatch) {
             cryptoPaymentConfirmed(tx.transaction_id, amount, 'USDT TRC20');
             return;
           }
         }
       }
+      if (cryptoSubmittedTxid && !cryptoSubmittedTxid.startsWith('0x')) {
+        try {
+          var evResp = await fetch('https://api.trongrid.io/v1/transactions/' + encodeURIComponent(cryptoSubmittedTxid) + '/events');
+          var evData = await evResp.json();
+          var evMatch = (evData.data || []).find(function(ev) {
+            return String(ev.contract_address || '').toLowerCase() === USDT_TRC20_CONTRACT.toLowerCase() &&
+                   ev.event_name === 'Transfer' &&
+                   String(ev.result && ev.result.to || '').toLowerCase() === USDT_TRC20_WALLET.toLowerCase() &&
+                   (parseInt(ev.result && ev.result.value || '0', 10) / 1e6) >= 78.5;
+          });
+          if (evMatch) {
+            cryptoPaymentConfirmed(cryptoSubmittedTxid, parseInt(evMatch.result.value, 10) / 1e6, 'USDT TRC20');
+            return;
+          }
+        } catch (e) {}
+      }
       showCryptoStatus('waiting', 'Waiting for ' + cryptoUniqueAmount.toFixed(2) + ' USDT transfer... (Check #' + cryptoCheckCount + ')');
     }
 
     async function checkERC20Payment() {
+      if (cryptoSubmittedTxid && cryptoSubmittedTxid.startsWith('0x')) {
+        try {
+          var txResp = await fetch('https://eth.blockscout.com/api/v2/transactions/' + encodeURIComponent(cryptoSubmittedTxid) + '/token-transfers');
+          var txData = await txResp.json();
+          if (txData && Array.isArray(txData.items)) {
+            for (var j = 0; j < txData.items.length; j++) {
+              var it = txData.items[j];
+              if (!it.token || !it.to || !it.total) continue;
+              var usdcOk = (it.token.address_hash || '').toLowerCase() === USDC_ERC20_CONTRACT.toLowerCase();
+              var walletOk = (it.to.hash || '').toLowerCase() === USDC_ERC20_WALLET.toLowerCase();
+              var amt = parseFloat(it.total.value) / Math.pow(10, parseInt(it.total.decimals || 6));
+              if (usdcOk && walletOk && amt >= 78.5) {
+                cryptoPaymentConfirmed(cryptoSubmittedTxid, amt, 'USDC ERC20');
+                return;
+              }
+            }
+          }
+        } catch (e) {}
+      }
+
       // Use Blockscout v2 public API for ERC20 token transfers (No API key required)
       var url = 'https://eth.blockscout.com/api/v2/addresses/' + USDC_ERC20_WALLET + '/token-transfers';
 
@@ -3206,7 +3394,9 @@
             var amount = parseFloat(item.total.value) / Math.pow(10, decimals);
             var ts = new Date(item.timestamp).getTime();
 
-            if (Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime) {
+            var txMatch = cryptoSubmittedTxid && String(item.transaction_hash || '').toLowerCase() === cryptoSubmittedTxid.toLowerCase() && amount >= 78.5;
+            var amtMatch = Math.abs(amount - cryptoUniqueAmount) < 0.01 && ts > cryptoCheckStartTime;
+            if (txMatch || amtMatch) {
               cryptoPaymentConfirmed(item.transaction_hash, amount, 'USDC ERC20');
               return;
             }
@@ -3222,6 +3412,7 @@
 
       // Set payment verified and download PDF
       paymentVerified = true;
+      saveLamboPendingOrder({ paymentMethod: 'crypto', transactionId: txHash, network: network });
 
       // Show success state
       setTimeout(function() {
@@ -3230,16 +3421,23 @@
         if (container) container.classList.add('hidden');
         if (success) success.classList.remove('hidden');
 
+        var customerEmail = getLamboCustomerEmail();
         var succEmail = document.getElementById('succEmail');
-        var emailInput = document.getElementById('custEmail');
-        if (succEmail && emailInput) succEmail.innerText = emailInput.value;
+        if (succEmail && customerEmail) succEmail.innerText = customerEmail;
         var succCardDetails = document.getElementById('succCardDetails');
         if (succCardDetails) succCardDetails.innerText = network;
         var succTxnId = document.getElementById('succTxnId');
         if (succTxnId) succTxnId.innerText = txHash.substring(0, 20) + '...';
 
         generateDossierPDF();
-      }, 1500);
+        deliverLamboPdfByEmail({
+          paymentMethod: 'crypto',
+          transactionId: txHash,
+          network: network,
+          customerEmail: customerEmail,
+          statusTargetId: 'lamboEmailDeliveryBanner'
+        });
+      }, 1000);
     }
 
     // Deep-link SEO model auto-selector (?model=<slug>)

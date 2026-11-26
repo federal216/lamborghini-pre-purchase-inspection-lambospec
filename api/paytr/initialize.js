@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const https = require('https');
 const querystring = require('querystring');
+const { savePaytrOrder } = require('../../lib/paytrOrders');
 
 const merchantId = process.env.PAYTR_MERCHANT_ID || 'dummy_id';
 const merchantKey = process.env.PAYTR_MERCHANT_KEY || 'dummy_key';
@@ -43,6 +44,12 @@ module.exports = async (req, res) => {
     const baseUrl = `${protocol}://${host}`;
 
     const merchant_oid = 'LAMBO_' + Date.now();
+    savePaytrOrder(merchant_oid, {
+      email,
+      buyerName,
+      modelName: modelName || 'Lamborghini',
+      amountLabel: `${rawPrice} ${paytrCurrency}`
+    });
     const user_ip = req.headers['x-forwarded-for']?.split(',')[0].trim() || req.socket.remoteAddress || '85.105.0.1';
     const user_name = buyerName;
     const user_address = 'Digital Delivery / Cloud PDF Dossier, Istanbul, Turkey';

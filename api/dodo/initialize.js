@@ -1,4 +1,5 @@
 const https = require('https');
+const { isAllowedReturnUrl } = require('../../lib/handlers');
 
 const LIVE_API_KEY = process.env.DODO_PAYMENTS_LIVE_KEY || 'dodo_live_xNuMmrRTOkHMLZY7.pEQXFVs-wu2XLVkeKX7xvdvcH9v71jbN6FdtMEyTPzCJLR0j';
 const LIVE_PRODUCT_ID = process.env.DODO_LIVE_PRODUCT_ID || 'pdt_0NsdaQ7P6h6NjAauG3k4P';
@@ -12,7 +13,13 @@ function createCheckoutSession(host, apiKey, productId, email, buyerName, modelN
       product_cart: [{ product_id: productId, quantity: 1 }],
       customer: { email, name: buyerName },
       return_url: returnUrl,
-      metadata: { model: modelName || 'Lamborghini', timestamp: Date.now().toString() }
+      metadata: {
+        app: 'lambospec',
+        product: 'LamboSpec AI Master Supercar Dossier',
+        model: modelName || 'Lamborghini',
+        customer_email: email,
+        timestamp: Date.now().toString()
+      }
     });
 
     const options = {
@@ -57,7 +64,7 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ status: 'failed', reason: 'Method Not Allowed' });
 
   try {
-    const { email, modelName, buyerName = 'VIP Collector' } = req.body || {};
+    const { email, modelName, buyerName = 'VIP Collector', returnUrl: clientReturnUrl } = req.body || {};
 
     if (!email) {
       return res.status(400).json({ status: 'failed', reason: 'Email address is required.' });
@@ -65,7 +72,9 @@ module.exports = async (req, res) => {
 
     const host = req.headers['x-forwarded-host'] || req.headers.host || 'lambospec.ai';
     const protocol = req.headers['x-forwarded-proto'] || 'https';
-    const returnUrl = process.env.DODO_RETURN_URL || `${protocol}://${host}/?payment_success=true&dodo_paid=true`;
+    const returnUrl = isAllowedReturnUrl(clientReturnUrl)
+      ? clientReturnUrl
+      : (process.env.DODO_RETURN_URL || `${protocol}://${host}/?payment_success=true&dodo_paid=true`);
 
     // 1. First attempt: Live Mode API
     let liveResult = null;

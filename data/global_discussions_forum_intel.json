@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Lamborghini Global Owner Forums & Community Intelligence Registry",
-    "last_updated": "2026-11-26T11:45:37.164200+00:00",
+    "last_updated": "2026-11-27T11:39:06.068385+00:00",
     "monitored_communities": [
       "Lamborghini-Talk (Primary Global Registry & DIY Maintenance)",
       "FerrariChat (Exotic Cross-Shoppers & PPI Discussions)",
@@ -137,29 +137,8 @@
         "topic": "Huracan Common Issues",
         "query": "site:lamborghini-talk.com Huracan common problems maintenance costs"
       },
-      "results": [
-        {
-          "title": "Huracan EVO Maintenance/Service costs - Lamborghini Talk",
-          "snippet": "Anyone know the approximatecostfor a 2020huracanrwd evo, for the 4 th year service. Was quoted 8k for spark plugs, oil service, coolant, brake flush, cabin filter Evo has 4k miles only . Any recs? Seems to be steep!",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhuracan%2Devo%2Dmaintenance%2Dservice%2Dcosts.226875%2F&rut=ffed1c8eff8cd4039d8dbe432a8fd5fd7564bfaac75fd9a303d1b86aee094a60"
-        },
-        {
-          "title": "Huracan Problems/Common issues to look for - Lamborghini Talk",
-          "snippet": "It's got about 11,500Km on it. Before buying, is there anycommonissues with these things to look for? Front lift failure, Engine or trannys failures, anycommonelectricalproblems? I just turned 21 and looking for my 2nd supercar, though I can afford the car, I don't know if I can afford to throw in a new Engine or Transmission Lol.",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhuracan%2Dproblems%2Dcommon%2Dissues%2Dto%2Dlook%2Dfor.231732%2F&rut=40a55ed3f80aa80e50f35b38fb98fda153f07d8742105aacd2d2f6e0024fecdc"
-        },
-        {
-          "title": "Huracan - Lamborghini Talk",
-          "snippet": "Custom carbon fiber floor mats forHuracanSTO/Perf/Technica and more MF5ive Feb 14, 2026 27 863",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fforums%2Fhuracan.202%2F&rut=9f4fe594bfec158f607214cd9c8847af5baab2fff79df574c515c544228f6ec5"
-        },
-        {
-          "title": "How much does maintenance cost on a lamborghini huracan?",
-          "snippet": "How much does itcostto maintain aLamborghiniHuracanfor a year, if bought used? WithmaintenanceI mean absolutely everything fuel, insurance, service, oil change etc... Lets say I want to buy a usedLamborghiniHuracanfor around 230.000 USD. If a buy in cash, which probably is the best...",
-          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lamborghini%2Dtalk.com%2Fthreads%2Fhow%2Dmuch%2Ddoes%2Dmaintenance%2Dcost%2Don%2Da%2Dlamborghini%2Dhuracan.221354%2F&rut=ba7a14c356222ce84b762dbd323c666094731bc401c5bd8c4a26317c3c56351d"
-        }
-      ],
-      "crawled_at": "2026-11-26T11:45:01.126808+00:00"
+      "results": [],
+      "crawled_at": "2026-11-27T11:38:31.727658+00:00"
     },
     {
       "target": {
@@ -168,7 +147,7 @@
         "query": "site:lamborghini-talk.com Huracan MagneRide leak CCB rotor wear"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:02.741257+00:00"
+      "crawled_at": "2026-11-27T11:38:32.920618+00:00"
     },
     {
       "target": {
@@ -177,7 +156,7 @@
         "query": "site:lamborghini-talk.com Aventador ISR clutch shudder release bearing cost"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:04.255896+00:00"
+      "crawled_at": "2026-11-27T11:38:34.078284+00:00"
     },
     {
       "target": {
@@ -186,7 +165,7 @@
         "query": "site:lamborghini-talk.com Gallardo e-gear snap reading clutch wear"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:05.629526+00:00"
+      "crawled_at": "2026-11-27T11:38:35.094910+00:00"
     },
     {
       "target": {
@@ -195,7 +174,7 @@
         "query": "site:lamborghini-talk.com Murcielago clutch replacement rear main seal"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:06.894504+00:00"
+      "crawled_at": "2026-11-27T11:38:36.440192+00:00"
     },
     {
       "target": {
@@ -204,7 +183,7 @@
         "query": "site:lamborghini-talk.com Diablo VT SV overheating wiring harness"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:08.565445+00:00"
+      "crawled_at": "2026-11-27T11:38:37.325431+00:00"
     },
     {
       "target": {
@@ -213,7 +192,7 @@
         "query": "site:lamborghini-talk.com Urus battery drain coolant leak thermostat"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:09.643161+00:00"
+      "crawled_at": "2026-11-27T11:38:38.476622+00:00"
     },
     {
       "target": {
@@ -222,7 +201,7 @@
         "query": "site:lamborghini-talk.com Revuelto delivery issues problems recall 2025 2026"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:10.588143+00:00"
+      "crawled_at": "2026-11-27T11:38:39.896982+00:00"
     },
     {
       "target": {
@@ -231,7 +210,7 @@
         "query": "site:lamborghini-talk.com Temerario V8 hybrid order waitlist allocation"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:11.808145+00:00"
+      "crawled_at": "2026-11-27T11:38:41.329854+00:00"
     },
     {
       "target": {
@@ -240,7 +219,7 @@
         "query": "site:ferrarichat.com Lamborghini vs Ferrari Huracan 488 reliability PPI"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:13.352960+00:00"
+      "crawled_at": "2026-11-27T11:38:42.666943+00:00"
     },
     {
       "target": {
@@ -249,7 +228,7 @@
         "query": "site:pistonheads.com Lamborghini ownership running costs maintenance"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:14.768331+00:00"
+      "crawled_at": "2026-11-27T11:38:44.311805+00:00"
     },
     {
       "target": {
@@ -258,7 +237,7 @@
         "query": "reddit r/lamborghini daily driving reliability ownership cost"
       },
       "results": [],
-      "crawled_at": "2026-11-26T11:45:15.826593+00:00"
+      "crawled_at": "2026-11-27T11:38:45.715253+00:00"
     }
   ]
 }

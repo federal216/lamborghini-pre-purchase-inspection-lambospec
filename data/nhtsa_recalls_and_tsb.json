@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Lamborghini Official NHTSA & Safety Recall Intelligence Registry",
-    "last_updated": "2026-11-27T11:39:06.069102+00:00",
+    "last_updated": "2026-11-28T11:14:01.794474+00:00",
     "regulatory_bodies": [
       "NHTSA (USA)",
       "KBA (Germany)",
@@ -73,7 +73,7 @@
         "query": "Lamborghini Revuelto NHTSA recall door gas struts camera oil leak"
       },
       "results": [],
-      "crawled_at": "2026-11-27T11:38:46.676503+00:00"
+      "crawled_at": "2026-11-28T11:13:44.650483+00:00"
     },
     {
       "target": {
@@ -82,7 +82,7 @@
         "query": "Lamborghini Urus NHTSA recall fuel line quick connector software"
       },
       "results": [],
-      "crawled_at": "2026-11-27T11:38:48.015003+00:00"
+      "crawled_at": "2026-11-28T11:13:46.078447+00:00"
     },
     {
       "target": {
@@ -91,7 +91,7 @@
         "query": "Lamborghini Aventador NHTSA recall fire fuel vapor EVAP purge canister"
       },
       "results": [],
-      "crawled_at": "2026-11-27T11:38:49.512617+00:00"
+      "crawled_at": "2026-11-28T11:13:47.489000+00:00"
     },
     {
       "target": {
@@ -100,7 +100,7 @@
         "query": "Lamborghini Huracan NHTSA recall suspension camber bolts passenger airbag"
       },
       "results": [],
-      "crawled_at": "2026-11-27T11:38:50.881592+00:00"
+      "crawled_at": "2026-11-28T11:13:48.372484+00:00"
     }
   ]
 }
